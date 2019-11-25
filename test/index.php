@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a><img src="./img/logo.png" alt="logo"></a>
+        <a href=""><img src="./img/logo.jpg" alt="logo"></a>
         
         <div id="top_menu">
             <a href="">ДОСТАВКА</a>
