@@ -1,0 +1,63 @@
+.header .content
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.header .content .menu
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.header .content .menu ul
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.header .content .menu ul li
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .content .menu li a
+{
+    position: relative;
+    color: #000000;
+    margin: 5px 15px;
+    text-transform: uppercase;
+}
+
+.header .content .menu li a:hover
+{
+    color: #e31e25;
+}
+
+.header .content .menu li a::after
+{
+    transition: 0.3s all;
+    transform: scale(0);
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    width: 100%;
+    height: 3px;
+    background-color: #e31e25;
+}
+
+.header .content .menu li a:hover::after
+{
+    transform: scale(1);
+}
+
+.header .content .menu li a.tel
+{
+    color: #e31e25;
+}
