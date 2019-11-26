@@ -49,7 +49,7 @@
 	overflow-x: scroll;
 	overflow-y: hidden;
 	flex-direction: row;
-	
+
 	width: 100%;
 	margin: 0px auto;
 	padding: 25px 10px;
@@ -70,6 +70,7 @@
 
 .product
 {
+	position: relative;
 	display: flex;
 	align-items: center;
 	flex-flow: column nowrap;
@@ -114,4 +115,30 @@
 	font-size: 42px;
 
 	margin-bottom: 15px;
+}
+
+.product > .sale
+{
+	background-color: red;
+    height: 50px;
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.product > .sale::before
+{
+	content: "-";
+}
+
+.product > .sale::after
+{
+	content: "%";
 }
