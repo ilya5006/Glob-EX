@@ -43,7 +43,7 @@
 	color: #E31E25;
 }
 
-.header .content .menu li a::after
+.header .content .menu li a:not(.tel)::after
 {
 	position: absolute;
 	bottom: -7px;
@@ -68,6 +68,11 @@
 .header .content .menu li a.tel
 {
 	color: #E31E25;
+}
+
+.header .content .menu li a.tel:hover
+{
+	font-weight: bold;
 }
 
 .header .content .nav

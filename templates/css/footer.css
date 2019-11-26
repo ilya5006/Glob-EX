@@ -20,14 +20,17 @@
 
 .footer > .content > ul.logo
 {
-    margin-right: auto;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+
+	margin-right: auto;
 }
 
 .footer > .content > ul > li > a
 {
+	font-size: 16px;
+
 	position: relative;
 
 	margin: 10px;
@@ -40,12 +43,22 @@
 
 .footer > .content > ul > li > a > span
 {
-	text-transform: none;
+	transition: 0.3s all;
 
 	color: #E31E25;
 }
 
-.footer > .content > ul > li > a:not(.contact)::after
+.footer > .content > ul > li > a > span:hover
+{
+	font-weight: bold;
+}
+
+.footer > .content > ul > li > a.email > span
+{
+	text-transform: none;
+}
+
+.footer > .content > ul > li > a:not(.exception)::after
 {
 	position: absolute;
 	bottom: -7px;
@@ -68,25 +81,25 @@
 
 @media screen and (max-width: 1200px)
 {
-    .footer > .content
-    {
-        flex-flow: column wrap;
-        justify-content: center;
+	.footer > .content
+	{
+		flex-flow: column wrap;
+		justify-content: center;
+	}
+	.footer > .content > ul.logo
+	{
+		order: 100;
 
-    }
-    .footer > .content > ul.logo
-    {
-        margin: 0 auto;
-        margin-top: 35px;
-        order: 100;
-        width: 100%;
-    }
-    .footer > .content > ul.logo li
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 35px;
+	}
+	.footer > .content > ul.logo li
+	{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 @media screen and (max-width: 750px)
@@ -98,11 +111,11 @@
 }
 @media screen and (max-width: 425px)
 {
-    .footer > .content > ul.logo li img
-    {
-        width: 100%;
-        padding: 5px 25px;
-    }
+	.footer > .content > ul.logo li img
+	{
+		width: 100%;
+		padding: 5px 25px;
+	}
 	.content
 	{
 		padding: 25px 5px;
