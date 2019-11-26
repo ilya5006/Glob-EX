@@ -18,6 +18,14 @@
 	margin: 0 50px;
 }
 
+.footer > .content > ul.logo
+{
+    margin-right: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
 .footer > .content > ul > li > a
 {
 	position: relative;
@@ -56,4 +64,47 @@
 .footer > .content > ul > li > a:hover::after
 {
 	transform: scale(1);
+}
+
+@media screen and (max-width: 1200px)
+{
+    .footer > .content
+    {
+        flex-flow: column wrap;
+        justify-content: center;
+
+    }
+    .footer > .content > ul.logo
+    {
+        margin: 0 auto;
+        margin-top: 35px;
+        order: 100;
+        width: 100%;
+    }
+    .footer > .content > ul.logo li
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 750px)
+{
+	.content
+	{
+		padding: 25px 25px;
+	}
+}
+@media screen and (max-width: 425px)
+{
+    .footer > .content > ul.logo li img
+    {
+        width: 100%;
+        padding: 5px 25px;
+    }
+	.content
+	{
+		padding: 25px 5px;
+	}
 }
