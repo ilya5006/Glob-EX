@@ -51,11 +51,11 @@
 	flex-direction: row;
 
 	width: 100%;
-	height: 50px;
+	height: 200px;
 	margin: 0px auto;
 }
 
-.scroll img
+.scroll > .brand
 {
-	margin-right: 20px;
+	margin-right: 50px;
 }
