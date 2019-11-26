@@ -27,6 +27,7 @@
     
 ::-webkit-scrollbar{
     width: 4px;
+    height: 7px;
 }
     
 #main
@@ -42,7 +43,8 @@
 
     width: 1000px;
     height: 50px;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
 #brands img
