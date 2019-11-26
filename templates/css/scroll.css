@@ -41,6 +41,9 @@
 .scroll
 {
 	margin-top: 450px;
+
+	scrollbar-color: red white;
+	scrollbar-width: thin;
 }
 
 .scroll
