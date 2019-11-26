@@ -77,7 +77,31 @@
         </div>
     </header>
 
-    <script>
+    <div id="main">
+        <div id="brands">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+            <img src="./img/logo.png">
+        </div>
+    </div>
+
+    <script id="catalog_popup">
         document.querySelector('#catalog').addEventListener('click', function()
         {
             if (document.querySelector('.expand-catalog').classList.contains('hide'))
@@ -109,28 +133,12 @@
             });
         });
     </script>
-    <div id="main">
-        <div id="brands">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-            <img src="./img/logo.png">
-        </div>
-    </div>
+    
+    <script id="scroll_brands">
+        document.querySelector('#brands').addEventListener('scroll', (event) =>
+        {
+            //console.log(event.target);
+        });
+    </script>
 </body>
 </html>
