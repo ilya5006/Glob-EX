@@ -78,8 +78,6 @@
 	align-items: center;
 	flex-flow: row wrap;
 	justify-content: space-between;
-
-	height: 40px;
 }
 
 .header .content .nav .catalog
@@ -173,7 +171,7 @@
 	flex-grow: 1;
 	justify-content: center;
 
-	min-height: 40px;
+	height: 40px;
 }
 
 .header .content .nav ul, .header .content .nav > ul li, .header .content .nav ul li a
@@ -193,7 +191,7 @@
 
 .header .content .nav ul li a img
 {
-	height: 85%;
+	height: 40px;
 }
 
 .header .content .nav > ul li
