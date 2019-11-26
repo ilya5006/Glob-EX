@@ -1,0 +1,15 @@
+#main
+{
+    margin-top: 450px;
+}
+
+#brands
+{
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+
+    width: 1000px;
+    height: 50px;
+    overflow: scroll;
+}

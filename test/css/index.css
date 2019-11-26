@@ -2,4 +2,80 @@
 {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+html
+{
+    background-color: #222222;
+}
+
+body
+{
+    max-width: 80%;
+    margin: 0px auto;
+
+    padding: 10px 10px;
+    background-color: white;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+
+    padding: 10px;
+}
+
+header
+{
+    background-color: white;
+}
+
+#top_header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top_menu a:hover
+{
+    color: #e31e25;
+    border-bottom: 3px solid #e31e25;
+}
+
+.phone_number
+{
+    font-weight: bold;
+    color: #e31e25;
+}
+
+#catalog
+{
+    background-color: #e31e25;
+    color: white;
+
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 0px;
+
+    cursor: pointer;
+}
+
+#bottom_header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#bottom_header form input
+{
+    height: 100%;
 }
