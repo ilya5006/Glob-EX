@@ -85,6 +85,41 @@
     </header>
     <!-- КОНЕЦ ХЕАДЕРА -->
 
+    <!-- СКРИПТ ДЛЯ МЕНЮ В ХЕАДЕРЕ -->
+    <script id="catalog_popup">
+        document.querySelector('#catalog').addEventListener('click', function () 
+        {
+            if (document.querySelector('.expand-catalog').classList.contains('hide')) 
+            {
+                document.querySelector('.expand-catalog').classList.remove('hide')
+            } 
+            else 
+            {
+                document.querySelector('.expand-catalog').classList.add('hide')
+            }
+        });
+
+        document.querySelectorAll('.cat_1').forEach((element) => 
+        {
+            element.addEventListener('mouseenter', function () 
+            {
+                if (element.nextElementSibling.classList.contains('expand-cat_2')) 
+                {
+                    element.nextElementSibling.classList.remove('hide');
+                }
+            });
+
+            element.addEventListener('mouseleave', function () 
+            {
+                if (element.nextElementSibling.classList.contains('expand-cat_2')) 
+                {
+                    element.nextElementSibling.classList.add('hide');
+                }
+            });
+        });
+    </script>
+    <!-- КОНЦА СКРИПТА ДЛЯ МЕНЮ В ХЕАДЕРЕ-->
+
     <!-- СЛАЙДЕР С ПРОДУКТАМИ -->
     <div class="content">
         <h2>Акции: Мебель</h2>
@@ -185,38 +220,6 @@
     </div>
     <!-- КОНЕЦ СЛАЙДЕРА С БРЕНДАМИ -->
 
-    <script id="catalog_popup">
-        document.querySelector('#catalog').addEventListener('click', function () 
-        {
-            if (document.querySelector('.expand-catalog').classList.contains('hide')) 
-            {
-                document.querySelector('.expand-catalog').classList.remove('hide')
-            } 
-            else 
-            {
-                document.querySelector('.expand-catalog').classList.add('hide')
-            }
-        });
-
-        document.querySelectorAll('.cat_1').forEach((element) => 
-        {
-            element.addEventListener('mouseenter', function () 
-            {
-                if (element.nextElementSibling.classList.contains('expand-cat_2')) 
-                {
-                    element.nextElementSibling.classList.remove('hide');
-                }
-            });
-
-            element.addEventListener('mouseleave', function () 
-            {
-                if (element.nextElementSibling.classList.contains('expand-cat_2')) 
-                {
-                    element.nextElementSibling.classList.add('hide');
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
