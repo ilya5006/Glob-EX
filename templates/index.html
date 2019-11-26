@@ -26,12 +26,12 @@
             <div class="nav">
                 <button class="catalog" id="catalog"> <span>|||</span> КАТАЛОГ ТОВАРОВ</button>
 
-                <div class="expand-catalog">
+                <div class="expand-catalog hide">
                     <a class="cat_1" href="#"> <img src="./img/percent.svg"><p> Акции и скидки </p></a>
                     <a class="cat_1" href="#"> <img src="./img/clip.svg"><p>Концелярии и товары</p><span>></span></a>
-                    <div class='expand-cat_2'>
+                    <div class='expand-cat_2 hide'>
                         <ul>
-                            <li><span>ASDASDASD</span></li>
+                            <li><span>1</span></li>
                             <li><a href="#">asdasd</a></li>
                             <li><a href="#">asdasd</a></li>
                             <li><a href="#">asdasd</a></li>
@@ -40,7 +40,27 @@
                         </ul>
                     </div>
                     <a class="cat_1" href="#"> <img src="./img/bucket.svg"><p>Хозтовары</p><span>></span></a>
+                    <div class='expand-cat_2 hide'>
+                        <ul>
+                            <li><span>2</span></li>
+                            <li><a href="#">zxczxc</a></li>
+                            <li><a href="#">zxczxc</a></li>
+                            <li><a href="#">zxczxc</a></li>
+                            <li><a href="#">zxc</a></li>
+                            <li><a href="#">zxc</a></li>
+                        </ul>
+                    </div>
                     <a class="cat_1" href="#"> <img src="./img/furniture.svg"><p>Мебель</p><span>></span></a>
+                    <div class='expand-cat_2 hide'>
+                        <ul>
+                            <li><span>3</span></li>
+                            <li><a href="#">fghj</a></li>
+                            <li><a href="#">fghj</a></li>
+                            <li><a href="#">fgh</a></li>
+                            <li><a href="#">fghj</a></li>
+                            <li><a href="#">fghj</a></li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <form action="#">
@@ -56,5 +76,37 @@
         </div>
     </header>
 
+    <script>
+        document.querySelector('#catalog').addEventListener('click', function()
+        {
+            if (document.querySelector('.expand-catalog').classList.contains('hide'))
+            {
+                document.querySelector('.expand-catalog').classList.remove('hide')
+            }
+            else
+            {
+                document.querySelector('.expand-catalog').classList.add('hide')
+            }
+        });
+
+        document.querySelectorAll('.cat_1').forEach((element) => 
+        {
+            element.addEventListener('mouseover', function()
+            {
+                if (element.nextElementSibling.classList.contains('expand-cat_2'))
+                {
+                    element.nextElementSibling.classList.remove('hide');
+                }       
+            });
+
+            element.addEventListener('mouseleave', function()
+            {   
+                if (element.nextElementSibling.classList.contains('expand-cat_2'))
+                {
+                    element.nextElementSibling.classList.add('hide');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
