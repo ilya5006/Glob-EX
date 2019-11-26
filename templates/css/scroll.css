@@ -147,3 +147,18 @@
 {
 	content: "%";
 }
+
+.product > .cart
+{
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	height: 50px;
+	width: 50px;
+}
+
+.product > .cart > img
+{
+	height: 100%;
+	width: 100%;
+}
