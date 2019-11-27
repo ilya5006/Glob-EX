@@ -6,58 +6,67 @@
     </div>
     <div class="scroll">
         <div class="product">
-            <a href="#"><img src="./resource/img/product.jpg" alt="фотография продукта"></a>
+            <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
             <p class="product-name">Имя продуктв</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
-            <a href="#" class="cart"> <img src="./resource/img/cart.svg" alt=""></a>
-            <a href="#" class="favourite"> <img src="./resource/img/favourite.svg" alt=""></a>
+            <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+            <a href="#" class="favourite"> <img src="./resource/img/icons/favourite.svg" alt=""></a>
         </div>
         <div class="product">
-            <a href="#"><img src="./resource/img/product.jpg" alt="фотография продукта"></a>
+            <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
             <p class="product-name">Имя продуктв</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
-            <a href="#" class="cart"> <img src="./resource/img/cart.svg" alt=""></a>
-            <a href="#" class="favourite"> <img src="./resource/img/favourite.svg" alt=""></a>
+            <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+            <a href="#" class="favourite"> <img src="./resource/img/icons/favourite.svg" alt=""></a>
         </div>
         <div class="product">
-            <a href="#"><img src="./resource/img/product.jpg" alt="фотография продукта"></a>
+            <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
             <p class="product-name">Имя продуктв</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
-            <a href="#" class="cart"> <img src="./resource/img/cart.svg" alt=""></a>
-            <a href="#" class="favourite"> <img src="./resource/img/favourite.svg" alt=""></a>
+            <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+            <a href="#" class="favourite"> <img src="./resource/img/icons/favourite.svg" alt=""></a>
         </div>
         <div class="product">
-            <a href="#"><img src="./resource/img/product.jpg" alt="фотография продукта"></a>
+            <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
             <p class="product-name">Имя продуктв</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
-            <a href="#" class="cart"> <img src="./resource/img/cart.svg" alt=""></a>
-            <a href="#" class="favourite"> <img src="./resource/img/favourite.svg" alt=""></a>
+            <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+            <a href="#" class="favourite"> <img src="./resource/img/icons/favourite.svg" alt=""></a>
         </div>
         <div class="product">
-            <a href="#"><img src="./resource/img/product.jpg" alt="фотография продукта"></a>
+            <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
             <p class="product-name">Имя продуктв</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
-            <a href="#" class="cart"> <img src="./resource/img/cart.svg" alt=""></a>
-            <a href="#" class="favourite"> <img src="./resource/img/favourite.svg" alt=""></a>
+            <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+            <a href="#" class="favourite"> <img src="./resource/img/icons/favourite.svg" alt=""></a>
         </div>
         <div class="product">
-            <a href="#"><img src="./resource/img/product.jpg" alt="фотография продукта"></a>
+            <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
             <p class="product-name">Имя продуктв</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
-            <a href="#" class="cart"> <img src="./resource/img/cart.svg" alt=""></a>
-            <a href="#" class="favourite"> <img src="./resource/img/favourite.svg" alt=""></a>
+            <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+            <a href="#" class="favourite"> <img src="./resource/img/icons/favourite.svg" alt=""></a>
+        </div>
+        <div class="product">
+            <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
+            <p class="product-name">Имя продуктв</p>
+            <p class="old-price">500р</p>
+            <p class="new-price">375р</p>
+            <p class="sale">25</p>
+            <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+            <a href="#" class="favourite"> <img src="./resource/img/icons/favourite.svg" alt=""></a>
         </div>
     </div>
 </div>

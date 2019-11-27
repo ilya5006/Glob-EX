@@ -5,24 +5,43 @@
 
 .footer > .content
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-end;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 }
 
 .footer > .content > ul
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column nowrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
 
 	margin: 0 50px;
 }
 
 .footer > .content > ul.logo
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 
 	margin-right: auto;
 }
@@ -49,6 +68,7 @@
 
 .footer > .content > ul > li > a > span
 {
+	-webkit-transition: 0.3s all;
 	transition: 0.3s all;
 
 	color: #E31E25;
@@ -74,31 +94,43 @@
 	height: 2px;
 
 	content: "";
+	-webkit-transition: 0.3s all;
 	transition: 0.3s all;
-	transform: scale(0);
+	-webkit-transform: scale(0);
+	        transform: scale(0);
 
 	background-color: #000000;
 }
 
 .footer > .content > ul > li > a:hover::after
 {
-	transform: scale(1);
+	-webkit-transform: scale(1);
+	        transform: scale(1);
 }
 
 @media screen and (max-width: 1200px)
 {
 	.footer > .content
 	{
-		flex-flow: column wrap;
-		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column wrap;
+		        flex-flow: column wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.footer > .content > ul
 	{
-		align-items: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 	.footer > .content > ul.logo
 	{
-		order: 100;
+		-webkit-box-ordinal-group: 101;
+		    -ms-flex-order: 100;
+		        order: 100;
 
 		width: 100%;
 		margin: 0 auto;
@@ -106,9 +138,15 @@
 	}
 	.footer > .content > ul.logo li
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.footer > .content > ul > li > a, .footer > .content > ul > li > a.tel, .footer > .content > ul > li > a.email
 	{

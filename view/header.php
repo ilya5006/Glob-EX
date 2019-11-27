@@ -15,9 +15,9 @@
             <button class="catalog" id="catalog"> <span>|||</span> КАТАЛОГ ТОВАРОВ</button>
 
             <div class="expand-catalog hide">
-                <a class="cat_1" href="#"> <img src="./resource/img/percent.svg"> <p> АКЦИИ И СКИДКИ </p> </a>
+                <a class="cat_1" href="#"> <img src="./resource/img/icons/percent.svg"> <p> АКЦИИ И СКИДКИ </p> </a>
 
-                <a class="cat_1" href="#"> <img src="./resource/img/clip.svg"> <p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
+                <a class="cat_1" href="#"> <img src="./resource/img/icons/clip.svg"> <p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
                 <div class='expand-cat_2 hide'>
                     <ul>
                         <li><span>1</span></li>
@@ -29,7 +29,7 @@
                     </ul>
                 </div>
 
-                <a class="cat_1" href="#"> <img src="./resource/img/bucket.svg"><p>ХОЗТОВАРЫ</p><span>&#62;</span></a>
+                <a class="cat_1" href="#"> <img src="./resource/img/icons/bucket.svg"><p>ХОЗТОВАРЫ</p><span>&#62;</span></a>
                 <div class='expand-cat_2 hide'>
                     <ul>
                         <li><span>2</span></li>
@@ -41,7 +41,7 @@
                     </ul>
                 </div>
 
-                <a class="cat_1" href="#"> <img src="./resource/img/furniture.svg"><p>МЕБЕЛЬ</p><span>&#62;</span></a>
+                <a class="cat_1" href="#"> <img src="./resource/img/icons/furniture.svg"><p>МЕБЕЛЬ</p><span>&#62;</span></a>
                 <div class='expand-cat_2 hide'>
                     <ul>
                         <li><span>3</span></li>
@@ -56,12 +56,12 @@
 
             <form action="#">
                 <input type="search" placeholder="Поиск...">
-                <button> <img src="./resource/img/search.svg" alt="search"> </button>
+                <button> <img src="./resource/img/icons/search.svg" alt="search"> </button>
             </form>
             <ul>
-                <li><a href="#"><img src="./resource/img/favourite.svg" alt="favorite"></a></li>
-                <li><a href="#"><img src="./resource/img/cart.svg" alt="cart"></a></li>
-                <li class="account"><a href="#"><img src="./resource/img/account.svg" alt="account"><p>Войти</p></a></li>
+                <li><a href="#"><img src="./resource/img/icons/favourite.svg" alt="favorite"></a></li>
+                <li><a href="#"><img src="./resource/img/icons/cart.svg" alt="cart"></a></li>
+                <li class="account"><a href="#"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти</p></a></li>
             </ul>
         </div>
     </div>

@@ -1,37 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 *
 {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html, body, .content
 {
-    width: 100%;
+	width: 100%;
 }
 
 body, input
 {
-    font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 .content
 {
-    padding: 25px 50px;
-    max-width: 1440px;
-    min-width: 320px;
-    margin: 0 auto;
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 25px 50px;
 }
 
 a
 {
-    display: block;
-    text-decoration: none;
+	display: block;
+
+	text-decoration: none;
 }
 
 ul
 {
-    list-style-type: none;
+	list-style-type: none;
 }

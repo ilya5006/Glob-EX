@@ -1,30 +1,35 @@
-let allBaners = document.querySelectorAll(".banners > .banner");
+"use strict";
 
-let button;
-for (let i = 0; i < allBaners.length; i++)
+var allBaners = document.querySelectorAll(".banners > .banner");
+var button;
+for (var i = 0; i < allBaners.length; i++) 
 {
+
     button = document.createElement('div');
     button.classList.add('button');
-    button.addEventListener('click', function() { bannersHide(i); });
+    button.addEventListener('click', function () 
+    {
+        bannersHide(i);
+    });
     document.querySelector(".banners > .buttons").appendChild(button);
 }
 
 let allButtons = document.querySelectorAll(".banners > .buttons > .button");
 
-function bannersHide(param)
+function bannersHide(param) 
 {
-    for (let i = 0; i < allBaners.length; i++)
-    {
-        if (param != i)
+    for (var i = 0; i < allBaners.length; i++) {
+        if (param != i) 
         {
             allBaners[i].classList.add('hide');
             allButtons[i].classList.remove('active');
-        }
-        else
+        } 
+        else 
         {
             allBaners[i].classList.remove('hide');
             allButtons[i].classList.add('active');
         }
     }
 }
+
 bannersHide(0);
