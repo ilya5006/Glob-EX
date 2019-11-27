@@ -326,6 +326,20 @@
 	height: 100%;
 }
 
+.cat_fold p, .cat_fold a
+{
+	color: #000000;
+	font-size: 14px;
+	line-height: 16px;
+
+	display: inline-block;
+}
+
+.cat_fold p span
+{
+	color: #E31E24;
+}
+
 @media screen and (max-width: 750px)
 {
 	.catalg_view
