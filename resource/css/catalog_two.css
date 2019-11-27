@@ -81,6 +81,7 @@
 .catalog_two > .catalog_list > .catalog .cat p,
 .catalog_two > .catalog_list > .catalog .cat a
 {
+    text-transform: uppercase;
     margin-left: 25px;
 }
 
