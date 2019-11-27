@@ -340,4 +340,8 @@
 	{
 		width: auto;
 	}
+	.filters
+	{
+		padding-right: 0;
+	}
 }
