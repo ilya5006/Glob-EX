@@ -5,7 +5,7 @@
             <li> <a href="#" class="exception"><span>Политика конфиденциальности</span></a></li>
         </ul>
         <ul>
-            <li><a href="#">Каталог</a></li>
+            <li><a href="#" class="catalog_expand_button">Каталог</a></li>
             <li><a href="#">Канцелярия</a></li>
             <li><a href="#">Хозтовар</a></li>
             <li><a href="#">Мебель</a></li>
