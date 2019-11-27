@@ -6,26 +6,35 @@
 
 .filters
 {
-	width: 30%;
 	display: flex;
 	flex-flow: column nowrap;
+
+	width: 30%;
 	padding-right: 50px;
 }
 
 .filters > .price-filter > .price-input
 {
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
 	flex-flow: row nowrap;
+	justify-content: space-between;
+
 	margin-bottom: 25px;
+}
+
+.filters > .price-filter > .price-input > p
+{
+	font-weight: bold;
 }
 
 .filters > .price-filter > .price-input > input
 {
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	padding: 2px 10px;
-	height: 28px;
 	width: 45%;
+	height: 28px;
+	padding: 2px 10px;
+
+	border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .filters > .price-filter > #slider
@@ -33,12 +42,110 @@
 	height: 7px;
 }
 
-.filters > .price-filter > p
+.filters > .price-filter > p, .filter > p
 {
-	text-transform: uppercase;
-	margin: 15px;
 	font-weight: bold;
+
+	margin: 15px;
+
+	text-transform: uppercase;
 }
+
+.filter
+{
+	margin-top: 25px;
+}
+
+.filter > ul > li
+{
+	padding-right: 15px;
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+.filter > ul > li > label > p
+{
+	margin-top: 5px;
+}
+
+.filter_button
+{
+	cursor: pointer;
+    margin-left: 15px;
+    font-weight: bold;
+}
+/* The container */
+.container
+{
+	font-size: 14px;
+	width: 100%;
+	position: relative;
+
+	display: block;
+
+	margin-bottom: 12px;
+	padding-left: 35px;
+
+	cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.container input
+{
+	position: absolute;
+
+	width: 0;
+	height: 0;
+
+	cursor: pointer;
+
+	opacity: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 21px;
+	height: 21px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark
+{
+	background-color: #FFFFFF;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark
+{
+	border: 0;
+	background-color: #E31E25;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after
+{
+	top: 5px;
+	left: 9px;
+
+	width: 5px;
+	height: 10px;
+
+	transform: rotate(45deg);
+
+	border: solid white;
+	border-width: 0 3px 3px 0;
+}
+/*asdas*/
+
 .products
 {
 	width: 70%;
@@ -56,6 +163,7 @@
 
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
+
 .catalg_view .sort img
 {
 	width: 30px;
@@ -72,6 +180,7 @@
 .catalg_view .sort img.active
 {
 	opacity: 1;
+
 	filter: grayscale(0);
 }
 
@@ -110,8 +219,8 @@
 
 .catalg_view .pagination li
 {
-    display: flex;
-    flex-flow: row nowrap;
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 .catalg_view .pagination li a
@@ -129,23 +238,29 @@
 
 .catalg_view .pagination li:first-child::before
 {
+	margin-right: 5px;
+
 	content: "<";
-    margin-right: 5px;
+
 	color: #000000;
 }
 
 .catalg_view .pagination li:last-child::before
 {
+	margin: 0 2px;
+
 	content: "... ";
-    opacity: 0.4;
-    margin: 0 2px;
+
+	opacity: 0.4;
 	color: #000000;
 }
 
 .catalg_view .pagination li:last-child::after
 {
+	margin-left: 5px;
+
 	content: ">";
-    margin-left: 5px;
+
 	color: #000000;
 }
 
@@ -166,16 +281,18 @@
 
 .list-products
 {
-    margin-top: 25px;
+	margin-top: 25px;
 }
 
 .list-products .product.box
 {
-    justify-self: stretch;
-    align-self: stretch;
-    min-width: auto;
-    width: 100%;
-    flex-grow: 1;
+	align-self: stretch;
+	flex-grow: 1;
+
+	width: 100%;
+	min-width: auto;
+
+	justify-self: stretch;
 }
 
 .list-products .product

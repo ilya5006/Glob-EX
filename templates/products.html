@@ -103,6 +103,64 @@
                     </div>
                     <div id="slider"></div>
                 </div>
+                <div class="filter">
+                    <p>Бренд</p>
+                    <ul>
+                        <li>
+                            <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                            <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                            <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                            <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                            <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                            <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter">
+                        <p>Бренд</p>
+                        <ul>
+                            <li>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter">
+                            <p>Бренд</p>
+                            <ul>
+                                <li>
+                                    <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                    <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                    <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                    <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                    <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                    <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter">
+                                <p>Бренд</p>
+                                <ul>
+                                    <li>
+                                        <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                        <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                        <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                        <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                        <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                        <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                        <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                        <label class="container"> <p>Бренд</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                                    </li>
+                                </ul>
+                            </div>
             </div>
             <script>
                 let slider = document.getElementById('slider');
@@ -137,6 +195,61 @@
                 priceMax.addEventListener('change', function () 
                 {
                     slider.noUiSlider.set([slider.noUiSlider.get()[0], this.value]);
+                });
+
+                // filters
+                let buttoCreated;
+                let allFilters = document.querySelectorAll('.filters .filter');
+                allFilters.forEach(function(element)
+                {
+                    let buttoCreated = false;
+                    for (let i = 0; i < element.querySelectorAll('label').length; i++)
+                    {
+                        if (i > 5)
+                        {
+                            element.querySelectorAll('label')[i].style.display = 'none';
+                            
+                            if (buttoCreated == false)
+                            {
+                                let buttonExpandFilter = document.createElement('div');
+                                buttonExpandFilter.textContent = "Показать всё";
+                                buttonExpandFilter.classList.add('filter_button');
+                                let isShow = false;
+                                buttonExpandFilter.addEventListener('click', function()
+                                {
+                                    if (isShow == false)
+                                    {
+                                        for (let i = 0; i < element.querySelectorAll('label').length; i++)
+                                        {
+                                            if (i > 5)
+                                            {
+                                                element.querySelectorAll('label')[i].style.display = 'block';
+                                            }   
+                                        }
+                                        isShow = true;
+                                        buttonExpandFilter.textContent = "Скрыть";
+                                    }
+                                    else
+                                    {
+                                        for (let i = 0; i < element.querySelectorAll('label').length; i++)
+                                        {
+                                            if (i > 5)
+                                            {
+                                                element.querySelectorAll('label')[i].style.display = 'none';
+                                            }   
+                                        }
+                                        isShow = false;
+                                        buttonExpandFilter.textContent = "Показать всё";
+                                    }
+                                })
+                                element.appendChild(buttonExpandFilter)
+                                console.log('создало нахуй');
+                                
+                                buttoCreated = true;
+                            }
+                        }
+                    }
+
                 });
             </script>
             <div class="products">
