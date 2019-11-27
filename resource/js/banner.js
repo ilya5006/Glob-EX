@@ -2,7 +2,7 @@
 
 var allBaners = document.querySelectorAll(".banners > .banner");
 var button;
-for (var i = 0; i < allBaners.length; i++) 
+for (let i = 0; i < allBaners.length; i++) 
 {
 
     button = document.createElement('div');
@@ -14,20 +14,21 @@ for (var i = 0; i < allBaners.length; i++)
     document.querySelector(".banners > .buttons").appendChild(button);
 }
 
-let allButtons = document.querySelectorAll(".banners > .buttons > .button");
+var allButtons = document.querySelectorAll(".banners > .buttons > .button");
 
 function bannersHide(param) 
 {
-    for (var i = 0; i < allBaners.length; i++) {
-        if (param != i) 
+    for (let j = 0; j < allBaners.length; j++) 
+    {
+        if (param != j) 
         {
-            allBaners[i].classList.add('hide');
-            allButtons[i].classList.remove('active');
+            allBaners[j].classList.add('hide');
+            allButtons[j].classList.remove('active');
         } 
         else 
         {
-            allBaners[i].classList.remove('hide');
-            allButtons[i].classList.add('active');
+            allBaners[j].classList.remove('hide');
+            allButtons[j].classList.add('active');
         }
     }
 }
