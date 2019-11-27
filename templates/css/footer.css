@@ -33,6 +33,8 @@
 
 	position: relative;
 
+	display: inline-block;
+
 	margin: 10px;
 
 	text-transform: uppercase;
@@ -89,6 +91,10 @@
 	{
 		flex-flow: column wrap;
 		justify-content: center;
+	}
+	.footer > .content > ul
+	{
+		align-items: center;
 	}
 	.footer > .content > ul.logo
 	{
