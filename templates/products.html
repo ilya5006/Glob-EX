@@ -212,7 +212,7 @@
                             if (buttoCreated == false)
                             {
                                 let buttonExpandFilter = document.createElement('div');
-                                buttonExpandFilter.textContent = "Показать всё";
+                                buttonExpandFilter.textContent = ">";
                                 buttonExpandFilter.classList.add('filter_button');
                                 let isShow = false;
                                 buttonExpandFilter.addEventListener('click', function()
@@ -227,7 +227,7 @@
                                             }   
                                         }
                                         isShow = true;
-                                        buttonExpandFilter.textContent = "Скрыть";
+                                        buttonExpandFilter.textContent = "<";
                                     }
                                     else
                                     {
@@ -239,12 +239,10 @@
                                             }   
                                         }
                                         isShow = false;
-                                        buttonExpandFilter.textContent = "Показать всё";
+                                        buttonExpandFilter.textContent = ">";
                                     }
                                 })
-                                element.appendChild(buttonExpandFilter)
-                                console.log('создало нахуй');
-                                
+                                element.querySelector('p').appendChild(buttonExpandFilter)
                                 buttoCreated = true;
                             }
                         }
