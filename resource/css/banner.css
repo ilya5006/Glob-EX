@@ -1,0 +1,123 @@
+.banners
+{
+	position: relative;
+}
+
+.banners > .banner
+{
+	position: relative;
+}
+
+.banners > .banner > img
+{
+	position: relative;
+
+	display: block;
+
+	width: 100%;
+}
+
+.banners > .banner::after
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	content: "";
+
+	background: linear-gradient(to right, rgba(246,41,12,1) 0%, rgba(240,47,23,0.84) 16%, rgba(255,255,255,0.54) 46%, rgba(255,255,255,0.21) 79%, rgba(255,255,255,0) 100%);
+}
+
+.banners > .banner p
+{
+	font-size: 68px;
+	font-weight: bold;
+
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+
+	margin: 55px;
+
+	color: #FFFFFF;
+	text-shadow: 3px 3px 0px red;
+}
+
+.banners > .buttons
+{
+	position: absolute;
+;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: center;
+
+	width: 100%;
+	min-height: 10px;
+}
+
+.banners > .buttons > .button
+{
+	width: 10px;
+	height: 10px;
+	margin: 15px 10px;
+
+	cursor: pointer;
+	transition: 0.3s all;
+
+	opacity: 0.7;
+	border-radius: 100%;
+	background-color: #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banners > .buttons > .button.active
+{
+	width: 13px;
+	height: 13px;
+
+	opacity: 1;
+}
+
+@media screen and (max-width: 1200px)
+{
+	.banners > .banner p
+	{
+		font-size: 56px;
+
+		margin: 25px;
+	}
+}
+
+@media screen and (max-width: 750px)
+{
+	.banners > .banner p
+	{
+		font-size: 7vw;
+
+		width: 100%;
+		margin: 15px 5px;
+
+		text-align: center;
+
+		text-shadow: 1px 1px 0px red;
+	}
+	.banners > .buttons > .button
+	{
+		width: 5px;
+		height: 5px;
+	}
+	.banners > .buttons > .button.active
+	{
+		width: 7px;
+		height: 7px;
+	}
+}
