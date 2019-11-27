@@ -149,9 +149,69 @@
                     <li> <a href="#">4</a></li>
                     <li> <a href="#">5</a></li>
                 </ul>
+
+                <div class="list-products">
+                    <div class="product box">
+                        <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
+                        <p class="product-name">Имя продуктв</p>
+                        <p class="old-price">500р</p>
+                        <p class="new-price">375р</p>
+                        <p class="sale">25</p>
+                        <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
+                        <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
+                    </div>
+                    <div class="product box">
+                            <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
+                            <p class="product-name">Имя продуктв</p>
+                            <p class="old-price">500р</p>
+                            <p class="new-price">375р</p>
+                            <p class="sale">25</p>
+                            <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
+                            <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
+                        </div>
+                        <div class="product box">
+                                <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
+                                <p class="product-name">Имя продуктв</p>
+                                <p class="old-price">500р</p>
+                                <p class="new-price">375р</p>
+                                <p class="sale">25</p>
+                                <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
+                                <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
+                            </div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        let sortBlock = document.querySelector('#sort-block');
+        let sortHor = document.querySelector('#sort-hor');
+        let listProduct = document.querySelector('.list-products');
+        
+        function setBlock()
+        {
+            listProduct.style.display = 'grid';
+            listProduct.style.gridGap = '15px';
+            listProduct.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
+            sortBlock.classList.add('active');
+            sortHor.classList.remove('active');
+        }
+
+        function setHor()
+        {
+        }
+
+        sortBlock.addEventListener('click', function()
+        {
+            setBlock();
+        });
+
+        sortHor.addEventListener('click', function()
+        {
+            setHor();
+        });
+
+        setBlock();
+    </script>
     <!-- КОНЕЦ ТОВАРОВ -->
 
     <!-- НАЧАЛО ФУТЕРА -->

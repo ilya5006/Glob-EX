@@ -39,6 +39,12 @@
 	filter: grayscale(1);
 }
 
+.catalg_view .sort img.active
+{
+	opacity: 1;
+	filter: grayscale(0);
+}
+
 .catalg_view .sort p
 {
 	flex-grow: 1;
@@ -138,4 +144,23 @@
 	{
 		width: 100%;
 	}
+}
+
+.list-products
+{
+    margin-top: 25px;
+}
+
+.list-products .product.box
+{
+    justify-self: stretch;
+    align-self: stretch;
+    min-width: auto;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.list-products .product
+{
+	height: 100%;
 }
