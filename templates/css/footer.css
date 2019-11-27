@@ -35,10 +35,14 @@
 
 	margin: 10px;
 
-	text-align: center;
 	text-transform: uppercase;
 
 	color: #000000;
+}
+
+.footer > .content > ul > li > a.tel, .footer > .content > ul > li > a.email
+{
+	text-align: right;
 }
 
 .footer > .content > ul > li > a > span
@@ -99,6 +103,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+	.footer > .content > ul > li > a, .footer > .content > ul > li > a.tel, .footer > .content > ul > li > a.email
+	{
+		text-align: center;
 	}
 }
 
