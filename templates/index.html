@@ -91,9 +91,44 @@
     <!-- НАЧАЛО БАНЕРА -->
     <div class="content">
         <div class="banners">
-            <div class="banner"><img src="./img/banners/banner1.png" alt="banner"> <p>КАНЦЕЛЯРСКИЕ <br> ТОВАРЫ</p> </div>
+            <div class="buttons"></div>
+            <div class="banner"><img src="./img/banners/banner1.png" alt="banner"> <p>КАНЦЕЛЯРСКИЕ <br> ТОВАРЫ 1</p> </div>
+            <div class="banner"><img src="./img/banners/banner1.png" alt="banner"> <p>КАНЦЕЛЯРСКИЕ <br> ТОВАРЫ 2</p> </div>
+            <div class="banner"><img src="./img/banners/banner1.png" alt="banner"> <p>КАНЦЕЛЯРСКИЕ <br> ТОВАРЫ 3</p> </div>
+            <div class="banner"><img src="./img/banners/banner1.png" alt="banner"> <p>КАНЦЕЛЯРСКИЕ <br> ТОВАРЫ 4</p> </div>
         </div>
     </div>
+
+    <script>
+        let allBaners = document.querySelectorAll(".banners > .banner");
+
+        function bannersHide(param)
+        {
+            for (let i = 0; i < allBaners.length; i++)
+            {
+                if (param != i)
+                {
+                    allBaners[i].classList.add('hide');
+                }
+                else
+                {
+                    allBaners[i].classList.remove('hide');
+                }
+            }
+        }
+
+        bannersHide(0);
+        
+        let button;
+        for (let i = 0; i < allBaners.length; i++)
+        {
+            button = document.createElement('div');
+            button.classList.add('button');
+            button.addEventListener('click', function() { bannersHide(i) });
+            document.querySelector(".banners > .buttons").appendChild(button);
+        }
+
+    </script>
     <!-- КОНЕЦ БАНЕРА -->
 
     <!-- СКРИПТ ДЛЯ МЕНЮ В ХЕАДЕРЕ -->
@@ -110,7 +145,7 @@
             }
         });
 
-        document.querySelectorAll('.cat_1').forEach((element) => 
+        document.querySelectorAll('.cat_1').forEach(function (element) 
         {
             element.addEventListener('mouseenter', function () 
             {
