@@ -1,0 +1,68 @@
+.banners > .banner
+{
+	position: relative;
+}
+
+.banners > .banner > img
+{
+	position: relative;
+
+	display: block;
+
+	width: 100%;
+}
+
+.banners > .banner::after
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	content: "";
+
+	background: linear-gradient(to right, rgba(246,41,12,1) 0%, rgba(240,47,23,0.84) 16%, rgba(255,255,255,0.54) 46%, rgba(255,255,255,0.21) 79%, rgba(255,255,255,0) 100%);
+}
+
+.banners > .banner p
+{
+	font-size: 68px;
+	font-weight: bold;
+
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+
+	margin: 55px;
+
+	color: #FFFFFF;
+	text-shadow: 3px 3px 0px red;
+}
+
+@media screen and (max-width: 1200px)
+{
+	.banners > .banner p
+	{
+		font-size: 56px;
+
+		margin: 25px;
+	}
+}
+
+@media screen and (max-width: 750px)
+{
+	.banners > .banner p
+	{
+		font-size: 8vw;
+
+		width: 100%;
+		margin: 15px 5px;
+
+		text-align: center;
+
+		text-shadow: 1px 1px 0px red;
+	}
+}
