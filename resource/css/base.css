@@ -40,5 +40,11 @@ ul
 
 img
 {
-	object-fit: contain;
+	-o-object-fit: contain;
+	   object-fit: contain;
+}
+
+.catalog_expand_button
+{
+	cursor: pointer;
 }
