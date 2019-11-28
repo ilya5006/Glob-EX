@@ -44,7 +44,6 @@
                 {
                     $specsId = $reader->getAttribute('id');
                     $specs[$specsId]['name'] = $reader->getAttribute('name');
-                    $specs[$specsId]['id'] = $reader->getAttribute('id');
                 }
 
                 $reader->read();
