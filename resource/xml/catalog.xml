@@ -1,2 +1,41 @@
 <?xml version="1.0" encoding="windows-1251"?>
-<data><brands><value name="DOLCE COSTO" id="1" image="C:\Картинки и баннеры\Логотипы\1.jpg"/><value name="LAMARK" id="2" image="C:\Картинки и баннеры\Логотипы\2.jpg"/></brands><Country><value name="Китай" id="2"/><value name="Россия" id="1"/></Country><specs><value name="Количество пробиваемых листов:" id="1"/><value name="Материал корпуса:" id="2"/></specs><partitions><value name="Канцелярские товары" technical_name="Kancelyarskie_tovary" id="3296" top_id="" sort="0" banner="" image1="C:\Картинки и баннеры\Фото\3296.jpg" image2=""><specs/></value><value name="Дыроколы" technical_name="Dyrokoly" id="3297" top_id="3296" sort="0" banner="" image1="C:\Картинки и баннеры\Фото\3297.jpg" image2=""><specs><spec id="1"/><spec id="2"/></specs></value><value name="Хозяйственные товары" technical_name="Хозяйственные товары" id="3300" top_id="" sort="0" banner="" image1="" image2=""><specs/></value></partitions><nomeklatura><value name="Дырокол на 20 листов DOLCE COSTO синий, метал.корпус, с линейкой" technical_name="Dyrokol_na_20_listov_DOLCE_COSTO_sinii,_metal.korpus,_s_lineikoi" id="3298" top_id="3297" sort="0" brand="1" country="1" price="102.31" unit="шт" image1="C:\Картинки и баннеры\Фото\3298.jpg" image2="" image3="" image4="" image5=""><specs/><spec id="1" value="20 листов"/><spec id="2" value="Металл"/></value><value name="Дырокол на 30 листов LAMARK металл., с линейкой синий  PN0150-BL" technical_name="Dyrokol_na_30_listov_LAMARK_metall.,_s_lineikoi_sinii__PN0150-BL" id="3299" top_id="3297" sort="0" brand="2" country="2" price="310.284" unit="шт" image1="C:\Картинки и баннеры\Фото\3299.jpg" image2="" image3="" image4="" image5=""><specs/><spec id="1" value="30 листов"/><spec id="2" value="Металл"/></value></nomeklatura></data>
+<data>
+    <brands>
+        <value name="DOLCE COSTO" id="1" image="C:\Картинки и баннеры\Логотипы\1.jpg"/>
+        <value name="LAMARK" id="2" image="C:\Картинки и баннеры\Логотипы\2.jpg"/>
+    </brands>
+    <Country>
+        <value name="Китай" id="2"/>
+        <value name="Россия" id="1"/>
+    </Country>
+    <specs>
+        <value name="Количество пробиваемых листов:" id="1"/>
+        <value name="Материал корпуса:" id="2"/>
+    </specs>
+    <partitions>
+        <value name="Канцелярские товары" technical_name="Kancelyarskie_tovary" id="3296" top_id="" sort="0" banner="" image1="C:\Картинки и баннеры\Фото\3296.jpg" image2="">
+            <specs/>
+        </value>
+        <value name="Дыроколы" technical_name="Dyrokoly" id="3297" top_id="3296" sort="0" banner="" image1="C:\Картинки и баннеры\Фото\3297.jpg" image2="">
+            <specs>
+                <spec id="1"/>
+                <spec id="2"/>
+            </specs>
+        </value>
+        <value name="Хозяйственные товары" technical_name="Хозяйственные товары" id="3300" top_id="" sort="0" banner="" image1="" image2="">
+            <specs/>
+        </value>
+    </partitions>
+    <nomeklatura>
+        <value name="Дырокол на 20 листов DOLCE COSTO синий, метал.корпус, с линейкой" technical_name="Dyrokol_na_20_listov_DOLCE_COSTO_sinii,_metal.korpus,_s_lineikoi" id="3298" top_id="3297" sort="0" brand="1" country="1" price="102.31" unit="шт" image1="C:\Картинки и баннеры\Фото\3298.jpg" image2="" image3="" image4="" image5="">
+            <specs/>
+            <spec id="1" value="20 листов"/>
+            <spec id="2" value="Металл"/>
+        </value>
+        <value name="Дырокол на 30 листов LAMARK металл., с линейкой синий  PN0150-BL" technical_name="Dyrokol_na_30_listov_LAMARK_metall.,_s_lineikoi_sinii__PN0150-BL" id="3299" top_id="3297" sort="0" brand="2" country="2" price="310.284" unit="шт" image1="C:\Картинки и баннеры\Фото\3299.jpg" image2="" image3="" image4="" image5="">
+            <specs/>
+            <spec id="1" value="30 листов"/>
+            <spec id="2" value="Металл"/>
+        </value>
+    </nomeklatura>
+</data>
