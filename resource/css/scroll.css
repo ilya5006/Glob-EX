@@ -107,12 +107,12 @@
 	height: 100%;
 }
 
-.product > a, .product > a > img
+.product > a, .scroll > .product > a > img
 {
 	width: 100%;
 }
 
-.scroll > .product:last-child::before
+.product:last-child::before
 {
 	width: 105%;
 	height: 1px;
