@@ -130,7 +130,7 @@
 .product_info .act .brand
 {
 	font-size: 17px;
-
+    margin-bottom: 15px;;
 	text-transform: uppercase;
 
 	color: #9D9A9A;
@@ -219,6 +219,24 @@
 
 @media screen and (max-width: 750px)
 {
+    .act
+    {
+        text-align: center;
+    }
+    .product_info .act form
+    {
+        flex-flow: column wrap;
+    }
+    .product_info .act input[type="number"], .product_info .act input[type="submit"]
+    {
+        margin-left: unset;
+        width: 100%;
+    }
+    .product_info .act input[type="number"]
+    {
+        margin-bottom: 15px;
+        width: 150px;
+    }
 	.product_info .pictures
 	{
 		order: unset;
@@ -228,8 +246,9 @@
 	.product_info .info
 	{
 		order: unset;
-
-		min-width: 100%;
+        margin: unset;
+        min-width: 100%;
+        margin-bottom: 25px;
 	}
 	.product_info .act
 	{
@@ -239,6 +258,7 @@
 	}
 	.product_info
 	{
+        
 		flex-flow: column nowrap;
 	}
 	.product_info .info, .detail
