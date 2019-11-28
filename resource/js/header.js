@@ -47,3 +47,16 @@ document.body.addEventListener('click', function ()
         document.querySelector('.expand-catalog').classList.add('hide');
     }
 }, true);
+
+document.querySelector('#login_button').addEventListener('click', function(e)
+{
+    e.preventDefault();
+    document.querySelector('#modal_authorize').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+});
+
+document.querySelector('#close_modal').addEventListener('click', function()
+{
+    document.querySelector('#modal_authorize').style.display = 'none';
+    document.body.style.overflow = 'scroll';
+});

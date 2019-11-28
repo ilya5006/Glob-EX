@@ -562,3 +562,57 @@
 	display: -ms-flexbox;
 	display: flex;
 }
+
+#modal_authorize
+{
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+
+	display: none;
+
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+#modal_authorize .modal
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	width: 500px;
+	height: 300px;
+
+	transform: translate(-50%, -50%);
+
+	background-color: #FFFFFF;
+}
+
+#modal_authorize .modal #close_modal
+{
+	font-size: 46px;
+
+	width: 100%;
+	padding: 5px 20px 5px 5px;
+
+	text-align: right;
+}
+
+#modal_authorize .modal form
+{
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	flex-grow: 1;
+	justify-content: center;
+}
+
+#login_button, #close_modal
+{
+	cursor: pointer;
+}

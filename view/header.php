@@ -61,8 +61,19 @@
             <ul>
                 <li><a href="#"><img src="./resource/img/icons/favourite.svg" alt="favorite"></a></li>
                 <li><a href="#"><img src="./resource/img/icons/cart.svg" alt="cart"></a></li>
-                <li class="account"><a href="#"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти</p></a></li>
+                <li class="account"><a id="login_button"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти</p></a></li>
             </ul>
         </div>
     </div>
 </header>
+
+<div id="modal_authorize">
+    <div class="modal">
+        <p id="close_modal"> x </p>
+        <form action="" class="login">
+            <input type="text">
+            <input type="password">
+            <input type="submit" value="войти">
+        </form>
+    </div>
+</div>
