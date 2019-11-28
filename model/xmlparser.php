@@ -1,4 +1,8 @@
 <?php
+    function isElement($type)
+    {
+        return $type == XMLReader::ELEMENT;
+    }
 
     $reader = new XMLReader();
     $reader->open('../resource/xml/catalog.xml');
@@ -6,19 +10,15 @@
 
     while ($reader->read())
     {
-        if ($reader->nodeType == XMLReader::ELEMENT && $reader->name == 'brands')
+        if (isElement($reader->nodeType) && $reader->name == 'brands')
         {
-            $shit2 = $reader->readInnerXml();
-
-            var_dump($shit2);
-
             $reader->read();
 
             $brands = [];
 
             while ($reader->name != 'brands')
             {
-                if ($reader->nodeType == XMLReader::ELEMENT)
+                if (isElement($reader->nodeType))
                 {
                     $brandId = $reader->getAttribute('id');
                     $brands[$brandId]['name'] = $reader->getAttribute('name');
@@ -32,7 +32,7 @@
         }
     }
 
-    // echo '<pre>';
-    //     echo var_export($allData);
-    // echo '</pre>';
+    echo '<pre>';
+        echo var_export($allData);
+    echo '</pre>';
 ?>
