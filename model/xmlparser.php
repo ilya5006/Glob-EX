@@ -10,6 +10,7 @@
 
     while ($reader->read())
     {
+        //brands
         if (isElement($reader->nodeType) && $reader->name == 'brands')
         {
             $reader->read();
@@ -29,6 +30,114 @@
             }
 
             $allData['brands'] = $brands;
+        }
+        //specs
+        if (isElement($reader->nodeType) && $reader->name == 'specs')
+        {
+            $reader->read();
+
+            $specs = [];
+
+            while ($reader->name != 'specs')
+            {
+                if (isElement($reader->nodeType))
+                {
+                    $specsId = $reader->getAttribute('id');
+                    $specs[$specsId]['name'] = $reader->getAttribute('name');
+                    $specs[$specsId]['id'] = $reader->getAttribute('id');
+                }
+
+                $reader->read();
+            }
+
+            $allData['specs'] = $specs;
+        }
+        //country
+        if (isElement($reader->nodeType) && $reader->name == 'Country')
+        {
+            $reader->read();
+
+            $country = [];
+
+            while ($reader->name != 'Country')
+            {
+                if (isElement($reader->nodeType))
+                {
+                    $countryId = $reader->getAttribute('id');
+                    $country[$countryId]['name'] = $reader->getAttribute('name');
+                }
+
+                $reader->read();
+            }
+
+            $allData['country'] = $country;
+        }
+        //partitions
+        if (isElement($reader->nodeType) && $reader->name == 'partitions')
+        {
+            $reader->read();
+
+            $partitions = [];
+
+            while ($reader->name != 'partitions')
+            {
+                if (isElement($reader->nodeType))
+                {
+                    if ($reader->name == 'value')
+                    {
+                        $partitionsId = $reader->getAttribute('id');
+                        $partitions[$partitionsId]['name'] = $reader->getAttribute('name');
+                        $partitions[$partitionsId]['technical_name'] = $reader->getAttribute('technical_name');
+                        $partitions[$partitionsId]['top_id'] = $reader->getAttribute('top_id');
+                        $partitions[$partitionsId]['sort'] = $reader->getAttribute('sort');
+                        $partitions[$partitionsId]['banner'] = $reader->getAttribute('banner');
+                        $partitions[$partitionsId]['image1'] = $reader->getAttribute('image1');
+                    }
+                    if ($reader->name == 'spec')
+                    {
+                        $value = $reader->getAttribute('id');
+                        $partitions[$partitionsId]['specs'][$reader->getAttribute('id')] = $reader->getAttribute('value');
+                    }
+                }
+
+                $reader->read();
+            }
+
+            $allData['partitions'] = $partitions;
+        }
+        //nomeklatura
+        if (isElement($reader->nodeType) && $reader->name == 'nomeklatura')
+        {
+            $reader->read();
+
+            $nomeklatura = [];
+
+            while ($reader->name != 'nomeklatura')
+            {
+                if (isElement($reader->nodeType))
+                {
+                    if ($reader->name == 'value')
+                    {
+                        $nomeklaturaId = $reader->getAttribute('id');
+                        $nomeklatura[$nomeklaturaId]['name'] = $reader->getAttribute('name');
+                        $nomeklatura[$nomeklaturaId]['technical_name'] = $reader->getAttribute('technical_name');
+                        $nomeklatura[$nomeklaturaId]['top_id'] = $reader->getAttribute('top_id');
+                        $nomeklatura[$nomeklaturaId]['sort'] = $reader->getAttribute('sort');
+                        $nomeklatura[$nomeklaturaId]['banner'] = $reader->getAttribute('banner');
+                        $nomeklatura[$nomeklaturaId]['unit'] = $reader->getAttribute('unit');
+                        $nomeklatura[$nomeklaturaId]['image1'] = $reader->getAttribute('image1');
+                    }
+                    if ($reader->name == 'spec')
+                    {
+                        $value = $reader->getAttribute('id');
+                        $nomeklatura[$nomeklaturaId]['specs'][$reader->getAttribute('id')] = $reader->getAttribute('value');
+                    }
+                }
+
+                $reader->read();
+            }
+
+            $allData['nomeklatura'] = $nomeklatura;
         }
     }
 
