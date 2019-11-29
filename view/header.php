@@ -69,7 +69,7 @@
 <div id="modal_authorize">
     <div class="modal">
         <p id="close_modal"> x </p>
-        <form action="" class="login">
+        <form action="../model/login.php" class="login">
             <input type="text">
             <input type="password">
             <input type="submit" value="войти">
