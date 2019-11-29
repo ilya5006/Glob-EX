@@ -7,7 +7,7 @@
     <div class="scroll">
         <div class="product">
             <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-            <p class="product-name">Имя продуктв</p>
+            <p class="product-name">Имя продукта</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
@@ -16,7 +16,7 @@
         </div>
         <div class="product">
             <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-            <p class="product-name">Имя продуктв</p>
+            <p class="product-name">Имя продукта</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
@@ -25,7 +25,7 @@
         </div>
         <div class="product">
             <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-            <p class="product-name">Имя продуктв</p>
+            <p class="product-name">Имя продукта</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
@@ -34,7 +34,7 @@
         </div>
         <div class="product">
             <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-            <p class="product-name">Имя продуктв</p>
+            <p class="product-name">Имя продукта</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
@@ -43,7 +43,7 @@
         </div>
         <div class="product">
             <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-            <p class="product-name">Имя продуктв</p>
+            <p class="product-name">Имя продукта</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
@@ -52,7 +52,7 @@
         </div>
         <div class="product">
             <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-            <p class="product-name">Имя продуктв</p>
+            <p class="product-name">Имя продукта</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>
@@ -61,7 +61,7 @@
         </div>
         <div class="product">
             <a href="#"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-            <p class="product-name">Имя продуктв</p>
+            <p class="product-name">Имя продукта</p>
             <p class="old-price">500р</p>
             <p class="new-price">375р</p>
             <p class="sale">25</p>

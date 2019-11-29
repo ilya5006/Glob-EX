@@ -2,7 +2,7 @@
     <div class="content">
         <ul class="logo">
             <li><a href="#" class="exception"><img src="./resource/img/logo.svg" alt="logo"></a></li>
-            <li><a href="#" class="exception"><span>ПОЛИТИКА КОНФЕДЕНЦИАЛЬНОСТИs</span></a></li>
+            <li><a href="#" class="exception"><span>ПОЛИТИКА КОНФЕДЕНЦИАЛЬНОСТИ</span></a></li>
         </ul>
         <ul>
             <li><a href="#" class="catalog_expand_button">КАТАЛОГ</a></li>
