@@ -3,7 +3,7 @@
     <div class="catalog_two">
         <div class="cat_fold"><p class="catalog_expand_button">Каталог</p>
             <p><span> &#92; Канцелярские товары </span></p></div>
-        <h2> Канцелярское чточто</h2>
+        <h2> Канцелярское товары</h2>
         <div class="catalog_list">
 
             <div class="catalog">
