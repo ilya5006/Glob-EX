@@ -69,10 +69,17 @@
 <div id="modal_authorize">
     <div class="modal">
         <p id="close_modal"> x </p>
+        <div class="type_auth"> <p id='log_form' class="active"> ВОЙТИ </p> <p id="reg_form"> РЕГИСТРАЦИЯ</p></div>
         <form action="../model/login.php" class="login">
             <input type="text">
             <input type="password">
             <input type="submit" value="войти">
+        </form>
+        <form action="../model/login.php" class="register" style="display: none">
+            <p> Авторизация </p>
+            <input type="text">
+            <input type="password">
+            <input type="submit" value="регистрация">
         </form>
     </div>
 </div>
