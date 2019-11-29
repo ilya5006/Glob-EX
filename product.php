@@ -14,19 +14,19 @@
     <link rel="stylesheet" href="./resource/css/footer.css">
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/product.js" defer></script>
-    <script src="./resource/js/slider.js" defer></script>  
+    <script src="./resource/js/slider.js" defer></script>
 </head>
 <body>
 
-    <?php require(__DIR__ . '/view/header.php'); ?>
+<?php require(__DIR__ . '/view/header.php'); ?>
 
-    <?php require(__DIR__ . '/view/product.php'); ?>
+<?php require(__DIR__ . '/view/product.php'); ?>
 
-    <?php require(__DIR__ . '/view/sliderProducts.php'); ?>
+<?php require(__DIR__ . '/view/sliderProducts.php'); ?>
 
-    <?php require(__DIR__ . '/view/sliderBrands.php'); ?>
+<?php require(__DIR__ . '/view/sliderBrands.php'); ?>
 
-    <?php require(__DIR__ . '/view/footer.php'); ?>
+<?php require(__DIR__ . '/view/footer.php'); ?>
 
 </body>
 </html>

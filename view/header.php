@@ -3,21 +3,20 @@
         <div class="menu">
             <a href="#"><img src="./resource/img/logo.svg" alt="logo"></a>
             <ul>
-                <li> <a href="#">ДОСТАВКА</a> </li>
-                <li> <a href="#">ОПЛАТА</a> </li>
-                <li> <a href="#">КОНТАКТЫ</a> </li>
-                <li> <a href="#">ЗАДАТЬ ВОПРОС</a> </li>
-                <li> <a href="#">О КОМПАНИИ</a> </li>
-                <li> <a href="#" class="tel">8-495-380-42-88</a> </li>
+                <li><a href="#">ДОСТАВКА</a></li>
+                <li><a href="#">ОПЛАТА</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
+                <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
+                <li><a href="#">О КОМПАНИИ</a></li>
+                <li><a href="#" class="tel">8-495-380-42-88</a></li>
             </ul>
         </div>
         <div class="nav">
-            <button class="catalog" id="catalog"> <span>|||</span> КАТАЛОГ ТОВАРОВ</button>
+            <button class="catalog" id="catalog"><span>|||</span> КАТАЛОГ ТОВАРОВ</button>
 
             <div class="expand-catalog hide">
-                <a class="cat_1" href="#"> <img src="./resource/img/icons/percent.svg"> <p> АКЦИИ И СКИДКИ </p> </a>
-
-                <a class="cat_1" href="#"> <img src="./resource/img/icons/clip.svg"> <p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
+                <a class="cat_1" href="#"> <img src="./resource/img/icons/percent.svg"><p> АКЦИИ И СКИДКИ </p></a>
+                <a class="cat_1" href="#"> <img src="./resource/img/icons/clip.svg"><p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
                 <div class='expand-cat_2 hide'>
                     <ul>
                         <li><span>1</span></li>
@@ -56,7 +55,7 @@
 
             <form action="#">
                 <input type="search" placeholder="Поиск...">
-                <button> <img src="./resource/img/icons/search.svg" alt="search"> </button>
+                <button><img src="./resource/img/icons/search.svg" alt="search"></button>
             </form>
             <ul>
                 <li><a href="#"><img src="./resource/img/icons/favourite.svg" alt="favorite"></a></li>

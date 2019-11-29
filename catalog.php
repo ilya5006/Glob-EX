@@ -14,18 +14,17 @@
     <link rel="stylesheet" href="./resource/css/footer.css">
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/banner.js" defer></script>
-    <script src="./resource/js/slider.js" defer></script>  
+    <script src="./resource/js/slider.js" defer></script>
 </head>
 <body>
 
-    <?php require(__DIR__ . '/view/header.php'); ?>
+<?php require(__DIR__ . '/view/header.php'); ?>
 
-    <?php require(__DIR__ . '/view/banner.php'); ?>
+<?php require(__DIR__ . '/view/banner.php'); ?>
 
-    <?php require(__DIR__ . '/view/catalog_two.php'); ?>
+<?php require(__DIR__ . '/view/catalog_two.php'); ?>
 
-
-    <?php require(__DIR__ . '/view/footer.php'); ?>
+<?php require(__DIR__ . '/view/footer.php'); ?>
 
 </body>
 </html>

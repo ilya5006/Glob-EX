@@ -190,7 +190,7 @@
                 slider.noUiSlider.on('update', function (values, handle) 
                 {
                     priceMax.value = values[1];
-                })
+                });
                 priceMax.addEventListener('change', function () 
                 {
                     slider.noUiSlider.set([slider.noUiSlider.get()[0], this.value]);
@@ -240,8 +240,8 @@
                                         isShow = false;
                                         buttonExpandFilter.textContent = ">";
                                     }
-                                })
-                                element.querySelector('p').appendChild(buttonExpandFilter)
+                                });
+                                element.querySelector('p').appendChild(buttonExpandFilter);
                                 buttoCreated = true;
                             }
                         }

@@ -9,16 +9,16 @@ for (let i = 0; i < puctires.length; i++)
 }
 function showImage(param)
 {
-    for (let j = 0; j < puctires.length; j++) 
+    for (let j = 0; j < puctires.length; j++)
     {
-        if (param != j) 
+        if (param != j)
         {
             puctires[j].style.order = 'unset';
             puctires[j].classList.remove('big');
             puctires[j].classList.add('little');
 
-        } 
-        else 
+        }
+        else
         {
             puctires[j].style.order = '-1';
             puctires[j].classList.add('big');
@@ -35,7 +35,7 @@ for (let i = 0; i < allFeature.length; i++)
     if (i > 5)
     {
         allFeature[i].style.display = 'none';
-        
+
         if (buttoCreated == false)
         {
             let showAll = document.createElement('p');
@@ -51,7 +51,7 @@ for (let i = 0; i < allFeature.length; i++)
                         if (i > 5)
                         {
                             allFeature[i].style.display = 'block';
-                        }   
+                        }
                     }
                     isShow = true;
                     showAll.textContent = "Скрыть";
@@ -63,13 +63,13 @@ for (let i = 0; i < allFeature.length; i++)
                         if (i > 5)
                         {
                             allFeature[i].style.display = 'none';
-                        }   
+                        }
                     }
                     isShow = false;
                     showAll.textContent = "Больше характеристик";
                 }
-            })
-            allFeature[i].parentElement.appendChild(showAll)
+            });
+            allFeature[i].parentElement.appendChild(showAll);
             buttoCreated = true;
         }
     }
