@@ -23,5 +23,7 @@
         // TODO: Регистрация физ. лци
         mysqli_query($link, "INSERT INTO users_individuals VALUES (...)");
     }
+
+    header('Location: ../index.php');
     
 ?>
