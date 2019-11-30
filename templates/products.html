@@ -211,7 +211,7 @@
                             if (buttoCreated == false)
                             {
                                 let buttonExpandFilter = document.createElement('div');
-                                buttonExpandFilter.textContent = ">";
+                                buttonExpandFilter.textContent = "Показать еще";
                                 buttonExpandFilter.classList.add('filter_button');
                                 let isShow = false;
                                 buttonExpandFilter.addEventListener('click', function()
@@ -226,7 +226,7 @@
                                             }   
                                         }
                                         isShow = true;
-                                        buttonExpandFilter.textContent = "<";
+                                        buttonExpandFilter.textContent = "Скрыть";
                                     }
                                     else
                                     {
@@ -238,10 +238,10 @@
                                             }   
                                         }
                                         isShow = false;
-                                        buttonExpandFilter.textContent = ">";
+                                        buttonExpandFilter.textContent = "Показать еще";
                                     }
                                 });
-                                element.querySelector('p').appendChild(buttonExpandFilter);
+                                element.querySelector('ul').appendChild(buttonExpandFilter);
                                 buttoCreated = true;
                             }
                         }

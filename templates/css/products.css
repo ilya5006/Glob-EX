@@ -87,19 +87,13 @@
 
 .filter_button
 {
-	font-size: 28px;
-	font-weight: bold;
-
-	display: inline-block;
-
-	max-width: 35px;
-	max-height: 35px;
-	margin-left: auto;
-
 	cursor: pointer;
-	transform: rotate(90deg);
-	text-align: center;
+	margin-top: 5px;
+	font-weight: bold;
+	margin-left: 20px;
+	text-transform: uppercase;
 }
+
 /* The container */
 .container
 {
