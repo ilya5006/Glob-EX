@@ -12,4 +12,18 @@
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     mysqli_query($link, "INSERT INTO users_all VALUES (NULL, '$role', '$surName', '$firstName', '$middleName', '$login', '$password', '$email', '$phoneNumber', '$address')");
+
+    if ($role == 'entities') // юр. лица
+    {
+        // TODO: Регистрация юр. лци
+        mysqli_query($link, "INSERT INTO users_entities VALUES (...)");
+    }
+    if ($role == 'individuals') // физ. лица
+    {
+        // TODO: Регистрация физ. лци
+        mysqli_query($link, "INSERT INTO users_individuals VALUES (...)");
+    }
+
+    header('Location: ../index.php');
+    
 ?>
