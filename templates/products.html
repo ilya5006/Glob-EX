@@ -146,7 +146,7 @@
                             </ul>
                         </div>
                         <div class="filter">
-                                <p>ХАРАКТЕРИСТИКАs</p>
+                                <p>ХАРАКТЕРИСТИКА</p>
                                 <ul>
                                     <li>
                                         <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
@@ -198,9 +198,12 @@
 
                 // filters
                 let buttoCreated;
+                let filterHide;
                 let allFilters = document.querySelectorAll('.filters .filter');
                 allFilters.forEach(function(element)
                 {
+                    element.querySelector('ul').style.display = 'block';
+
                     let buttoCreated = false;
                     for (let i = 0; i < element.querySelectorAll('label').length; i++)
                     {
@@ -246,7 +249,23 @@
                             }
                         }
                     }
-
+                    filterHide = document.createElement('div');
+                    filterHide.textContent = "<";
+                    filterHide.classList.add('filterHide');
+                    filterHide.addEventListener('click', function(elem) 
+                    {
+                        if (element.querySelector('ul').style.display == 'block')
+                        {
+                            element.querySelector('ul').style.display = 'none';
+                            elem.target.textContent = ">"
+                        }
+                        else
+                        {
+                            element.querySelector('ul').style.display = 'block';
+                            elem.target.textContent = "<"
+                        }
+                    });
+                    element.querySelector('p').appendChild(filterHide);
                 });
             </script>
             <div class="products">

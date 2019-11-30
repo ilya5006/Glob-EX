@@ -94,6 +94,11 @@
 	text-transform: uppercase;
 }
 
+.filterHide
+{
+	cursor: pointer;
+	transform: rotate(90deg);
+}
 /* The container */
 .container
 {
