@@ -101,6 +101,7 @@
 .product_info .act
 {
 	display: flex;
+	align-self: flex-start;
 	flex-flow: column nowrap;
 
 	min-width: 320px;
@@ -130,10 +131,13 @@
 .product_info .act .brand
 {
 	font-size: 17px;
-    margin-bottom: 15px;;
+
+	margin-bottom: 15px;
+
 	text-transform: uppercase;
 
 	color: #9D9A9A;
+;
 }
 
 .product_info .act .brand span
@@ -219,24 +223,24 @@
 
 @media screen and (max-width: 750px)
 {
-    .act
-    {
-        text-align: center;
-    }
-    .product_info .act form
-    {
-        flex-flow: column wrap;
-    }
-    .product_info .act input[type="number"], .product_info .act input[type="submit"]
-    {
-        margin-left: unset;
-        width: 100%;
-    }
-    .product_info .act input[type="number"]
-    {
-        margin-bottom: 15px;
-        width: 150px;
-    }
+	.act
+	{
+		text-align: center;
+	}
+	.product_info .act form
+	{
+		flex-flow: column wrap;
+	}
+	.product_info .act input[type="number"], .product_info .act input[type="submit"]
+	{
+		width: 100%;
+		margin-left: unset;
+	}
+	.product_info .act input[type="number"]
+	{
+		width: 150px;
+		margin-bottom: 15px;
+	}
 	.product_info .pictures
 	{
 		order: unset;
@@ -246,9 +250,10 @@
 	.product_info .info
 	{
 		order: unset;
-        margin: unset;
-        min-width: 100%;
-        margin-bottom: 25px;
+
+		min-width: 100%;
+		margin: unset;
+		margin-bottom: 25px;
 	}
 	.product_info .act
 	{
@@ -258,7 +263,6 @@
 	}
 	.product_info
 	{
-        
 		flex-flow: column nowrap;
 	}
 	.product_info .info, .detail
