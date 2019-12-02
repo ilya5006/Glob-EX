@@ -87,11 +87,43 @@
             <input type="submit" value="войти" id="loginButton">
             
         </form>
+
         <form action="../model/login.php" class="register" style="display: none">
-            <p> Авторизация </p>
-            <input type="text">
-            <input type="password">
-            <input type="submit" value="регистрация">
+
+            <label class="placeinput">
+                <input required="1" type="text" id="fio" />
+                <div class="place_holder">Введите фио<span>*</span></div>
+            </label>
+
+            <label class="placeinput">
+                <input required="1" type="text" id="email" />
+                <div class="place_holder">Введите фио<span>*</span></div>
+            </label>
+            <label class="placeinput">
+                <input required="1" type="tel" id="tel" />
+                <div class="place_holder">Введите телефон<span>*</span></div>
+            </label>
+
+            <div class="passwords">
+                <label class="placeinput">
+                    <input required="1" type="password" id="password" />
+                    <div class="place_holder">Введите пароль<span>*</span></div>
+                </label>
+                <label class="placeinput">
+                    <input required="1" type="password" id="password" />
+                    <div class="place_holder">Повторите пароль<span>*</span></div>
+                </label>
+            </div>
+
+            <label class="container"> <p>Согласен на <a href="#">обработку персональных данных *</a></p> <input type="checkbox" > <span class="checkmark"></span> </label>
+
+            <label class="container"> <p>Я хочу получать рассылку об акциях и новостях</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+
+            <p class="require"> <span>*</span> Поля обязательные для ввода</p>
+            
+            <input type="submit" value="зарегистрироваться" id="loginButton">
+            
         </form>
+
     </div>
 </div>
