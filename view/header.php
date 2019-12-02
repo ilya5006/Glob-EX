@@ -68,12 +68,24 @@
 
 <div id="modal_authorize">
     <div class="modal">
-        <p id="close_modal"> x </p>
-        <div class="type_auth"> <p id='log_form' class="active"> ВОЙТИ </p> <p id="reg_form"> РЕГИСТРАЦИЯ</p></div>
+        <div class="type_auth"> <p id='log_form' class="active"> ВОЙТИ </p> <p id="reg_form"> ЗАРЕГИСТРИРОВАТЬСЯ</p></div>
         <form action="../model/login.php" class="login">
-            <input type="text">
-            <input type="password">
-            <input type="submit" value="войти">
+
+            <label class="placeinput">
+                <input required="1" type="text" id="login" />
+                <div class="place_holder">Введите телефон или e-mail<span>*</span></div>
+            </label>
+
+            <label class="placeinput">
+                <input required="1" type="password" id="password" />
+                <div class="place_holder">Введите пароль<span>*</span></div>
+            </label>
+
+            <a href="#" class="forget_password"> Забыли пароль? </a>
+            <p class="require"> <span>*</span> Поля обязательные для ввода</p>
+            
+            <input type="submit" value="войти" id="loginButton">
+            
         </form>
         <form action="../model/login.php" class="register" style="display: none">
             <p> Авторизация </p>

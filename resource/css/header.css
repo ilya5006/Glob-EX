@@ -570,8 +570,6 @@
 	top: 0;
 	left: 0;
 
-	display: none;
-
 	min-width: 100vw;
 	min-height: 100vh;
 }
@@ -581,15 +579,17 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
 	display: flex;
 	flex-flow: column nowrap;
 
 	width: 500px;
-	height: 300px;
+	min-height: 300px;
+	padding-bottom: 40px;
 
 	transform: translate(-50%, -50%);
 
+	border-top: 7px solid #E31E25;
 	background-color: #FFFFFF;
 }
 
@@ -619,25 +619,123 @@
 
 #modal_authorize .modal .type_auth
 {
-	padding: 0px 30px;
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
 	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+
+	margin-top: 15px;
+	margin-bottom: 20px;
+	padding: 0px 0px 0px 30px;
+
+	border-bottom: 1px solid rgb(232, 232, 232);
 }
 
 #modal_authorize .modal .type_auth p
 {
 	font-weight: bold;
-	cursor: pointer;
-	margin: 15px 5px;
-	flex-grow: 1;
-	text-align: center;
+
+	margin: 15px 5px 0px 5px;
 	padding: 15px;
+
+	cursor: pointer;
+	text-align: center;
 }
 
 #modal_authorize .modal .type_auth p.active
 {
-	border-bottom: 3px solid #E31E25;
+	border-bottom: 5px solid #E31E25;
 }
 
+#modal_authorize .modal form label
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+}
+
+#modal_authorize .modal form input[type=text], #modal_authorize .modal form input[type=password]
+{
+	width: 80%;
+	height: 40px;
+	margin: 15px;
+	padding: 5px 15px;
+
+	border: 0;
+	border-bottom: 1px rgb(208, 208, 208) solid;
+}
+
+.place_holder
+{
+	position: absolute;
+	z-index: 100;
+	left: 10%;
+
+	display: none;
+
+	width: 100%;
+	margin-left: 15px;
+
+	cursor: text;
+
+	color: lightgrey;
+}
+
+.placeinput input:invalid + .place_holder
+{
+	display: inline;
+}
+
+.placeinput
+{
+	position: relative;
+
+	overflow: hidden;
+}
+
+.place_holder span
+{
+	margin-left: 7px;
+
+	color: red;
+}
+
+#modal_authorize .modal form input[type=submit]
+{
+	text-transform: uppercase;
+	align-self: flex-start;
+	font-weight: bold;
+	font-size: 16px;
+	width: 160px;
+	margin-left: 10%;
+	padding: 15px;
+
+	color: #FFFFFF;
+	border: 0;
+	background-color: #E31E25;
+}
+
+#modal_authorize .modal form .forget_password
+{
+	align-self: flex-end;
+
+	margin-right: 10%;
+	font-size: 14px;
+	text-align: right;
+	margin-bottom: 20px;
+	color: #E31E25;
+}
+
+#modal_authorize .modal form .require
+{
+	font-size: 14px;
+	width: 80%;
+	margin-bottom: 20px;
+}
+
+#modal_authorize .modal form .require span
+{
+	color: #E31E25;
+}
