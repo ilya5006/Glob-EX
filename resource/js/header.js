@@ -47,7 +47,7 @@ document.body.addEventListener('click', function (e)
         document.querySelector('.expand-catalog').classList.add('hide');
     }
 
-    console.log(e.target.parentElement.tagName);
+    console.log(e.target.parentElement === document.body);
 
     if (e.target.parentElement === document.body);
     {   
