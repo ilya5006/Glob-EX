@@ -115,6 +115,10 @@
                 </label>
             </div>
 
+            <div class="user-type">
+                <label class="container"> <p> Частное лицо</p> <input type="radio" name="type" > <span class="checkmark"></span> </label>
+                <label class="container"> <p> Юридическое лицо</p> <input type="radio" name="type"  > <span class="checkmark"></span> </label>
+            </div>
             <label class="container"> <p>Согласен на <a href="#">обработку персональных данных *</a></p> <input type="checkbox" > <span class="checkmark"></span> </label>
 
             <label class="container"> <p>Я хочу получать рассылку об акциях и новостях</p> <input type="checkbox" > <span class="checkmark"></span> </label>

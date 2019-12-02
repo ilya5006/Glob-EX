@@ -754,7 +754,7 @@
 	color: #E31E25;
 }
 
-#modal_authorize .modal form .passwords
+#modal_authorize .modal form .passwords, #modal_authorize .modal form .user-type
 {
 	display: flex;
 	flex-flow: row nowrap;
