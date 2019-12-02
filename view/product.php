@@ -38,7 +38,7 @@
             <p class="available">есть в наличии</p>
             <p class="brand">БРЕНД: <span>SVETOCOPY</span></p>
             <form action="#">
-                <input type="number" name="" id="" min="1" max="999">
+                <input type="number" name="" id="" min="1" max="999" value="1">
                 <input type="submit" value="в корзину">
             </form>
         </div>
