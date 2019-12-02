@@ -40,23 +40,25 @@ allExpandButton.forEach(function (element)
     });
 });
 
-document.body.addEventListener('click', function () 
+document.body.addEventListener('click', function (e) 
 {
     if (document.querySelector('.expand-catalog').classList.contains('hide') == false) 
     {
         document.querySelector('.expand-catalog').classList.add('hide');
     }
-}, true);
+
+    console.log(e.target.parentElement.tagName);
+
+    if (e.target.parentElement === document.body);
+    {   
+        document.querySelector('#modal_authorize').style.display = 'none';
+        document.body.style.overflowY = 'scroll';
+    }
+}, false);
 
 document.querySelector('#login_button').addEventListener('click', function(e)
 {
     e.preventDefault();
     document.querySelector('#modal_authorize').style.display = 'flex';
 	document.body.style.overflowY = 'hidden';
-});
-
-document.querySelector('#close_modal').addEventListener('click', function()
-{
-	document.querySelector('#modal_authorize').style.display = 'none';
-	document.body.style.overflowY = 'scroll';
 });

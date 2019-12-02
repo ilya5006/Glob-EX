@@ -694,6 +694,10 @@
 
 	overflow: hidden;
 }
+.place_holder span
+{
+	color: #8B7B7B;
+}
 
 .place_holder span
 {
@@ -733,6 +737,7 @@
 	font-size: 14px;
 	width: 80%;
 	margin-bottom: 20px;
+	color: #8B7B7B;
 }
 
 #modal_authorize .modal form .require span
