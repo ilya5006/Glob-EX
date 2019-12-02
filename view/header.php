@@ -66,7 +66,7 @@
     </div>
 </header>
 
-<div id="modal_authorize">
+<div id="modal_authorize" style="display: none;">
     <div class="modal">
         <div class="type_auth"> <p id='log_form' class="active"> ВОЙТИ </p> <p id="reg_form"> ЗАРЕГИСТРИРОВАТЬСЯ</p></div>
         <form action="../model/login.php" class="login">

@@ -40,21 +40,18 @@ allExpandButton.forEach(function (element)
     });
 });
 
-document.body.addEventListener('click', function (e) 
+document.body.addEventListener('mousedown', function (e) 
 {
     if (document.querySelector('.expand-catalog').classList.contains('hide') == false) 
     {
         document.querySelector('.expand-catalog').classList.add('hide');
     }
-
-    console.log(e.target.parentElement === document.body);
-
-    if (e.target.parentElement === document.body);
+    if (e.target.parentElement === document.body)
     {   
         document.querySelector('#modal_authorize').style.display = 'none';
         document.body.style.overflowY = 'scroll';
     }
-}, false);
+}, true);
 
 document.querySelector('#login_button').addEventListener('click', function(e)
 {
