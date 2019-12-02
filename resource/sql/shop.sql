@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 30 2019 г., 11:06
+-- Время создания: Дек 02 2019 г., 12:49
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.2
 
@@ -53,7 +53,16 @@ CREATE TABLE `country` (
 CREATE TABLE `goods` (
   `id_good` int(11) NOT NULL,
   `id_country` int(11) NOT NULL,
-  `id_brand` int(11) NOT NULL
+  `id_brand` int(11) NOT NULL,
+  `top_id` int(11) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `price` float NOT NULL,
+  `unit` varchar(50) NOT NULL,
+  `image1` varchar(255) DEFAULT NULL,
+  `image2` varchar(255) DEFAULT NULL,
+  `image3` varchar(255) DEFAULT NULL,
+  `image4` varchar(255) DEFAULT NULL,
+  `image5` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
