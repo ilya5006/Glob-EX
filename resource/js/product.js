@@ -1,28 +1,26 @@
 ﻿//img
-let puctires = document.querySelectorAll('.product_info .pictures img');
-for (let i = 0; i < puctires.length; i++)
+let puctures = document.querySelectorAll('.product_info .pictures img.little');
+let bigPuctire = document.querySelector('.product_info .pictures img.big');
+
+for (let i = 0; i < puctures.length; i++)
 {
-    puctires[i].addEventListener('click', function()
+    puctures[i].addEventListener('click', function()
     {
         showImage(i)
     });
 }
 function showImage(param)
 {
-    for (let j = 0; j < puctires.length; j++)
+    for (let j = 0; j < puctures.length; j++)
     {
         if (param != j)
         {
-            puctires[j].style.order = 'unset';
-            puctires[j].classList.remove('big');
-            puctires[j].classList.add('little');
-
+            puctures[j].style.border = '1px solid #DADADA';
         }
         else
         {
-            puctires[j].style.order = '-1';
-            puctires[j].classList.add('big');
-            puctires[j].classList.remove('little');
+            bigPuctire.src = puctures[j].src;
+            puctures[j].style.border = '1px solid #E31E25';
         }
     }
 }

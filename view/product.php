@@ -7,10 +7,16 @@
     <div class="product_info">
         <div class="pictures">
             <img src="./resource/img/products/product.jpg" alt="" class="big" style="order: -1;">
-            <img src="./resource/img/products/product2.jpg" alt="" class="little">
-            <img src="./resource/img/products/product3.jpg" alt="" class="little">
-            <img src="./resource/img/products/product4.jpg" alt="" class="little">
-            <img src="./resource/img/products/product5.jpg" alt="" class="little">
+            <div class="img_list">
+                <img src="./resource/img/products/product2.jpg" alt="" class="little">
+                <img src="./resource/img/products/product2.jpg" alt="" class="little">
+                <img src="./resource/img/products/product3.jpg" alt="" class="little">
+                <img src="./resource/img/products/product4.jpg" alt="" class="little">
+                <img src="./resource/img/products/product5.jpg" alt="" class="little">
+                <img src="./resource/img/products/product3.jpg" alt="" class="little">
+                <img src="./resource/img/products/product4.jpg" alt="" class="little">
+                <img src="./resource/img/products/product5.jpg" alt="" class="little">
+            </div>
         </div>
         <div class="info">
             <h2>SvetoCopy CLASSIC бумага для печати формат А4 бумага для печати формат А4</h2>
