@@ -7,17 +7,23 @@
     <div class="product_info">
         <div class="pictures">
             <img src="./resource/img/products/product.jpg" alt="" class="big" style="order: -1;">
-            <img src="./resource/img/products/product2.jpg" alt="" class="little">
-            <img src="./resource/img/products/product3.jpg" alt="" class="little">
-            <img src="./resource/img/products/product4.jpg" alt="" class="little">
-            <img src="./resource/img/products/product5.jpg" alt="" class="little">
+            <div class="img_list">
+                <img src="./resource/img/products/product2.jpg" alt="" class="little">
+                <img src="./resource/img/products/product2.jpg" alt="" class="little">
+                <img src="./resource/img/products/product3.jpg" alt="" class="little">
+                <img src="./resource/img/products/product4.jpg" alt="" class="little">
+                <img src="./resource/img/products/product5.jpg" alt="" class="little">
+                <img src="./resource/img/products/product3.jpg" alt="" class="little">
+                <img src="./resource/img/products/product4.jpg" alt="" class="little">
+                <img src="./resource/img/products/product5.jpg" alt="" class="little">
+            </div>
         </div>
         <div class="info">
             <h2>SvetoCopy CLASSIC бумага для печати формат А4 бумага для печати формат А4</h2>
             <div class="detail">
                 <p>Артикул <span>352698</span></p>
-                <p>В наличии <span>500</span></p>
-                <p>Бренд: <span>SVETOCOPY</span></p>
+                <!-- <p>В наличии <span>500</span></p> -->
+                <p>Бренд: <a href="#">SVETOCOPY</a></p>
             </div>
             <div class="features">
                 <p class="feature">Формат А4</p>
@@ -36,8 +42,8 @@
         <div class="act">
             <p class="old-price">123p</p>
             <p class="new-price">322p</p>
-            <p class="available">есть в наличии</p>
-            <p class="brand">БРЕНД: <span>SVETOCOPY</span></p>
+            <p class="available">есть в наличии (500) </p>
+            <p class="brand">БРЕНД: <a href="#">SVETOCOPY</a> </p>
             <form action="#">
                 <input type="number" name="" id="" min="1" max="999" value="1">
                 <input type="submit" value="в корзину">

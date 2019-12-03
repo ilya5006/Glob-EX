@@ -76,7 +76,7 @@ document.querySelector('#login_button').addEventListener('click', function(e)
 {
     e.preventDefault();
     document.querySelector('#modal_authorize').style.display = 'flex';
-	document.body.style.overflowY = 'hidden';
+    document.body.style.overflowY = 'hidden';
 });
 
 document.querySelector('#log_form').addEventListener('click', function()

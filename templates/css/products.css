@@ -100,8 +100,8 @@
 	transform: rotate(90deg);
 }
 
-/* The container */
-.container
+/* Начало чекбоксов */
+.filter > ul > li .container
 {
 	font-size: 14px;
 
@@ -116,8 +116,8 @@
 	cursor: pointer;
 }
 
-/* Hide the browser's default checkbox */
-.container input
+
+.filter > ul > li .container input
 {
 	position: absolute;
 
@@ -129,8 +129,8 @@
 	opacity: 0;
 }
 
-/* Create a custom checkbox */
-.checkmark
+
+.filter > ul > li .checkmark
 {
 	position: absolute;
 	top: 0;
@@ -143,21 +143,20 @@
 	background-color: #FFFFFF;
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark
+
+.filter > ul > li  .container:hover input ~ .checkmark
 {
 	background-color: #FFFFFF;
 }
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark
+
+.filter > ul > li .container input:checked ~ .checkmark
 {
 	border: 0;
 	background-color: #E31E25;
 }
 
-/* Style the checkmark/indicator */
-.container .checkmark:after
+.filter > ul > li .container .checkmark:after
 {
 	top: 5px;
 	left: 9px;
@@ -170,7 +169,7 @@
 	border: solid white;
 	border-width: 0 3px 3px 0;
 }
-/*asdas*/
+/* Конец чекбоксов */
 
 .products
 {
