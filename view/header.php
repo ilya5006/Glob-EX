@@ -16,7 +16,7 @@
 
             <div class="expand-catalog hide">
                 <a class="cat_1" href="#"> <img src="./resource/img/icons/percent.svg"><p> АКЦИИ И СКИДКИ </p></a>
-                <a class="cat_1" href="#"> <img src="./resource/img/icons/clip.svg"><p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
+                <a class="cat_1"> <img src="./resource/img/icons/clip.svg"><p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
                 <div class='expand-cat_2 hide'>
                     <ul>
                         <li><span>1</span></li>
@@ -28,7 +28,7 @@
                     </ul>
                 </div>
 
-                <a class="cat_1" href="#"> <img src="./resource/img/icons/bucket.svg"><p>ХОЗТОВАРЫ</p><span>&#62;</span></a>
+                <a class="cat_1"> <img src="./resource/img/icons/bucket.svg"><p>ХОЗТОВАРЫ</p><span>&#62;</span></a>
                 <div class='expand-cat_2 hide'>
                     <ul>
                         <li><span>2</span></li>
@@ -40,7 +40,7 @@
                     </ul>
                 </div>
 
-                <a class="cat_1" href="#"> <img src="./resource/img/icons/furniture.svg"><p>МЕБЕЛЬ</p><span>&#62;</span></a>
+                <a class="cat_1"> <img src="./resource/img/icons/furniture.svg"><p>МЕБЕЛЬ</p><span>&#62;</span></a>
                 <div class='expand-cat_2 hide'>
                     <ul>
                         <li><span>3</span></li>
