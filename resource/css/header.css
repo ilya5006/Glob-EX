@@ -794,8 +794,8 @@
 }
 
 
-/* The container */
-.container
+/* Начало чекбоксов */
+form .container
 {
 	font-size: 14px;
 
@@ -810,8 +810,7 @@
 	cursor: pointer;
 }
 
-/* Hide the browser's default checkbox */
-.container input
+form  .container input
 {
 	position: absolute;
 
@@ -823,13 +822,12 @@
 	opacity: 0;
 }
 
-label.container
+form  label.container
 {
 	margin-bottom: 22px;
 }
 
-/* Create a custom checkbox */
-.checkmark
+form .checkmark
 {
 	position: absolute;
 	top: 0;
@@ -842,21 +840,18 @@ label.container
 	background-color: #FFFFFF;
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark
+form .container:hover input ~ .checkmark
 {
 	background-color: #FFFFFF;
 }
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark
+form .container input:checked ~ .checkmark
 {
 	border: 0;
 	background-color: #E31E25;
 }
 
-/* Style the checkmark/indicator */
-.container .checkmark:after
+form .container .checkmark:after
 {
 	top: 5px;
 	left: 9px;
@@ -870,7 +865,7 @@ label.container
 	border-width: 0 3px 3px 0;
 }
 
-.container p
+form .container p
 {
 	width: 80%;
 	margin-top: 3px;
@@ -879,13 +874,13 @@ label.container
 	color: #8B8787;
 }
 
-.container p a, .container p span
+form .container p a, .container p span
 {
 	display: inline-block;
 
 	color: #E31E25;
 }
-/*asdas*/
+/* Конец чекбоксов */
 
 @media screen and (max-width: 750px)
 {

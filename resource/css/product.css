@@ -74,11 +74,14 @@
 
 .product_info .info .detail p
 {
+	display: flex;
+	flex-flow: row nowrap;
 	margin: 5px 15px 5px 0;
 }
 
-.product_info .info .detail p span
+.product_info .info .detail p span, .product_info .info .detail p a
 {
+	margin-left: 5px;
 	color: #E31E25;
 }
 
@@ -131,7 +134,8 @@
 .product_info .act .brand
 {
 	font-size: 17px;
-
+	display: flex;
+	flex-flow: row nowrap;
 	margin-bottom: 15px;
 
 	text-transform: uppercase;
@@ -140,10 +144,10 @@
 ;
 }
 
-.product_info .act .brand span
+.product_info .act .brand span, .product_info .act .brand a
 {
 	margin-bottom: 25px;
-
+	margin-left: 5px;
 	color: #E31E25;
 }
 
@@ -192,6 +196,7 @@
 {
 	flex-grow: 2;
 }
+
 .product_info .act
 {
 	flex-grow: 1;
@@ -204,6 +209,7 @@
 
 .info_slider .sliders
 {
+	display: flex;
 	flex-flow: row nowrap;
 	margin-bottom: 35px;
 }
@@ -307,10 +313,27 @@
 	{
 		flex-flow: column nowrap;
 	}
-	.product_info .info, .detail
+	.product_info .info, .detail, .product_info .act .brand
 	{
 		justify-content: center;
 
 		text-align: center;
+	}
+	.info_slider .sliders p, .info_slider .sliders p
+	{
+		padding-right: 5px;
+		padding-left: 5px;
+		text-align: center;
+		margin-left: 0;
+		flex-grow: 1;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 550px)
+{
+	.info_slider .sliders p, .info_slider .sliders p
+	{
+		font-size: 12px
 	}
 }

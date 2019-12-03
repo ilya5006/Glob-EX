@@ -16,8 +16,8 @@
             <h2>SvetoCopy CLASSIC бумага для печати формат А4 бумага для печати формат А4</h2>
             <div class="detail">
                 <p>Артикул <span>352698</span></p>
-                <p>В наличии <span>500</span></p>
-                <p>Бренд: <span>SVETOCOPY</span></p>
+                <!-- <p>В наличии <span>500</span></p> -->
+                <p>Бренд: <a href="#">SVETOCOPY</a></p>
             </div>
             <div class="features">
                 <p class="feature">Формат А4</p>
@@ -36,8 +36,8 @@
         <div class="act">
             <p class="old-price">123p</p>
             <p class="new-price">322p</p>
-            <p class="available">есть в наличии</p>
-            <p class="brand">БРЕНД: <span>SVETOCOPY</span></p>
+            <p class="available">есть в наличии (500) </p>
+            <p class="brand">БРЕНД: <a href="#">SVETOCOPY</a> </p>
             <form action="#">
                 <input type="number" name="" id="" min="1" max="999" value="1">
                 <input type="submit" value="в корзину">

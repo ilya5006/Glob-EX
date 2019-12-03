@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Главная </title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./../resource/css/normalize.css">
+    <link rel="stylesheet" href="./../resource/css/base.css">
+    <link rel="stylesheet" href="./../resource/css/header.css">
     <link rel="stylesheet" href="./css/products.css">
-    <link rel="stylesheet" href="./css/scroll.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./../resource/css/scroll.css">
+    <link rel="stylesheet" href="./../resource/css/footer.css">
     <script src="./../resource/js/nouislider.js"></script>
+    <script src="./../resource/js/slider.js" defer></script>
+    <script src="./../resource/js/header.js" defer></script>
     <link rel="stylesheet" href="./../resource/css/nouislider.css">
 </head>
 
@@ -20,81 +22,145 @@
 
     <!-- ХЕАДЕР -->
     <header class="header">
-        <div class="content">
-            <div class="menu">
-                <a href="#"><img src="./img/logo.svg" alt="logo"></a>
-                <ul>
-                    <li> <a href="#">Доставка</a> </li>
-                    <li> <a href="#">Оплата</a> </li>
-                    <li> <a href="#">Контакт</a> </li>
-                    <li> <a href="#">Задать вопрос</a> </li>
-                    <li> <a href="#">О компании</a> </li>
-                    <li> <a href="#" class="tel">8-495-380-42-88</a> </li>
-                </ul>
-            </div>
-            <div class="nav">
-                <button class="catalog" id="catalog"> <span>|||</span> КАТАЛОГ ТОВАРОВ</button>
-
-                <div class="expand-catalog hide">
-                    <a class="cat_1" href="#"> <img src="./img/percent.svg">
-                        <p> Акции и скидки </p>
-                    </a>
-                    <a class="cat_1" href="#"> <img src="./img/clip.svg">
-                        <p>Концелярии и товары</p><span>&#62;</span>
-                    </a>
-                    <div class='expand-cat_2 hide'>
-                        <ul>
-                            <li><span>1</span></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                        </ul>
-                    </div>
-                    <a class="cat_1" href="#"> <img src="./img/bucket.svg"><p>Хозтовары</p><span>&#62;</span></a>
-                    <div class='expand-cat_2 hide'>
-                        <ul>
-                            <li><span>2</span></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                        </ul>
-                    </div>
-                    <a class="cat_1" href="#"> <img src="./img/furniture.svg"><p>Мебель</p><span>&#62;</span></a>
-                    <div class='expand-cat_2 hide'>
-                        <ul>
-                            <li><span>3</span></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                            <li><a href="#">asdasd</a></li>
-                        </ul>
-                    </div>
+            <div class="content">
+                <div class="menu">
+                    <a href="#"><img src="./../resource/img/logo.svg" alt="logo"></a>
+                    <ul>
+                        <li><a href="#">ДОСТАВКА</a></li>
+                        <li><a href="#">ОПЛАТА</a></li>
+                        <li><a href="#">КОНТАКТЫ</a></li>
+                        <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
+                        <li><a href="#">О КОМПАНИИ</a></li>
+                        <li><p class="tel">8-495-380-42-88</p></li>
+                    </ul>
                 </div>
-
-                <form action="#">
-                    <input type="search" placeholder="Поиск...">
-                    <button> <img src="./img/search.svg" alt="search"> </button>
+                <div class="nav">
+                    <button class="catalog" id="catalog"><span>|||</span> КАТАЛОГ ТОВАРОВ</button>
+        
+                    <div class="expand-catalog hide">
+                        <a class="cat_1" href="#"> <img src="./../resource/img/icons/percent.svg"><p> АКЦИИ И СКИДКИ </p></a>
+                        <a class="cat_1"> <img src="./../resource/img/icons/clip.svg"><p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
+                        <div class='expand-cat_2 hide'>
+                            <ul>
+                                <li><span>1</span></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                            </ul>
+                        </div>
+        
+                        <a class="cat_1"> <img src="./../resource/img/icons/bucket.svg"><p>ХОЗТОВАРЫ</p><span>&#62;</span></a>
+                        <div class='expand-cat_2 hide'>
+                            <ul>
+                                <li><span>2</span></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                            </ul>
+                        </div>
+        
+                        <a class="cat_1"> <img src="./../resource/img/icons/furniture.svg"><p>МЕБЕЛЬ</p><span>&#62;</span></a>
+                        <div class='expand-cat_2 hide'>
+                            <ul>
+                                <li><span>3</span></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                                <li><a href="#">asdasd</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <form action="#">
+                        <input type="search" placeholder="Поиск...">
+                        <button><img src="./../resource/img/icons/search.svg" alt="search"></button>
+                    </form>
+                    <ul>
+                        <li><a href="#"><img src="./../resource/img/icons/favourite.svg" alt="favorite"></a></li>
+                        <li><a href="#"><img src="./../resource/img/icons/cart.svg" alt="cart"></a></li>
+                        <li class="account"><a id="login_button"><img src="./../resource/img/icons/account.svg" alt="account"><p>Войти <span>&#62;</span></p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <div id="modal_authorize" style="display: none;">
+            <div class="modal">
+                <div class="type_auth"> <p id='log_form' class="active"> ВОЙТИ </p> <p id="reg_form"> ЗАРЕГИСТРИРОВАТЬСЯ</p></div>
+                <form action="../model/login.php" class="login">
+        
+                    <label class="placeinput">
+                        <input required="1" type="text" id="login" />
+                        <div class="place_holder">Введите телефон или e-mail<span>*</span></div>
+                    </label>
+        
+                    <label class="placeinput">
+                        <input required="1" type="password" id="passwordLogin" />
+                        <div class="place_holder">Введите пароль<span>*</span></div>
+                    </label>
+        
+                    <a href="#" class="forget_password"> Забыли пароль? </a>
+                    <p class="require"> <span>*</span> Поля обязательные для ввода</p>
+                    
+                    <input type="submit" value="войти" id="loginButton">
+                    
                 </form>
-                <ul>
-                    <li><a href="#"><img src="./img/favourite.svg" alt="favorite"></a></li>
-                    <li><a href="#"><img src="./img/cart.svg" alt="cart"></a></li>
-                    <li class="account"><a href="#"><img src="./img/account.svg" alt="account"><p>Войти</p></a></li>
-                </ul>
+        
+                <form action="../model/login.php" class="register" style="display: none">
+        
+                    <label class="placeinput">
+                        <input required="1" type="text" id="fio" />
+                        <div class="place_holder">Введите фио<span>*</span></div>
+                    </label>
+        
+                    <label class="placeinput">
+                        <input required="1" type="text" id="email" />
+                        <div class="place_holder">Введите фио<span>*</span></div>
+                    </label>
+                    <label class="placeinput">
+                        <input required="1" type="tel" id="tel" />
+                        <div class="place_holder">Введите телефон<span>*</span></div>
+                    </label>
+        
+                    <div class="passwords">
+                        <label class="placeinput">
+                            <input required="1" type="password" id="passwordRegister" />
+                            <div class="place_holder">Введите пароль<span>*</span></div>
+                        </label>
+                        <label class="placeinput">
+                            <input required="1" type="password" id="passwordRegisterAgain" />
+                            <div class="place_holder">Повторите пароль<span>*</span></div>
+                        </label>
+                    </div>
+        
+                    <div class="user-type">
+                        <label class="container"> <p> Частное лицо</p> <input type="radio" name="type" > <span class="checkmark"></span> </label>
+                        <label class="container"> <p> Юридическое лицо</p> <input type="radio" name="type"  > <span class="checkmark"></span> </label>
+                    </div>
+                    <label class="container"> <p>Согласен на <a href="#">обработку персональных данных *</a></p> <input type="checkbox" > <span class="checkmark"></span> </label>
+        
+                    <label class="container"> <p>Я хочу получать рассылку об акциях и новостях</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+        
+                    <p class="require"> <span>*</span> Поля обязательные для ввода</p>
+                    
+                    <input type="submit" value="зарегистрироваться" id="registerButton">
+                    
+                </form>
+        
             </div>
         </div>
-    </header>
     <!-- КОНЕЦ ХЕАДЕРА -->
-    
+
     <!-- ТОВАРЫ -->
     <div class="content">
         <div class="catalg_view">
             <div class="filters">
-                <div class="price-filter"> 
+                <div class="price-filter">
                     <p>Цена:</p>
                     <div class="price-input">
                         <input title="минимальная цена" id="price-min">
@@ -107,92 +173,144 @@
                     <p>Бренд</p>
                     <ul>
                         <li>
-                            <label class="container"> <p>SvetoCopy (4)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (3)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (6)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (2)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (8)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (2)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (8)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (2)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (8)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            <label class="container"> <p>SvetoCopy (21)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+                            <label class="container">
+                                <p>SvetoCopy (4)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (3)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (6)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (2)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (8)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (2)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (8)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (2)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (8)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>SvetoCopy (21)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
                         </li>
                     </ul>
                 </div>
                 <div class="filter">
-                        <p>ФОРМАТ</p>
-                        <ul>
-                            <li>
-                                <label class="container"> <p>A4 (3)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                <label class="container"> <p>A5 (3)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                <label class="container"> <p>A3 (3)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                <label class="container"> <p>A2 (3)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                <label class="container"> <p>A1 (3)</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="filter">
-                            <p>ХАРАКТЕРИСТИКА</p>
-                            <ul>
-                                <li>
-                                    <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                    <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                    <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                    <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                    <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                    <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="filter">
-                                <p>ХАРАКТЕРИСТИКА</p>
-                                <ul>
-                                    <li>
-                                        <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                        <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                        <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                        <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                        <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                        <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                        <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                        <label class="container"> <p>Атрибут</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-                                    </li>
-                                </ul>
-                            </div>
+                    <p>ФОРМАТ</p>
+                    <ul>
+                        <li>
+                            <label class="container">
+                                <p>A4 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>A5 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>A3 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>A2 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>A1 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter">
+                    <p>ХАРАКТЕРИСТИКА</p>
+                    <ul>
+                        <li>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter">
+                    <p>ХАРАКТЕРИСТИКА</p>
+                    <ul>
+                        <li>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <script>
                 let slider = document.getElementById('slider');
                 let priceMin = document.getElementById('price-min');
                 let priceMax = document.getElementById('price-max');
 
-                noUiSlider.create(slider, 
-                {
+                noUiSlider.create(slider, {
                     start: [20, 80],
                     connect: true,
-                    range: 
-                    {
+                    range: {
                         'min': 0,
                         'max': 100
                     },
                     step: 10
                 });
 
-                slider.noUiSlider.on('update', function (values, handle) 
-                {
+                slider.noUiSlider.on('update', function (values, handle) {
                     priceMin.value = values[0];
                 });
-                priceMin.addEventListener('change', function () 
-                {
+                priceMin.addEventListener('change', function () {
                     slider.noUiSlider.set([this.value, slider.noUiSlider.get()[1]]);
                 });
 
-                slider.noUiSlider.on('update', function (values, handle) 
-                {
+                slider.noUiSlider.on('update', function (values, handle) {
                     priceMax.value = values[1];
                 });
-                priceMax.addEventListener('change', function () 
-                {
+                priceMax.addEventListener('change', function () {
                     slider.noUiSlider.set([slider.noUiSlider.get()[0], this.value]);
                 });
 
@@ -200,45 +318,37 @@
                 let buttoCreated;
                 let filterHide;
                 let allFilters = document.querySelectorAll('.filters .filter');
-                allFilters.forEach(function(element)
-                {
+                allFilters.forEach(function (element) {
                     element.querySelector('ul').style.display = 'block';
 
                     let buttoCreated = false;
-                    for (let i = 0; i < element.querySelectorAll('label').length; i++)
-                    {
-                        if (i > 5)
-                        {
+                    for (let i = 0; i < element.querySelectorAll('label').length; i++) {
+                        if (i > 5) {
                             element.querySelectorAll('label')[i].style.display = 'none';
-                            
-                            if (buttoCreated == false)
-                            {
+
+                            if (buttoCreated == false) {
                                 let buttonExpandFilter = document.createElement('div');
                                 buttonExpandFilter.textContent = "Показать еще";
                                 buttonExpandFilter.classList.add('filter_button');
                                 let isShow = false;
-                                buttonExpandFilter.addEventListener('click', function()
-                                {
-                                    if (isShow == false)
-                                    {
-                                        for (let i = 0; i < element.querySelectorAll('label').length; i++)
-                                        {
-                                            if (i > 5)
-                                            {
-                                                element.querySelectorAll('label')[i].style.display = 'block';
-                                            }   
+                                buttonExpandFilter.addEventListener('click', function () {
+                                    if (isShow == false) {
+                                        for (let i = 0; i < element.querySelectorAll('label')
+                                            .length; i++) {
+                                            if (i > 5) {
+                                                element.querySelectorAll('label')[i].style.display =
+                                                    'block';
+                                            }
                                         }
                                         isShow = true;
                                         buttonExpandFilter.textContent = "Скрыть";
-                                    }
-                                    else
-                                    {
-                                        for (let i = 0; i < element.querySelectorAll('label').length; i++)
-                                        {
-                                            if (i > 5)
-                                            {
-                                                element.querySelectorAll('label')[i].style.display = 'none';
-                                            }   
+                                    } else {
+                                        for (let i = 0; i < element.querySelectorAll('label')
+                                            .length; i++) {
+                                            if (i > 5) {
+                                                element.querySelectorAll('label')[i].style.display =
+                                                    'none';
+                                            }
                                         }
                                         isShow = false;
                                         buttonExpandFilter.textContent = "Показать еще";
@@ -252,15 +362,11 @@
                     filterHide = document.createElement('div');
                     filterHide.textContent = "<";
                     filterHide.classList.add('filterHide');
-                    filterHide.addEventListener('click', function(elem) 
-                    {
-                        if (element.querySelector('ul').style.display == 'block')
-                        {
+                    filterHide.addEventListener('click', function (elem) {
+                        if (element.querySelector('ul').style.display == 'block') {
                             element.querySelector('ul').style.display = 'none';
                             elem.target.textContent = ">"
-                        }
-                        else
-                        {
+                        } else {
                             element.querySelector('ul').style.display = 'block';
                             elem.target.textContent = "<"
                         }
@@ -269,36 +375,34 @@
                 });
             </script>
             <div class="products">
-                    <div class="cat_fold"> 
-                        <p class="catalog_expand_button"> Каталог</p>
-                        <a href="#"> &frasl; Канцелярские товары </a>
-                        <p> <span> &frasl; Бумага для печати </span> </p>
-                    </div>
+                <div class="cat_fold">
+                    <p class="catalog_expand_button"> Каталог</p>
+                    <a href="#"> &frasl; Канцелярские товары </a>
+                    <p> <span> &frasl; Бумага для печати </span> </p>
+                </div>
                 <!-- СЛАЙДЕР С БРЕНДАМИ -->
-                    <div class="slider_header">
-                        <h2> Бренды </h2> 
-                        <div class="slide_left">&#60;</div>
-                        <div class="slide_right">&#62;</div>
-                    </div>
-                    <div class="scroll">
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                        <a href="#" class="brand"><img src="./img/brands/1.jpg"></a>
-                    </div>
+                <div class="slider_header">
+                    <h2> Бренды </h2>
+                    <div class="slide_left slide_anim"> <span>&#60;</span> </div>
+                    <div class="slide_right slide_anim"> <span>&#62;</span> </div>
+                </div>
+                <div class="scroll">
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                    <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+                </div>
                 <!-- КОНЕЦ СЛАЙДЕРА С БРЕНДАМИ -->
 
                 <div class="sort">
                     <p>
-                        Сортировка: 
+                        Сортировка:
                         <select>
                             <option value="10">По популярности</option>
                             <option value="30">Сначала дешевые</option>
@@ -307,7 +411,7 @@
                     </p>
 
                     <p>
-                        Товаров на странице: 
+                        Товаров на странице:
                         <select>
                             <option value="10">10</option>
                             <option value="30">30</option>
@@ -322,7 +426,7 @@
                 </div>
 
                 <ul class="pagination">
-                    <li> <a href="#" >1</a></li>
+                    <li> <a href="#">1</a></li>
                     <li> <a href="#">2</a></li>
                     <li> <a href="#" class="active">3</a></li>
                     <li> <a href="#">4</a></li>
@@ -340,62 +444,61 @@
                         <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
                     </div>
                     <div class="product box">
-                            <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
-                            <p class="product-name">Имя продуктв</p>
-                            <p class="old-price">500р</p>
-                            <p class="new-price">375р</p>
-                            <p class="sale">25</p>
-                            <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
-                            <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
-                        </div>
-                        <div class="product box">
-                                <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
-                                <p class="product-name">Имя продуктв</p>
-                                <p class="old-price">500р</p>
-                                <p class="new-price">375р</p>
-                                <p class="sale">25</p>
-                                <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
-                                <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
-                            </div>
-                            <div class="product box">
-                                    <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
-                                    <p class="product-name">Имя продуктв</p>
-                                    <p class="old-price">500р</p>
-                                    <p class="new-price">375р</p>
-                                    <p class="sale">25</p>
-                                    <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
-                                    <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
-                                </div>
-                                <div class="product box">
-                                        <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
-                                        <p class="product-name">Имя продуктв</p>
-                                        <p class="old-price">500р</p>
-                                        <p class="new-price">375р</p>
-                                        <p class="sale">25</p>
-                                        <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
-                                        <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
-                                    </div>
-                                    <div class="product box">
-                                            <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
-                                            <p class="product-name">Имя продуктв</p>
-                                            <p class="old-price">500р</p>
-                                            <p class="new-price">375р</p>
-                                            <p class="sale">25</p>
-                                            <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
-                                            <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
-                                        </div>
-                            </div>
+                        <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
+                        <p class="product-name">Имя продуктв</p>
+                        <p class="old-price">500р</p>
+                        <p class="new-price">375р</p>
+                        <p class="sale">25</p>
+                        <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
+                        <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
+                    </div>
+                    <div class="product box">
+                        <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
+                        <p class="product-name">Имя продуктв</p>
+                        <p class="old-price">500р</p>
+                        <p class="new-price">375р</p>
+                        <p class="sale">25</p>
+                        <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
+                        <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
+                    </div>
+                    <div class="product box">
+                        <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
+                        <p class="product-name">Имя продуктв</p>
+                        <p class="old-price">500р</p>
+                        <p class="new-price">375р</p>
+                        <p class="sale">25</p>
+                        <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
+                        <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
+                    </div>
+                    <div class="product box">
+                        <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
+                        <p class="product-name">Имя продуктв</p>
+                        <p class="old-price">500р</p>
+                        <p class="new-price">375р</p>
+                        <p class="sale">25</p>
+                        <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
+                        <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
+                    </div>
+                    <div class="product box">
+                        <a href="#"><img src="./img/product.jpg" alt="фотография продукта"></a>
+                        <p class="product-name">Имя продуктв</p>
+                        <p class="old-price">500р</p>
+                        <p class="new-price">375р</p>
+                        <p class="sale">25</p>
+                        <a href="#" class="cart"> <img src="./img/cart.svg" alt=""></a>
+                        <a href="#" class="favourite"> <img src="./img/favourite.svg" alt=""></a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <script>
         let sortBlock = document.querySelector('#sort-block');
         let sortHor = document.querySelector('#sort-hor');
         let listProduct = document.querySelector('.list-products');
-        
-        function setBlock()
-        {
+
+        function setBlock() {
             listProduct.style.display = 'grid';
             listProduct.style.gridGap = '15px';
             listProduct.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
@@ -403,17 +506,13 @@
             sortHor.classList.remove('active');
         }
 
-        function setHor()
-        {
-        }
+        function setHor() {}
 
-        sortBlock.addEventListener('click', function()
-        {
+        sortBlock.addEventListener('click', function () {
             setBlock();
         });
 
-        sortHor.addEventListener('click', function()
-        {
+        sortHor.addEventListener('click', function () {
             setHor();
         });
 
@@ -448,26 +547,6 @@
         </div>
     </footer>
     <!-- КОНЕЦ ФУТЕРА -->
-
-    <!-- СКРИПТ ДЛЯ СКРОЛА, ЧТОБЫ КНОПКИ РАБОТАЛИ -->
-    <script>
-        let elmentWidth;
-        let scrolls = document.querySelectorAll('.slider_header');
-        scrolls.forEach(function (element)
-        {
-            element.querySelector('.slide_right').addEventListener('click', function()
-            {
-                elmentWidth = element.nextElementSibling.children[0].offsetWidth + 20;
-                element.nextElementSibling.scrollTo(element.nextElementSibling.scrollLeft + elmentWidth, 0);
-            });
-            element.querySelector('.slide_left').addEventListener('click', function()
-            {
-                elmentWidth = element.nextElementSibling.children[0].offsetWidth + 20;
-                element.nextElementSibling.scrollTo(element.nextElementSibling.scrollLeft - elmentWidth, 0);
-            });
-        });
-    </script>
-    <!-- КОНЕЦ СКРИПТА ДЛЯ СКРОЛА-->
 </body>
 
 </html>
