@@ -84,11 +84,11 @@
             <a href="#" class="forget_password"> Забыли пароль? </a>
             <p class="require"> <span>*</span> Поля обязательные для ввода</p>
             
-            <input type="submit" value="войти" id="loginButton">
+            <div id="loginButton"> войти </div>
             
         </form>
 
-        <div class="register" style="display: none">
+        <form class="register" style="display: none">
 
             <label class="placeinput" id="fio_label">
                 <input required="1" type="text" name="fio" id="fio" />
@@ -116,8 +116,8 @@
             </div>
 
             <div class="user-type">
-                <label class="container" id="individual"> <p> Частное лицо</p> <input type="radio" name="individual" > <span class="checkmark"></span> </label>
-                <label class="container" id="entities"> <p> Юридическое лицо</p> <input type="radio" name="entitie"  > <span class="checkmark"></span> </label>
+                <label class="container" id="individual"> <p> Частное лицо</p> <input type="radio" name="user_type" > <span class="checkmark"></span> </label>
+                <label class="container" id="entities"> <p> Юридическое лицо</p> <input type="radio" name="user_type"  > <span class="checkmark"></span> </label>
             </div>
             <label class="container" id="personal_data"> <p>Согласен на <a href="#">обработку персональных данных *</a></p> <input type="checkbox" > <span class="checkmark"></span> </label>
 
@@ -125,7 +125,7 @@
 
             <p class="require"> <span>*</span> Поля обязательные для ввода</p>
             
-            <input type="submit" value="зарегистрироваться" id="registerButton">
+            <div id="registerButton"> зарегистрироваться </div>
             
         </form>
 

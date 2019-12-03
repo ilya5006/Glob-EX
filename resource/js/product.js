@@ -9,6 +9,9 @@ for (let i = 0; i < puctures.length; i++)
         showImage(i)
     });
 }
+
+showImage(0);
+
 function showImage(param)
 {
     for (let j = 0; j < puctures.length; j++)
