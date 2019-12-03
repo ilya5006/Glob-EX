@@ -51,7 +51,7 @@
 	justify-content: center;
 }
 
-.header .content .menu li a
+.header .content .menu li a, .header .content .menu li p.tel
 {
 	position: relative;
 
@@ -60,6 +60,12 @@
 	text-transform: uppercase;
 
 	color: #000000;
+}
+
+.header .content .menu li p.tel
+{
+	font-weight: bold;
+	color: #E31E25;
 }
 
 .header .content .menu li a:hover
@@ -219,7 +225,7 @@
 
 .header .content .nav form button img
 {
-	padding: 5px;
+	padding: 8px;
 }
 
 .header .content .nav > ul
@@ -569,7 +575,7 @@
 	z-index: 999;
 	top: 0;
 	left: 0;
-
+	overflow-y: scroll;
 	min-width: 100vw;
 	min-height: 100vh;
 }
@@ -577,7 +583,7 @@
 #modal_authorize .modal
 {
 	position: absolute;
-	top: 50%;
+	top: 140px;
 	left: 50%;
 
 	display: flex;
@@ -587,7 +593,7 @@
 	min-height: 300px;
 	padding-bottom: 40px;
 
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 0%);
 
 	border-top: 7px solid #E31E25;
 	background-color: #FFFFFF;
@@ -628,6 +634,12 @@
 	padding-top: 1px;
 }
 
+#login_button > p > span
+{
+	transform: rotate(90deg);
+	margin-left: 4px;
+	margin-bottom: 1px;
+}
 
 #modal_authorize .modal .type_auth
 {
@@ -865,3 +877,41 @@ label.container
 	color: #E31E25;
 }
 /*asdas*/
+
+@media screen and (max-width: 750px)
+{
+	#modal_authorize .modal .type_auth
+	{
+		padding: 0px;
+	}
+	#modal_authorize .modal
+	{
+		width: 100%;
+	}
+	#modal_authorize .modal form .passwords
+	{
+		width: 100%;
+		flex-flow: column wrap;
+	}
+	#modal_authorize .modal form .passwords
+	{
+		width: 100%;
+	}
+	#modal_authorize .modal form input[type=submit]
+	{
+		align-self: center;
+	}
+	.placeinput input:invalid + .place_holder, #modal_authorize input
+	{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+	.container p
+	{
+		margin-top: 6px;
+		font-size: 9px;
+	}
+}

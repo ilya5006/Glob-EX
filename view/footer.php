@@ -18,7 +18,7 @@
         </ul>
         <ul>
             <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
-            <li><a href="#" class="exception tel"><span>8-495-380-42-88</span></a></li>
+            <li><p class="exception tel"><span>8-495-380-42-88</span></p></li>
             <li><a href="#" class="exception email"><span>sale@glob-ex.ru</span></a></li>
         </ul>
     </div>

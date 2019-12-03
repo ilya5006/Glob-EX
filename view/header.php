@@ -8,7 +8,7 @@
                 <li><a href="#">КОНТАКТЫ</a></li>
                 <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
                 <li><a href="#">О КОМПАНИИ</a></li>
-                <li><a href="#" class="tel">8-495-380-42-88</a></li>
+                <li><p class="tel">8-495-380-42-88</p></li>
             </ul>
         </div>
         <div class="nav">
@@ -60,7 +60,7 @@
             <ul>
                 <li><a href="#"><img src="./resource/img/icons/favourite.svg" alt="favorite"></a></li>
                 <li><a href="#"><img src="./resource/img/icons/cart.svg" alt="cart"></a></li>
-                <li class="account"><a id="login_button"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти</p></a></li>
+                <li class="account"><a id="login_button"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти <span>&#62;</span></p></a></li>
             </ul>
         </div>
     </div>
@@ -77,7 +77,7 @@
             </label>
 
             <label class="placeinput">
-                <input required="1" type="password" id="password" />
+                <input required="1" type="password" id="passwordLogin" />
                 <div class="place_holder">Введите пароль<span>*</span></div>
             </label>
 
@@ -106,11 +106,11 @@
 
             <div class="passwords">
                 <label class="placeinput">
-                    <input required="1" type="password" id="password" />
+                    <input required="1" type="password" id="passwordRegister" />
                     <div class="place_holder">Введите пароль<span>*</span></div>
                 </label>
                 <label class="placeinput">
-                    <input required="1" type="password" id="password" />
+                    <input required="1" type="password" id="passwordRegisterAgain" />
                     <div class="place_holder">Повторите пароль<span>*</span></div>
                 </label>
             </div>
@@ -125,7 +125,7 @@
 
             <p class="require"> <span>*</span> Поля обязательные для ввода</p>
             
-            <input type="submit" value="зарегистрироваться" id="loginButton">
+            <input type="submit" value="зарегистрироваться" id="registerButton">
             
         </form>
 

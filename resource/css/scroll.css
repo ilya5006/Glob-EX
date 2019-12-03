@@ -112,6 +112,11 @@
 	width: 100%;
 }
 
+.product > a, .scroll > .product > a > img.product_img
+{
+	margin-top: 20px;
+}
+
 .product:last-child::before
 {
 	width: 105%;
@@ -136,6 +141,7 @@
 .product > .old-price
 {
 	font-size: 26px;
+	font-style: italic;
 
 	text-decoration: line-through;
 

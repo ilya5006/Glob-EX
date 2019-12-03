@@ -1,14 +1,18 @@
 "use strict";
 
-document.querySelector('#catalog').addEventListener('click', function () 
+document.querySelector('#catalog').addEventListener('mouseup', function () 
 {
     if (document.querySelector('.expand-catalog').classList.contains('hide')) 
     {
         document.querySelector('.expand-catalog').classList.remove('hide');
+        console.log('1');
+        
     } 
     else 
     {
         document.querySelector('.expand-catalog').classList.add('hide');
+        console.log('2');
+        
     }
 });
 

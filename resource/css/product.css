@@ -113,7 +113,7 @@
 .product_info .act .old-price
 {
 	font-size: 26px;
-
+	font-style: italic;
 	text-decoration: line-through;
 
 	color: gray;
