@@ -65,6 +65,7 @@
 .header .content .menu li p.tel
 {
 	font-weight: bold;
+
 	color: #E31E25;
 }
 
@@ -156,7 +157,7 @@
 .header .content .nav .catalog span
 {
 	font-size: 23px;
-	padding-right: 1px;
+
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -168,6 +169,7 @@
 	justify-content: center;
 
 	margin-right: 15px;
+	padding-right: 1px;
 
 	-webkit-transform: rotate(90deg);
 	        transform: rotate(90deg);
@@ -412,6 +414,7 @@
 	height: 25px;
 	padding: 25px 25px;
 
+	cursor: pointer;
 	-webkit-transition: 0.3s all;
 	        transition: 0.3s all;
 	        transition: 0.3s all;
@@ -575,7 +578,9 @@
 	z-index: 999;
 	top: 0;
 	left: 0;
+
 	overflow-y: scroll;
+
 	min-width: 100vw;
 	min-height: 100vh;
 }
@@ -636,9 +641,10 @@
 
 #login_button > p > span
 {
-	transform: rotate(90deg);
-	margin-left: 4px;
 	margin-bottom: 1px;
+	margin-left: 4px;
+
+	transform: rotate(90deg);
 }
 
 #modal_authorize .modal .type_auth
@@ -769,6 +775,7 @@
 
 	width: 80%;
 	margin-bottom: 20px;
+
 	color: #8B7B7B;
 }
 
@@ -865,15 +872,17 @@ label.container
 
 .container p
 {
-	color: #8B8787;
+	width: 80%;
 	margin-top: 3px;
-    width: 80%;
-    margin-left: 10px;
+	margin-left: 10px;
+
+	color: #8B8787;
 }
 
 .container p a, .container p span
 {
 	display: inline-block;
+
 	color: #E31E25;
 }
 /*asdas*/
@@ -890,8 +899,9 @@ label.container
 	}
 	#modal_authorize .modal form .passwords
 	{
-		width: 100%;
 		flex-flow: column wrap;
+
+		width: 100%;
 	}
 	#modal_authorize .modal form .passwords
 	{
@@ -911,7 +921,8 @@ label.container
 {
 	.container p
 	{
-		margin-top: 6px;
 		font-size: 9px;
+
+		margin-top: 6px;
 	}
 }
