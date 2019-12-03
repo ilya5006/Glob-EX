@@ -788,7 +788,7 @@
 {
 	display: flex;
 	flex-flow: row nowrap;
-
+	padding-left: 0.4%;
 	width: 90%;
 	margin-bottom: 15px;
 }
@@ -904,6 +904,8 @@ form .container p a, .container p span
 	}
 	#modal_authorize .modal form input[type=submit]
 	{
+		margin-top: 15px;
+		margin-left: 0;
 		align-self: center;
 	}
 	.placeinput input:invalid + .place_holder, #modal_authorize input
