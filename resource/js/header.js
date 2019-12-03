@@ -48,9 +48,7 @@ allExpandButton.forEach(function (element)
 });
 
 document.body.addEventListener('mousedown', function (e) 
-{
-    console.log(e.target.parentElement.tagName);
-    
+{   
     if (document.querySelector('.expand-catalog').classList.contains('hide') == false) 
     {
         if (e.target.parentElement.classList.contains('cat_1') == false )
