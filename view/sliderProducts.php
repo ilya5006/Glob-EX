@@ -1,8 +1,8 @@
 <div class="content">
     <div class="slider_header">
         <h2> Акции: Мебель </h2>
-        <div class="slide_left"> <span>&#60;</span> </div>
-        <div class="slide_right"> <span>&#62;</span> </div>
+        <div class="slide_left slide_anim"> <span>&#60;</span> </div>
+        <div class="slide_right slide_anim"> <span>&#62;</span> </div>
     </div>
     <div class="scroll">
         <div class="product">

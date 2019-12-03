@@ -271,7 +271,7 @@
 	border-radius: 100%;
 }
 
-.slide_left:hover, .slide_right:hover
+.slide_anim:hover
 {
 	opacity: 1;
 }
