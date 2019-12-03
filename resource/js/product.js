@@ -28,7 +28,7 @@ function showImage(param)
 }
 
 //filters
-let allFeature = document.querySelectorAll('.features .feature');
+let allFeature = document.querySelectorAll('.info > .features .feature');
 let buttoCreated = false;
 for (let i = 0; i < allFeature.length; i++)
 {
@@ -36,41 +36,39 @@ for (let i = 0; i < allFeature.length; i++)
     {
         allFeature[i].style.display = 'none';
 
-        if (buttoCreated == false)
-        {
-            let showAll = document.createElement('p');
-            showAll.textContent = "Больше характеристик";
-            showAll.classList.add('feature_button');
-            let isShow = false;
-            showAll.addEventListener('click', function()
-            {
-                if (isShow == false)
-                {
-                    for (let i = 0; i < allFeature.length; i++)
-                    {
-                        if (i > 5)
-                        {
-                            allFeature[i].style.display = 'block';
-                        }
-                    }
-                    isShow = true;
-                    showAll.textContent = "Скрыть";
-                }
-                else
-                {
-                    for (let i = 0; i < allFeature.length; i++)
-                    {
-                        if (i > 5)
-                        {
-                            allFeature[i].style.display = 'none';
-                        }
-                    }
-                    isShow = false;
-                    showAll.textContent = "Больше характеристик";
-                }
-            });
-            allFeature[i].parentElement.appendChild(showAll);
-            buttoCreated = true;
-        }
+        // if (buttoCreated == false)
+        // {
+        //     let showAll = document.createElement('p');
+        //     showAll.textContent = "Больше характеристик";
+        //     showAll.classList.add('feature_button');
+
+        //     allFeature[i].parentElement.appendChild(showAll);
+        //     buttoCreated = true;
+        //}
     }
 }
+
+document.querySelector('.feature_button').addEventListener('click', function()
+{
+    document.querySelector('.info_slider > .sliders .slider_d').classList.remove('active');
+    document.querySelector('.info_slider > .sliders .slider_f').classList.add('active');
+    document.querySelector('.informations .info_d').style.display = 'none';
+    document.querySelector('.informations .features').style.display = 'block';
+});
+
+//sliders
+document.querySelector('.info_slider > .sliders .slider_d').addEventListener('click', function()
+{
+    document.querySelector('.info_slider > .sliders .slider_d').classList.add('active');
+    document.querySelector('.info_slider > .sliders .slider_f').classList.remove('active');
+    document.querySelector('.informations .info_d').style.display = 'block';
+    document.querySelector('.informations .features').style.display = 'none';
+});
+document.querySelector('.info_slider > .sliders .slider_f').addEventListener('click', function()
+{
+    document.querySelector('.info_slider > .sliders .slider_d').classList.remove('active');
+    document.querySelector('.info_slider > .sliders .slider_f').classList.add('active');
+    document.querySelector('.informations .info_d').style.display = 'none';
+    document.querySelector('.informations .features').style.display = 'block';
+});
+

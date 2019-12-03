@@ -30,6 +30,7 @@
                 <p class="feature">Плотность 80 г/м2</p>
                 <p class="feature">Листов в пачке 500 шт</p>
                 <p class="feature">Листов в пачке 500 шт</p>
+                <p class="feature_button">Больше характеристик</p>
             </div>
         </div>
         <div class="act">
@@ -41,6 +42,40 @@
                 <input type="number" name="" id="" min="1" max="999" value="1">
                 <input type="submit" value="в корзину">
             </form>
+        </div>
+    </div>
+    <div class="info_slider">
+        <div class="sliders">
+            <p class="slider_d active"> Описание товара </p>
+            <p class="slider_f"> Все характеристики </p>
+        </div>
+        
+        <div class="informations">
+            <div class="info_d"> 
+                <p> Прямой диван Куба – практичное решение для небольшой гостиной, студии или кухни. При своих скромных размерах он трансформируется в полноценное двуспальное место. Поскольку подушки модели раскладываются на пол, модель не предназначена для ежедневного использования, но удобна для размещения припозднившихся гостей. Тканевая обивка легко поддается чистке. Прикручивающиеся ножки выполнены из прочного пластика. <br> Эта модель доступна только в тех вариантах обивки, которые представлены в нашем ассортименте.</p>
+            </div>
+            <div class="features" style="display: none;">
+                <p class="feature">Формат А4</p>
+                <p class="feature">Класс А</p>
+                <p class="feature">Плотность 80 г/м2</p>
+                <p class="feature">Листов в пачке 500 шт</p>
+                <p class="feature">Листов в пачке 500 шт</p>
+                <p class="feature">Формат А4</p>
+                <p class="feature">Класс А</p>
+                <p class="feature">Плотность 80 г/м2</p>
+                <p class="feature">Листов в пачке 500 шт</p>
+                <p class="feature">Листов в пачке 500 шт</p>
+                <p class="feature">Формат А4</p>
+                <p class="feature">Класс А</p>
+                <p class="feature">Плотность 80 г/м2</p>
+                <p class="feature">Листов в пачке 500 шт</p>
+                <p class="feature">Листов в пачке 500 шт</p>
+                <p class="feature">Формат А4</p>
+                <p class="feature">Класс А</p>
+                <p class="feature">Плотность 80 г/м2</p>
+                <p class="feature">Листов в пачке 500 шт</p>
+                <p class="feature">Листов в пачке 500 шт</p>
+            </div>
         </div>
     </div>
 </div>
