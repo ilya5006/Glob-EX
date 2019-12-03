@@ -265,18 +265,15 @@
 	-webkit-transition: 0.3s all;
 	        transition: 0.3s all;
 
-	color: rgba(255, 0, 8, 0.5);
-	border: 3px solid rgba(255, 0, 8, 0.5);
+	color: #E31E25;
+	opacity: 0.5;
+	border: 3px solid #E31E25;
 	border-radius: 100%;
-
-	-webkit-filter: grayscale(1);
-	        filter: grayscale(1);
 }
 
 .slide_left:hover, .slide_right:hover
 {
-	-webkit-filter: grayscale(0);
-	        filter: grayscale(0);
+	opacity: 1;
 }
 
 .slide_left
@@ -287,6 +284,11 @@
 .slide_right
 {
 	margin-left: 25px;
+}
+
+.slide_left > span, .slide_right > span
+{
+	color: #000000;
 }
 
 @media screen and (max-width: 750px)
