@@ -88,40 +88,40 @@
             
         </form>
 
-        <form action="../model/login.php" class="register" style="display: none">
+        <div class="register" style="display: none">
 
-            <label class="placeinput">
-                <input required="1" type="text" id="fio" />
+            <label class="placeinput" id="fio_label">
+                <input required="1" type="text" name="fio" id="fio" />
                 <div class="place_holder">Введите фио<span>*</span></div>
             </label>
 
-            <label class="placeinput">
-                <input required="1" type="text" id="email" />
-                <div class="place_holder">Введите фио<span>*</span></div>
+            <label class="placeinput" id="email_label">
+                <input required="1" type="text" name="email" id="email" />
+                <div class="place_holder">Введите email<span>*</span></div>
             </label>
-            <label class="placeinput">
-                <input required="1" type="tel" id="tel" />
+            <label class="placeinput" id="tel_label">
+                <input required="1" type="tel" name="phone_number" id="tel" />
                 <div class="place_holder">Введите телефон<span>*</span></div>
             </label>
 
-            <div class="passwords">
-                <label class="placeinput">
-                    <input required="1" type="password" id="passwordRegister" />
+            <div class="passwords" id="password_label">
+                <label class="placeinput" id="first_password">
+                    <input required="1" type="password" name="password" id="passwordRegister" />
                     <div class="place_holder">Введите пароль<span>*</span></div>
                 </label>
-                <label class="placeinput">
+                <label class="placeinput" id="second_password">
                     <input required="1" type="password" id="passwordRegisterAgain" />
                     <div class="place_holder">Повторите пароль<span>*</span></div>
                 </label>
             </div>
 
             <div class="user-type">
-                <label class="container"> <p> Частное лицо</p> <input type="radio" name="type" > <span class="checkmark"></span> </label>
-                <label class="container"> <p> Юридическое лицо</p> <input type="radio" name="type"  > <span class="checkmark"></span> </label>
+                <label class="container" id="individual"> <p> Частное лицо</p> <input type="radio" name="individual" > <span class="checkmark"></span> </label>
+                <label class="container" id="entities"> <p> Юридическое лицо</p> <input type="radio" name="entitie"  > <span class="checkmark"></span> </label>
             </div>
-            <label class="container"> <p>Согласен на <a href="#">обработку персональных данных *</a></p> <input type="checkbox" > <span class="checkmark"></span> </label>
+            <label class="container" id="personal_data"> <p>Согласен на <a href="#">обработку персональных данных *</a></p> <input type="checkbox" > <span class="checkmark"></span> </label>
 
-            <label class="container"> <p>Я хочу получать рассылку об акциях и новостях</p> <input type="checkbox" > <span class="checkmark"></span> </label>
+            <label class="container" id="mailing"> <p>Я хочу получать рассылку об акциях и новостях</p> <input type="checkbox" > <span class="checkmark"></span> </label>
 
             <p class="require"> <span>*</span> Поля обязательные для ввода</p>
             
