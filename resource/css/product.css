@@ -227,6 +227,7 @@
 
 .info_slider .sliders
 {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-flow: row nowrap;
 

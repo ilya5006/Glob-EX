@@ -1,4 +1,4 @@
-﻿<div class="content">
+﻿<div class="content" style="padding-top: 0; padding-bottom: 0;">
     <div class="cat_fold">
         <p class="catalog_expand_button"> Каталог</p>
         <a href="#"> &#92; Канцелярские товары </a>

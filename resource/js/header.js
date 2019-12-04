@@ -69,6 +69,7 @@ document.body.addEventListener('mousedown', function (e)
     {   
         document.querySelector('#modal_authorize').style.display = 'none';
         document.body.style.overflowY = 'scroll';
+        document.body.style.paddingRight = '0px';
     }
 }, true);
 
@@ -77,6 +78,7 @@ document.querySelector('#login_button').addEventListener('click', function(e)
     e.preventDefault();
     document.querySelector('#modal_authorize').style.display = 'flex';
     document.body.style.overflowY = 'hidden';
+    document.body.style.paddingRight = '18px';
 });
 
 document.querySelector('#log_form').addEventListener('click', function()

@@ -1,0 +1,223 @@
+﻿.cat_fold p
+{
+	font-size: 14px;
+	line-height: 16px;
+
+	display: inline-block;
+}
+
+.cat_fold p span
+{
+	color: #E31E24;
+}
+
+
+.sliders
+{
+	display: flex;
+	flex-flow: row nowrap;
+
+	margin-top: 50px;
+	margin-bottom: 35px;
+
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sliders p, .sliders a
+{
+	font-size: 18px;
+
+	display: inline-block;
+
+	margin-right: 15px;
+	padding: 0 30px;
+
+	cursor: pointer;
+	text-align: center;
+
+	color: #E31E24;
+}
+
+.sliders p.active, .sliders a.active
+{
+	font-weight: bold;
+
+	padding-bottom: 9px;
+
+	border-bottom: 5px solid #E31E25;
+}
+
+.cart-block
+{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.cart-block > .items
+{
+	display: flex;
+	flex-flow: column nowrap;
+
+	width: 77%;
+}
+
+.product
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	margin-bottom: 25px;
+
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.product > .product-image
+{
+	width: 150px;
+	height: 150px;
+	margin-right: 25px;
+}
+
+.product > .product-info
+{
+	display: flex;
+	flex-flow: column;
+
+	padding: 20px;
+}
+
+.product > .product-info > .product-name
+{
+	font-size: 20px;
+
+	margin-bottom: 30px;
+}
+
+.product > .product-info > .product-detail
+{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.product > .product-info > .product-detail p, .product > .product-info > .product-detail a, .product > .product-info > .product-detail p a
+{
+	display: inline-block;
+
+	color: #9D9A9A;
+}
+
+.product > .product-info > .product-detail p a
+{
+	color: #E31E25;
+}
+
+.product > .product-price
+{
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 59px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 20px 35px;
+}
+
+.product > .product-count
+{
+	font-size: 29px;
+
+	width: 100px;
+	height: 40px;
+
+	text-align: center;
+}
+
+.product > .fav-button
+{
+	margin: 20px 25px;
+
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+.product > .fav-button img
+{
+	width: 25px;
+	height: 25px;
+}
+
+.product > .fav-button:hover
+{
+	filter: grayscale(1);
+}
+
+.cart-block > .act
+{
+	align-self: flex-start;
+	flex-grow: 1;
+
+	margin-left: 25px;
+	padding: 20px;
+
+	background: #9D9A9A;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.cart-block > .act hr
+{
+	margin: 15px 0;
+}
+
+.cart-block > .act p
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	color: #FFFFFF;
+}
+
+.act > .act-tovari, .act > .act-skidka, .act > .act-dostavka
+{
+	font-size: 18px;
+
+	margin-bottom: 15px;
+}
+
+.cart-block > .act span
+{
+	font-size: 25px;
+
+	margin-left: auto;
+
+	text-align: right;
+}
+
+.cart-block > .act span::after
+{
+	content: " р.";
+}
+
+.act > .act-skidka > span::before
+{
+	content: " - ";
+}
+
+.act > .order-button
+{
+	font-size: 17px;
+	font-weight: bold;
+
+	width: 100%;
+	padding: 13px 5px;
+
+	color: #E31E24;
+	border: 0;
+	background-color: #FFFFFF;
+}
