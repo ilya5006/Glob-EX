@@ -1,4 +1,14 @@
-﻿.cat_fold p
+﻿h2
+{
+	font-size: 25px;
+	font-weight: bold;
+
+	margin-top: 30px;
+
+	text-transform: uppercase;
+}
+
+.cat_fold p
 {
 	font-size: 14px;
 	line-height: 16px;
@@ -104,8 +114,9 @@
 
 .product > .product-info > .product-detail p, .product > .product-info > .product-detail a, .product > .product-info > .product-detail p a
 {
+	text-align: center;
 	display: inline-block;
-
+	margin: 0 5px;
 	color: #9D9A9A;
 }
 
@@ -217,7 +228,130 @@
 	width: 100%;
 	padding: 13px 5px;
 
+	cursor: pointer;
+	transition: 0.3s all;
+
 	color: #E31E24;
 	border: 0;
 	background-color: #FFFFFF;
+}
+
+.act > .order-button:hover
+{
+	color: #FFFFFF;
+	background-color: #E31E24;
+}
+
+.pay-type
+{
+	margin-top: 25px;
+}
+
+.pay-type .container p
+{
+	font-size: 20px;
+
+	margin-left: 0;
+
+	color: #8B8787;
+}
+
+.cart-block .delivery .delivery-type
+{
+	display: flex;
+	flex-flow: row nowrap;
+
+	width: 100%;
+	margin-top: 30px;
+
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.cart-block .delivery .delivery-type p
+{
+	font-size: 18px;
+
+	flex-grow: 1;
+
+	padding: 15px;
+
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #FF0008;
+	background-color: #FFFFFF;
+}
+
+.cart-block .delivery .delivery-type p.active
+{
+	color: #FFFFFF;
+	background-color: #FF0008;
+}
+
+@media screen and (max-width: 1200px)
+{
+	.cart-block > .items
+	{
+		width: 100%;
+	}
+	.cart-block > .act
+	{
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 1000px)
+{
+	.product
+	{
+		flex-flow: row wrap;
+	}
+	.product > .product-count
+	{
+		margin: 15px;
+		margin-left: auto;
+	}
+}
+
+@media screen and (max-width: 700px)
+{
+	.product
+	{
+		justify-content: center;
+	}
+	.product > .product-info > .product-name
+	{
+		text-align: center;
+	}
+	.product-count
+	{
+		order: 99;
+	}
+	.sliders p, .sliders a
+	{
+		flex-grow: 1;
+		margin-right: 0;
+	}
+	.product > .product-price
+	{
+		width: 100%;
+	}
+	h2
+	{
+		text-align: center;
+	}
+	.pay-type
+	{
+		padding-left: 25px;
+	}
+}
+
+
+@media screen and (max-width: 470px)
+{
+	.product > .product-info > .product-detail
+	{
+		flex-flow: column wrap;
+	}
 }

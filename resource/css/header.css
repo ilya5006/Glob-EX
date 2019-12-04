@@ -800,7 +800,7 @@
 
 
 /* Начало чекбоксов */
-form .container
+form .container, .pay-type .container
 {
 	font-size: 14px;
 
@@ -815,7 +815,7 @@ form .container
 	cursor: pointer;
 }
 
-form  .container input
+form  .container input, .pay-type .container input
 {
 	position: absolute;
 
@@ -827,12 +827,12 @@ form  .container input
 	opacity: 0;
 }
 
-form  label.container
+form  label.container, .pay-type label.container
 {
 	margin-bottom: 22px;
 }
 
-form .checkmark
+form .checkmark, .pay-type .checkmark
 {
 	position: absolute;
 	top: 0;
@@ -845,18 +845,18 @@ form .checkmark
 	background-color: #FFFFFF;
 }
 
-form .container:hover input ~ .checkmark
+form .container:hover input ~ .checkmark, .pay-type .container:hover input ~ .checkmark
 {
 	background-color: #FFFFFF;
 }
 
-form .container input:checked ~ .checkmark
+form .container input:checked ~ .checkmark, .pay-type .container input:checked ~ .checkmark
 {
 	border: 0;
 	background-color: #E31E25;
 }
 
-form .container .checkmark:after
+form .container .checkmark:after, .pay-type .container .checkmark:after
 {
 	top: 5px;
 	left: 9px;
@@ -870,7 +870,7 @@ form .container .checkmark:after
 	border-width: 0 3px 3px 0;
 }
 
-form .container p
+form .container p, .pay-type .container p
 {
 	width: 80%;
 	margin-top: 3px;
@@ -884,6 +884,11 @@ form .container p a, .container p span
 	display: inline-block;
 
 	color: #E31E25;
+}
+
+.pay-type .checkmark
+{
+	left: 0;
 }
 /* Конец чекбоксов */
 
