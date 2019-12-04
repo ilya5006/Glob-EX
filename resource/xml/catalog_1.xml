@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<data>
+    <brands>
+        <value name="IQ Allround" id="1" description="" image="C:\Картинки и баннеры\Логотипы\1.jpg"/>
+        <value name="Lamark" id="4" description="" image="C:\Картинки и баннеры\Логотипы\4.jpg"/>
+        <value name="Nota" id="3" description="" image="C:\Картинки и баннеры\Логотипы\3.jpg"/>
+        <value name="Svetocopy" id="2" description="" image="C:\Картинки и баннеры\Логотипы\2.jpg"/>
+    </brands>
+    <Country>
+        <value name="Россия" id="1"/>
+    </Country>
+    <specs>
+        <value name="Белизна (%)" id="5"/>
+        <value name="Количество листов в пачке" id="6"/>
+        <value name="Марка бумаги" id="1"/>
+        <value name="Наличие бокса" id="10"/>
+        <value name="Плотность бумаги (г/кв.м)" id="2"/>
+        <value name="Размер изделия (мм)" id="9"/>
+        <value name="Толщина (мкм)" id="3"/>
+        <value name="Формат листов" id="4"/>
+        <value name="Цвет бумаги" id="8"/>
+        <value name="Штук в коробке" id="7"/>
+    </specs>
+    <partitions>
+        <value name="Бумажная продукция" technical_name="Bumajnaya_produkciya" id="2" top_id="" sort="0" banner="" image1="" image2="" description="" icon="">
+            <specs/>
+        </value>
+        <value name="Блоки для записей" technical_name="Bloki_dlya_zapisei" id="14" top_id="2" sort="100" banner="" image1="C:\Картинки и баннеры\Фото\14.jpg" image2="" description="">
+            <specs>
+                <spec id="6"/>
+                <spec id="2"/>
+                <spec id="8"/>
+                <spec id="9"/>
+            </specs>
+        </value>
+        <value name="Бумага для оргтехники" technical_name="Bumaga_dlya_orgtexniki" id="3" top_id="2" sort="0" banner="" image1="C:\Картинки и баннеры\Фото\3.jpg" image2="" description="">
+            <specs>
+                <spec id="1"/>
+                <spec id="2"/>
+                <spec id="3"/>
+                <spec id="4"/>
+                <spec id="5"/>
+                <spec id="6"/>
+                <spec id="7"/>
+            </specs>
+        </value>
+        <value name="Канцелярские товары" technical_name="Kancelyarskie_tovary" id="1" top_id="" sort="1" banner="" image1="" image2="" description="" icon="">
+            <specs/>
+        </value>
+        <value name="Калькуляторы" technical_name="Kal'kulyatory" id="6" top_id="1" sort="100" banner="" image1="" image2="" description="">
+            <specs/>
+        </value>
+        <value name="Клей" technical_name="Klei" id="7" top_id="1" sort="100" banner="" image1="" image2="" description="">
+            <specs/>
+        </value>
+    </partitions>
+    <nomeklatura>
+        <value name="Блок для заметок 9*9*9cм LAMARK белый в пластиковом боксе NT0070" technical_name="Blok_dlya_zametok_9*9*9cm_LAMARK_belyi_v_plastikovom_bokse_NT0070" id="15" top_id="14" sort="100" brand="4" country="1" quantity="6" unit="шт" price="101.842" image1="C:\Картинки и баннеры\Фото\15.jpg" image2="" image3="" image4="" image5="" description="">
+            <specs/>
+            <spec id="6" value="900"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="8" value="Белый"/>
+            <spec id="9" value="90*90"/>
+            <spec id="10" value="Да"/>
+        </value>
+        <value name="Блок для заметок 9*9*9см LAMARK белый NT0075" technical_name="Blok_dlya_zametok_9*9*9sm_LAMARK_belyi_NT0075" id="16" top_id="14" sort="100" brand="4" country="1" quantity="128" unit="шт" price="78.767" image1="C:\Картинки и баннеры\Фото\16.jpg" image2="" image3="" image4="" image5="" description="">
+            <specs/>
+            <spec id="6" value="900"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="8" value="Белый"/>
+            <spec id="9" value="90*90"/>
+            <spec id="10" value="Нет"/>
+        </value>
+        <value name="Бумага А3 &quot;SVETO COPY&quot; 80гр/м2 Ярк.94% ISO, 146% CIE (500л/пач)" technical_name="Bumaga_A3_&quot;SVETO_COPY&quot;_80gr/m2_YArk.94%_ISO,_146%_CIE_(500l/pach)" id="10" top_id="3" sort="4" brand="2" country="1" quantity="181" unit="пач" price="471.13" image1="C:\Картинки и баннеры\Фото\10.jpg" image2="C:\Картинки и баннеры\Фото\10-2.jpg" image3="" image4="" image5="" description="">
+            <specs/>
+            <spec id="1" value="C"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="3" value="104"/>
+            <spec id="4" value="A3"/>
+            <spec id="5" value="146 %"/>
+            <spec id="6" value="500"/>
+            <spec id="7" value="5 шт."/>
+        </value>
+        <value name="Бумага А4 &quot;IQ ALLROUND&quot; 80г,162%CIE пачка (500л/пач)" technical_name="Bumaga_A4_&quot;IQ_ALLROUND&quot;_80g,162%CIE_pachka_(500l/pach)" id="5" top_id="3" sort="3" brand="1" country="1" quantity="3172" unit="пач" price="286" image1="C:\Картинки и баннеры\Фото\5.jpg" image2="C:\Картинки и баннеры\Фото\5-2.jpg" image3="" image4="" image5="" description="">
+            <specs/>
+            <spec id="1" value="B"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="3" value="104"/>
+            <spec id="4" value="A4"/>
+            <spec id="5" value="162 %"/>
+            <spec id="6" value="500"/>
+            <spec id="7" value="5 шт."/>
+        </value>
+        <value name="Бумага А4 &quot;NOTA&quot; 80гр/м2 95% CIE 150% (500л/пач)" technical_name="Bumaga_A4_&quot;NOTA&quot;_80gr/m2_95%_CIE_150%_(500l/pach)" id="11" top_id="3" sort="1" brand="3" country="1" quantity="3988" unit="пач" price="209" old_price="220" discount="5" image1="C:\Картинки и баннеры\Фото\11.jpg" image2="" image3="" image4="" image5="" description="">
+            <specs/>
+            <spec id="1" value="B+"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="3" value="105"/>
+            <spec id="4" value="A4"/>
+            <spec id="5" value="150 %"/>
+            <spec id="6" value="500"/>
+            <spec id="7" value="5 шт."/>
+        </value>
+        <value name="Бумага А4 &quot;SVETO COPY&quot; 80гр/м2 95% CIE 146% (500л/пач)" technical_name="Bumaga_A4_&quot;SVETO_COPY&quot;_80gr/m2_95%_CIE_146%_(500l/pach)" id="12" top_id="3" sort="2" brand="2" country="1" quantity="5390" unit="пач" price="235.554" image1="C:\Картинки и баннеры\Фото\12.jpg" image2="C:\Картинки и баннеры\Фото\12-2.jpg" image3="" image4="" image5="" description="">
+            <specs/>
+            <spec id="1" value="C"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="3" value="104"/>
+            <spec id="4" value="A4"/>
+            <spec id="5" value="146 %"/>
+            <spec id="6" value="500"/>
+            <spec id="7" value="5 шт."/>
+        </value>
+        <value name="Калькулятор 12 разряд. 206*164*30мм SDC-888Т, двойное питание, корректировка,  черный" technical_name="Kal'kulyator_12_razryad._206*164*30mm_SDC-888T,_dvoinoe_pitanie,_korrektirovka,__chernyi" id="13" top_id="6" sort="100" brand="" country="" quantity="144" unit="шт" price="0" image1="" image2="" image3="" image4="" image5="" description="">
+            <specs/>
+        </value>
+    </nomeklatura>
+</data>
