@@ -497,7 +497,14 @@
 
 .product > .product-act > .cart
 {
+	height: 100%;
+	width: 25px;
 	position: static;
+}
+
+.product > .product-act > .cart img
+{
+	height: 100%;
 }
 
 @media screen and (max-width: 470px)
