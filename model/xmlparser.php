@@ -5,7 +5,7 @@ function isElement($type)
 }
 
 $reader = new XMLReader();
-$reader->open('../resource/xml/catalog.xml');
+$reader->open('../resource/xml/catalog_1.xml');
 $allData = [];
 
 while ($reader->read()) {
