@@ -28,5 +28,7 @@
 
 <?php require(__DIR__ . '/view/footer.php'); ?>
 
+<script src="./resource/js/registration.js"></script>
+
 </body>
 </html>

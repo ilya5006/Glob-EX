@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 02 2019 г., 12:49
+-- Время создания: Дек 04 2019 г., 13:08
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.2
 
@@ -125,15 +125,24 @@ CREATE TABLE `specs` (
 CREATE TABLE `users_all` (
   `id_user` int(11) NOT NULL,
   `role` bigint(20) NOT NULL,
-  `surname` varchar(255) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `middle_name` varchar(255) NOT NULL,
-  `login` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `fio` varchar(255) NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone_number` varchar(20) NOT NULL,
-  `address` varchar(255) DEFAULT NULL
+  `address` varchar(255) DEFAULT NULL,
+  `mailing` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `users_all`
+--
+
+INSERT INTO `users_all` (`id_user`, `role`, `fio`, `password`, `email`, `phone_number`, `address`, `mailing`) VALUES
+(1, 0, 'Да Да Да', '$2y$10$58adI2iM5PEp7y2pZcZHJeboEvDkbhFEmjb/vmG2dcLLnWBhtvciu', 'dada@dada.dada', '88005553535', NULL, 0),
+(2, 0, 'Яяя Ааа Ддд', '$2y$10$ZOcqE7WwwClqNHMNMLmKHuHShokrUCYvdqZIpy.rNIZ8D43G5vmAW', 'yaya@yaya.yaya', '85025698756', NULL, 0),
+(3, 0, 'Яяя Ааа Aaa', '$2y$10$HMoWHpOkdETsiSH2unzCtuyEULHXaHcHu.Eydx9az5nu6WG9VIdSC', 'yaya@yaya.yaya', '85025698756', NULL, 1),
+(4, 1, 'Яяя Ааа Aaa', '$2y$10$ZdAidiOGlOv77fSYRAIw.eNHYZA2jwuapeK.nQkFoRz.kAp5JfKke', 'yaya@yaya.yaya', '85025698756', NULL, 1),
+(5, 1, 'Яяя Ааа Aaa', '$2y$10$eJqj1a5ZlMmpXX3s1IB/seU3LGyLmdXyzC4ENyRD/GZ0uIcf/CSEO', 'yaya@yaya.yaya', '85025698756', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -145,6 +154,14 @@ CREATE TABLE `users_entities` (
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `users_entities`
+--
+
+INSERT INTO `users_entities` (`id_user`) VALUES
+(4),
+(5);
+
 -- --------------------------------------------------------
 
 --
@@ -154,6 +171,26 @@ CREATE TABLE `users_entities` (
 CREATE TABLE `users_individuals` (
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `users_individuals`
+--
+
+INSERT INTO `users_individuals` (`id_user`) VALUES
+(1),
+(1),
+(1),
+(1),
+(1),
+(1),
+(1),
+(1),
+(1),
+(1),
+(1),
+(1),
+(2),
+(3);
 
 --
 -- Индексы сохранённых таблиц
@@ -237,7 +274,7 @@ ALTER TABLE `goods`
 -- AUTO_INCREMENT для таблицы `users_all`
 --
 ALTER TABLE `users_all`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
