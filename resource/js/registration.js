@@ -45,7 +45,7 @@ registerButton.addEventListener('click', () =>
     
         connection.catch((error) => 
         {
-            alert('Произошла ошибка. Попробуйте зарегестрироваться ещё раз.');
+            alert('Произошла ошибка. Попробуйте зарегистрироваться ещё раз.');
         });
     }
     else
