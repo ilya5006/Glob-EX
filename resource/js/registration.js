@@ -16,7 +16,7 @@ let role = -1;
 
 let mailing1 = 0;
 
-registerButton.addEventListener('click', (event) =>
+registerButton.addEventListener('click', () =>
 {
     if (individual.checked) role = 0;
     if (entities.checked) role = 1;
@@ -45,7 +45,7 @@ registerButton.addEventListener('click', (event) =>
     
         connection.catch((error) => 
         {
-            alert('Произошла ошибка. Попробуйте зарегестрироваться ещё раз.');
+            alert('Произошла ошибка. Попробуйте зарегистрироваться ещё раз.');
         });
     }
     else
