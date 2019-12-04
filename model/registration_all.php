@@ -16,8 +16,6 @@
 
     require_once './connection.php';
 
-    $out = [];
-
     $role = $mysqli->escape_string($_POST['role']);
     $fio = $mysqli->escape_string(trim($_POST['fio']));
     $password = $mysqli->escape_string($_POST['password']);
@@ -27,8 +25,7 @@
 
     if (isUserExists($email, $phoneNumber, $password))
     {
-        $out[] = 'Такой пользователь уже существует';
-        echo json_encode($out);
+        echo json_encode(['Такой пользователь уже существует']);
         die();
     }
 
@@ -48,4 +45,6 @@
     {
         $mysqli->query("INSERT INTO users_individuals VALUES ('$lastId')");
     }
+
+    echo json_encode(['Регистрация прошла успешно']);
 ?>
