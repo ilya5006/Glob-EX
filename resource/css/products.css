@@ -509,6 +509,10 @@
 
 @media screen and (max-width: 470px)
 {
+	.product > .product-act
+	{
+		margin-bottom: 30px;
+	}
 	.product
 	{
 		text-align: center;
