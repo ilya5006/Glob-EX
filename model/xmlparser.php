@@ -6,7 +6,7 @@ function isElement($type)
 
 $reader = new XMLReader();
 $reader->open('../resource/xml/catalog_1.xml');
-$allData = [];
+$xmlParseData = [];
 
 while ($reader->read()) {
     //brands
@@ -25,7 +25,7 @@ while ($reader->read()) {
             $reader->read();
         }
 
-        $allData['brands'] = $brands;
+        $xmlParseData['brands'] = $brands;
     }
     //specs
     if (isElement($reader->nodeType) && $reader->name == 'specs') {
@@ -42,7 +42,7 @@ while ($reader->read()) {
             $reader->read();
         }
 
-        $allData['specs'] = $specs;
+        $xmlParseData['specs'] = $specs;
     }
     //country
     if (isElement($reader->nodeType) && $reader->name == 'Country') {
@@ -59,7 +59,7 @@ while ($reader->read()) {
             $reader->read();
         }
 
-        $allData['countries'] = $countries;
+        $xmlParseData['countries'] = $countries;
     }
     //partitions
     if (isElement($reader->nodeType) && $reader->name == 'partitions') {
@@ -77,17 +77,21 @@ while ($reader->read()) {
                     $partitions[$partitionsId]['sort'] = $reader->getAttribute('sort');
                     $partitions[$partitionsId]['banner'] = $reader->getAttribute('banner');
                     $partitions[$partitionsId]['image1'] = $reader->getAttribute('image1');
+                    $partitions[$partitionsId]['image2'] = $reader->getAttribute('image2');
+                    $partitions[$partitionsId]['description'] = $reader->getAttribute('description');
+                    $partitions[$partitionsId]['icon'] = $reader->getAttribute('icon');
+
                 }
                 if ($reader->name == 'spec') {
                     $value = $reader->getAttribute('id');
-                    $partitions[$partitionsId]['specs'][$reader->getAttribute('id')] = $reader->getAttribute('value');
+                    $partitions[$partitionsId]['specs'][] = $reader->getAttribute('id');
                 }
             }
 
             $reader->read();
         }
 
-        $allData['partitions'] = $partitions;
+        $xmlParseData['partitions'] = $partitions;
     }
     //nomeklatura
     if (isElement($reader->nodeType) && $reader->name == 'nomeklatura') {
@@ -128,11 +132,7 @@ while ($reader->read()) {
             $reader->read();
         }
 
-        $allData['nomeklatura'] = $nomeklatura;
+        $xmlParseData['nomeklatura'] = $nomeklatura;
     }
 }
-
-echo '<pre>';
-echo var_export($allData);
-echo '</pre>';
 ?>
