@@ -330,7 +330,7 @@
 .delivery .change-address
 {
 	font-weight: bold;
-
+	margin-left: 15px;
 	padding: 15px 25px;
 
 	cursor: pointer;
@@ -384,6 +384,19 @@
 	}
 }
 
+@media screen and (max-width: 900px)
+{
+	.delivery .deliv-inf
+	{
+		flex-flow: column wrap;
+	}
+	.delivery .change-address
+	{
+		margin-left: 0;
+		margin: 10px;
+	}
+}
+
 @media screen and (max-width: 700px)
 {
 	.product
@@ -415,6 +428,14 @@
 	.pay-type
 	{
 		padding-left: 25px;
+	}
+	.delivery
+	{
+		text-align: center;
+	}
+	.delivery > .delivery-cost
+	{
+		font-size: 18px;
 	}
 }
 
