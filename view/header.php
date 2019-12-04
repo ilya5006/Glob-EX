@@ -1,7 +1,7 @@
 <header class="header">
     <div class="content" style="padding-bottom: 0;">
         <div class="menu">
-            <a href="#"><img src="./resource/img/logo.svg" alt="logo"></a>
+            <a href="./index.php"><img src="./resource/img/logo.svg" alt="logo"></a>
             <ul>
                 <li><a href="#">ДОСТАВКА</a></li>
                 <li><a href="#">ОПЛАТА</a></li>
@@ -58,8 +58,8 @@
                 <button><img src="./resource/img/icons/search.svg" alt="search"></button>
             </form>
             <ul>
-                <li><a href="#"><img src="./resource/img/icons/favourite.svg" alt="favorite"></a></li>
-                <li><a href="#"><img src="./resource/img/icons/cart.svg" alt="cart"></a></li>
+                <li><a href="./favourite.php"><img src="./resource/img/icons/favourite.svg" alt="favorite"></a></li>
+                <li><a href="./cart.php"><img src="./resource/img/icons/cart.svg" alt="cart"></a></li>
                 <li class="account"><a id="login_button"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти <span>&#62;</span></p></a></li>
             </ul>
         </div>

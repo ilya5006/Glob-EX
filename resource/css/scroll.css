@@ -221,6 +221,11 @@
 	        transition: 0.3s all;
 }
 
+.product .cart
+{
+	right: 15px;
+    bottom: 15px;
+}
 .product .cart:hover, .product > .favourite:hover
 {
 	-webkit-filter: grayscale(1);

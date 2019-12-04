@@ -5,8 +5,8 @@
     </div>
     <h2> Корзина </h2>
     <div class="sliders">
-        <a class="cart active"> Моя корзина </a>
-        <a class="favourite"> Отложенные товары </a>
+        <a class="cart active" href="./cart.php"> Моя корзина </a>
+        <a class="favourite" href="./favourite.php"> Отложенные товары </a>
     </div>
     <div class="cart-block">
         <div class="items">
