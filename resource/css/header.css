@@ -380,6 +380,10 @@
 	{
 		padding: 25px 5px;
 	}
+	.header .content .menu > ul
+	{
+		flex-flow: column wrap;
+	}
 }
 
 .expand-catalog

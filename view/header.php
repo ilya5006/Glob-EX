@@ -1,5 +1,5 @@
 <header class="header">
-    <div class="content">
+    <div class="content" style="padding-bottom: 0;">
         <div class="menu">
             <a href="#"><img src="./resource/img/logo.svg" alt="logo"></a>
             <ul>
