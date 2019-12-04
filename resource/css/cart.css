@@ -114,9 +114,12 @@
 
 .product > .product-info > .product-detail p, .product > .product-info > .product-detail a, .product > .product-info > .product-detail p a
 {
-	text-align: center;
 	display: inline-block;
+
 	margin: 0 5px;
+
+	text-align: center;
+
 	color: #9D9A9A;
 }
 
@@ -289,6 +292,73 @@
 	background-color: #FF0008;
 }
 
+.delivery .address
+{
+	font-size: 20px;
+
+	display: inline-block;
+
+	color: #000000;
+}
+
+.delivery > .delivery-cost
+{
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 29px;
+
+	margin-top: 25px;
+
+	color: #E31E24;
+}
+
+.delivery > .delivery-cost::after
+{
+	content: " р.";
+}
+
+.delivery .deliv-inf
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	margin-top: 50px;
+}
+
+.delivery .change-address
+{
+	font-weight: bold;
+
+	padding: 15px 25px;
+
+	cursor: pointer;
+	transition: 0.3s all;
+
+	color: #FF0008;
+	border: 2px solid #FF0008;
+	background: #FFFFFF;
+}
+
+.delivery .change-address:hover
+{
+	color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+	background: #FF0008;
+}
+
+.delivery > .info
+{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 23px;
+
+	margin-top: 50px;
+
+	color: #000000;
+}
+
 @media screen and (max-width: 1200px)
 {
 	.cart-block > .items
@@ -331,6 +401,7 @@
 	.sliders p, .sliders a
 	{
 		flex-grow: 1;
+
 		margin-right: 0;
 	}
 	.product > .product-price

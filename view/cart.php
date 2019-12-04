@@ -92,7 +92,12 @@
                     <p class="type-deliv active">Доставка</p>
                     <p class="type-pickup">Самовызов</p>
                 </div>
-                
+                <div class="deliv-inf">
+                    <p class="address">г. Москва, м. Комсомольская, ул. Ленина, д.5, кв.177</p>
+                    <button class="change-address">ВЫБРАТЬ АДРЕС</button>
+                </div>
+                <p class="delivery-cost">Стоимость доставки: <span >200</span></p>
+                <p class="info">Курьер свяжется с Вами для уточнения адреса и времери доставки, после оформления заказа</p>
             </div>
 
             <h2> СПОСОБ ОПЛАТЫ </h2>
