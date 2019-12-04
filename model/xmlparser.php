@@ -48,18 +48,18 @@ while ($reader->read()) {
     if (isElement($reader->nodeType) && $reader->name == 'Country') {
         $reader->read();
 
-        $country = [];
+        $countries = [];
 
         while ($reader->name != 'Country') {
             if (isElement($reader->nodeType)) {
                 $countryId = $reader->getAttribute('id');
-                $country[$countryId]['name'] = $reader->getAttribute('name');
+                $countries[$countryId]['name'] = $reader->getAttribute('name');
             }
 
             $reader->read();
         }
 
-        $allData['country'] = $country;
+        $allData['countries'] = $countries;
     }
     //partitions
     if (isElement($reader->nodeType) && $reader->name == 'partitions') {
@@ -103,9 +103,21 @@ while ($reader->read()) {
                     $nomeklatura[$nomeklaturaId]['technical_name'] = $reader->getAttribute('technical_name');
                     $nomeklatura[$nomeklaturaId]['top_id'] = $reader->getAttribute('top_id');
                     $nomeklatura[$nomeklaturaId]['sort'] = $reader->getAttribute('sort');
-                    $nomeklatura[$nomeklaturaId]['banner'] = $reader->getAttribute('banner');
+                    $nomeklatura[$nomeklaturaId]['brand'] = $reader->getAttribute('brand');
+                    $nomeklatura[$nomeklaturaId]['country'] = $reader->getAttribute('country');
+                    $nomeklatura[$nomeklaturaId]['quantity'] = $reader->getAttribute('quantity');
                     $nomeklatura[$nomeklaturaId]['unit'] = $reader->getAttribute('unit');
+                    $nomeklatura[$nomeklaturaId]['price'] = $reader->getAttribute('price');
+
+                    $nomeklatura[$nomeklaturaId]['old_price'] = $reader->getAttribute('old_price');
+                    $nomeklatura[$nomeklaturaId]['discount'] = $reader->getAttribute('discount');
                     $nomeklatura[$nomeklaturaId]['image1'] = $reader->getAttribute('image1');
+                    $nomeklatura[$nomeklaturaId]['image2'] = $reader->getAttribute('image2');
+                    $nomeklatura[$nomeklaturaId]['image3'] = $reader->getAttribute('image3');
+                    $nomeklatura[$nomeklaturaId]['image4'] = $reader->getAttribute('image4');
+                    $nomeklatura[$nomeklaturaId]['image5'] = $reader->getAttribute('image5');
+                    $nomeklatura[$nomeklaturaId]['description'] = $reader->getAttribute('description');
+
                 }
                 if ($reader->name == 'spec') {
                     $value = $reader->getAttribute('id');
