@@ -1,0 +1,515 @@
+.catalg_view
+{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.filters
+{
+	display: flex;
+	flex-flow: column nowrap;
+
+	width: 30%;
+	padding-right: 50px;
+}
+
+.filters > .price-filter > .price-input
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	margin-bottom: 25px;
+}
+
+.filters > .price-filter > .price-input > p
+{
+	font-weight: bold;
+}
+
+.filters > .price-filter > .price-input > input
+{
+	width: 45%;
+	height: 28px;
+	padding: 2px 10px;
+
+	border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.filters > .price-filter > #slider
+{
+	height: 7px;
+}
+
+.filters > .price-filter > p, .filter > p
+{
+	font-weight: bold;
+
+	margin: 15px;
+
+	text-transform: uppercase;
+}
+
+.filter > p
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.filter
+{
+	margin-top: 25px;
+}
+
+.filter > ul > li
+{
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+
+	padding-right: 12px;
+}
+
+.filter > ul > li > label > p
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	margin-top: 5px;
+	padding-right: 30px;
+}
+
+.filter_button
+{
+	font-weight: bold;
+
+	margin-top: 5px;
+	margin-left: 20px;
+
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.filterHide
+{
+	cursor: pointer;
+	transform: rotate(90deg);
+}
+
+/* Начало чекбоксов */
+.filter > ul > li .container
+{
+	font-size: 14px;
+
+	position: relative;
+
+	display: block;
+
+	width: 100%;
+	margin-bottom: 12px;
+	padding-left: 35px;
+
+	cursor: pointer;
+}
+
+
+.filter > ul > li .container input
+{
+	position: absolute;
+
+	width: 0;
+	height: 0;
+
+	cursor: pointer;
+
+	opacity: 0;
+}
+
+
+.filter > ul > li .checkmark
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 21px;
+	height: 21px;
+
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+}
+
+
+.filter > ul > li  .container:hover input ~ .checkmark
+{
+	background-color: #FFFFFF;
+}
+
+
+.filter > ul > li .container input:checked ~ .checkmark
+{
+	border: 0;
+	background-color: #E31E25;
+}
+
+.filter > ul > li .container .checkmark:after
+{
+	top: 5px;
+	left: 9px;
+
+	width: 5px;
+	height: 10px;
+
+	transform: rotate(45deg);
+
+	border: solid white;
+	border-width: 0 3px 3px 0;
+}
+/* Конец чекбоксов */
+
+.products
+{
+	width: 70%;
+}
+
+.catalg_view .sort
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	margin-top: 50px;
+	margin-bottom: 25px;
+
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.catalg_view .sort img
+{
+	width: 30px;
+	height: 30px;
+	margin: 10px 10px;
+
+	cursor: pointer;
+
+	opacity: 0.5;
+
+	filter: grayscale(1);
+}
+
+.catalg_view .sort img.active
+{
+	opacity: 1;
+
+	filter: grayscale(0);
+}
+
+.catalg_view .sort p
+{
+	flex-grow: 1;
+
+	margin: 10px 15px;
+
+	text-align: center;
+}
+
+.catalg_view .sort p select
+{
+	margin-left: 5px;
+
+	color: #E31E25;
+	border: 0;
+}
+
+.catalg_view .sort .view
+{
+	display: flex;
+	flex-flow: row nowrap;
+	flex-grow: 1;
+	justify-content: center;
+}
+
+.catalg_view .pagination
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+.catalg_view .pagination li
+{
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.catalg_view .pagination li a
+{
+	margin: 0 5px;
+
+	opacity: 0.4;
+	color: #000000;
+}
+
+.catalg_view .pagination li a:hover
+{
+	opacity: 0.7;
+}
+
+.catalg_view .pagination li:first-child::before
+{
+	margin-right: 5px;
+
+	content: "<";
+
+	color: #000000;
+}
+
+.catalg_view .pagination li:last-child::before
+{
+	margin: 0 2px;
+
+	content: "... ";
+
+	opacity: 0.4;
+	color: #000000;
+}
+
+.catalg_view .pagination li:last-child::after
+{
+	margin-left: 5px;
+
+	content: ">";
+
+	color: #000000;
+}
+
+.catalg_view .pagination li:first-child::before, .catalg_view .pagination li:last-child::after
+{
+	font-weight: bold;
+
+	margin: 0 5px;
+}
+
+.catalg_view .pagination li a.active
+{
+	font-weight: bold;
+
+	opacity: 1;
+	color: #E31E25;
+}
+
+.list-products
+{
+	display: grid;
+
+	margin-top: 25px;
+
+	gap: 15px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.list-products .product.box
+{
+	align-self: stretch;
+	flex-grow: 1;
+
+	width: 100%;
+	min-width: auto;
+
+	justify-self: stretch;
+}
+
+.list-products .product.box a img, .list-products .product.box div a img
+{
+	width: 100%;
+}
+
+.list-products .product
+{
+	height: 100%;
+}
+
+.cat_fold p, .cat_fold a
+{
+	font-size: 14px;
+	line-height: 16px;
+
+	display: inline-block;
+
+	color: #000000;
+}
+
+.cat_fold p span
+{
+	color: #E31E24;
+}
+
+@media screen and (max-width: 750px)
+{
+	.catalg_view
+	{
+		flex-flow: column wrap;
+	}
+	.filters, .products
+	{
+		width: 100%;
+	}
+	.list-products .product.box
+	{
+		width: auto;
+	}
+	.filters
+	{
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 700px)
+{
+	.sliders p, .sliders a
+	{
+		flex-grow: 1;
+
+		margin-right: 0;
+	}
+	h2
+	{
+		text-align: center;
+	}
+}
+
+/* Начало чекбоксов */
+.product > .container
+{
+	font-size: 14px;
+
+	position: relative;
+
+	display: block;
+
+	width: 100%;
+	margin-bottom: 12px;
+	padding-left: 35px;
+
+	cursor: pointer;
+}
+
+
+.product > .container input
+{
+	position: absolute;
+
+	width: 0;
+	height: 0;
+
+	cursor: pointer;
+
+	opacity: 0;
+}
+
+
+.product .checkmark
+{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+
+	width: 25px;
+	height: 25px;
+
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+}
+
+
+.product > .container:hover input ~ .checkmark
+{
+	background-color: #FFFFFF;
+}
+
+
+.product > .container input:checked ~ .checkmark
+{
+	border: 0;
+	background-color: #E31E25;
+}
+
+.product > .container .checkmark:after
+{
+	top: 5px;
+	left: 9px;
+
+	width: 5px;
+	height: 10px;
+
+	transform: rotate(45deg);
+
+	border: solid white;
+	border-width: 0 3px 3px 0;
+}
+/* Конец чекбоксов */
+
+.available
+{
+	font-size: 17px;
+
+	margin-bottom: 10px;
+
+	color: #9D9A9A;
+}
+
+.product > .product-name
+{
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.product .product-count
+{
+	font-size: 29px;
+
+	width: 100px;
+	height: 40px;
+
+	text-align: center;
+}
+
+.product > .product-act
+{
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	width: 100%;
+	padding: 10px 25px;
+}
+
+.product > .product-act > .cart
+{
+	position: static;
+}
+
+@media screen and (max-width: 470px)
+{
+	.product
+	{
+		text-align: center;
+	}
+	.product > .product-act > .new-price
+	{
+		width: 100%;
+
+		text-align: center;
+	}
+}

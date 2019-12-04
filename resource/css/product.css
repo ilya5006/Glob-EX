@@ -44,8 +44,10 @@
 
 .product_info .pictures img.little
 {
-	flex-grow: 1;
 	position: relative;
+
+	flex-grow: 1;
+
 	width: 60px;
 	height: 60px;
 }
@@ -64,9 +66,10 @@
 
 .product_info .pictures img.big
 {
+	margin: 0;
+
 	border: 0;
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
-	margin: 0;
 }
 
 .product_info .info
@@ -144,6 +147,16 @@
 	margin: 10px 0 15px 0;
 
 	color: #9D9A9A;
+}
+
+.product_info .act .available-count::before
+{
+	content: "(";
+}
+
+.product_info .act .available-count::after
+{
+	content: " шт)";
 }
 
 .product_info .act .brand
@@ -227,11 +240,12 @@
 
 .info_slider .sliders
 {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-flow: row nowrap;
 
 	margin-bottom: 35px;
+
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .info_slider .sliders p

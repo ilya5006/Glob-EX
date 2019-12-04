@@ -743,16 +743,17 @@
 
 #modal_authorize .modal form input[type=submit], #loginButton, #registerButton
 {
-	cursor: pointer;
 	font-size: 16px;
 	font-weight: bold;
-	text-align: center;
+
 	align-self: flex-start;
 
 	min-width: 160px;
 	margin-left: 10%;
 	padding: 15px;
 
+	cursor: pointer;
+	text-align: center;
 	text-transform: uppercase;
 
 	color: #FFFFFF;
@@ -793,9 +794,10 @@
 {
 	display: flex;
 	flex-flow: row nowrap;
-	padding-left: 0.4%;
+
 	width: 90%;
 	margin-bottom: 15px;
+	padding-left: 0.4%;
 }
 
 
@@ -914,9 +916,10 @@ form .container p a, .container p span
 	}
 	#modal_authorize .modal form input[type=submit], #loginButton, #registerButton
 	{
+		align-self: center;
+
 		margin-top: 15px;
 		margin-left: 0;
-		align-self: center;
 	}
 	.placeinput input:invalid + .place_holder, #modal_authorize input
 	{

@@ -42,7 +42,7 @@
         <div class="act">
             <p class="old-price">123p</p>
             <p class="new-price">322p</p>
-            <p class="available">есть в наличии (500) </p>
+            <p class="available">есть в наличии <span class="available-count">500</span> </p>
             <p class="brand">БРЕНД: <a href="#">SVETOCOPY</a> </p>
             <form action="#">
                 <input type="number" name="" id="" min="1" max="999" value="1">

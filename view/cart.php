@@ -15,7 +15,7 @@
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
                     <div class="product-detail"> 
-                        <p>в наличии (70)</p>
+                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
                     <div class="product-detail"> 
-                        <p>в наличии (70)</p>
+                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
                     <div class="product-detail"> 
-                        <p>в наличии (70)</p>
+                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
                     <div class="product-detail"> 
-                        <p>в наличии (70)</p>
+                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
                     <div class="product-detail"> 
-                        <p>в наличии (70)</p>
+                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
                 </div>

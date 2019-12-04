@@ -8,13 +8,13 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-flow: row nowrap;
+	    flex-flow: row nowrap;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	    -ms-flex-flow: row nowrap;
-	        flex-flow: row nowrap;
 	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
 }
 
 .footer > .content > ul
@@ -22,10 +22,10 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-flow: column nowrap;
+	    flex-flow: column nowrap;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-flow: column nowrap;
-	        flex-flow: column nowrap;
 
 	margin: 0 50px 0 0;
 }
@@ -33,6 +33,7 @@
 .footer > .content > ul:last-child
 {
 	margin: 0 0 0 50px;
+
 	text-align: right;
 }
 
@@ -41,13 +42,13 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-flow: column nowrap;
+	    flex-flow: column nowrap;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-flow: column nowrap;
-	        flex-flow: column nowrap;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 
 	margin-right: auto;
 }
@@ -69,16 +70,19 @@
 
 .footer > .content > ul > li > .tel, .footer > .content > ul > li > a.email
 {
-	display: block;
 	font-weight: bold;
+
+	display: block;
+
 	text-align: right;
+
 	color: #E31E25;
 }
 
 .footer > .content > ul > li > a > span
 {
 	-webkit-transition: 0.3s all;
-	transition: 0.3s all;
+	        transition: 0.3s all;
 
 	color: #E31E25;
 }
@@ -104,7 +108,7 @@
 
 	content: "";
 	-webkit-transition: 0.3s all;
-	transition: 0.3s all;
+	        transition: 0.3s all;
 	-webkit-transform: scale(0);
 	        transform: scale(0);
 
@@ -121,25 +125,25 @@
 {
 	.footer > .content
 	{
+		-ms-flex-flow: column wrap;
+		    flex-flow: column wrap;
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
-		    -ms-flex-flow: column wrap;
-		        flex-flow: column wrap;
 		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 	.footer > .content > ul
 	{
 		-webkit-box-align: center;
-		    -ms-flex-align: center;
-		        align-items: center;
+		align-items: center;
+		-ms-flex-align: center;
 	}
 	.footer > .content > ul.logo
 	{
 		-webkit-box-ordinal-group: 101;
-		    -ms-flex-order: 100;
-		        order: 100;
+		-ms-flex-order: 100;
+		order: 100;
 
 		width: 100%;
 		margin: 0 auto;
@@ -151,11 +155,11 @@
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-align: center;
-		    -ms-flex-align: center;
-		        align-items: center;
+		align-items: center;
+		-ms-flex-align: center;
 		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 	.footer > .content > ul > li > a, .footer > .content > ul > li > a.tel, .footer > .content > ul > li > a.email
 	{
@@ -164,6 +168,7 @@
 	.footer > .content > ul:last-child, .footer > .content > ul
 	{
 		margin: 0 15px;
+
 		text-align: center;
 	}
 }
