@@ -1,18 +1,22 @@
 <?php
-    $loginEntered = mysqli_real_escape_string($link, $_GET['login']);
-    $passwordEntered = mysqli_real_escape_string($link, $_GET['password']);
+    require_once './connection.php';
 
-    $loginPasswordIdDbQuery = mysqli_query($link, "SELECT login, password, id_user FROM users_all WHERE login = '$loginEntered'");
-    $loginPasswordIdDb = mysqli_fetch_row($loginPasswordIdDbQuery);
-    $passwordDb = $loginPasswordIdDb[1];
-    $idDb = $loginPasswordIdDb[2];
+    $emailOrPhoneNumber = $mysqli->escape_string($_POST['emailOrPhoneNumber']);
+    $passwordEntered = $mysqli->escape_string($_POST['password']);
 
-    if (password_verify($passwordEntered, $passwordDb))
+    $idFioPasswordDB = $mysqli->query("SELECT id_user, fio, password FROM users_all WHERE email = '$emailOrPhoneNumber' OR phone_number = '$emailOrPhoneNumber'");
+    $idFioPasswordDB = $idFioPasswordDB->fetch_assoc();
+    $idDB = $idFioPasswordDB['id_user'];
+    $fioDB = $idFioPasswordDB['fio'];
+    $passwordDB = $idFioPasswordDB['password']; 
+
+    if (password_verify($passwordEntered, $passwordDB))
     {
-        setcookie("isLogin", md5($idDb), time() + 60*60*24*7); // 7 дней
+        setcookie('isLogin', md5($idDb), time() + 60*60*24*7, '/', 'glob-ex'); // 7 дней
+        echo json_encode(['Авторизация прошла успешно']);
     }
     else
     {
-        // Логин или пароль неверны
+        echo json_encode(['Телефонный номер, email или пароль не верны']);
     }
 ?>
