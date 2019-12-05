@@ -3,7 +3,7 @@ let sortHor = document.querySelector('#sort-hor');
 let listProduct = document.querySelector('.list-products');
 let products = document.querySelectorAll('.product');
 
-let horEnable;
+let horEnable = true;
 
 function setBlock() 
 {
@@ -56,8 +56,6 @@ window.addEventListener('resize', function()
     checkSize();
 });
 
-checkSize()
-
 function checkSize()
 {
     if (document.body.clientWidth < 1000)
@@ -72,3 +70,5 @@ function checkSize()
         horEnable = true;
     }
 }
+
+checkSize()
