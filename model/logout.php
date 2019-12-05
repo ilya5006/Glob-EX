@@ -1,3 +1,3 @@
 <?php
-    setcookie('isLogin', '', time() - 3600);
+    setcookie('isLogin', '', time() - 3600, '/', 'glob-ex');
 ?>
