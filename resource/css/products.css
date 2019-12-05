@@ -637,7 +637,7 @@
 .product > .product-act
 {
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
 	flex-flow: row wrap;
