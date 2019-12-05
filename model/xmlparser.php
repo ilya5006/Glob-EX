@@ -112,7 +112,6 @@ while ($reader->read()) {
                     $nomeklatura[$nomeklaturaId]['quantity'] = $reader->getAttribute('quantity');
                     $nomeklatura[$nomeklaturaId]['unit'] = $reader->getAttribute('unit');
                     $nomeklatura[$nomeklaturaId]['price'] = $reader->getAttribute('price');
-
                     $nomeklatura[$nomeklaturaId]['old_price'] = $reader->getAttribute('old_price');
                     $nomeklatura[$nomeklaturaId]['discount'] = $reader->getAttribute('discount');
                     $nomeklatura[$nomeklaturaId]['image1'] = $reader->getAttribute('image1');
@@ -124,7 +123,6 @@ while ($reader->read()) {
 
                 }
                 if ($reader->name == 'spec') {
-                    $value = $reader->getAttribute('id');
                     $nomeklatura[$nomeklaturaId]['specs'][$reader->getAttribute('id')] = $reader->getAttribute('value');
                 }
             }
