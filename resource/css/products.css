@@ -308,12 +308,12 @@
 
 .list-products
 {
-	display: grid;
+	/* display: grid; */
 
 	margin-top: 25px;
 
-	gap: 15px;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	/* gap: 15px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .list-products .product.box
@@ -337,6 +337,140 @@
 	height: 100%;
 }
 
+.list-products .product.hor
+{
+	min-height: unset;
+	margin-bottom: 25px;
+	flex-flow: row nowrap;
+}
+
+.product.hor > .product-disc
+{
+	height: 100%;
+}
+
+.product .fav-button
+{
+	display: none;
+}
+
+.product > .product-disc .features
+{
+	margin-top: 10px;
+	display: none;
+}
+
+.product.box > .product-disc .features
+{
+	display: none;
+}
+
+.product.hor > .product-disc .features
+{
+	display: block;
+}
+
+.product.hor > .product-disc .features .feature
+{
+	margin: 10px 0;
+    color: #9D9A9A;
+}
+
+.product.hor > .product-disc .features .feature_button
+{
+	margin-top: 5px;
+	font-weight: bold;
+    display: inline-block;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.list-products .product.hor .product-image
+{
+	margin-top: 0;
+	height: 100%;
+	width: 250px;
+}
+
+.list-products .product.hor .product-image img
+{
+	height: 250px;
+	width: 250px;
+}
+
+.list-products .product.hor label
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.list-products .product .inp-cart-fav
+{
+	margin-top: 20px;
+	display: flex;
+	width: 100%;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+    align-items: center;
+}
+
+.product.box .cart, .product.hor .cart
+{
+	position: static;
+}
+
+.product.hor .checkmark
+{
+	left: 15px;
+}
+
+.product.hor .fav-button
+{
+	display: block;
+}
+
+
+.list-products .product.hor::before
+{
+	display: none;
+}
+
+.product.hor > .product-act
+{
+	margin-bottom: 0;
+	padding: 30px 25px;
+	align-self: stretch;
+	background-color: #EAEAEA;
+	height: auto;
+	align-items: stretch;
+	flex-flow: column wrap;
+	width: auto;
+}
+
+.product.hor > .product-act > .new-price
+{
+	width: 300px;
+}
+
+.product.hor > .product-act > .available
+{
+	margin-top: 10px;
+	margin-bottom: auto;
+	width: 100%;
+}
+
+.product.hor > .product-act > .cart
+{
+	height: auto;
+}
+
+.product.hor .new-price
+{
+	order: -1;
+	font-size: 50px;
+}
+
 .cat_fold p, .cat_fold a
 {
 	font-size: 14px;
@@ -345,6 +479,22 @@
 	display: inline-block;
 
 	color: #000000;
+}
+
+.product > .product-disc > .product-name
+{
+	width: 100%;
+	font-size: 20px;
+}
+
+.product > .product-disc
+{
+	padding: 20px 25px 0px 25px;
+	width: 100%;
+	flex-grow: 1;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
 }
 
 .cat_fold p span
@@ -421,7 +571,7 @@
 	position: absolute;
 	top: 15px;
 	right: 15px;
-
+	z-index: 50;
 	width: 25px;
 	height: 25px;
 
@@ -460,7 +610,7 @@
 .available
 {
 	font-size: 17px;
-
+	width: 100%;
 	margin-bottom: 10px;
 
 	color: #9D9A9A;
@@ -485,7 +635,7 @@
 .product > .product-act
 {
 	position: relative;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	display: flex;
 	align-items: center;
 	flex-flow: row wrap;
@@ -509,10 +659,6 @@
 
 @media screen and (max-width: 470px)
 {
-	.product > .product-act
-	{
-		margin-bottom: 30px;
-	}
 	.product
 	{
 		text-align: center;
@@ -520,8 +666,12 @@
 	.product > .product-act > .new-price
 	{
 		width: 100%;
-
+		margin-bottom: 15px;
 		text-align: center;
+	}
+	.list-products .product .inp-cart-fav
+	{
+		margin-left: 0;
 	}
 }
 
