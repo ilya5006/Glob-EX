@@ -60,8 +60,7 @@
         {
             foreach($data['specs'] as $key => $idSpec)
             {
-                //$mysqli->query("REPLACE INTO partition_specs SET id_partition = '$idPartition', id_spec = '$idSpec'");
-                $mysqli->query("INSERT IGNORE INTO partition_specs SET id_partition = '$idPartition', id_spec = '$idSpec'");
+                $mysqli->query("REPLACE INTO partition_specs SET id_partition = '$idPartition', id_spec = '$idSpec'");
             }
         }
     }
@@ -118,8 +117,7 @@
         {
             foreach($data['specs'] as $idSpec => $value)
             {
-                // $mysqli->query("REPLACE INTO good_specs SET id_good = '$idGood', id_spec = '$idSpec', value = '$value'");
-                $mysqli->query("INSERT IGNORE INTO good_specs SET id_good = '$idGood', id_spec = '$idSpec', value = '$value'");
+                $mysqli->query("REPLACE INTO good_specs SET id_good = '$idGood', id_spec = '$idSpec', value = '$value'");
             }
         }
     }
