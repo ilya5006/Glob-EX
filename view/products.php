@@ -1,163 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Главная </title>
-    <link rel="stylesheet" href="./../resource/css/normalize.css">
-    <link rel="stylesheet" href="./../resource/css/base.css">
-    <link rel="stylesheet" href="./../resource/css/header.css">
-    <link rel="stylesheet" href="./css/products.css">
-    <link rel="stylesheet" href="./../resource/css/scroll.css">
-    <link rel="stylesheet" href="./../resource/css/footer.css">
-    <script src="./../resource/js/nouislider.js"></script>
-    <script src="./../resource/js/slider.js" defer></script>
-    <script src="./../resource/js/header.js" defer></script>
-    <link rel="stylesheet" href="./../resource/css/nouislider.css">
-</head>
-
-<body>
-
-    <!-- ХЕАДЕР -->
-    <header class="header">
-            <div class="content">
-                <div class="menu">
-                    <a href="#"><img src="./../resource/img/logo.svg" alt="logo"></a>
-                    <ul>
-                        <li><a href="#">ДОСТАВКА</a></li>
-                        <li><a href="#">ОПЛАТА</a></li>
-                        <li><a href="#">КОНТАКТЫ</a></li>
-                        <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
-                        <li><a href="#">О КОМПАНИИ</a></li>
-                        <li><p class="tel">8-495-380-42-88</p></li>
-                    </ul>
-                </div>
-                <div class="nav">
-                    <button class="catalog" id="catalog"><span>|||</span> КАТАЛОГ ТОВАРОВ</button>
-        
-                    <div class="expand-catalog hide">
-                        <a class="cat_1" href="#"> <img src="./../resource/img/icons/percent.svg"><p> АКЦИИ И СКИДКИ </p></a>
-                        <a class="cat_1"> <img src="./../resource/img/icons/clip.svg"><p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
-                        <div class='expand-cat_2 hide'>
-                            <ul>
-                                <li><span>1</span></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                            </ul>
-                        </div>
-        
-                        <a class="cat_1"> <img src="./../resource/img/icons/bucket.svg"><p>ХОЗТОВАРЫ</p><span>&#62;</span></a>
-                        <div class='expand-cat_2 hide'>
-                            <ul>
-                                <li><span>2</span></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                            </ul>
-                        </div>
-        
-                        <a class="cat_1"> <img src="./../resource/img/icons/furniture.svg"><p>МЕБЕЛЬ</p><span>&#62;</span></a>
-                        <div class='expand-cat_2 hide'>
-                            <ul>
-                                <li><span>3</span></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                                <li><a href="#">asdasd</a></li>
-                            </ul>
-                        </div>
-                    </div>
-        
-                    <form action="#">
-                        <input type="search" placeholder="Поиск...">
-                        <button><img src="./../resource/img/icons/search.svg" alt="search"></button>
-                    </form>
-                    <ul>
-                        <li><a href="#"><img src="./../resource/img/icons/favourite.svg" alt="favorite"></a></li>
-                        <li><a href="#"><img src="./../resource/img/icons/cart.svg" alt="cart"></a></li>
-                        <li class="account"><a id="login_button"><img src="./../resource/img/icons/account.svg" alt="account"><p>Войти <span>&#62;</span></p></a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        
-        <div id="modal_authorize" style="display: none;">
-            <div class="modal">
-                <div class="type_auth"> <p id='log_form' class="active"> ВОЙТИ </p> <p id="reg_form"> ЗАРЕГИСТРИРОВАТЬСЯ</p></div>
-                <form action="../model/login.php" class="login">
-        
-                    <label class="placeinput">
-                        <input required="1" type="text" id="login" />
-                        <div class="place_holder">Введите телефон или e-mail<span>*</span></div>
-                    </label>
-        
-                    <label class="placeinput">
-                        <input required="1" type="password" id="passwordLogin" />
-                        <div class="place_holder">Введите пароль<span>*</span></div>
-                    </label>
-        
-                    <a href="#" class="forget_password"> Забыли пароль? </a>
-                    <p class="require"> <span>*</span> Поля обязательные для ввода</p>
-                    
-                    <input type="submit" value="войти" id="loginButton">
-                    
-                </form>
-        
-                <form action="../model/login.php" class="register" style="display: none">
-        
-                    <label class="placeinput">
-                        <input required="1" type="text" id="fio" />
-                        <div class="place_holder">Введите фио<span>*</span></div>
-                    </label>
-        
-                    <label class="placeinput">
-                        <input required="1" type="text" id="email" />
-                        <div class="place_holder">Введите фио<span>*</span></div>
-                    </label>
-                    <label class="placeinput">
-                        <input required="1" type="tel" id="tel" />
-                        <div class="place_holder">Введите телефон<span>*</span></div>
-                    </label>
-        
-                    <div class="passwords">
-                        <label class="placeinput">
-                            <input required="1" type="password" id="passwordRegister" />
-                            <div class="place_holder">Введите пароль<span>*</span></div>
-                        </label>
-                        <label class="placeinput">
-                            <input required="1" type="password" id="passwordRegisterAgain" />
-                            <div class="place_holder">Повторите пароль<span>*</span></div>
-                        </label>
-                    </div>
-        
-                    <div class="user-type">
-                        <label class="container"> <p> Частное лицо</p> <input type="radio" name="type" > <span class="checkmark"></span> </label>
-                        <label class="container"> <p> Юридическое лицо</p> <input type="radio" name="type"  > <span class="checkmark"></span> </label>
-                    </div>
-                    <label class="container"> <p>Согласен на <a href="#">обработку персональных данных *</a></p> <input type="checkbox" > <span class="checkmark"></span> </label>
-        
-                    <label class="container"> <p>Я хочу получать рассылку об акциях и новостях</p> <input type="checkbox" > <span class="checkmark"></span> </label>
-        
-                    <p class="require"> <span>*</span> Поля обязательные для ввода</p>
-                    
-                    <input type="submit" value="зарегистрироваться" id="registerButton">
-                    
-                </form>
-        
-            </div>
-        </div>
-    <!-- КОНЕЦ ХЕАДЕРА -->
-
-    <!-- ТОВАРЫ -->
-    <div class="content" style="padding-top: 0">
+﻿<div class="content" style="padding-top: 0">
         <div class="catalg_view">
             <div class="filters">
                 <div class="price-filter">
@@ -285,95 +126,7 @@
                     </ul>
                 </div>
             </div>
-            <script>
-                let slider = document.getElementById('slider');
-                let priceMin = document.getElementById('price-min');
-                let priceMax = document.getElementById('price-max');
 
-                noUiSlider.create(slider, {
-                    start: [20, 80],
-                    connect: true,
-                    range: {
-                        'min': 0,
-                        'max': 100
-                    },
-                    step: 10
-                });
-
-                slider.noUiSlider.on('update', function (values, handle) {
-                    priceMin.value = values[0];
-                });
-                priceMin.addEventListener('change', function () {
-                    slider.noUiSlider.set([this.value, slider.noUiSlider.get()[1]]);
-                });
-
-                slider.noUiSlider.on('update', function (values, handle) {
-                    priceMax.value = values[1];
-                });
-                priceMax.addEventListener('change', function () {
-                    slider.noUiSlider.set([slider.noUiSlider.get()[0], this.value]);
-                });
-
-                // filters
-                let buttoCreated;
-                let filterHide;
-                let allFilters = document.querySelectorAll('.filters .filter');
-                allFilters.forEach(function (element) {
-                    element.querySelector('ul').style.display = 'block';
-
-                    let buttoCreated = false;
-                    for (let i = 0; i < element.querySelectorAll('label').length; i++) {
-                        if (i > 5) {
-                            element.querySelectorAll('label')[i].style.display = 'none';
-
-                            if (buttoCreated == false) {
-                                let buttonExpandFilter = document.createElement('div');
-                                buttonExpandFilter.textContent = "Показать еще";
-                                buttonExpandFilter.classList.add('filter_button');
-                                let isShow = false;
-                                buttonExpandFilter.addEventListener('click', function () {
-                                    if (isShow == false) {
-                                        for (let i = 0; i < element.querySelectorAll('label')
-                                            .length; i++) {
-                                            if (i > 5) {
-                                                element.querySelectorAll('label')[i].style.display =
-                                                    'block';
-                                            }
-                                        }
-                                        isShow = true;
-                                        buttonExpandFilter.textContent = "Скрыть";
-                                    } else {
-                                        for (let i = 0; i < element.querySelectorAll('label')
-                                            .length; i++) {
-                                            if (i > 5) {
-                                                element.querySelectorAll('label')[i].style.display =
-                                                    'none';
-                                            }
-                                        }
-                                        isShow = false;
-                                        buttonExpandFilter.textContent = "Показать еще";
-                                    }
-                                });
-                                element.querySelector('ul').appendChild(buttonExpandFilter);
-                                buttoCreated = true;
-                            }
-                        }
-                    }
-                    filterHide = document.createElement('div');
-                    filterHide.textContent = "<";
-                    filterHide.classList.add('filterHide');
-                    filterHide.addEventListener('click', function (elem) {
-                        if (element.querySelector('ul').style.display == 'block') {
-                            element.querySelector('ul').style.display = 'none';
-                            elem.target.textContent = ">"
-                        } else {
-                            element.querySelector('ul').style.display = 'block';
-                            elem.target.textContent = "<"
-                        }
-                    });
-                    element.querySelector('p').appendChild(filterHide);
-                });
-            </script>
             <div class="products">
                 <div class="cat_fold">
                     <p class="catalog_expand_button"> Каталог</p>
@@ -420,8 +173,8 @@
                     </p>
 
                     <div class="view">
-                        <img src="./img/icons/block.png" alt="sort" id="sort-block">
-                        <img src="./img/icons/horizontal.png" alt="sort" id="sort-hor">
+                        <img src="./resource/img/icons/block.png" alt="sort" id="sort-block">
+                        <img src="./resource/img/icons/horizontal.png" alt="sort" id="sort-hor">
                     </div>
                 </div>
 
@@ -435,7 +188,6 @@
 
                     <div class="list-products">
                         <div class="product">
-                            <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
                             <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                             <div class="product-disc">
                                 <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
@@ -451,7 +203,7 @@
                                 <p class="available">есть в наличии <span class="available-count">500</span> </p>
                                 <p class="new-price">375р</p>
                                 <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                                
+
                                 <div class="inp-cart-fav">
                                     <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                                     <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
@@ -460,7 +212,6 @@
                             </div>
                         </div>
                         <div class="product">
-                            <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
                             <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                             <div class="product-disc">
                                 <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
@@ -476,7 +227,7 @@
                                 <p class="available">есть в наличии <span class="available-count">500</span> </p>
                                 <p class="new-price">375р</p>
                                 <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                                
+
                                 <div class="inp-cart-fav">
                                     <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                                     <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
@@ -485,7 +236,6 @@
                             </div>
                         </div>
                         <div class="product">
-                            <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
                             <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                             <div class="product-disc">
                                 <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
@@ -501,7 +251,7 @@
                                 <p class="available">есть в наличии <span class="available-count">500</span> </p>
                                 <p class="new-price">375р</p>
                                 <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                                
+
                                 <div class="inp-cart-fav">
                                     <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                                     <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
@@ -510,7 +260,6 @@
                             </div>
                         </div>
                         <div class="product">
-                            <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
                             <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                             <div class="product-disc">
                                 <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
@@ -526,7 +275,55 @@
                                 <p class="available">есть в наличии <span class="available-count">500</span> </p>
                                 <p class="new-price">375р</p>
                                 <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                                
+
+                                <div class="inp-cart-fav">
+                                    <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
+                                    <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+                                    <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
+                            <div class="product-disc">
+                                <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                                <div class="features">
+                                    <p class="feature">Формат А4</p>
+                                    <p class="feature">Класс А</p>
+                                    <p class="feature">Плотность 80 г/м2</p>
+                                    <p class="feature">Листов в пачке 500 шт</p>
+                                    <p class="feature_button">Больше характеристик</p>
+                                </div>
+                            </div>
+                            <div class="product-act">
+                                <p class="available">есть в наличии <span class="available-count">500</span> </p>
+                                <p class="new-price">375р</p>
+                                <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
+
+                                <div class="inp-cart-fav">
+                                    <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
+                                    <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
+                                    <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
+                            <div class="product-disc">
+                                <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                                <div class="features">
+                                    <p class="feature">Формат А4</p>
+                                    <p class="feature">Класс А</p>
+                                    <p class="feature">Плотность 80 г/м2</p>
+                                    <p class="feature">Листов в пачке 500 шт</p>
+                                    <p class="feature_button">Больше характеристик</p>
+                                </div>
+                            </div>
+                            <div class="product-act">
+                                <p class="available">есть в наличии <span class="available-count">500</span> </p>
+                                <p class="new-price">375р</p>
+                                <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
+
                                 <div class="inp-cart-fav">
                                     <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                                     <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
@@ -538,60 +335,3 @@
         </div>
     </div>
     </div>
-    <script>
-        let sortBlock = document.querySelector('#sort-block');
-        let sortHor = document.querySelector('#sort-hor');
-        let listProduct = document.querySelector('.list-products');
-
-        function setBlock() {
-            listProduct.style.display = 'grid';
-            listProduct.style.gridGap = '15px';
-            listProduct.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
-            sortBlock.classList.add('active');
-            sortHor.classList.remove('active');
-        }
-
-        function setHor() {}
-
-        sortBlock.addEventListener('click', function () {
-            setBlock();
-        });
-
-        sortHor.addEventListener('click', function () {
-            setHor();
-        });
-
-        setBlock();
-    </script>
-    <!-- КОНЕЦ ТОВАРОВ -->
-
-    <!-- НАЧАЛО ФУТЕРА -->
-    <footer class="footer">
-        <div class="content">
-            <ul class="logo">
-                <li> <a href="#" class="exception"><img src="./img/logo.svg" alt="logo"></a></li>
-                <li> <a href="#" class="exception"><span>Политика конфиденциальности</span></a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Канцелярия</a></li>
-                <li><a href="#">Хозтовар</a></li>
-                <li><a href="#">Мебель</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Оплата</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">О компании</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Задать вопрос</a></li>
-                <li><a href="#" class="exception tel"><span>123123</span></a></li>
-                <li><a href="#" class="exception email"><span>asdasd@mail.ru</span></a></li>
-            </ul>
-        </div>
-    </footer>
-    <!-- КОНЕЦ ФУТЕРА -->
-</body>
-
-</html>

@@ -318,6 +318,7 @@
 
 .list-products .product.box
 {
+	margin: 0;
 	align-self: stretch;
 	flex-grow: 1;
 
@@ -326,6 +327,7 @@
 
 	justify-self: stretch;
 }
+
 
 .list-products .product.box a img, .list-products .product.box div a img
 {
