@@ -10,31 +10,30 @@
 
     foreach ($xmlParseData['brands'] as $idBrand => $data)
     {
-        $nameBrand = $data['name'];
-        $imageBrand = $data['image'];
-        $imageBrand = str_replace('\\', '/', $imageBrand);
+        $name = $data['name'];
+        $image = $data['image'];
+        $image = str_replace('\\', '/', $image);
 
-        $mysqli->query("REPLACE INTO brands SET id_brand = '$idBrand', name = '$nameBrand', image = '$imageBrand'");
+        $mysqli->query("REPLACE INTO brands SET id_brand = '$idBrand', name = '$name', image = '$image'");
     }
 
     foreach ($xmlParseData['countries'] as $idCountry => $data)
     {
-        $nameCountry = $data['name'];
+        $name = $data['name'];
 
-        $mysqli->query("REPLACE INTO country SET id_country = '$idCountry', name = '$nameCountry'");
+        $mysqli->query("REPLACE INTO country SET id_country = '$idCountry', name = '$name'");
     }
 
     foreach ($xmlParseData['specs'] as $idSpec => $data)
     {
-        $nameSpec = $data['name'];
+        $name = $data['name'];
 
-        $mysqli->query("REPLACE INTO specs SET id_spec = '$idSpec', name = '$nameSpec'");
+        $mysqli->query("REPLACE INTO specs SET id_spec = '$idSpec', name = '$name'");
     }
 
     foreach ($xmlParseData['partitions'] as $idPartition => $data)
     {
         $name = $data['name'];
-        $technicalName = $data['technical_name'];
         $topId = $data['top_id'];
         $sort = $data['sort'];
         $banner = $data['banner'];
@@ -46,9 +45,7 @@
         $image1 = str_replace('\\', '/', $image1); // Потому что MySQL экранирует символ \
         $image2 = str_replace('\\', '/', $image2); // Потому что MySQL экранирует символ \
 
-        $technicalName = str_replace('\'', '', $technicalName); // Потому что MySQL экранирует символ '
-
-        $query = "REPLACE INTO partitions SET id_partition = '$idPartition', top_id = '$topId', name = '$name', technical_name = '$technicalName', sort = '$sort', 
+        $query = "REPLACE INTO partitions SET id_partition = '$idPartition', top_id = '$topId', name = '$name', sort = '$sort', 
                                               banner = '$banner', image1 = '$image1', image2 = '$image2', description = '$description', icon = '$icon'";
 
         if ($topId === '')
@@ -68,7 +65,6 @@
     foreach ($xmlParseData['nomeklatura'] as $idGood => $data)
     {
         $name = $data['name'];
-        $technicalName = $data['technical_name'];
         $topId = $data['top_id'];
         $sort = $data['sort'];
         $brand = $data['brand'];
@@ -90,8 +86,6 @@
         $image3 = str_replace('\\', '/', $image3); // Потому что MySQL экранирует символ \
         $image4 = str_replace('\\', '/', $image4); // Потому что MySQL экранирует символ \
         $image5 = str_replace('\\', '/', $image5); // Потому что MySQL экранирует символ \
-
-        $technicalName = str_replace('\'', '', $technicalName); // Потому что MySQL экранирует символ '
 
         $query = "REPLACE INTO goods SET id_good = '$idGood', id_country = '$idCountry', id_brand = '$brand', top_id = '$topId', name = '$name',
                                          sort = '$sort', price = '$price', old_price = '$oldPrice', discount = '$discount', unit = '$unit', 
