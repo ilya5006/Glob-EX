@@ -14,7 +14,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                    <div class="product-detail"> 
+                    <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
@@ -29,7 +29,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                    <div class="product-detail"> 
+                    <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
@@ -44,7 +44,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                    <div class="product-detail"> 
+                    <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
@@ -59,7 +59,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                    <div class="product-detail"> 
+                    <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
@@ -74,7 +74,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                    <div class="product-detail"> 
+                    <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
                     </div>
@@ -96,14 +96,21 @@
                     <p class="address">г. Москва, м. Комсомольская, ул. Ленина, д.5, кв.177</p>
                     <button class="change-address">ВЫБРАТЬ АДРЕС</button>
                 </div>
-                <p class="delivery-cost">Стоимость доставки: <span >200</span></p>
-                <p class="info">Курьер свяжется с Вами для уточнения адреса и времери доставки, после оформления заказа</p>
+                <p class="delivery-cost">Стоимость доставки: <span>200</span></p>
+                <p class="info">Курьер свяжется с Вами для уточнения адреса и времери доставки, после оформления заказа
+                </p>
             </div>
 
             <h2> СПОСОБ ОПЛАТЫ </h2>
             <div class="pay-type">
-                <label class="container" id="cash"> <p> НАЛИЧНЫМИ ПРИ ПОЛУЧЕНИИ </p> <input type="radio" name="pay_type" > <span class="checkmark"></span> </label>
-                <label class="container" id="cart"> <p> ОПЛАТА КАРТОЙ ПРИ ПОЛУЧЕНИИ</p> <input type="radio" name="pay_type"  > <span class="checkmark"></span> </label>
+                <label class="container" id="cash">
+                    <p> НАЛИЧНЫМИ ПРИ ПОЛУЧЕНИИ </p> <input type="radio" name="pay_type"> <span
+                        class="checkmark"></span>
+                </label>
+                <label class="container" id="cart">
+                    <p> ОПЛАТА КАРТОЙ ПРИ ПОЛУЧЕНИИ</p> <input type="radio" name="pay_type"> <span
+                        class="checkmark"></span>
+                </label>
             </div>
 
         </div>

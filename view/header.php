@@ -83,9 +83,9 @@
 
             <a href="#" class="forget_password"> Забыли пароль? </a>
             <p class="require"> <span>*</span> Поля обязательные для ввода</p>
-            
+
             <div id="loginButton"> войти </div>
-            
+
         </form>
 
         <form class="register" style="display: none">
@@ -124,9 +124,9 @@
             <label class="container" id="mailing"> <p>Я хочу получать рассылку об акциях и новостях</p> <input type="checkbox" > <span class="checkmark"></span> </label>
 
             <p class="require"> <span>*</span> Поля обязательные для ввода</p>
-            
+
             <div id="registerButton"> зарегистрироваться </div>
-            
+
         </form>
 
     </div>

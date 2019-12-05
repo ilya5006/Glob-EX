@@ -224,7 +224,7 @@
 .product .cart
 {
 	right: 15px;
-    bottom: 15px;
+	bottom: 15px;
 }
 .product .cart:hover, .product > .favourite:hover
 {

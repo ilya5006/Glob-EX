@@ -54,7 +54,7 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        
+
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
@@ -79,7 +79,7 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        
+
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
@@ -104,7 +104,7 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        
+
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
@@ -129,7 +129,7 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        
+
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <a href="#" class="cart"> <img src="./resource/img/icons/cart.svg" alt=""></a>
