@@ -341,7 +341,6 @@
 {
 	min-height: unset;
 	margin-bottom: 25px;
-	height: 250px;
 	flex-flow: row nowrap;
 }
 
@@ -382,7 +381,8 @@
 	margin-top: 5px;
 	font-weight: bold;
     display: inline-block;
-    cursor: pointer;
+	cursor: pointer;
+	margin-bottom: 15px;
 }
 
 .list-products .product.hor .product-image
@@ -405,6 +405,21 @@
 	left: 0;
 }
 
+.list-products .product .inp-cart-fav
+{
+	margin-top: 20px;
+	display: flex;
+	width: 100%;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+    align-items: center;
+}
+
+.product.box .cart, .product.hor .cart
+{
+	position: static;
+}
+
 .product.hor .checkmark
 {
 	left: 15px;
@@ -423,10 +438,12 @@
 
 .product.hor > .product-act
 {
+	margin-bottom: 0;
 	padding: 30px 25px;
 	align-self: stretch;
 	background-color: #EAEAEA;
-	height: 100%;
+	height: auto;
+	align-items: stretch;
 	flex-flow: column wrap;
 	width: auto;
 }
@@ -438,6 +455,8 @@
 
 .product.hor > .product-act > .available
 {
+	margin-top: 10px;
+	margin-bottom: auto;
 	width: 100%;
 }
 
@@ -640,10 +659,6 @@
 
 @media screen and (max-width: 470px)
 {
-	.product > .product-act
-	{
-		margin-bottom: 50px;
-	}
 	.product
 	{
 		text-align: center;
@@ -651,8 +666,12 @@
 	.product > .product-act > .new-price
 	{
 		width: 100%;
-
+		margin-bottom: 15px;
 		text-align: center;
+	}
+	.list-products .product .inp-cart-fav
+	{
+		margin-left: 0;
 	}
 }
 

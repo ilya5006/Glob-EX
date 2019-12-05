@@ -3,6 +3,8 @@ let sortHor = document.querySelector('#sort-hor');
 let listProduct = document.querySelector('.list-products');
 let products = document.querySelectorAll('.product');
 
+let horEnable;
+
 function setBlock() 
 {
     sortBlock.classList.add('active');
@@ -21,17 +23,20 @@ function setBlock()
 
 function setHor() 
 {
-    sortBlock.classList.remove('active');
-    sortHor.classList.add('active');
-
-    products.forEach(function(e)
+    if (horEnable == true)
     {
-        e.classList.remove('box');
-        e.classList.add('hor');
-    });
+        sortBlock.classList.remove('active');
+        sortHor.classList.add('active');
 
-    listProduct.style.display = 'flex';
-    listProduct.style.flexFlow = 'column wrap';
+        products.forEach(function(e)
+        {
+            e.classList.remove('box');
+            e.classList.add('hor');
+        });
+
+        listProduct.style.display = 'flex';
+        listProduct.style.flexFlow = 'column wrap';
+    }
 }
 
 sortBlock.addEventListener('click', function () 
@@ -44,4 +49,26 @@ sortHor.addEventListener('click', function ()
     setHor();
 });
 
-setHor();
+setBlock();
+
+window.addEventListener('resize', function()
+{
+    checkSize();
+});
+
+checkSize()
+
+function checkSize()
+{
+    if (document.body.clientWidth < 1000)
+    {
+        setBlock();
+        horEnable = false;
+        sortHor.style.opacity = '0.1';
+    }
+    else
+    {
+        sortHor.style.removeProperty('opacity');
+        horEnable = true;
+    }
+}
