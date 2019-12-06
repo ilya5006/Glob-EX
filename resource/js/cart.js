@@ -1,7 +1,22 @@
 ﻿let productInCart = [];
-let temp = document.querySelectorAll('.product > .product-info > .article');
-temp.forEach(function(element)
+let products = document.querySelectorAll('.product');
+
+products.forEach(function(element)
 {
-    productInCart.push(element.textContent);
+    element.querySelector('input.product-count').addEventListener('change', function()
+    {
+        update();
+    });
 });
-console.log(productInCart);
+
+function update()
+{
+    productInCart = [];
+    products.forEach(function(element)
+    {   
+        productInCart.push([element.querySelector('.article').textContent, element.querySelector('input.product-count').value]);
+    });
+    console.log(productInCart);
+}
+
+update();
