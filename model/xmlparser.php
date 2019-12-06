@@ -5,7 +5,7 @@ function isElement($type)
 }
 
 $reader = new XMLReader();
-$reader->open('../resource/xml/catalog_3.xml');
+$reader->open(__DIR__ . '/../resource/xml/catalog_3.xml');
 $xmlParseData = [];
 
 while ($reader->read()) {
@@ -133,9 +133,5 @@ while ($reader->read()) {
 
         $xmlParseData['nomeklatura'] = $nomeklatura;
     }
-
-    echo '<pre>';
-        var_export($xmlParseData);
-    echo '</pre>';
 }
 ?>
