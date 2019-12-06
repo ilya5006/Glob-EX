@@ -72,15 +72,20 @@ allFilters.forEach(function (element) {
         }
     }
     filterHide = document.createElement('div');
-    filterHide.textContent = "<";
+    filterHide.textContent = ">";
+    filterHide.style.transform = 'rotate(90deg)';
     filterHide.classList.add('filterHide');
-    filterHide.addEventListener('click', function (elem) {
-        if (element.querySelector('ul').style.display == 'block') {
+    filterHide.addEventListener('click', function (elem) 
+    {
+        if (element.querySelector('ul').style.display == 'block') 
+        {
             element.querySelector('ul').style.display = 'none';
-            elem.target.textContent = ">"
-        } else {
+            elem.target.style.transform = 'rotate(0deg)';
+        } 
+        else 
+        {
             element.querySelector('ul').style.display = 'block';
-            elem.target.textContent = "<"
+            elem.target.style.transform = 'rotate(90deg)';
         }
     });
     element.querySelector('p').appendChild(filterHide);

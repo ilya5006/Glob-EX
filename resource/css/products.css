@@ -99,7 +99,6 @@
 .filterHide
 {
 	cursor: pointer;
-	transform: rotate(90deg);
 }
 
 /* Начало чекбоксов */
@@ -423,9 +422,54 @@
 	margin-top: 20px;
 }
 
+
 .product.box .cart, .product.hor .cart
 {
 	position: static;
+
+	cursor: pointer;
+
+	border: 0;
+	background-color: transparent;
+}
+
+.product.hor .cart:hover
+{
+	color: #E31E25;
+	background-color: #FFFFFF;
+
+	filter: grayscale(0);
+}
+
+.product .cart > img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.product.box .cart > .cart-text
+{
+	display: none;
+}
+
+.product.hor .cart > img
+{
+	display: none;
+}
+
+.product.hor .cart
+{
+	flex-grow: 1;
+	order: 15;
+
+	width: 100%;
+	height: 100%;
+	margin-left: 25px;
+
+	text-transform: lowercase;
+
+	color: #FFFFFF;
+	background-color: #E31E25;
 }
 
 .product.hor .checkmark
@@ -433,8 +477,23 @@
 	left: 15px;
 }
 
+.product .fav-button
+{
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+.product .fav-button:hover
+{
+	filter: grayscale(1);
+}
+
 .product.hor .fav-button
 {
+	position: absolute;
+	top: 46px;
+	right: 25px;
+
 	display: block;
 }
 

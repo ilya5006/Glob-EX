@@ -214,9 +214,19 @@
 	height: 40px;
 	margin-left: 15px;
 
+	cursor: pointer;
+	transition: 0.3s all;
+	text-transform: lowercase;
+
 	color: #FFFFFF;
 	border: 0;
 	background-color: #E31E25;
+}
+
+.product_info .act input[type="submit"]:hover
+{
+	color: #E31E25;
+	background-color: #FFFFFF;
 }
 
 .product_info .pictures
