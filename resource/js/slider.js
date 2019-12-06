@@ -17,6 +17,11 @@ scrolls.forEach(function (element)
         element.nextElementSibling.scrollTo(element.nextElementSibling.scrollLeft + elmentWidth, 0);
         checkSlide(element);
     });
+
+    element.nextElementSibling.addEventListener('scroll', function()
+    {
+        checkSlide(element);
+    });
 });
 
 function checkSlide(elem)
