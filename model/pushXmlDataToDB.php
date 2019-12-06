@@ -2,19 +2,16 @@
     require_once './xmlparser.php';
     require_once './connection.php';
 
-    echo '<pre>';
-        echo var_export($xmlParseData);
-    echo '</pre>';
-
     echo '<hr>';
 
     foreach ($xmlParseData['brands'] as $idBrand => $data)
     {
         $name = $data['name'];
         $image = $data['image'];
+        $description = $data['description'];
         $image = str_replace('\\', '/', $image);
 
-        $mysqli->query("REPLACE INTO brands SET id_brand = '$idBrand', name = '$name', image = '$image'");
+        $mysqli->query("REPLACE INTO brands SET id_brand = '$idBrand', name = '$name', description = '$description', image = '$image'");
     }
 
     foreach ($xmlParseData['countries'] as $idCountry => $data)
@@ -65,6 +62,7 @@
     foreach ($xmlParseData['nomeklatura'] as $idGood => $data)
     {
         $name = $data['name'];
+        $article = $data['article'];
         $topId = $data['top_id'];
         $sort = $data['sort'];
         $brand = $data['brand'];
@@ -87,8 +85,8 @@
         $image4 = str_replace('\\', '/', $image4); // Потому что MySQL экранирует символ \
         $image5 = str_replace('\\', '/', $image5); // Потому что MySQL экранирует символ \
 
-        $query = "REPLACE INTO goods SET id_good = '$idGood', id_country = '$idCountry', id_brand = '$brand', top_id = '$topId', name = '$name',
-                                         sort = '$sort', price = '$price', old_price = '$oldPrice', discount = '$discount', unit = '$unit', 
+        $query = "REPLACE INTO goods SET id_good = '$idGood', id_country = '$idCountry', id_brand = '$brand', article = '$article', top_id = '$topId',
+                                         name = '$name', sort = '$sort', price = '$price', old_price = '$oldPrice', discount = '$discount', unit = '$unit', 
                                          image1 = '$image1', image2 = '$image2', image3 = '$image3', 
                                          image4 = '$image4', image5 = '$image5', quantity = '$quantity', description = '$description'";
 

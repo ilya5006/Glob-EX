@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<data>
+    <brands>
+        <value name="Attache" id="6" description="" image="ftp://user587s.beget.tech/Data/Картинки и баннеры/Логотипы/6.jpg"/>
+        <value name="IQ Allround" id="1" description="" image="ftp://user587s.beget.tech/Data/Картинки и баннеры/Логотипы/1.jpg"/>
+        <value name="Lamark" id="4" description="" image="ftp://user587s.beget.tech/Data/Картинки и баннеры/Логотипы/4.jpg"/>
+        <value name="Nota" id="3" description="" image="ftp://user587s.beget.tech/Data/Картинки и баннеры/Логотипы/3.jpg"/>
+        <value name="STICK`N" id="5" description="" image="ftp://user587s.beget.tech/Data/Картинки и баннеры/Логотипы/5.jpg"/>
+        <value name="Svetocopy" id="2" description="" image="ftp://user587s.beget.tech/Data/Картинки и баннеры/Логотипы/2.jpg"/>
+    </brands>
+    <Country>
+        <value name="Китай" id="2"/>
+        <value name="Россия" id="1"/>
+    </Country>
+    <specs>
+        <value name="Автоматическая" id="24"/>
+        <value name="Белизна (%)" id="5"/>
+        <value name="Возможность смены стержня" id="23"/>
+        <value name="Диаметр шарика" id="25"/>
+        <value name="Длина рулона" id="15"/>
+        <value name="Количество листов" id="12"/>
+        <value name="Количество листов в пачке" id="6"/>
+        <value name="Количество слоев" id="13"/>
+        <value name="Марка бумаги" id="1"/>
+        <value name="Материал корпуса" id="19"/>
+        <value name="Наличие бокса" id="10"/>
+        <value name="Наличие резиновой манжетки" id="18"/>
+        <value name="Плотность бумаги (г/кв.м)" id="2"/>
+        <value name="Размер изделия" id="11"/>
+        <value name="Размер изделия (мм)" id="9"/>
+        <value name="Разрядность" id="16"/>
+        <value name="Рулонов в упаковке" id="14"/>
+        <value name="Толщина (мкм)" id="3"/>
+        <value name="Форма корпуса" id="22"/>
+        <value name="Форма наконечника" id="21"/>
+        <value name="Формат листов" id="4"/>
+        <value name="Цвет бумаги" id="8"/>
+        <value name="Цвет корпуса" id="17"/>
+        <value name="Цвет чернил" id="20"/>
+        <value name="Штук в коробке" id="7"/>
+    </specs>
+    <partitions>
+        <value name="Канцелярские товары" id="1" top_id="" sort="1" banner="" image1="" image2="" description="" concomitant="" icon="">
+            <specs/>
+        </value>
+        <value name="Бумажная продукция" id="2" top_id="1" sort="0" banner="" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/2.jpg" image2="" description="" concomitant="">
+            <specs/>
+        </value>
+        <value name="Блоки для записей" id="14" top_id="2" sort="2" banner="" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/14.jpg" image2="" description="" concomitant="35">
+            <specs>
+                <spec id="6"/>
+                <spec id="2"/>
+                <spec id="8"/>
+                <spec id="9"/>
+                <spec id="10"/>
+            </specs>
+        </value>
+        <value name="Бумага для оргтехники" id="3" top_id="2" sort="1" banner="" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/3.jpg" image2="" description="" concomitant="35">
+            <specs>
+                <spec id="1"/>
+                <spec id="2"/>
+                <spec id="3"/>
+                <spec id="4"/>
+                <spec id="5"/>
+                <spec id="6"/>
+                <spec id="7"/>
+            </specs>
+        </value>
+        <value name="Бумага с клеевым краем" id="17" top_id="2" sort="3" banner="" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/17.jpg" image2="" description="" concomitant="35">
+            <specs>
+                <spec id="6"/>
+                <spec id="2"/>
+                <spec id="8"/>
+                <spec id="11"/>
+            </specs>
+        </value>
+        <value name="Бухгалтерские книги и журналы" id="30" top_id="2" sort="100" banner="" image1="" image2="" description="" concomitant="">
+            <specs>
+                <spec id="12"/>
+            </specs>
+        </value>
+        <value name="Калькуляторы" id="6" top_id="1" sort="100" banner="" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/6.jpg" image2="" description="" concomitant="">
+            <specs>
+                <spec id="16"/>
+            </specs>
+        </value>
+        <value name="Клей" id="7" top_id="1" sort="100" banner="" image1="" image2="" description="" concomitant="">
+            <specs/>
+        </value>
+        <value name="Письменные принадлежности" id="34" top_id="1" sort="100" banner="" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/34.jpg" image2="" description="" concomitant="">
+            <specs/>
+        </value>
+        <value name="Ручки гелевые" id="35" top_id="34" sort="100" banner="" image1="" image2="" description="" concomitant="14,17,3">
+            <specs>
+                <spec id="17"/>
+                <spec id="18"/>
+                <spec id="19"/>
+                <spec id="20"/>
+                <spec id="21"/>
+                <spec id="22"/>
+                <spec id="23"/>
+                <spec id="24"/>
+                <spec id="25"/>
+            </specs>
+        </value>
+        <value name="Хозяйственные товары" id="31" top_id="" sort="100" banner="" image1="" image2="" description="" concomitant="" icon="">
+            <specs/>
+        </value>
+        <value name="Бумага туалетная и полотенца бумажные" id="32" top_id="31" sort="100" banner="" image1="" image2="" description="" concomitant="">
+            <specs/>
+        </value>
+        <value name="Полотенца бумажные" id="33" top_id="32" sort="100" banner="" image1="" image2="" description="" concomitant="">
+            <specs>
+                <spec id="13"/>
+                <spec id="14"/>
+                <spec id="15"/>
+                <spec id="12"/>
+            </specs>
+        </value>
+    </partitions>
+    <nomeklatura>
+        <value name="Блок для заметок 9*9*9cм LAMARK белый в пластиковом боксе NT0070" id="15" article="254846" top_id="14" sort="100" brand="4" country="1" quantity="126" unit="шт" price="101.842" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/15.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="900"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="8" value="Белый"/>
+            <spec id="9" value="90*90"/>
+            <spec id="10" value="Да"/>
+        </value>
+        <value name="Блок для заметок 9*9*9см LAMARK белый NT0075" id="16" article="237229" top_id="14" sort="100" brand="4" country="1" quantity="128" unit="шт" price="78.767" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/16.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="900"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="8" value="Белый"/>
+            <spec id="9" value="90*90"/>
+            <spec id="10" value="Нет"/>
+        </value>
+        <value name="Бумага А3 &quot;SVETO COPY&quot; 80гр/м2 Ярк.94% ISO, 146% CIE (500л/пач)" id="10" article="95" top_id="3" sort="4" brand="2" country="1" quantity="181" unit="пач" price="471.13" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/10.jpg" image2="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/10-2.jpg" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="1" value="C"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="3" value="104"/>
+            <spec id="4" value="A3"/>
+            <spec id="5" value="146 %"/>
+            <spec id="6" value="500"/>
+            <spec id="7" value="5 шт."/>
+        </value>
+        <value name="Бумага А4 &quot;IQ ALLROUND&quot; 80г,162%CIE пачка (500л/пач)" id="5" article="211730" top_id="3" sort="3" brand="1" country="1" quantity="3172" unit="пач" price="286" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/5.jpg" image2="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/5-2.jpg" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="1" value="B"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="3" value="104"/>
+            <spec id="4" value="A4"/>
+            <spec id="5" value="162 %"/>
+            <spec id="6" value="500"/>
+            <spec id="7" value="5 шт."/>
+        </value>
+        <value name="Бумага А4 &quot;NOTA&quot; 80гр/м2 95% CIE 150% (500л/пач)" id="11" article="261307" top_id="3" sort="1" brand="3" country="1" quantity="3820" unit="пач" price="209" old_price="220" discount="5" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/11.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="1" value="B+"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="3" value="105"/>
+            <spec id="4" value="A4"/>
+            <spec id="5" value="150 %"/>
+            <spec id="6" value="500"/>
+            <spec id="7" value="5 шт."/>
+        </value>
+        <value name="Бумага А4 &quot;SVETO COPY&quot; 80гр/м2 95% CIE 146% (500л/пач)" id="12" article="185" top_id="3" sort="2" brand="2" country="1" quantity="4964" unit="пач" price="233.2" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/12.jpg" image2="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/12-2.jpg" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="1" value="C"/>
+            <spec id="2" value="80 гр./кв.м"/>
+            <spec id="3" value="104"/>
+            <spec id="4" value="A4"/>
+            <spec id="5" value="146 %"/>
+            <spec id="6" value="500"/>
+            <spec id="7" value="5 шт."/>
+        </value>
+        <value name="Блок самоклеющ 38*51 (100л) ассорти HOPAX -21004Y" id="18" article="929" top_id="17" sort="100" brand="5" country="1" quantity="678" unit="шт" price="11.535" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/18.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Микс"/>
+            <spec id="11" value="38*51 мм."/>
+        </value>
+        <value name="Блок самоклеющ 38*51 (100л) желтый HOPAX" id="19" article="216273" top_id="17" sort="100" brand="5" country="1" quantity="266" unit="шт" price="11.535" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/19.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Желтый"/>
+            <spec id="11" value="38*51 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*127 (100л) желтый HOPAX  -21009Y" id="20" article="959" top_id="17" sort="100" brand="5" country="1" quantity="45" unit="шт" price="39.975" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/20.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Желтый"/>
+            <spec id="11" value="76*127 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*51 (100л) зеленый, Stick'N Notes, Hopax  -21147" id="22" article="965" top_id="17" sort="100" brand="5" country="1" quantity="66" unit="шт" price="16.92" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/22.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Зеленый"/>
+            <spec id="11" value="76*51 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*51 (100л) розовый, Stick'N Notes, Hopax  -21145" id="23" article="277223" top_id="17" sort="100" brand="5" country="1" quantity="75" unit="шт" price="16.92" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/23.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Розовый"/>
+            <spec id="11" value="76*51 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*51(100л) голубой, Stick'N Notes, Hopax  -21146" id="21" article="962" top_id="17" sort="100" brand="5" country="1" quantity="65" unit="шт" price="16.92" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/21.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Голубой"/>
+            <spec id="11" value="76*51 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*76 (100л) голубой, Stick`n ECO Hopax 21747" id="24" article="267760" top_id="17" sort="100" brand="5" country="1" quantity="544" unit="шт" price="15.375" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/24.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Голубой"/>
+            <spec id="11" value="76*76 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*76 (100л) желтый, Stick`n ECO" id="25" article="267804" top_id="17" sort="100" brand="5" country="1" quantity="2127" unit="шт" price="15.375" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/25.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Желтый"/>
+            <spec id="11" value="76*76 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*76 (100л) зеленый, Stick`n ECO" id="26" article="267759" top_id="17" sort="100" brand="5" country="1" quantity="518" unit="шт" price="15.375" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/26.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Зеленый"/>
+            <spec id="11" value="76*76 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*76 (100л) розовый, Stick`n ECO Hopax 21746" id="27" article="267761" top_id="17" sort="100" brand="5" country="1" quantity="663" unit="шт" price="15.375" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/27.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="100 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Розовый"/>
+            <spec id="11" value="76*76 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*76 (400л) &quot;Неон&quot;, Stick'N Notes, Hopax (5цв/уп)" id="28" article="968" top_id="17" sort="100" brand="5" country="1" quantity="274" unit="шт" price="136.845" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/28.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="400 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Ассорти"/>
+            <spec id="11" value="76*76 мм."/>
+        </value>
+        <value name="Блок самоклеющ 76*76 (400л) &quot;Пастель&quot; Stick'N Notes, Hopax (4цв/уп) -21013" id="29" article="265640" top_id="17" sort="100" brand="5" country="1" quantity="130" unit="шт" price="136.845" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/29.jpg" image2="" image3="" image4="" image5="" description="" concomitant="35">
+            <specs/>
+            <spec id="6" value="400 шт."/>
+            <spec id="2" value="70 гр./кв.м"/>
+            <spec id="8" value="Ассорти"/>
+            <spec id="11" value="76*76 мм."/>
+        </value>
+        <value name="Калькулятор 12 разряд. 206*164*30мм SDC-888Т, двойное питание, корректировка,  черный" id="13" article="267445" top_id="6" sort="100" brand="" country="" quantity="144" unit="шт" price="0" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/13.jpg" image2="" image3="" image4="" image5="" description="" concomitant="">
+            <specs/>
+            <spec id="16" value="12"/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, Berlingo &quot;Techno-Gel&quot;, синяя" id="36" article="284263" top_id="35" sort="100" brand="" country="" quantity="110" unit="шт" price="14.71" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, Berlingo &quot;Techno-Gel&quot;, черная" id="37" article="284264" top_id="35" sort="100" brand="" country="" quantity="120" unit="шт" price="14.71" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, зеленая, прозрачный корпус, с резиновым держателем BASIR" id="38" article="277333" top_id="35" sort="100" brand="" country="" quantity="359" unit="шт" price="0" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, красная, прозрачный корпус, с резиновым держателем BASIR" id="39" article="263445" top_id="35" sort="100" brand="" country="" quantity="868" unit="шт" price="0" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, синяя автоматическая Erich Krause &quot;Smart-Gel&quot;, резиновый упор" id="40" article="284265" top_id="35" sort="100" brand="" country="" quantity="120" unit="шт" price="23.65" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, синяя, прозрачный корпус, с резиновым держателем BASIR" id="41" article="263444" top_id="35" sort="100" brand="" country="" quantity="2107" unit="шт" price="0" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, синяя, прозрачный корпус, с резиновым держателем Berlingo &quot;Techno-Gel Grip&quot;" id="42" article="275194" top_id="35" sort="100" brand="" country="" quantity="108" unit="шт" price="17.32" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, черная, прозрачный корпус, с резиновым держателем BASIR" id="43" article="263443" top_id="35" sort="100" brand="" country="" quantity="2549" unit="шт" price="0" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, черная, прозрачный корпус, с резиновым держателем Berlingo &quot;Techno-Gel Grip&quot;" id="44" article="275192" top_id="35" sort="100" brand="" country="" quantity="108" unit="шт" price="17.32" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая 0,5мм, чёрная автоматическая Erich Krause &quot;Smart-Gel&quot;, резиновый упор" id="45" article="284266" top_id="35" sort="100" brand="" country="" quantity="120" unit="шт" price="23.65" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая G-987 автоматическая,с резин.манжеткой, 0,5мм, синяя" id="46" article="204912" top_id="35" sort="100" brand="6" country="2" quantity="195" unit="шт" price="19.66" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/46.jpg" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value="Прозрачный"/>
+            <spec id="18" value="Да"/>
+            <spec id="19" value="Пластик"/>
+            <spec id="20" value="Синий"/>
+            <spec id="21" value="Стандартная"/>
+            <spec id="22" value="Круглая"/>
+            <spec id="23" value="Да"/>
+            <spec id="24" value="Да"/>
+            <spec id="25" value="1 мм."/>
+        </value>
+        <value name="Ручка гелевая G-987 автоматическая,с резин.манжеткой, 0,5мм, черная" id="47" article="208210" top_id="35" sort="100" brand="6" country="2" quantity="66" unit="шт" price="19.52" image1="ftp://user587s.beget.tech/Data/Картинки и баннеры/Фото/47.jpg" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value="Прозрачный"/>
+            <spec id="18" value="Да"/>
+            <spec id="19" value="Пластик"/>
+            <spec id="20" value="Черный"/>
+            <spec id="21" value="Стандартная"/>
+            <spec id="22" value="Круглая"/>
+            <spec id="23" value="Да"/>
+            <spec id="24" value="Да"/>
+            <spec id="25" value="1 мм."/>
+        </value>
+        <value name="Ручка гелевая PENTEL K405-C, резиновый упор 0.5мм, синяя" id="48" article="204270" top_id="35" sort="100" brand="" country="" quantity="120" unit="шт" price="27.01" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая PENTEL K405-А, резиновый упор 0.5мм, красная" id="49" article="284268" top_id="35" sort="100" brand="" country="" quantity="120" unit="шт" price="0" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+        <value name="Ручка гелевая PENTEL K405-А, резиновый упор 0.5мм, черная" id="50" article="217587" top_id="35" sort="100" brand="" country="" quantity="120" unit="шт" price="29.2" image1="" image2="" image3="" image4="" image5="" description="" concomitant="14,17,3">
+            <specs/>
+            <spec id="17" value=""/>
+            <spec id="18" value=""/>
+            <spec id="19" value=""/>
+            <spec id="20" value=""/>
+            <spec id="21" value=""/>
+            <spec id="22" value=""/>
+            <spec id="23" value=""/>
+            <spec id="24" value=""/>
+            <spec id="25" value=""/>
+        </value>
+    </nomeklatura>
+</data>
