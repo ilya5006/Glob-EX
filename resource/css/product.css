@@ -156,7 +156,7 @@
 
 .product_info .act .available-count::after
 {
-	content: " шт)";
+	content: ")";
 }
 
 .product_info .act .brand
