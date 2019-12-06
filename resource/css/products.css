@@ -413,20 +413,20 @@
 
 .list-products .product .inp-cart-fav
 {
+	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 
-	width: 100%;
-	margin-top: 20px;
+	width: auto;
 }
 
 
 .product.box .cart, .product.hor .cart
 {
 	position: static;
-
+	margin-left: 15px;
 	cursor: pointer;
 
 	border: 0;
@@ -754,5 +754,6 @@
 
 .product .new-price
 {
+	margin-right: 25px;
 	margin-bottom: 0;
 }
