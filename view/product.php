@@ -1,4 +1,32 @@
-﻿<div class="content" style="padding-top: 0; padding-bottom: 0;">
+﻿<?php
+
+require_once __DIR__ . '/../model/xmlparser.php';
+
+$idProduct = $_GET['id'];
+$product = $xmlParseData['nomeklatura'][$idProduct];
+
+$product['images'][] = $product['image1'];
+$product['images'][] = $product['image2'];
+$product['images'][] = $product['image3'];
+$product['images'][] = $product['image4'];
+$product['images'][] = $product['image5'];
+
+for ($i = 0; $i < count($product['images']); $i++)
+{
+    $product['images'][$i] = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $product['images'][$i]);
+}
+
+$brand = $xmlParseData['brands'][$product['brand']];
+$specsNames = [];
+$specsId = array_keys($product['specs']);
+
+foreach ($specsId as $id => $specId)
+{
+    $specsNames[$specId] = $xmlParseData['specs'][$specId]['name'];
+}
+?>
+
+<div class="content" style="padding-top: 0; padding-bottom: 0;">
     <div class="cat_fold">
         <p class="catalog_expand_button"> Каталог</p>
         <a href="#"> &#92; Канцелярские товары </a>
@@ -8,42 +36,48 @@
         <div class="pictures">
             <img src="./resource/img/products/product.jpg" alt="" class="big" style="order: -1;">
             <div class="img_list">
-                <img src="./resource/img/products/product2.jpg" alt="" class="little">
-                <img src="./resource/img/products/product2.jpg" alt="" class="little">
-                <img src="./resource/img/products/product3.jpg" alt="" class="little">
-                <img src="./resource/img/products/product4.jpg" alt="" class="little">
-                <img src="./resource/img/products/product5.jpg" alt="" class="little">
-                <img src="./resource/img/products/product3.jpg" alt="" class="little">
-                <img src="./resource/img/products/product4.jpg" alt="" class="little">
-                <img src="./resource/img/products/product5.jpg" alt="" class="little">
+                <?php
+                    
+                foreach ($product['images'] as $id => $image)
+                {
+                    if ($image != '')
+                    {
+                        $imageBase64 = base64_encode(file_get_contents($image));
+                        echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $imageBase64 . '" alt="" class="little"></a>';
+                    }
+                }
+                ?>
             </div>
         </div>
         <div class="info">
-            <h2>SvetoCopy CLASSIC бумага для печати формат А4 бумага для печати формат А4</h2>
+            <h2> <?php echo $product['name']; ?> </h2>
             <div class="detail">
-                <p>Артикул <span>352698</span></p>
-                <!-- <p>В наличии <span>500</span></p> -->
-                <p>Бренд: <a href="#">SVETOCOPY</a></p>
+                <p>Артикул <span><?php echo $product['article']; ?></span></p>
+                <p>Бренд: <a href="#"><?php echo $brand['name']; ?></a></p>
             </div>
             <div class="features">
-                <p class="feature">Формат А4</p>
-                <p class="feature">Класс А</p>
-                <p class="feature">Плотность 80 г/м2</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Формат А4</p>
-                <p class="feature">Класс А</p>
-                <p class="feature">Плотность 80 г/м2</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Листов в пачке 500 шт</p>
+                <?php
+                    $specsPrintedCount = 0;
+
+                    foreach($specsNames as $id => $name)
+                    {
+                        $specsPrintedCount++;
+                        echo '<p class="feature">' . $name . ' ' . $product['specs'][$id] .'</p>';
+                        if ($specsPrintedCount == 6) 
+                            break;
+                    }
+                ?>
                 <p class="feature_button">Больше характеристик</p>
             </div>
         </div>
         <div class="act">
-            <p class="old-price">123p</p>
-            <p class="new-price">322p</p>
-            <p class="available">есть в наличии <span class="available-count">500</span> </p>
-            <p class="brand">БРЕНД: <a href="#">SVETOCOPY</a> </p>
+            <?php if ( !is_null($product['old_price']) )
+            { ?>
+                <p class="old-price"><?php echo $product['old_price']; ?> р.</p>
+      <?php } ?>
+            <p class="new-price"><?php echo $product['price']; ?> р.</p>
+            <p class="available">есть в наличии <span class="available-count"><?php echo $product['quantity'] . ' ' . $product['unit']; ?></span> </p>
+            <p class="brand">БРЕНД: <a href="#"><?php echo $brand['name']; ?></a> </p>
             <form action="#">
                 <input type="number" name="" id="" min="1" max="999" value="1">
                 <input type="submit" value="в корзину">
@@ -58,29 +92,13 @@
         
         <div class="informations">
             <div class="info_d"> 
-                <p> Прямой диван Куба – практичное решение для небольшой гостиной, студии или кухни. При своих скромных размерах он трансформируется в полноценное двуспальное место. Поскольку подушки модели раскладываются на пол, модель не предназначена для ежедневного использования, но удобна для размещения припозднившихся гостей. Тканевая обивка легко поддается чистке. Прикручивающиеся ножки выполнены из прочного пластика. <br> Эта модель доступна только в тех вариантах обивки, которые представлены в нашем ассортименте.</p>
+                <p> <?php echo $product['description']; ?></p>
             </div>
             <div class="features" style="display: none;">
-                <p class="feature">Формат А4</p>
-                <p class="feature">Класс А</p>
-                <p class="feature">Плотность 80 г/м2</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Формат А4</p>
-                <p class="feature">Класс А</p>
-                <p class="feature">Плотность 80 г/м2</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Формат А4</p>
-                <p class="feature">Класс А</p>
-                <p class="feature">Плотность 80 г/м2</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Формат А4</p>
-                <p class="feature">Класс А</p>
-                <p class="feature">Плотность 80 г/м2</p>
-                <p class="feature">Листов в пачке 500 шт</p>
-                <p class="feature">Листов в пачке 500 шт</p>
+                <?php
+                foreach($specsNames as $id => $name)
+                    echo '<p class="feature">' . $name . ' ' . $product['specs'][$id] .'</p>';
+                ?>
             </div>
         </div>
     </div>

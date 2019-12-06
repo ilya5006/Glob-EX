@@ -6,7 +6,7 @@ $brands = $xmlParseData['brands'];
 
 foreach ($brands as $brandId => $brandInfo)
 {
-    $brands[$brandId]['image'] = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech' , $brands[$brandId]['image']);
+    $brands[$brandId]['image'] = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $brands[$brandId]['image']);
 }
 // $img = base64_encode(file_get_contents('ftp://user587s:CgIc6Wbt@user587s.beget.tech/Data/Картинки и баннеры/Логотипы/1.jpg'));
 ?>
