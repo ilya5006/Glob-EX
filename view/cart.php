@@ -14,6 +14,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                    <p class="article" style="display: none;"> Сюда артикул </p>
                     <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
@@ -29,6 +30,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                    <p class="article" style="display: none;"> Сюда артикул </p>
                     <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
@@ -44,6 +46,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                    <p class="article" style="display: none;"> Сюда артикул </p>
                     <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
@@ -59,6 +62,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                    <p class="article" style="display: none;"> Сюда артикул </p>
                     <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>
@@ -74,6 +78,7 @@
                 <img class="product-image" src="./resource/img/products/product.jpg" alt="">
                 <div class="product-info">
                     <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                    <p class="article" style="display: none;"> Сюда артикул </p>
                     <div class="product-detail">
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p>БРЕНД: <a href="#">SVETOCOPY</a></p>

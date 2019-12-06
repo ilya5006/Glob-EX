@@ -37,11 +37,12 @@
 
         <div class="products" style="width: 100%;">
             <div class="list-products">
-                <div class="product">
+            <div class="product">
                     <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
                     <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                     <div class="product-disc">
                         <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                        <p class="article" style="display: none;"> Сюда артикул </p>
                         <div class="features">
                             <p class="feature">Формат А4</p>
                             <p class="feature">Класс А</p>
@@ -54,7 +55,6 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
@@ -67,6 +67,7 @@
                     <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                     <div class="product-disc">
                         <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                        <p class="article" style="display: none;"> Сюда артикул </p>
                         <div class="features">
                             <p class="feature">Формат А4</p>
                             <p class="feature">Класс А</p>
@@ -79,7 +80,6 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
@@ -92,6 +92,7 @@
                     <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                     <div class="product-disc">
                         <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                        <p class="article" style="display: none;"> Сюда артикул </p>
                         <div class="features">
                             <p class="feature">Формат А4</p>
                             <p class="feature">Класс А</p>
@@ -104,7 +105,6 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
@@ -117,6 +117,7 @@
                     <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                     <div class="product-disc">
                         <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                        <p class="article" style="display: none;"> Сюда артикул </p>
                         <div class="features">
                             <p class="feature">Формат А4</p>
                             <p class="feature">Класс А</p>
@@ -129,7 +130,6 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
@@ -142,6 +142,7 @@
                     <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
                     <div class="product-disc">
                         <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
+                        <p class="article" style="display: none;"> Сюда артикул </p>
                         <div class="features">
                             <p class="feature">Формат А4</p>
                             <p class="feature">Класс А</p>
@@ -154,7 +155,6 @@
                         <p class="available">есть в наличии <span class="available-count">500</span> </p>
                         <p class="new-price">375р</p>
                         <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>

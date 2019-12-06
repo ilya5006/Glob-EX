@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./resource/css/footer.css">
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/productSort.js" defer></script>
+    <script src="./resource/js/checkedList.js" defer></script>
 </head>
 <body>
 
