@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./resource/css/cart.css">
     <link rel="stylesheet" href="./resource/css/footer.css">
     <script src="./resource/js/header.js" defer></script>
+    <script src="./resource/js/cart.js" defer></script>
 </head>
 <body>
 
