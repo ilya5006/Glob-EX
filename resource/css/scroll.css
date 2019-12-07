@@ -250,6 +250,11 @@
 	justify-content: space-between;
 }
 
+.slider_header h2
+{
+	margin-top: 0;
+}
+
 .slide_left, .slide_right
 {
 	font-size: 48px;
