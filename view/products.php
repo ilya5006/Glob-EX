@@ -159,13 +159,8 @@ foreach ($brands as $brandId => $brandInfo)
                     }
                     else // Category 3
                     {
-                        // $topId = $partitions[$topIdCategory2['top_id']]['top_id'];
-                        // $topIdCategory3 = $partitions[$topId];
-                        // echo '<a href="#"> &frasl; ' . $partitions[$topIdCategory2['top_id']]['name'] . ' </a>';
-                        // echo '<a href="#"> &frasl; ' . $topIdCategory2['name'] . ' </a>';
-                        // echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . ' </span> </p>';
-                        
                         $topIdCategory3 = $partitions[$topIdCategory2['top_id']];
+
                         echo '<a href="#"> &frasl; ' . $topIdCategory3['name'] . ' </a>';
                         echo '<a href="#"> &frasl; ' . $topIdCategory2['name'] . ' </a>';
                         echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . ' </span> </p>';
