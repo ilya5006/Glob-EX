@@ -2,6 +2,11 @@
 let allProducts = document.querySelectorAll('.product');
 let allChecked = document.querySelectorAll('.product > .container input:checked');
 let allCheckbox = document.querySelectorAll('.product > .container input[type=checkbox');
+let countPanel = document.querySelector('.check-selecter');
+let checkedCount = document.querySelector('.text-selected > .selected-count');
+
+let btnDelete = document.querySelector('.fav-act > .check-selecter p.delete');
+let btnInCart = document.querySelector('.fav-act > .check-selecter p.in-cart');
 
 allCheckbox.forEach(function(element)
 {
@@ -19,6 +24,15 @@ function update()
     {
         checkedProducts.push([elem.parentElement.parentElement.querySelector('.article').textContent, elem.parentElement.parentElement.querySelector('.product-count').value]);
     });
+    checkedCount.textContent = checkedProducts.length;
+    if (checkedProducts.length >= 1)
+    {
+        countPanel.style.display = 'flex';
+    }
+    else
+    {
+        countPanel.style.display = 'none';
+    }
     console.log(checkedProducts);
 }
 
@@ -29,3 +43,13 @@ allProducts.forEach(function(element)
         update();
     });
 });
+
+btnDelete.addEventListener('click', function()
+{
+    // сюда код, когда жмёшь УДАЛИТЬ
+})
+
+btnInCart.addEventListener('click', function()
+{
+    // сюда код, когда жмёшь В КОРЗИНУ
+})

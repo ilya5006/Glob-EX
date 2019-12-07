@@ -102,7 +102,7 @@
 }
 
 /* Начало чекбоксов */
-.filter > ul > li .container
+.filter > ul > li .container, .fav-act > .check-selecter .container
 {
 	font-size: 14px;
 
@@ -117,8 +117,12 @@
 	cursor: pointer;
 }
 
+.fav-act > .check-selecter .container
+{
+	width: auto;
+}
 
-.filter > ul > li .container input
+.filter > ul > li .container input, .fav-act > .check-selecter .container input
 {
 	position: absolute;
 
@@ -131,7 +135,7 @@
 }
 
 
-.filter > ul > li .checkmark
+.filter > ul > li .checkmark, .check-selecter .container .checkmark
 {
 	position: absolute;
 	top: 0;
@@ -145,19 +149,45 @@
 }
 
 
-.filter > ul > li  .container:hover input ~ .checkmark
+.filter > ul > li  .container:hover input ~ .checkmark, .fav-act > .check-selecter .container .container:hover input ~ .checkmark
 {
 	background-color: #FFFFFF;
 }
 
 
-.filter > ul > li .container input:checked ~ .checkmark
+.filter > ul > li .container input:checked ~ .checkmark, .fav-act > .check-selecter .container input:checked ~ .checkmark
 {
 	border: 0;
 	background-color: #E31E25;
 }
 
-.filter > ul > li .container .checkmark:after
+.fav-act > .check-selecter .container
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+.fav-act > .check-selecter .container .checkmark
+{
+	top: 5px;
+;
+	left: 0;
+}
+
+.fav-act > .check-selecter .container > input[type=checkbox]
+{
+	visibility: hidden;
+}
+
+.fav-act > .check-selecter .container
+{
+	margin-bottom: 0;
+	padding-left: 15px;
+}
+
+.filter > ul > li .container .checkmark:after, .fav-act > .check-selecter .container .checkmark:after
 {
 	top: 5px;
 	left: 9px;
@@ -413,10 +443,10 @@
 
 .list-products .product .inp-cart-fav
 {
-	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap;
+	flex-grow: 1;
 	justify-content: space-between;
 
 	width: auto;
@@ -426,7 +456,9 @@
 .product.box .cart, .product.hor .cart
 {
 	position: static;
+
 	margin-left: 15px;
+
 	cursor: pointer;
 
 	border: 0;
@@ -756,4 +788,56 @@
 {
 	margin-right: 25px;
 	margin-bottom: 0;
+}
+
+
+.fav-act
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+
+	width: 100%;
+}
+
+.fav-act > .sort
+{
+	flex-grow: 1;
+
+	min-height: 55px;
+}
+
+.fav-act > .check-selecter
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	flex-grow: 1;
+	justify-content: flex-start;
+	order: -1;
+
+	min-height: 55px;
+	margin-top: 50px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	padding: 10px 15px;
+
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fav-act > .check-selecter p
+{
+	font-size: 18px;
+
+	margin: 5px 20px;
+
+	cursor: pointer;
+
+	color: #E31E24;
+}
+
+
+.fav-act > .check-selecter p.text-selected, .fav-act > .check-selecter p.selected-count
+{
+	color: #000000;
 }

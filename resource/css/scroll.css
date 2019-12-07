@@ -67,8 +67,8 @@
 
 .scroll > .brand
 {
-	min-width: 150px;
 	width: 150px;
+	min-width: 150px;
 	height: 150px;
 	margin: 10px;
 }
@@ -346,29 +346,29 @@
 
 .alphablet
 {
-	transition: 0.3s all;
-	margin-left: 25px;
-	margin-top: 20px;
 	display: flex;
 	flex-flow: row wrap;
+
+	margin-top: 20px;
+	margin-left: 25px;
+
+	transition: 0.3s all;
 }
 
 .alphablet > div
 {
-	opacity: 0.5;
-	cursor: pointer;
-	font-weight: bold;
-	margin-right: 25px;
 	font-size: 25px;
+	font-weight: bold;
 	line-height: 29px;
+
+	margin-right: 25px;
+
+	cursor: pointer;
+
+	opacity: 0.5;
 }
 
 .alphablet > div:hover
 {
 	opacity: 1;
-}
-
-h2
-{
-	margin-top: 0;
 }

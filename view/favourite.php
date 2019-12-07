@@ -10,28 +10,38 @@
     </div>
 
     <div class="catalg_view">
-        <div class="sort">
-            <p>
-                Сортировка:
-                <select>
-                    <option value="10">По популярности</option>
-                    <option value="30">Сначала дешевые</option>
-                    <option value="50">Сначала дорогие</option>
-                </select>
-            </p>
+        <div class='fav-act'>
+            <div class="sort">
+                <p>
+                    Сортировка:
+                    <select>
+                        <option value="10">По популярности</option>
+                        <option value="30">Сначала дешевые</option>
+                        <option value="50">Сначала дорогие</option>
+                    </select>
+                </p>
 
-            <p>
-                Товаров на странице:
-                <select>
-                    <option value="10">10</option>
-                    <option value="30">30</option>
-                    <option value="50">50</option>
-                </select>
-            </p>
+                <p>
+                    Товаров на странице:
+                    <select>
+                        <option value="10">10</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                    </select>
+                </p>
 
-            <div class="view">
-                <img src="./resource/img/icons/block.png" alt="sort" id="sort-block">
-                <img src="./resource/img/icons/horizontal.png" alt="sort" id="sort-hor">
+                <div class="view">
+                    <img src="./resource/img/icons/block.png" alt="sort" id="sort-block">
+                    <img src="./resource/img/icons/horizontal.png" alt="sort" id="sort-hor">
+                </div>
+            </div>
+
+            <div class="check-selecter" style="display: none;">
+                <!-- <label class="container" id="cart"> -->
+                    <p class="text-selected">Выбранно: <span class="selected-count">0</span> </p> 
+                <!-- <input type="checkbox" name="prduct-check"> <span class="checkmark"></span>  </label> -->
+                <p class="delete"> Удалить </p>
+                <p class=in-cart> В корзину </p>
             </div>
         </div>
 

@@ -62,6 +62,3 @@ document.querySelector('.scroll').addEventListener('scroll', function(element)
         }
     }
 });
-
-allLetters[0].style.color = '#E31E25';
-allLetters[0].style.opacity = '1';
