@@ -5,6 +5,8 @@ let temp;
 let tempAlph = [];
 let tempAlphNumLet = [];
 let counter = 1;
+let lastLetter;
+
 brandsTemp.forEach(function(element)
 {
     brandsLetters.push([element.textContent[0], counter]);
@@ -25,7 +27,12 @@ brandsLetters.forEach(function(element)
         temp.addEventListener('click', function()
         {
             document.querySelector('.scroll').scrollTo(((element[1] - 1) * (document.querySelectorAll('.brand')[0].offsetWidth + 20)), 0);
-            console.log(brandsTemp[element[1]-1]);
+            
+            for (let i = 0; i < tempAlphNumLet.length; i++)
+            {
+                allLetters[i].style.color = '#000000';
+                allLetters[i].style.removeProperty('opacity');
+            }
         });
         alphablet.appendChild(temp);
         counter++;
@@ -37,24 +44,21 @@ let allLetters = document.querySelectorAll('.alphablet > div');
 
 document.querySelector('.scroll').addEventListener('scroll', function(element)
 {
-    console.log(parseInt(element.target.scrollLeft / (150 + 20)) + 1);
     for (let i = 0; i < tempAlphNumLet.length; i++)
     {
         if (tempAlphNumLet[i][1] == parseInt(element.target.scrollLeft / (150 + 20)) + 1)
         {
+            lastLetter = tempAlphNumLet[i][2];
             allLetters[tempAlphNumLet[i][2]].style.color = '#E31E25';
-            console.log('ебать');
+            allLetters[tempAlphNumLet[i][2]].style.opacity = '1';
         }
         else
         {
-            allLetters[i].style.color = '#000000';
+            if (i != lastLetter)
+            {
+                allLetters[i].style.color = '#000000';
+                allLetters[i].style.removeProperty('opacity');
+            }
         }
     }
-    // if (tempAlphNumLet[parseInt(element.target.scrollLeft / (150 + 20))][1] == parseInt(element.target.scrollLeft / (150 + 20) + 1))
-    // {
-    //     temp = tempAlphNumLet[parseInt(element.target.scrollLeft / (150 + 20) + 1)][2];
-    //     console.log(temp);
-    // }
 });
-
-//allLetters[parseInt(element.target.scrollLeft / (150 + 20))]);
