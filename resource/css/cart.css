@@ -237,7 +237,7 @@
 .delivery .address
 {
 	font-size: 20px;
-
+	margin-bottom: 20px;
 	display: inline-block;
 
 	color: #000000;
@@ -262,12 +262,43 @@
 .delivery .deliv-inf
 {
 	display: flex;
-	align-items: center;
-	flex-flow: row nowrap;
+	align-items: flex-start;
+	flex-flow: column nowrap;
 	justify-content: space-between;
 
 	margin-top: 50px;
 }
+
+.delivery .deliv-inf input
+{
+	height: 40px;
+    margin: 15px;
+    padding: 5px 15px;
+    border: 0;
+    border-bottom: 1px rgb(208, 208, 208) solid;
+}
+
+.delivery .deliv-inf label, .delivery .deliv-inf label input
+{
+	width: 100%;
+}
+.delivery .deliv-inf label > .place_holder
+{
+	bottom: 25px;
+    left: 15px;
+}
+
+.delivery .deliv-inf label > p
+{
+    justify-content: center;
+    align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+    text-transform: uppercase;
+    color: #9D9A9A;
+    font-weight: bold;
+}
+
 
 .delivery .change-address
 {

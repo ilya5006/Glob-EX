@@ -98,12 +98,25 @@
                     <p class="type-pickup">Самовызов</p>
                 </div>
                 <div class="deliv-inf">
-                    <p class="address">г. Москва, м. Комсомольская, ул. Ленина, д.5, кв.177</p>
-                    <button class="change-address">ВЫБРАТЬ АДРЕС</button>
+                    <p class="address"></p>
+                    <label class="placeinput">
+                        <p>
+                            <span> Адрес: </span> 
+                            <input required="1" type="text" id="adress" />
+                            <div class="place_holder">Введите адресс<span>*</span></div>
+                        </p> 
+                    </label>
+                    <label class="placeinput">
+                        <p>
+                            <span> Телефон: </span> 
+                            <input required="1" type="number" id="number" />
+                            <div class="place_holder">Введите Номер<span>*</span></div>
+                        </p>
+                    </label>
+                    <!-- <button class="change-address">ВЫБРАТЬ АДРЕС</button> -->
                 </div>
-                <p class="delivery-cost">Стоимость доставки: <span>200</span></p>
-                <p class="info">Курьер свяжется с Вами для уточнения адреса и времери доставки, после оформления заказа
-                </p>
+                <!-- <p class="delivery-cost">Стоимость доставки: <span>200</span></p> -->
+                <p class="info">Курьер свяжется с Вами для уточнения адреса и времени и стоймости доставки, после оформления заказа.</p>
             </div>
 
             <h2> СПОСОБ ОПЛАТЫ </h2>
@@ -124,7 +137,7 @@
             <hr>
             <p class='act-tovari'> товары <span>8 200</span> </p>
             <p class='act-skidka'> скидка <span>8 200</span> </p>
-            <p class='act-dostavka'> доставка <span>200</span> </p>
+            <!-- <p class='act-dostavka'> доставка <span>200</span> </p> -->
             <input class="order-button" type="submit" value="ОФОРМИТЬ ЗАКАЗ">
         </div>
     </div>
