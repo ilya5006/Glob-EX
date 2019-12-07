@@ -446,7 +446,7 @@
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap;
-	flex-grow: 1;
+	
 	justify-content: space-between;
 
 	width: auto;
@@ -841,3 +841,40 @@
 {
 	color: #000000;
 }
+
+.fav-act > .check-selecter p.delete
+{
+	margin-left: auto;
+}
+
+@media screen and (max-width: 1100px)
+{
+	.fav-act > .check-selecter
+	{
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 600px)
+{
+	.fav-act > .check-selecter
+	{
+		flex-flow: row wrap;
+	}
+	.fav-act > .check-selecter p.text-selected
+	{
+		width: 100%;
+		text-align: center;
+	}
+	.fav-act > .check-selecter p.delete
+	{
+		margin-left: unset;
+		margin: 5px 20px;
+	}
+	.fav-act > .check-selecter p
+	{
+		text-align: center;
+		flex-grow: 1;
+	}
+}
+
