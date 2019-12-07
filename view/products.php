@@ -1,4 +1,17 @@
-﻿<div class="content" style="padding-top: 0">
+﻿<?php
+
+require_once __DIR__ . '/../model/xmlparser.php';
+
+$brands = $xmlParseData['brands'];
+
+foreach ($brands as $brandId => $brandInfo)
+{
+    $brands[$brandId]['image'] = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $brands[$brandId]['image']);
+}
+// $img = base64_encode(file_get_contents('ftp://user587s:CgIc6Wbt@user587s.beget.tech/Data/Картинки и баннеры/Логотипы/1.jpg'));
+?>
+
+<div class="content" style="padding-top: 0">
     <div class="catalg_view">
         <div class="filters">
             <div class="price-filter">
@@ -140,16 +153,14 @@
                 <div class="slide_right slide_anim"> <span>&#62;</span> </div>
             </div>
             <div class="scroll">
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
-                <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a>
+            <?php
+            foreach ($brands as $brandId => $brandInfo)
+            {
+                $img = base64_encode(file_get_contents($brandInfo['image']));
+                echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $img . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
+            }
+            ?> 
+                <!-- <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a> -->
             </div>
             <!-- КОНЕЦ СЛАЙДЕРА С БРЕНДАМИ -->
 

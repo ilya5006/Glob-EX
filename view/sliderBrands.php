@@ -18,18 +18,6 @@ foreach ($brands as $brandId => $brandInfo)
         <div class="slide_right slide_anim"> <span>&#62;</span> </div>
     </div>
     <div class="scroll">
-        <!-- <a href="#" class="brand"><img src="data:image/png;base64,<?php #echo $img; ?>"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a>
-        <a href="#" class="brand"><img src="./resource/img/brands/1.jpg"></a> -->
         <?php
             foreach ($brands as $brandId => $brandInfo)
             {
