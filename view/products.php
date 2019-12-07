@@ -48,6 +48,7 @@ foreach ($brands as $brandId => $brandInfo)
                         foreach ($brands as $brandId => $brandInfo)
                         {
                             $goodsQuantity = quantityOfGoodsForOneBrand($brandId);
+                            
                             echo '<label class="container">';
                                 echo '<p>' . $brandInfo['name'] . ' (' . $goodsQuantity . ') </p> <input type="checkbox"> <span class="checkmark"></span>';
                             echo '</label>';
@@ -143,27 +144,30 @@ foreach ($brands as $brandId => $brandInfo)
             <div class="cat_fold">
                 <p class="catalog_expand_button"> Каталог</p>
                 <?php
-                if ($partitions[$categoryId]['top_id'] === '') // Category 1
+                $category1 = $partitions[$categoryId];
+                
+                if ($category1['top_id'] === '') // Category 1
                 {
-                    echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . ' </span> </p>';
+                    echo '<p> <span> &frasl; ' . $category1['name'] . ' </span> </p>';
                 }
                 else
                 {
-                    $topId = $partitions[$categoryId]['top_id'];
-                    $topIdCategory2 = $partitions[$topId];
+                    $topId = $category1['top_id'];
+                    $category2 = $partitions[$topId];
 
-                    if ($topIdCategory2['top_id'] === '') // Category 2
+                    if ($category2['top_id'] === '') // Category 2
                     {
-                        echo '<a href="#"> &frasl; ' . $topIdCategory2['name'] . ' </a>';
-                        echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . '</span> </p>';
+                        echo '<a href="#"> &frasl; ' . $category2['name'] . ' </a>';
+                        echo '<p> <span> &frasl; ' . $category1['name'] . '</span> </p>';
                     }
                     else // Category 3
                     {
-                        $topIdCategory3 = $partitions[$topIdCategory2['top_id']];
+                        $topId = $category2['top_id'];
+                        $category3 = $partitions[$topId];
 
-                        echo '<a href="#"> &frasl; ' . $topIdCategory3['name'] . ' </a>';
-                        echo '<a href="#"> &frasl; ' . $topIdCategory2['name'] . ' </a>';
-                        echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . ' </span> </p>';
+                        echo '<a href="#"> &frasl; ' . $category3['name'] . ' </a>';
+                        echo '<a href="#"> &frasl; ' . $category2['name'] . ' </a>';
+                        echo '<p> <span> &frasl; ' . $category1['name'] . ' </span> </p>';
                     }
                 }
                 ?>
