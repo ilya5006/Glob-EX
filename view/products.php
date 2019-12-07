@@ -2,7 +2,24 @@
 
 require_once __DIR__ . '/../model/xmlparser.php';
 
+$categoryId = $_GET['id'];
+
+function quantityOfGoodsForOneBrand($brandId)
+{
+    global $goods;
+    $quantity = 0;
+    foreach ($goods as $goodId => $goodInfo)
+    {
+        if ($goodInfo['brand'] == $brandId) 
+            $quantity++;
+    }
+
+    return $quantity;
+}
+
 $brands = $xmlParseData['brands'];
+$partitions = $xmlParseData['partitions'];
+$goods = $xmlParseData['nomeklatura'];
 
 foreach ($brands as $brandId => $brandInfo)
 {
@@ -27,36 +44,18 @@ foreach ($brands as $brandId => $brandInfo)
                 <p>Бренд</p>
                 <ul>
                     <li>
-                        <label class="container">
+                        <?php
+                        foreach ($brands as $brandId => $brandInfo)
+                        {
+                            $goodsQuantity = quantityOfGoodsForOneBrand($brandId);
+                            echo '<label class="container">';
+                                echo '<p>' . $brandInfo['name'] . ' (' . $goodsQuantity . ') </p> <input type="checkbox"> <span class="checkmark"></span>';
+                            echo '</label>';
+                        }
+                        ?>
+                        <!-- <label class="container">
                             <p>SvetoCopy (4)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (3)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (6)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (2)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (8)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (2)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (8)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (2)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (8)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>SvetoCopy (21)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
+                        </label> -->
                     </li>
                 </ul>
             </div>
@@ -143,8 +142,38 @@ foreach ($brands as $brandId => $brandInfo)
         <div class="products">
             <div class="cat_fold">
                 <p class="catalog_expand_button"> Каталог</p>
-                <a href="#"> &frasl; Канцелярские товары </a>
-                <p> <span> &frasl; Бумага для печати </span> </p>
+                <?php
+                if ($partitions[$categoryId]['top_id'] === '') // Category 1
+                {
+                    echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . ' </span> </p>';
+                }
+                else
+                {
+                    $topId = $partitions[$categoryId]['top_id'];
+                    $topIdCategory2 = $partitions[$topId];
+
+                    if ($topIdCategory2['top_id'] === '') // Category 2
+                    {
+                        echo '<a href="#"> &frasl; ' . $topIdCategory2['name'] . ' </a>';
+                        echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . '</span> </p>';
+                    }
+                    else // Category 3
+                    {
+                        // $topId = $partitions[$topIdCategory2['top_id']]['top_id'];
+                        // $topIdCategory3 = $partitions[$topId];
+                        // echo '<a href="#"> &frasl; ' . $partitions[$topIdCategory2['top_id']]['name'] . ' </a>';
+                        // echo '<a href="#"> &frasl; ' . $topIdCategory2['name'] . ' </a>';
+                        // echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . ' </span> </p>';
+                        
+                        $topIdCategory3 = $partitions[$topIdCategory2['top_id']];
+                        echo '<a href="#"> &frasl; ' . $topIdCategory3['name'] . ' </a>';
+                        echo '<a href="#"> &frasl; ' . $topIdCategory2['name'] . ' </a>';
+                        echo '<p> <span> &frasl; ' . $partitions[$categoryId]['name'] . ' </span> </p>';
+                    }
+                }
+                ?>
+                <!-- <a href="#"> &frasl; Канцелярские товары </a>
+                <p> <span> &frasl; Бумага для печати </span> </p> -->
             </div>
             <!-- СЛАЙДЕР С БРЕНДАМИ -->
             <div class="slider_header">
@@ -160,7 +189,7 @@ foreach ($brands as $brandId => $brandInfo)
                 echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $img . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
             }
             ?> 
-                <!-- <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a> -->
+                <!-- <a href="#" class="brand"><img src="./../resource/img/brands/1.jpg"></a> ПРИМЕР ИЗОБРАЖЕНИЯ БРЕНДА -->
             </div>
             <!-- КОНЕЦ СЛАЙДЕРА С БРЕНДАМИ -->
 
