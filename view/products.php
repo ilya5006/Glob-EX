@@ -270,6 +270,7 @@ foreach ($brands as $brandId => $brandInfo)
 
                 $isProductHaveImage = $productInfo['image1'] != '';
                 $isProductHaveBrand = $productInfo['brand'] != '';
+                $isProductWithDiscount = !is_null($productInfo['discount']);
 
                 if ($isProductHaveImage)
                 {
@@ -288,9 +289,7 @@ foreach ($brands as $brandId => $brandInfo)
                     else
                     { ?>
                         <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-                    <?php
-                    }
-                    ?>
+              <?php } ?>
                     <div class="product-disc">
                         <p class="product-name"> <?php echo $productInfo['name']; ?> </p>
                         <p class="article" style="display: none;">' <?php echo $productInfo['article']; ?> </p>
@@ -316,7 +315,14 @@ foreach ($brands as $brandId => $brandInfo)
                     </div>
                     <div class="product-act">
                         <p class="available">есть в наличии <span class="available-count"> <?php echo $productInfo['quantity']; ?> </span> </p>
-                        <p class="new-price"><?php echo $productInfo['price']; ?></p>
+
+                        <?php
+                        if ($isProductWithDiscount)
+                        { ?>
+                            <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
+                  <?php } ?>
+                            <p class="new-price"><?php echo $productInfo['price']; ?></p>
+
                         <?php
                         if ($isProductHaveBrand)
                         { ?>
@@ -326,6 +332,7 @@ foreach ($brands as $brandId => $brandInfo)
                         { ?>
                             <p>БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
                   <?php } ?>
+                  
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
