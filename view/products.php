@@ -280,7 +280,7 @@ foreach ($brands as $brandId => $brandInfo)
                 
                 ?>
                 <div class="product">
-                    <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
+                    <!-- <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label> -->
                     <?php
                     if ($isProductHaveImage)
                     { ?>
@@ -291,7 +291,7 @@ foreach ($brands as $brandId => $brandInfo)
                         <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
               <?php } ?>
                     <div class="product-disc">
-                        <p class="product-name"> <?php echo $productInfo['name']; ?> </p>
+                        <a class="product-name" href="product.php?id=<?php echo $productId; ?>"> <?php echo $productInfo['name']; ?> </a>
                         <p class="article" style="display: none;">' <?php echo $productInfo['article']; ?> </p>
                         <div class="features">
                             <?php
