@@ -223,8 +223,8 @@ foreach ($brands as $brandId => $brandInfo)
             <?php
             foreach ($brands as $brandId => $brandInfo)
             {
-                $img = base64_encode(file_get_contents($brandInfo['image']));
-                echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $img . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
+                $image = base64_encode(file_get_contents($brandInfo['image']));
+                echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $image . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
             }
             ?>
             </div>
@@ -269,6 +269,7 @@ foreach ($brands as $brandId => $brandInfo)
                 { 
 
                 $isProductHaveImage = $productInfo['image1'] != '';
+                $isProductHaveBrand = $productInfo['brand'] != '';
 
                 if ($isProductHaveImage)
                 {
@@ -316,7 +317,15 @@ foreach ($brands as $brandId => $brandInfo)
                     <div class="product-act">
                         <p class="available">есть в наличии <span class="available-count"> <?php echo $productInfo['quantity']; ?> </span> </p>
                         <p class="new-price"><?php echo $productInfo['price']; ?></p>
-                        <p style="display: none;">БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
+                        <?php
+                        if ($isProductHaveBrand)
+                        { ?>
+                            <p>БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
+                  <?php }
+                        else
+                        { ?>
+                            <p>БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
+                  <?php } ?>
                         <div class="inp-cart-fav">
                             <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
                             <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
