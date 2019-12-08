@@ -326,11 +326,11 @@ foreach ($brands as $brandId => $brandInfo)
                         <?php
                         if ($isProductHaveBrand)
                         { ?>
-                            <p>БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
+                            <p class="product-brand">БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
                   <?php }
                         else
                         { ?>
-                            <p>БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
+                            <p class="product-brand">БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
                   <?php } ?>
                   
                         <div class="inp-cart-fav">

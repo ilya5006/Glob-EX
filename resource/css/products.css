@@ -397,6 +397,22 @@
 	display: none;
 }
 
+.product.hor .product-brand
+{
+	margin-bottom: auto;
+}
+
+.product.hor .product-brand a
+{
+	color: #E31E25;
+	display: inline-block
+}
+
+.product.box .product-brand
+{
+	display: none;
+}
+
 .product.hor > .product-disc .features
 {
 	display: block;
