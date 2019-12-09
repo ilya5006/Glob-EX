@@ -82,10 +82,6 @@ function checkSize()
 
 checkSize()
 
-console.log(products);
-
-
-
 ////////////////////////////////////////////////////////////////////////////////
 
 let productsListUpdate = () =>
