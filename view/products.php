@@ -321,6 +321,7 @@ foreach ($brands as $brandId => $brandInfo)
                         if ($isProductWithDiscount)
                         { ?>
                             <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
+                            <p class="sale"><?php echo $productInfo['discount']; ?></p>
                   <?php } ?>
                             <p class="new-price"><?php echo $productInfo['price']; ?></p>
 
