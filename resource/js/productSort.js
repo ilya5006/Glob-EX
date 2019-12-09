@@ -3,6 +3,15 @@ let sortHor = document.querySelector('#sort-hor');
 let listProduct = document.querySelector('.list-products');
 let products = document.querySelectorAll('.product');
 
+let productsSort = document.querySelector('#products_sort');
+let productsQuantitySort = document.querySelector('#products_quantity');
+
+let pagination = document.querySelector('.pagination');
+
+console.log(pagination);
+
+// Выбранное количество сортировки товаров на странице - productsQuantity.selectedOptions[0].value
+
 let horEnable = true;
 
 function setBlock() 
@@ -72,3 +81,39 @@ function checkSize()
 }
 
 checkSize()
+
+console.log(products);
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+let productsListUpdate = () =>
+{
+    listProduct.innerHTML = '';
+
+    let activePage = parseInt(pagination.querySelector('li .active').textContent);
+
+    let quantitySelected = parseInt(productsQuantitySort.selectedOptions[0].value);
+
+    let firstProductToShow = (activePage - 1) * quantitySelected;
+
+    for (let i = firstProductToShow; i < products.length && i < firstProductToShow + quantitySelected; i++)
+    {
+        listProduct.insertAdjacentElement('beforeEnd', products[i]);
+    }
+}
+
+productsQuantitySort.addEventListener('input', productsListUpdate);
+pagination.addEventListener('click', (event) =>
+{
+    event.preventDefault();
+    if (event.target.tagName.toLowerCase() == 'a')
+    {
+        pagination.querySelector('li .active').classList.remove('active');
+        event.target.classList.add('active');
+        productsListUpdate();
+    }
+});
+
+productsListUpdate();

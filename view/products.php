@@ -213,6 +213,7 @@ foreach ($brands as $brandId => $brandInfo)
                 <!-- <a href="#"> &frasl; Канцелярские товары </a>
                 <p> <span> &frasl; Бумага для печати </span> </p> -->
             </div>
+
             <!-- СЛАЙДЕР С БРЕНДАМИ -->
             <div class="slider_header">
                 <h2> Бренды </h2>
@@ -233,7 +234,7 @@ foreach ($brands as $brandId => $brandInfo)
             <div class="sort">
                 <p>
                     Сортировка:
-                    <select>
+                    <select id="products_sort">
                         <option value="10">По популярности</option>
                         <option value="30">Сначала дешевые</option>
                         <option value="50">Сначала дорогие</option>
@@ -242,7 +243,7 @@ foreach ($brands as $brandId => $brandInfo)
 
                 <p>
                     Товаров на странице:
-                    <select>
+                    <select id="products_quantity">
                         <option value="10">10</option>
                         <option value="30">30</option>
                         <option value="50">50</option>
@@ -256,9 +257,9 @@ foreach ($brands as $brandId => $brandInfo)
             </div>
 
             <ul class="pagination">
-                <li> <a href="#">1</a></li>
+                <li> <a href="#" class="active">1</a></li>
                 <li> <a href="#">2</a></li>
-                <li> <a href="#" class="active">3</a></li>
+                <li> <a href="#">3</a></li>
                 <li> <a href="#">4</a></li>
                 <li> <a href="#">5</a></li>
             </ul>
