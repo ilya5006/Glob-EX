@@ -321,7 +321,13 @@
 
 .header .content .nav ul li.account
 {
+	margin-right: 0;
 	margin-left: 50px;
+}
+
+#login_button, #login_button img
+{
+	margin-left: auto;
 }
 
 @media screen and (max-width: 1200px)

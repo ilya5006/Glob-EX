@@ -29,7 +29,7 @@ body, input
 a
 {
 	display: block;
-
+	transition: 0.3s all;
 	text-decoration: none;
 }
 
