@@ -271,7 +271,7 @@ foreach ($brands as $brandId => $brandInfo)
 
                 $isProductHaveImage = $productInfo['image1'] != '';
                 $isProductHaveBrand = $productInfo['brand'] != '';
-                $isProductWithDiscount = !is_null($productInfo['discount']);
+                $isProductHaveDiscount = !is_null($productInfo['discount']);
 
                 if ($isProductHaveImage)
                 {
@@ -290,6 +290,11 @@ foreach ($brands as $brandId => $brandInfo)
                     else
                     { ?>
                         <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
+              <?php } 
+
+                    if ($isProductHaveDiscount)
+                    { ?>
+                        <p class="sale"><?php echo $productInfo['discount']; ?></p>
               <?php } ?>
                     <div class="product-disc">
                         <a class="product-name" href="product.php?id=<?php echo $productId; ?>"> <?php echo $productInfo['name']; ?> </a>
@@ -318,10 +323,9 @@ foreach ($brands as $brandId => $brandInfo)
                         <p class="available">есть в наличии <span class="available-count"> <?php echo $productInfo['quantity']; ?> </span> </p>
 
                         <?php
-                        if ($isProductWithDiscount)
+                        if ($isProductHaveDiscount)
                         { ?>
                             <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
-                            <p class="sale"><?php echo $productInfo['discount']; ?></p>
                   <?php } ?>
                             <p class="new-price"><?php echo $productInfo['price']; ?></p>
 
