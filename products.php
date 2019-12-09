@@ -19,6 +19,12 @@
 
     <script src="./resource/js/nouislider.js"></script>
     <link rel="stylesheet" href="./../resource/css/nouislider.css">
+
+    <style>
+        .product .product-count { display: none; }
+        .product.hor .product-count { display: block; }
+        .product .cart { margin-left: auto; }
+    </style>
 </head>
 <body>
 
