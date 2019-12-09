@@ -82,7 +82,7 @@
 .product
 {
 	position: relative;
-
+	max-width: 320px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -110,7 +110,13 @@
 
 .product > a, .scroll > .product > a > img
 {
+	max-height: 250px;
 	width: 100%;
+}
+
+.scroll > .product > a.img
+{
+	margin-bottom: 25px;
 }
 
 .product > a, .scroll > .product > a > img.product_img

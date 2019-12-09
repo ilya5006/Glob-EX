@@ -72,6 +72,7 @@ while ($reader->read()) {
             if (isElement($reader->nodeType)) {
                 if ($reader->name == 'value') {
                     $partitionsId = $reader->getAttribute('id');
+                    $partitions[$partitionsId]['id'] = $reader->getAttribute('id');
                     $partitions[$partitionsId]['name'] = $reader->getAttribute('name');
                     $partitions[$partitionsId]['top_id'] = $reader->getAttribute('top_id');
                     $partitions[$partitionsId]['sort'] = $reader->getAttribute('sort');
@@ -134,4 +135,8 @@ while ($reader->read()) {
         $xmlParseData['nomeklatura'] = $nomeklatura;
     }
 }
+
+// echo "<pre>";
+// var_dump($xmlParseData['partitions'][1]);
+// echo "</pre>";
 ?>
