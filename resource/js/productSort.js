@@ -104,6 +104,7 @@ productsQuantitySort.addEventListener('input', productsListUpdate);
 pagination.addEventListener('click', (event) =>
 {
     event.preventDefault();
+    
     if (event.target.tagName.toLowerCase() == 'a')
     {
         pagination.querySelector('li .active').classList.remove('active');
