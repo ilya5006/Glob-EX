@@ -135,7 +135,7 @@
 .product > .product-name
 {
 	font-size: 18px;
-
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
@@ -155,6 +155,12 @@
 	font-weight: bold;
 
 	margin-bottom: 15px;
+}
+
+.product .new-price::after, .product .old-price::after
+{
+	content: " р.";
+	font-size: 20px;
 }
 
 .product > .sale
