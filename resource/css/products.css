@@ -401,10 +401,7 @@
 	height: 100%;
 }
 
-.product .fav-button
-{
-	display: none;
-}
+
 
 .product > .product-disc .features
 {
@@ -567,6 +564,7 @@
 
 .product .fav-button
 {
+	margin-left: 25px;
 	cursor: pointer;
 	transition: 0.3s all;
 }

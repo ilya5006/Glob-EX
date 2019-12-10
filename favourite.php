@@ -15,6 +15,9 @@
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/productSort.js" defer></script>
     <script src="./resource/js/checkedList.js" defer></script>
+    <script src="./resource/js/registration.js" defer></script>
+    <script src="./resource/js/login.js" defer></script>
+    <script src="./resource/js/favourite.js" defer></script>
 </head>
 <body>
 

@@ -298,7 +298,8 @@ foreach ($brands as $brandId => $brandInfo)
               <?php } ?>
                     <div class="product-disc">
                         <a class="product-name" href="product.php?id=<?php echo $productId; ?>"> <?php echo $productInfo['name']; ?> </a>
-                        <p class="article" style="display: none;">' <?php echo $productInfo['article']; ?> </p>
+                        <p class="article" style="display: none;"> <?php echo $productInfo['article']; ?> </p>
+                        <p class="id" style="display: none;"> <?php echo $productInfo['id']; ?> </p>
                         <div class="features">
                             <?php
                             $specsPrintedCount = 0;
