@@ -1008,3 +1008,34 @@ form .container p a, .container p span
 		margin-top: 6px;
 	}
 }
+
+@media screen and (max-width: 550px)
+{
+	.header .content .nav > ul
+	{
+		margin-bottom: 35px;
+		width: 100%;
+		flex-flow: row wrap;
+	}
+	.header .content .nav ul li a
+	{
+		justify-content: center;
+	}
+	.header .content .nav ul li.account, #login_button, #profie_button
+	{
+		width: 100%;
+		margin-left: 0;
+	}
+	#login_button, #login_button img, #profie_button, #profie_button img
+	{
+		margin-left: 0;
+	}
+	.header .content .nav ul li a
+	{
+		padding: 0;
+	}
+	.header .content .nav ul li.account > .user-act
+	{
+		width: 100%;
+	}
+}
