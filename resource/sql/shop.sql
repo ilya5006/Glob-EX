@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 10 2019 г., 14:53
--- Версия сервера: 8.0.15
--- Версия PHP: 7.3.2
+-- Время создания: Дек 10 2019 г., 20:46
+-- Версия сервера: 10.3.13-MariaDB-log
+-- Версия PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,6 +25,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `user-favoutite`
+--
+
+CREATE TABLE `user-favoutite` (
+  `id_user` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `user-favoutite`
+--
+
+INSERT INTO `user-favoutite` (`id_user`, `id_product`) VALUES
+(8, 19),
+(8, 18),
+(8, 11);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users_all`
 --
 
@@ -32,7 +52,7 @@ CREATE TABLE `users_all` (
   `id_user` int(11) NOT NULL,
   `role` bigint(20) NOT NULL,
   `fio` varchar(255) NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone_number` varchar(20) NOT NULL,
   `address` varchar(255) DEFAULT NULL,
@@ -50,7 +70,8 @@ INSERT INTO `users_all` (`id_user`, `role`, `fio`, `password`, `email`, `phone_n
 (4, 1, 'Яяя Ааа Aaa', '$2y$10$ZdAidiOGlOv77fSYRAIw.eNHYZA2jwuapeK.nQkFoRz.kAp5JfKke', 'yaya@yaya.yaya', '85025698756', NULL, 1),
 (5, 1, 'Яяя Ааа Aaa', '$2y$10$eJqj1a5ZlMmpXX3s1IB/seU3LGyLmdXyzC4ENyRD/GZ0uIcf/CSEO', 'yaya@yaya.yaya', '85025698756', NULL, 0),
 (6, 1, '123', '$2y$10$OmGVARGpFTRfJKwMk/kOee3l9jvydKfAB2Bbz8omlXsqlBJORelpa', '123@123.123', '123', NULL, 0),
-(7, 1, 'AAa AAa AaA', '$2y$10$WN6n42g/nlMPBy/ynF9XEOQ1lRyLoIQXpNIPgt7Q2JMS9MsAEmynG', 'email@email.email', '8 999 555 12 22', NULL, 0);
+(7, 1, 'AAa AAa AaA', '$2y$10$WN6n42g/nlMPBy/ynF9XEOQ1lRyLoIQXpNIPgt7Q2JMS9MsAEmynG', 'email@email.email', '8 999 555 12 22', NULL, 0),
+(8, 0, 'Манисов Александр Ильйч', '$2y$10$bCZq4EDwTEcqOtypskNezO1GCtnBdeA9sbyLvuD64rH0u35PNe4Ye', 'mrreads@yandex.com', '+79259294570', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -89,11 +110,18 @@ CREATE TABLE `users_individuals` (
 INSERT INTO `users_individuals` (`id_user`) VALUES
 (1),
 (2),
-(3);
+(3),
+(8);
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `user-favoutite`
+--
+ALTER TABLE `user-favoutite`
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Индексы таблицы `users_all`
@@ -121,11 +149,17 @@ ALTER TABLE `users_individuals`
 -- AUTO_INCREMENT для таблицы `users_all`
 --
 ALTER TABLE `users_all`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
+
+--
+-- Ограничения внешнего ключа таблицы `user-favoutite`
+--
+ALTER TABLE `user-favoutite`
+  ADD CONSTRAINT `user-favoutite_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users_all` (`id_user`);
 
 --
 -- Ограничения внешнего ключа таблицы `users_entities`
