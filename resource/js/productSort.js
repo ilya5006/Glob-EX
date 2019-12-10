@@ -82,6 +82,27 @@ checkSize()
 
 ////////////////////////////////////////////////////////////////////////////////
 
+let calculatePagesQuantity = () =>
+{
+    return Math.ceil(products.length / parseInt(productsQuantitySort.selectedOptions[0].value));
+}
+
+let showPages = () =>
+{
+    pagination.innerHTML = '';
+
+    let pagesQuantity = calculatePagesQuantity();
+    pagination.insertAdjacentHTML('beforeEnd', '<li> <a href="#" class="active">1</a></li>');
+
+    for (let page = 2; page <= pagesQuantity; page++)
+    {
+        console.log(page);
+        pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
+    }
+
+    console.log(' ');
+}
+
 let productsListUpdate = () =>
 {
     listProduct.innerHTML = '';
@@ -100,8 +121,7 @@ let productsListUpdate = () =>
 
 productsQuantitySort.addEventListener('input', () =>
 {
-    pagination.querySelector('li .active').classList.remove('active');
-    pagination.querySelector('li a').classList.add('active'); // Первая страница
+    showPages();
     productsListUpdate();
 });
 pagination.addEventListener('click', (event) =>
@@ -116,4 +136,5 @@ pagination.addEventListener('click', (event) =>
     }
 });
 
+showPages();
 productsListUpdate();

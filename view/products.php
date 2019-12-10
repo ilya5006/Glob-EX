@@ -258,11 +258,11 @@ foreach ($brands as $brandId => $brandInfo)
             </div>
 
             <ul class="pagination">
-                <li> <a href="#" class="active">1</a></li>
+                <!-- <li> <a href="#" class="active">1</a></li>
                 <li> <a href="#">2</a></li>
                 <li> <a href="#">3</a></li>
                 <li> <a href="#">4</a></li>
-                <li> <a href="#">5</a></li>
+                <li> <a href="#">5</a></li> -->
             </ul>
 
             <div class="list-products">
@@ -321,7 +321,17 @@ foreach ($brands as $brandId => $brandInfo)
                         </div>
                     </div>
                     <div class="product-act">
-                        <p class="available">есть в наличии <span class="available-count"> <?php echo $productInfo['quantity']; ?> </span> </p>
+                        <?php
+                        echo (int)$productInfo['quantity'];
+                        if ((int)$productInfo['quantity'] > 0)
+                        { ?>
+                            <p class="available">есть в наличии <span class="available-count"> <?php echo $productInfo['quantity']; ?> </span> </p>
+                        <?php
+                        }
+                        else
+                        { ?>
+                            <p class="available">нет в наличии</p>
+                  <?php } ?>
 
                         <?php
                         if ($isProductHaveDiscount)
