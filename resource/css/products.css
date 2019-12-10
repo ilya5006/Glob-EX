@@ -371,7 +371,7 @@
 .list-products .product.hor
 {
 	flex-flow: row nowrap;
-
+	max-width: 100%;
 	min-height: unset;
 	margin-bottom: 25px;
 }
