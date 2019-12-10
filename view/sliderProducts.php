@@ -2,9 +2,6 @@
 
 require_once dirname(__DIR__) . '/model/xmlparser.php';
 
-createSlideProduct(1, $xmlParseData);
-createSlideProduct(31, $xmlParseData);
-
 function createSlideProduct(int $categoryId, array $data)
 {
 echo 
@@ -29,8 +26,8 @@ foreach($data['nomeklatura'] as $product)
             echo '<div class="product">';
                 $img = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $product['image1']);
                 $img = base64_encode(file_get_contents($img));
-                echo '  <a href="#" class="img"><img src="data:image/png;base64,' . $img . '" class="product_img" alt="фотография продукта"></a>';
-                echo '  <p class="product-name">'.$product['name'].'</p>';
+                echo '  <a href="product.php?id='.$product['id'].'" class="img"><img src="data:image/png;base64,' . $img . '" class="product_img" alt="фотография продукта"></a>';
+                echo '  <a href="product.php?id='.$product['id'].'" class="product-name">'.$product['name'].'</a>';
                 echo '  <p class="id" style="display: none;">'.$product['id'].'</p>';
                 echo '  <p class="old-price">'.$product['old_price'].'</p>';
                 echo '  <p class="new-price">'.$product['price'].'</p>';
