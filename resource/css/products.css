@@ -172,8 +172,8 @@
 .fav-act > .check-selecter .container .checkmark
 {
 	top: 5px;
-;
 	left: 0;
+	;
 }
 
 .fav-act > .check-selecter .container > input[type=checkbox]
@@ -337,11 +337,12 @@
 
 .list-products
 {
+	display: grid;
+
 	margin-top: 25px;
 
-	display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 15px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .list-products .product.box
@@ -356,11 +357,29 @@
 	justify-self: stretch;
 }
 
+.list-products .product .product-brand
+{
+	display: none;
+
+	margin-bottom: auto;
+}
+
+.list-products .product .product-brand a
+{
+	display: inline-block;
+
+	color: #E31E24;
+}
+
+.list-products .product.hor .product-brand
+{
+	display: block;
+}
 
 .list-products .product a img, .list-products .product div a img
 {
-	height: 100%;
 	width: 100%;
+	height: 100%;
 }
 
 .list-products .product
@@ -371,6 +390,7 @@
 .list-products .product.hor
 {
 	flex-flow: row nowrap;
+
 	max-width: 100%;
 	min-height: unset;
 	margin-bottom: 25px;
@@ -393,6 +413,12 @@
 	margin-top: 10px;
 }
 
+.product.hor > .product-disc
+{
+	margin-bottom: auto;
+	padding: 30px 25px 0px 25px;
+}
+
 .product.box > .product-disc .features
 {
 	display: none;
@@ -405,8 +431,10 @@
 
 .product.hor .product-brand a
 {
+	display: inline-block;
+;
+
 	color: #E31E25;
-	display: inline-block
 }
 
 .product .product-brand
@@ -463,9 +491,9 @@
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap;
-	
-	justify-content: space-between;
 	flex-grow: 1;
+	justify-content: space-between;
+
 	width: auto;
 }
 
@@ -559,11 +587,14 @@
 
 .product .old-price
 {
-	width: 100%;
 	font-size: 26px;
-    font-style: italic;
-    text-decoration: line-through;
-    color: gray;
+	font-style: italic;
+
+	width: 100%;
+
+	text-decoration: line-through;
+
+	color: gray;
 }
 
 .product.hor .old-price
@@ -627,9 +658,12 @@
 .product > .product-disc > .product-name
 {
 	font-size: 20px;
-	color: #000000;
-	cursor: pointer;
+
 	width: 100%;
+
+	cursor: pointer;
+
+	color: #000000;
 }
 
 .product > .product-disc
@@ -826,36 +860,47 @@
 	}
 }
 
+.product .old-price
+{
+	width: 100%;
+}
+
 .product .new-price
 {
+	width: 100%;
 	margin-right: 25px;
 	margin-bottom: 0;
 }
 
 .product .new-price::after, .product .old-price::after
 {
-	content: " р.";
 	font-size: 20px;
+
+	content: " р.";
 }
 
-.product .sale 
+.product .sale
 {
-    font-size: 26px;
-    position: absolute;
-    top: 15px;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -ms-flex-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100px;
-    height: 50px;
-    color: #FFFFFF;
+	font-size: 26px;
+
+	position: absolute;
+	top: 15px;
+	left: 0;
+
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-ms-flex-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+
+	width: 100px;
+	height: 50px;
+
+	color: #FFFFFF;
 	background-color: red;
 }
 
@@ -932,17 +977,19 @@
 	.fav-act > .check-selecter p.text-selected
 	{
 		width: 100%;
+
 		text-align: center;
 	}
 	.fav-act > .check-selecter p.delete
 	{
-		margin-left: unset;
 		margin: 5px 20px;
+		margin-left: unset;
 	}
 	.fav-act > .check-selecter p
 	{
-		text-align: center;
 		flex-grow: 1;
+
+		text-align: center;
 	}
 }
 

@@ -1,4 +1,15 @@
-﻿<div class="content" style="padding-top: 0">
+﻿<?php
+
+require_once __DIR__ . '/../model/xmlparser.php';
+require_once __DIR__ . '/../model/connection.php';
+
+$idUser = (int)$_COOKIE['isLogin'];
+
+$productInfo = $xmlParseData['nomeklatura'];
+$brandInfo = $xmlParseData['brands'];
+?>
+
+<div class="content" style="padding-top: 0">
     <div class="cat_fold">
         <p> Главная </p>
         <p><span> &#92; Корзина </span></p>
@@ -47,131 +58,64 @@
 
         <div class="products" style="width: 100%;">
             <div class="list-products">
-            <div class="product">
-                    <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
-                    <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-                    <div class="product-disc">
-                        <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                        <p class="article" style="display: none;"> Сюда артикул </p>
-                        <div class="features">
-                            <p class="feature">Формат А4</p>
-                            <p class="feature">Класс А</p>
-                            <p class="feature">Плотность 80 г/м2</p>
-                            <p class="feature">Листов в пачке 500 шт</p>
-                            <p class="feature_button">Больше характеристик</p>
-                        </div>
-                    </div>
-                    <div class="product-act">
-                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
-                        <p class="new-price">375р</p>
-                        <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        <div class="inp-cart-fav">
-                            <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
-                            <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
-                            <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
-                    <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-                    <div class="product-disc">
-                        <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                        <p class="article" style="display: none;"> Сюда артикул </p>
-                        <div class="features">
-                            <p class="feature">Формат А4</p>
-                            <p class="feature">Класс А</p>
-                            <p class="feature">Плотность 80 г/м2</p>
-                            <p class="feature">Листов в пачке 500 шт</p>
-                            <p class="feature_button">Больше характеристик</p>
-                        </div>
-                    </div>
-                    <div class="product-act">
-                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
-                        <p class="new-price">375р</p>
-                        <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        <div class="inp-cart-fav">
-                            <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
-                            <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
-                            <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
-                    <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-                    <div class="product-disc">
-                        <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                        <p class="article" style="display: none;"> Сюда артикул </p>
-                        <div class="features">
-                            <p class="feature">Формат А4</p>
-                            <p class="feature">Класс А</p>
-                            <p class="feature">Плотность 80 г/м2</p>
-                            <p class="feature">Листов в пачке 500 шт</p>
-                            <p class="feature_button">Больше характеристик</p>
-                        </div>
-                    </div>
-                    <div class="product-act">
-                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
-                        <p class="new-price">375р</p>
-                        <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        <div class="inp-cart-fav">
-                            <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
-                            <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
-                            <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
-                    <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-                    <div class="product-disc">
-                        <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                        <p class="article" style="display: none;"> Сюда артикул </p>
-                        <div class="features">
-                            <p class="feature">Формат А4</p>
-                            <p class="feature">Класс А</p>
-                            <p class="feature">Плотность 80 г/м2</p>
-                            <p class="feature">Листов в пачке 500 шт</p>
-                            <p class="feature_button">Больше характеристик</p>
-                        </div>
-                    </div>
-                    <div class="product-act">
-                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
-                        <p class="new-price">375р</p>
-                        <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        <div class="inp-cart-fav">
-                            <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
-                            <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
-                            <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>
-                    <a href="#" class="product-image"><img src="./resource/img/products/product.jpg" alt="фотография продукта"></a>
-                    <div class="product-disc">
-                        <p class="product-name">Швабра-лентяйка Viieda самоотжимающаяся</p>
-                        <p class="article" style="display: none;"> Сюда артикул </p>
-                        <div class="features">
-                            <p class="feature">Формат А4</p>
-                            <p class="feature">Класс А</p>
-                            <p class="feature">Плотность 80 г/м2</p>
-                            <p class="feature">Листов в пачке 500 шт</p>
-                            <p class="feature_button">Больше характеристик</p>
-                        </div>
-                    </div>
-                    <div class="product-act">
-                        <p class="available">есть в наличии <span class="available-count">500</span> </p>
-                        <p class="new-price">375р</p>
-                        <p style="display: none;">БРЕНД: <a href="#">SVETOCOPY</a></p>
-                        <div class="inp-cart-fav">
-                            <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
-                            <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
-                            <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
-                        </div>
-                    </div>
-                </div>
+            <?php
+                $result = $mysqli->query("SELECT `id_product` FROM `user-favoutite` WHERE id_user = $idUser;");
+
+                while($idProduct = $result->fetch_assoc()['id_product'])
+                {
+                    echo '<div class="product">';
+                        if (isset($productInfo[$idProduct]['discount']))
+                        {
+                            echo '<p class="sale">'.$productInfo[$idProduct]['discount'].'</p>';
+                        }
+                        echo '<label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>';
+                        $image = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $productInfo[$idProduct]['image1']);
+                        $image = base64_encode(file_get_contents($image));
+                        echo '<a href="#" class="product-image"><img src="data:image/png;base64,' . $image . '" alt="фотография продукта"></a>';
+                        echo '<div class="product-disc">';
+                            echo '<p class="product-name">'.$productInfo[$idProduct]['name'].'</p>';
+                            echo '<p class="article" style="display: none;">'.$productInfo[$idProduct]['article'].'</p>';
+                            echo '<div class="features">';
+                                $specsPrintedCount = 0;
+
+                                $specsNames = [];
+                                $specsId = array_keys($productInfo[$idProduct]['specs']);
+                                foreach ($specsId as $id => $specId)
+                                {
+                                    $specsNames[$specId] = $specs[$specId]['name'];
+                                }
+
+                                foreach ($specsNames as $id => $name)
+                                {
+                                    echo '<p class="feature">' . $name . ' ' . $productInfo[$idProduct]['specs'][$id]. '</p>';
+                                    if (++$specsPrintedCount == 5) break;
+                                }
+                            echo '</div>';
+                        echo '</div>';
+                        echo '<div class="product-act">';
+                            if ($productInfo[$idProduct]['quantity'] > 0)
+                            {
+                                echo '<p class="available">есть в наличии <span class="available-count">'.$productInfo[$idProduct]['quantity'].'</span> </p>';
+                            }
+                            else
+                            {
+                                echo '<p class="available">нет в наличии</p>';
+                            }
+                            if (isset($productInfo[$idProduct]['old_price']))
+                            {
+                                echo '<p class="old-price">'.$productInfo[$idProduct]['old_price'].'</p>';
+                            }
+                            echo '<p class="new-price">'.$productInfo[$idProduct]['price'].'</p>';
+                            echo '<p class="product-brand">БРЕНД: <a href="#">'.$brandInfo[$productInfo[$idProduct]['brand']]['name'].'</a></p>';
+                            echo '<div class="inp-cart-fav">';
+                                echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo[$idProduct]['quantity'].'" value="1">';
+                                echo '<button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>';
+                                echo '<img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">';
+                            echo '</div>';
+                        echo '</div>';
+                    echo '</div>';
+                }
+            ?>
             </div>
         </div>
     </div>

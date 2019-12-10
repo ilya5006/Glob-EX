@@ -105,6 +105,7 @@ while ($reader->read()) {
             if (isElement($reader->nodeType)) {
                 if ($reader->name == 'value') {
                     $nomeklaturaId = $reader->getAttribute('id');
+                    $nomeklatura[$nomeklaturaId]['id'] = $reader->getAttribute('id');
                     $nomeklatura[$nomeklaturaId]['name'] = $reader->getAttribute('name');
                     $nomeklatura[$nomeklaturaId]['article'] = $reader->getAttribute('article');
                     $nomeklatura[$nomeklaturaId]['top_id'] = $reader->getAttribute('top_id');
