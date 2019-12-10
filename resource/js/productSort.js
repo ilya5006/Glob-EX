@@ -8,8 +8,6 @@ let productsQuantitySort = document.querySelector('#products_quantity');
 
 let pagination = document.querySelector('.pagination');
 
-console.log(pagination);
-
 // Выбранное количество сортировки товаров на странице - productsQuantity.selectedOptions[0].value
 
 let horEnable = true;
