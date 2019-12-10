@@ -30,7 +30,10 @@ foreach ($specsId as $id => $specId)
     <div class="cat_fold">
     <?php
         echo '<p class="catalog_expand_button"> Каталог</p>';
-        echo '<a href="products.php?id='.$xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]['top_id'].'"> &#92; '.$xmlParseData['partitions'][$xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]['top_id']]['name'].' </a>';
+        if (isset($xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]))
+        {
+            echo '<a href="products.php?id='.$xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]['top_id'].'"> &#92; '.$xmlParseData['partitions'][$xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]['top_id']]['name'].' </a>';
+        }   
         echo '<a href="products.php?id='.$xmlParseData['partitions'][$product['top_id']]['top_id'].'"> &#92; '.$xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]['name'].' </a>';
         echo '<a href="products.php?id='.$product['top_id'].'"><span> &#92; '.$xmlParseData['partitions'][$product['top_id']]['name'].' </span></a>';
     ?>
