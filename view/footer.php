@@ -1,3 +1,21 @@
+<?php
+
+require_once __DIR__ . '/../model/xmlparser.php';
+
+$data = $xmlParseData['partitions'];
+$categories = [];
+
+
+foreach($data as $category)
+{
+    if ($category['top_id'] == '')
+    {
+        array_push($categories, $category);
+    }
+}
+
+?>
+
 <footer class="footer">
     <div class="content">
         <ul class="logo">
@@ -6,9 +24,15 @@
         </ul>
         <ul>
             <li><a href="#" class="catalog_expand_button">КАТАЛОГ</a></li>
-            <li><a href="#">КАНЦЕЛЯРИЯ</a></li>
+            <?php
+            foreach($categories as $category)
+            {
+                echo '<li><a href="products.php?id='.$category['id'].'">'.$category['name'].'</a></li>';
+            }
+            ?>
+            <!-- <li><a href="#">КАНЦЕЛЯРИЯ</a></li>
             <li><a href="#">ХОЗТОВАРЫ</a></li>
-            <li><a href="#">МЕБЕЛЬ</a></li>
+            <li><a href="#">МЕБЕЛЬ</a></li> -->
         </ul>
         <ul>
             <li><a href="#">ДОСТАВКА</a></li>
