@@ -270,12 +270,6 @@
 	line-height: 16px;
 	text-transform: uppercase;
 }
-
-.header .content .nav ul li a
-{
-	padding: 0 20px 0s 31px;
-}
-
 .expand-catalog .cat_1 p
 {
 	font-weight: bold;
@@ -315,6 +309,11 @@
 
 	-webkit-transition: 0.3s all;
 	        transition: 0.3s all;
+}
+
+.header .content .nav ul li a
+{
+	padding: 0 20px 0 35px;
 }
 
 .header .content .nav ul li a p
