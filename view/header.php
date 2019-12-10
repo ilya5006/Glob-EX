@@ -58,7 +58,7 @@ $categories['three'] = $three;
             foreach($categories['first'] as $category)
             {
                 $idFirst = $category['id'];
-                echo '<a class="cat_1"> <img src="./resource/img/icons/clip.svg"><p>'.$category['name'].'</p><span>&#62;</span> </a>';
+                echo '<a class="cat_1" href="catalog.php?id='.$category['id'].'"> <img src="./resource/img/icons/clip.svg"><p>'.$category['name'].'</p><span>&#62;</span> </a>';
                 echo '<div class="expand-cat_2 hide">';
                 echo '<ul>';
                     foreach($categories['two'] as $category)
