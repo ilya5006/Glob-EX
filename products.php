@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="./resource/css/products.css">
     <link rel="stylesheet" href="./resource/css/footer.css">
     <script src="./resource/js/header.js" defer></script>
-    <script src="./resource/js/productSort.js" defer></script>
     <script src="./resource/js/filters.js" defer></script>
+    <script src="./resource/js/productSort.js" defer></script>
     <script src="./resource/js/slider.js" defer></script>
     <script src="./resource/js/favourite.js" defer></script>
     <script src="./resource/js/registration.js" defer></script>

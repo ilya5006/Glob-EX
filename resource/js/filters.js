@@ -2,12 +2,27 @@
 let priceMin = document.getElementById('price-min');
 let priceMax = document.getElementById('price-max');
 
+function getPrices()
+{
+    let products = document.querySelectorAll('.product .product-act .new-price');
+    let prices = [];
+    products.forEach((product) =>
+    {
+        prices.push(parseFloat(product.textContent));
+    });
+    return prices;
+}
+
+let prices = getPrices();
+let minPrice = Math.min(...prices);
+let maxPrice = Math.max(...prices);
+
 noUiSlider.create(slider, {
-    start: [20, 80],
+    start: [minPrice, maxPrice],
     connect: true,
     range: {
-        'min': 0,
-        'max': 100
+        'min': minPrice,
+        'max': maxPrice
     },
     step: 10
 });
