@@ -21,8 +21,8 @@ foreach ($brands as $brandId => $brandInfo)
         <?php
             foreach ($brands as $brandId => $brandInfo)
             {
-                $img = base64_encode(file_get_contents($brandInfo['image']));
-                echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $img . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
+                $image = base64_encode(file_get_contents($brandInfo['image']));
+                echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $image . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
             }
         ?> 
     </div>

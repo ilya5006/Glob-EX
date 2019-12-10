@@ -34,7 +34,5 @@
 
 <?php require(__DIR__ . '/view/footer.php'); ?>
 
-<script src="./resource/js/products.js"></script>
-
 </body>
 </html>
