@@ -2,6 +2,11 @@
 
 require_once __DIR__ . '/../model/xmlparser.php';
 
+if (empty($_COOKIE['sort']))
+{
+    $_COOKIE['sort'] = 'popular';
+}
+
 $categoryId = isset($_GET['id']) ? $_GET['id'] : 1;
 
 function findProductsWithSameCategory($categoryId, $products, $partitions)
@@ -233,18 +238,14 @@ foreach ($brands as $brandId => $brandInfo)
             <!-- КОНЕЦ СЛАЙДЕРА С БРЕНДАМИ -->
 
             <div class="sort">
-                <p>
-                    Сортировка:
-                    <select id="products_sort">
-                        <option value="10">По популярности</option>
-                        <option value="30">Сначала дешевые</option>
-                        <option value="50">Сначала дорогие</option>
+                <p> Сортировка: <select id="products_sort">
+                        <option value="popular" selected="selected">По популярности</option>
+                        <option value="low">Сначала дешевые</option>
+                        <option value="hight">Сначала дорогие</option>
                     </select>
                 </p>
 
-                <p>
-                    Товаров на странице:
-                    <select id="products_quantity">
+                <p> Товаров на странице: <select id="products_quantity">
                         <option value="10">10</option>
                         <option value="30">30</option>
                         <option value="50">50</option>
@@ -267,6 +268,7 @@ foreach ($brands as $brandId => $brandInfo)
 
             <div class="list-products">
                 <?php
+
                 foreach ($productsWithSameCategory as $productId => $productInfo)
                 { 
 
@@ -281,7 +283,12 @@ foreach ($brands as $brandId => $brandInfo)
                 }
                 
                 ?>
-                <div class="product">
+                <div class="product" 
+                <?php 
+                    if ($_COOKIE['sort'] == 'popular') { echo 'style="order: '.(int)$productInfo['sort'].'"'; } 
+                    if ($_COOKIE['sort'] == 'low') { echo 'style="order: '.(int)$productInfo['price'].'"'; }
+                    if ($_COOKIE['sort'] == 'hight') { echo 'style="order: -'.(int)$productInfo['price'].'"'; } 
+                ?> >
                     <!-- <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label> -->
                     <?php
                     if ($isProductHaveImage)

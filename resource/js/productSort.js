@@ -134,5 +134,34 @@ pagination.addEventListener('click', (event) =>
     }
 });
 
+function getCookie(name) 
+{
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(cname, cvalue, exdays) 
+{
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+let sortValue = getCookie('sort');
+if (sortValue == 'popular') { document.querySelector('#products_sort').options[0].selected = true; }
+if (sortValue == 'low') { document.querySelector('#products_sort').options[1].selected = true; }
+if (sortValue == 'hight') { document.querySelector('#products_sort').options[2].selected = true; }
+
+productsSort.addEventListener('change', function()
+{
+    setCookie('sort', document.querySelector('#products_sort').value, 7);
+    document.location.reload();
+    
+});
+
+
 showPages();
 productsListUpdate();
