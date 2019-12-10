@@ -96,11 +96,9 @@ let showPages = () =>
 
     for (let page = 2; page <= pagesQuantity; page++)
     {
-        console.log(page);
         pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
     }
 
-    console.log(' ');
 }
 
 let productsListUpdate = () =>

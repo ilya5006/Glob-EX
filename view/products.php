@@ -323,7 +323,6 @@ foreach ($brands as $brandId => $brandInfo)
                     </div>
                     <div class="product-act">
                         <?php
-                        echo (int)$productInfo['quantity'];
                         if ((int)$productInfo['quantity'] > 0)
                         { ?>
                             <p class="available">есть в наличии <span class="available-count"> <?php echo $productInfo['quantity']; ?> </span> </p>
