@@ -28,9 +28,15 @@ foreach ($specsId as $id => $specId)
 
 <div class="content" style="padding-top: 0; padding-bottom: 0;">
     <div class="cat_fold">
-        <p class="catalog_expand_button"> Каталог</p>
-        <a href="#"> &#92; Канцелярские товары </a>
-        <p><span> &#92; Бумага для печати </span></p>
+    <?php
+        echo '<p class="catalog_expand_button"> Каталог</p>';
+        if (isset($xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]))
+        {
+            echo '<a href="products.php?id='.$xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]['top_id'].'"> &#92; '.$xmlParseData['partitions'][$xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]['top_id']]['name'].' </a>';
+        }   
+        echo '<a href="products.php?id='.$xmlParseData['partitions'][$product['top_id']]['top_id'].'"> &#92; '.$xmlParseData['partitions'][$xmlParseData['partitions'][$product['top_id']]['top_id']]['name'].' </a>';
+        echo '<a href="products.php?id='.$product['top_id'].'"><span> &#92; '.$xmlParseData['partitions'][$product['top_id']]['name'].' </span></a>';
+    ?>
     </div>
     <div class="product_info">
         <div class="pictures">

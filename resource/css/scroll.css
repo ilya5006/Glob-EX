@@ -140,6 +140,9 @@
 
 .product > .product-name
 {
+	color: #000000;
+	width: 100%;
+    padding: 0 25px;
 	font-size: 18px;
 	margin-top: 20px;
 	margin-bottom: 20px;

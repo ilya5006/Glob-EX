@@ -17,6 +17,7 @@
     <script src="./resource/js/slider.js" defer></script>
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
+    <script src="./resource/js/favourite.js" defer></script>
 </head>
 <body>
 
@@ -24,7 +25,11 @@
 
 <?php require(__DIR__ . '/view/banner.php'); ?>
 
-<?php require(__DIR__ . '/view/sliderProducts.php'); ?>
+<?php 
+    require(__DIR__ . '/view/sliderProducts.php'); 
+    createSlideProduct(1, $xmlParseData);
+    createSlideProduct(31, $xmlParseData);
+?>
 
 <?php require(__DIR__ . '/view/sliderBrands.php'); ?>
 

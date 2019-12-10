@@ -28,6 +28,7 @@ body, input
 
 a
 {
+	cursor: pointer;
 	display: block;
 	transition: 0.3s all;
 	text-decoration: none;
@@ -59,15 +60,16 @@ h2
 	text-transform: uppercase;
 }
 
-.cat_fold p
+.cat_fold a, .cat_fold p
 {
+	margin-right: 5px;
 	font-size: 14px;
 	line-height: 16px;
 
 	display: inline-block;
 }
 
-.cat_fold p span
+.cat_fold a span, .cat_fold p span
 {
 	color: #E31E24;
 }

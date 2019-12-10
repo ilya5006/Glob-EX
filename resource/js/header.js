@@ -73,27 +73,30 @@ document.body.addEventListener('mousedown', function (e)
     }
 }, true);
 
-document.querySelector('#login_button').addEventListener('click', function(e)
+if (document.querySelector('#login_button'))
 {
-    e.preventDefault();
-    document.querySelector('#modal_authorize').style.display = 'flex';
-    document.body.style.overflowY = 'hidden';
-    document.body.style.paddingRight = '18px';
-});
+    document.querySelector('#login_button').addEventListener('click', function(e)
+    {
+        e.preventDefault();
+        document.querySelector('#modal_authorize').style.display = 'flex';
+        document.body.style.overflowY = 'hidden';
+        document.body.style.paddingRight = '18px';
+    });
 
 
-document.querySelector('#log_form').addEventListener('click', function()
-{
-    document.querySelector('#log_form').classList.add('active');
-    document.querySelector('#reg_form').classList.remove('active');
-    document.querySelector('#modal_authorize .modal form.login').style.display = 'flex';
-    document.querySelector('#modal_authorize .modal form.register').style.display = 'none';
-});
+    document.querySelector('#log_form').addEventListener('click', function()
+    {
+        document.querySelector('#log_form').classList.add('active');
+        document.querySelector('#reg_form').classList.remove('active');
+        document.querySelector('#modal_authorize .modal form.login').style.display = 'flex';
+        document.querySelector('#modal_authorize .modal form.register').style.display = 'none';
+    });
 
-document.querySelector('#reg_form').addEventListener('click', function()
-{
-    document.querySelector('#reg_form').classList.add('active');
-    document.querySelector('#log_form').classList.remove('active');
-    document.querySelector('#modal_authorize .modal form.register').style.display = 'flex';
-    document.querySelector('#modal_authorize .modal form.login').style.display = 'none';
-});
+    document.querySelector('#reg_form').addEventListener('click', function()
+    {
+        document.querySelector('#reg_form').classList.add('active');
+        document.querySelector('#log_form').classList.remove('active');
+        document.querySelector('#modal_authorize .modal form.register').style.display = 'flex';
+        document.querySelector('#modal_authorize .modal form.login').style.display = 'none';
+    });
+}
