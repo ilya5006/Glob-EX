@@ -232,21 +232,10 @@
 
 .header .content .nav > ul
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
 	align-items: center;
-	-ms-flex-align: center;
-	-webkit-box-flex: 1;
-	-ms-flex-flow: row nowrap;
-	    flex-flow: row nowrap;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-positive: 1;
+	flex-flow: row nowrap;
 	flex-grow: 1;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 
 	height: 40px;
@@ -275,6 +264,18 @@
 	height: 25px;
 }
 
+.expand-catalog .cat_1 p, .header .content .nav ul li > span, .header .content .nav ul li a
+{
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+
+.expand-catalog .cat_1 p
+{
+	font-weight: bold;
+}
+
 .header .content .nav > ul li
 {
 	-webkit-box-flex: 1;
@@ -282,6 +283,14 @@
 	flex-grow: 1;
 
 	margin: 0 15px;
+}
+
+.header .content .nav ul li > span
+{
+	width: 100%;
+	width: 100%;
+    padding: 0px 25px;
+	font-weight: bold;
 }
 
 .header .content .nav ul li a
@@ -294,7 +303,10 @@
 	-ms-flex-align: center;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
-	justify-content: center;
+	justify-content: flex-start;
+
+	width: 100%;
+	padding: 0 25px;
 
 	-webkit-transition: 0.3s all;
 	        transition: 0.3s all;
@@ -327,6 +339,7 @@
 
 #login_button, #login_button img
 {
+	padding-right: 0px;
 	margin-left: auto;
 }
 

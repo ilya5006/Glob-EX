@@ -1,3 +1,42 @@
+<?
+require_once __DIR__ . '/../model/xmlparser.php';
+
+$data = $xmlParseData['partitions'];
+$first = [];
+$two = [];
+$three = [];
+
+
+foreach($data as $category)
+{
+    if ($category['top_id'] == '')
+    {
+        array_push($first, $category);
+    }
+
+    if ($category['top_id'] != '')
+    {
+        if (empty($category['specs']))
+        {
+            array_push($two, $category);
+        }
+    }
+
+    if (isset($category['specs']))
+    {
+        array_push($three, $category);
+    }
+}
+
+$categories['first'] = $first;
+$categories['two'] = $two;
+$categories['three'] = $three;
+
+// echo "<pre>";
+// var_dump($categories);
+// echo "</pre>";
+?>
+
 <header class="header">
     <div class="content" style="padding-bottom: 0;">
         <div class="menu">
@@ -13,9 +52,37 @@
         </div>
         <div class="nav">
             <button class="catalog" id="catalog"><span>|||</span> КАТАЛОГ ТОВАРОВ</button>
-
             <div class="expand-catalog hide">
-                <a class="cat_1" href="#"> <img src="./resource/img/icons/percent.svg"><p> АКЦИИ И СКИДКИ </p></a>
+            <?php
+
+            foreach($categories['first'] as $category)
+            {
+                $idFirst = $category['id'];
+                echo '<a class="cat_1"> <img src="./resource/img/icons/clip.svg"><p>'.$category['name'].'</p><span>&#62;</span> </a>';
+                echo '<div class="expand-cat_2 hide">';
+                echo '<ul>';
+                    foreach($categories['two'] as $category)
+                    {
+                        if ($idFirst == $category['top_id'])
+                        {
+                            $idTwo = $category['id'];
+                            echo '<li><span>'.$category['name'].'</span></li>';
+                            foreach($categories['three'] as $category)
+                            {
+                                if ($idTwo == $category['top_id'])
+                                {
+                                    echo '<li><a href="products.php?id='.$category['id'].'">'.$category['name'].'</a></li>';
+                                }
+                            }
+                        }
+                    }
+                    echo '</ul>';
+                echo '</div>';
+            }
+                    
+            ?>
+            
+                <!-- <a class="cat_1" href="#"> <img src="./resource/img/icons/percent.svg"><p> АКЦИИ И СКИДКИ </p></a>
                 <a class="cat_1"> <img src="./resource/img/icons/clip.svg"><p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
                 <div class='expand-cat_2 hide'>
                     <ul>
@@ -50,7 +117,7 @@
                         <li><a href="#">asdasd</a></li>
                         <li><a href="#">asdasd</a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
 
             <form action="#">

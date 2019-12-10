@@ -359,6 +359,7 @@
 
 .list-products .product a img, .list-products .product div a img
 {
+	height: 100%;
 	width: 100%;
 }
 
