@@ -16,7 +16,8 @@ loginButton.addEventListener('click', () =>
 
     connection.then((result) =>
     {
-        result.json().then(result => alert(result));
+        //result.json().then(result => alert(result));
+        result.json().then(result => document.location.reload());
     });
 
     connection.catch((error) => 

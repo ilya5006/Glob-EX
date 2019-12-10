@@ -1,5 +1,6 @@
 <?
 require_once __DIR__ . '/../model/xmlparser.php';
+require_once __DIR__ . '/../model/connection.php';
 
 $data = $xmlParseData['partitions'];
 $first = [];
@@ -35,6 +36,10 @@ $categories['three'] = $three;
 // echo "<pre>";
 // var_dump($categories);
 // echo "</pre>";
+
+$idUser = (int)$_COOKIE['isLogin'];
+$result = $mysqli->query("SELECT * FROM users_all WHERE id_user = $idUser;");
+$userData = $result->fetch_assoc();
 ?>
 
 <header class="header">
@@ -127,7 +132,23 @@ $categories['three'] = $three;
             <ul>
                 <li><a href="./favourite.php"><img src="./resource/img/icons/favourite.svg" alt="favorite"></a></li>
                 <li><a href="./cart.php"><img src="./resource/img/icons/cart.svg" alt="cart"></a></li>
-                <li class="account"><a id="login_button"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти <span>&#62;</span></p></a></li>
+                <?php
+                    if (isset($idUser) && !empty($userData))
+                    {
+                        echo '
+                                <li class="account"><a id="profie_button"><img src="./resource/img/icons/account.svg" alt="account"><p> ПРОФИЛЬ <span>&#62;</span></p></a>
+                                    <div class="user-act">
+                                        <a href="../profile.php?id='.$idUser.'"> Профиль </a>
+                                        <a href="../model/logout.php"> Выход </a>
+                                    </div>
+                                </li>';
+                    }
+                    else
+                    {
+                        echo '<li class="account"><a id="login_button"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти <span>&#62;</span></p></a></li>';
+                    }
+                ?>
+                
             </ul>
         </div>
     </div>

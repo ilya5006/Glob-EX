@@ -81,6 +81,7 @@ document.querySelector('#login_button').addEventListener('click', function(e)
     document.body.style.paddingRight = '18px';
 });
 
+
 document.querySelector('#log_form').addEventListener('click', function()
 {
     document.querySelector('#log_form').classList.add('active');
