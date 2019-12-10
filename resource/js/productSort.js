@@ -100,7 +100,12 @@ let productsListUpdate = () =>
     }
 }
 
-productsQuantitySort.addEventListener('input', productsListUpdate);
+productsQuantitySort.addEventListener('input', () =>
+{
+    pagination.querySelector('li .active').classList.remove('active');
+    pagination.querySelector('li a').classList.add('active'); // Первая страница
+    productsListUpdate();
+});
 pagination.addEventListener('click', (event) =>
 {
     event.preventDefault();
