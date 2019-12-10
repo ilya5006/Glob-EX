@@ -271,6 +271,11 @@
 	text-transform: uppercase;
 }
 
+.header .content .nav ul li a
+{
+	padding: 0 20px 0s 31px;
+}
+
 .expand-catalog .cat_1 p
 {
 	font-weight: bold;
