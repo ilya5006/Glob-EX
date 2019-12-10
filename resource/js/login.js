@@ -4,7 +4,6 @@ let loginButton = document.querySelector('#loginButton');
 
 loginButton.addEventListener('click', () =>
 {
-    console.log('Entereed');
     let formData = new FormData();
     formData.append('emailOrPhoneNumber', emailOrPhone.value);
     formData.append('password', password.value);
