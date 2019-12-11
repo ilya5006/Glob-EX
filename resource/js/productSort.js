@@ -3,6 +3,11 @@ let sortHor = document.querySelector('#sort-hor');
 let listProduct = document.querySelector('.list-products');
 let products = document.querySelectorAll('.product');
 
+// Т.к products - не обычный массив, а NodeList, нам нужно сделать из него массив, чтобы использовать его методы
+let productsArray = [];
+products.forEach((product) => { productsArray.push(product); });
+products = productsArray;
+
 let productsSort = document.querySelector('#products_sort');
 let productsQuantitySort = document.querySelector('#products_quantity');
 
@@ -82,6 +87,20 @@ checkSize()
 
 ////////////////////////////////////////////////////////////////////////////////
 
+let sortProductsAscendingOrDescending = (ascendingOrDescending) => // Аргумент должен быть равен либо 1 (по возрастанию), либо -1 (по убыванию)
+{
+    let sortedProducts = products.sort((first, second) =>
+    {
+        let firstProductPrice = parseFloat(first.querySelector('.product-act .new-price').textContent);
+        let secondProductPrice = parseFloat(second.querySelector('.product-act .new-price').textContent);
+        if (firstProductPrice > secondProductPrice) return 1 * ascendingOrDescending;
+        if (firstProductPrice < secondProductPrice) return -1 * ascendingOrDescending;
+        return 0;
+    });
+
+    return sortedProducts;
+}
+
 let calculatePagesQuantity = () =>
 {
     return Math.ceil(products.length / parseInt(productsQuantitySort.selectedOptions[0].value));
@@ -117,6 +136,15 @@ let productsListUpdate = () =>
     }
 }
 
+productsSort.addEventListener('input', () =>
+{
+    let selectedValue = productsSort.selectedOptions[0].value
+    if (selectedValue == 'low') products = sortProductsAscendingOrDescending(1);
+    if (selectedValue == 'hight') products = sortProductsAscendingOrDescending(-1);
+
+    showPages();
+    productsListUpdate();
+})
 productsQuantitySort.addEventListener('input', () =>
 {
     showPages();
