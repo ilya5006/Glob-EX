@@ -762,7 +762,7 @@
 	width: 100%;
 }
 
-#modal_authorize .modal form input[type=text], #modal_authorize .modal form input[type=password], #modal_authorize .modal form input[type=tel]
+#modal_authorize .modal form input[type=text], #modal_authorize .modal form input[type=password], #modal_authorize .modal form input[type=tel], #modal_authorize .modal form input[type=email]
 {
 	width: 80%;
 	height: 40px;
