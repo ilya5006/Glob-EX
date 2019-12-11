@@ -293,11 +293,11 @@ foreach ($brands as $brandId => $brandInfo)
                     <?php
                     if ($isProductHaveImage)
                     { ?>
-                        <a href="#" class="product-image"><img src="data:image/png;base64,<?php echo $imageBase64; ?>" alt="фотография продукта"></a>
+                        <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="data:image/png;base64,<?php echo $imageBase64; ?>" alt="фотография продукта"></a>
               <?php } 
                     else
                     { ?>
-                        <a href="#" class="product-image"><img src="./resource/img/none.jpg" alt="фотография продукта"></a>
+                        <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="./resource/img/none.jpg" alt="фотография продукта"></a>
               <?php } 
 
                     if ($isProductHaveDiscount)
