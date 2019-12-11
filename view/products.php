@@ -2,11 +2,6 @@
 
 require_once __DIR__ . '/../model/xmlparser.php';
 
-if (empty($_COOKIE['sort']))
-{
-    $_COOKIE['sort'] = 'popular';
-}
-
 $categoryId = isset($_GET['id']) ? $_GET['id'] : 1;
 
 function findProductsWithSameCategory($categoryId, $products, $partitions)
@@ -283,12 +278,7 @@ foreach ($brands as $brandId => $brandInfo)
                 }
                 
                 ?>
-                <div class="product" 
-                <?php 
-                    if ($_COOKIE['sort'] == 'popular') { echo 'style="order: '.(int)$productInfo['sort'].'"'; } 
-                    if ($_COOKIE['sort'] == 'low') { echo 'style="order: '.(int)$productInfo['price'].'"'; }
-                    if ($_COOKIE['sort'] == 'hight') { echo 'style="order: -'.(int)$productInfo['price'].'"'; } 
-                ?> >
+                <div class="product">
                     <!-- <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label> -->
                     <?php
                     if ($isProductHaveImage)
