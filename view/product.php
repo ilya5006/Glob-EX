@@ -79,7 +79,7 @@ foreach ($specsId as $id => $specId)
       <?php } ?>
             <p class="new-price"><?php echo $product['price']; ?> р.</p>
             <?php
-                    if ($product['quantity'] > 1)
+                    if ((int)$product['quantity'] > 0)
                     {
                         echo '<p class="available">есть в наличии <span class="available-count">'.$product['quantity'] . ' ' . $product['unit'].'</span> </p>';
                     }
@@ -92,7 +92,7 @@ foreach ($specsId as $id => $specId)
             <p class="brand">БРЕНД: <a href="#"><?php echo $brand['name']; ?></a> </p>
             <form action="#">
                 <?php
-                    if ($product['quantity'] > 1)
+                    if ((int)$product['quantity'] > 0)
                     {
                         echo '<input type="number" name="" id="" min="1" max="'.$product['quantity'].'" value="1">';
                         echo '<input type="submit" value="в корзину">';
