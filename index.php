@@ -26,11 +26,7 @@
 
 <?php require(__DIR__ . '/view/banner.php'); ?>
 
-<?php 
-    require(__DIR__ . '/view/sliderProducts.php'); 
-    createSlideProduct(1, $xmlParseData);
-    createSlideProduct(31, $xmlParseData);
-?>
+<?php require(__DIR__ . '/view/sliderProducts.php'); ?>
 
 <?php require(__DIR__ . '/view/sliderBrands.php'); ?>
 
