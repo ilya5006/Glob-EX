@@ -74,6 +74,7 @@ $brandInfo = $xmlParseData['brands'];
                         echo '<div class="product-disc">';
                             echo '<p class="product-name">'.$productInfo[$idProduct]['name'].'</p>';
                             echo '<p class="article" style="display: none;">'.$productInfo[$idProduct]['article'].'</p>';
+                            echo '<p class="id" style="display: none;">'.$productInfo[$idProduct]['id'].'</p>';
                             echo '<div class="features">';
                                 $specsPrintedCount = 0;
 
@@ -107,8 +108,12 @@ $brandInfo = $xmlParseData['brands'];
                             echo '<p class="new-price">'.$productInfo[$idProduct]['price'].'</p>';
                             echo '<p class="product-brand">БРЕНД: <a href="#">'.$brandInfo[$productInfo[$idProduct]['brand']]['name'].'</a></p>';
                             echo '<div class="inp-cart-fav">';
-                                echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo[$idProduct]['quantity'].'" value="1">';
+
+                            if ((int)$productInfo[$idProduct]['quantity'] > 0)
+                            {
+                                echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo['quantity'].'" value="1">';
                                 echo '<button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>';
+                            }
                                 echo '<img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">';
                             echo '</div>';
                         echo '</div>';

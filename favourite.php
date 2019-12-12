@@ -19,7 +19,12 @@
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/favourite.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
-    <style> .product.hor .sale { top: 55px; } </style>
+    <style> 
+        .product.hor .sale { top: 55px; }
+        .list-products .product .inp-cart-fav { width: 100%; }
+        .product .product-count { margin-right: auto; }
+        .product .fav-button { margin-left: auto; }
+    </style>
 </head>
 <body>
 

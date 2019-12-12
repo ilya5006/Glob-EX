@@ -342,7 +342,7 @@
 	margin-top: 25px;
 
 	gap: 15px;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 0fr));
 }
 
 .list-products .product.box
@@ -485,15 +485,20 @@
 
 .list-products .product .inp-cart-fav
 {
+	margin-top: 10px;
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap;
-	flex-grow: 1;
+	margin-left: auto;
 	justify-content: space-between;
 
 	width: auto;
 }
 
+.list-products .product.hor .inp-cart-fav
+{
+	width: 100%;
+}
 
 .product .cart
 {

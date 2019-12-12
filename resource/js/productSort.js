@@ -30,7 +30,7 @@ function setBlock()
 
     listProduct.style.display = 'grid';
     listProduct.style.gridGap = '15px';
-    listProduct.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
+    listProduct.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 0fr))';
 }
 
 function setHor() 
