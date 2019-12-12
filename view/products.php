@@ -92,7 +92,7 @@ foreach ($brands as $brandId => $brandInfo)
                             $productsQuantity = quantityOfProductsForOneBrand($brandId, $productsWithSameCategory);
                             
                             echo '<label class="container">';
-                                echo '<p>' . $brandInfo['name'] . ' (' . $productsQuantity . ') </p> <input type="checkbox"> <span class="checkmark"></span>';
+                                echo '<p>' . $brandInfo['name'] . ' (' . $productsQuantity . ') </p> <input type="checkbox" value="' . $brandInfo['name'] . '"> <span class="checkmark"></span>';
                             echo '</label>';
                         }
                         ?>
@@ -348,7 +348,7 @@ foreach ($brands as $brandId => $brandInfo)
                   
                         <div class="inp-cart-fav">
                     <?php
-                        if ($productInfo['quantity'] > 1)
+                        if ((int)$productInfo['quantity'] > 0)
                         {
                             echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo['quantity'].'" value="1">';
                             echo '<button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>';
