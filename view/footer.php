@@ -5,10 +5,9 @@ require_once __DIR__ . '/../model/xmlparser.php';
 $data = $xmlParseData['partitions'];
 $categories = [];
 
-
 foreach($data as $category)
 {
-    if ($category['top_id'] == '')
+    if (categoryLevel($data, $category['id'], 0) == '1')
     {
         array_push($categories, $category);
     }
