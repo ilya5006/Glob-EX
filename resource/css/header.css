@@ -580,9 +580,7 @@
 
 .expand-catalog .expand-cat_2 ul li span
 {
-	padding: 0 15px;
-	padding-bottom: 1px;
-
+	font-weight: bold;
 	color: #E31E25;
 }
 

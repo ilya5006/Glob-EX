@@ -7,23 +7,33 @@ $first = [];
 $two = [];
 $three = [];
 
+function categoryLevel(array $arr, int $id, int $numb)
+{
+    $topId = $arr[$id]['top_id'];
+    $counter = $numb;
+
+    if ($arr[$id]['top_id'] != '')
+    {
+        ++$counter;
+        return categoryLevel($arr, $topId, $counter);
+    }
+
+    return $counter + 1;
+}
 
 foreach($data as $category)
 {
-    if ($category['top_id'] == '')
+    if (categoryLevel($data, $category['id'], 0) == '1')
     {
         array_push($first, $category);
     }
 
-    if ($category['top_id'] != '')
+    if (categoryLevel($data, $category['id'], 0) == '2')
     {
-        if (empty($category['specs']))
-        {
-            array_push($two, $category);
-        }
+        array_push($two, $category);
     }
 
-    if (isset($category['specs']))
+    if (categoryLevel($data, $category['id'], 0) == '3')
     {
         array_push($three, $category);
     }
@@ -71,7 +81,7 @@ $userData = $result->fetch_assoc();
                         if ($idFirst == $category['top_id'])
                         {
                             $idTwo = $category['id'];
-                            echo '<li><span>'.$category['name'].'</span></li>';
+                            echo '<li> <a href="products.php?id='.$category['id'].'"><span>'.$category['name'].'</span> </a></li>';
                             foreach($categories['three'] as $category)
                             {
                                 if ($idTwo == $category['top_id'])
