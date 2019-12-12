@@ -13,7 +13,7 @@ $product['images'][] = $product['image5'];
 
 for ($i = 0; $i < count($product['images']); $i++)
 {
-    $product['images'][$i] = str_replace('ftp://37.140.192.146', __DIR__ . '/.././', $product['images'][$i]);
+    $product['images'][$i] = str_replace('ftp://37.140.192.146', './../', $product['images'][$i]);
 }
 
 $brand = $xmlParseData['brands'][$product['brand']];
@@ -46,11 +46,7 @@ foreach ($specsId as $id => $specId)
                     
                 foreach ($product['images'] as $id => $image)
                 {
-                    if ($image != '')
-                    {
-                        $imageBase64 = base64_encode(file_get_contents($image));
-                        echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $imageBase64 . '" alt="" class="little"></a>';
-                    }
+                    echo '<a href="#" class="brand"><img src="' . $image . '" alt="" class="little"></a>';
                 }
                 ?>
             </div>

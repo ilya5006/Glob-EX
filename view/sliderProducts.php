@@ -24,9 +24,8 @@ foreach($data['nomeklatura'] as $product)
         if ($firstId == $categoryId)
         {
             echo '<div class="product">';
-                $img = str_replace('ftp://37.140.192.146', __DIR__ . '/.././', $product['image1']);
-                $img = base64_encode(file_get_contents($img));
-                echo '  <a href="product.php?id='.$product['id'].'" class="img"><img src="data:image/png;base64,' . $img . '" class="product_img" alt="фотография продукта"></a>';
+                $img = str_replace('ftp://37.140.192.146', './../', $product['image1']);
+                echo '  <a href="product.php?id='.$product['id'].'" class="img"><img src="' . $img . '" class="product_img" alt="фотография продукта"></a>';
                 echo '  <a href="product.php?id='.$product['id'].'" class="product-name">'.$product['name'].'</a>';
                 echo '  <p class="id" style="display: none;">'.$product['id'].'</p>';
                 echo '  <p class="old-price">'.$product['old_price'].'</p>';

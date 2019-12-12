@@ -65,7 +65,7 @@ $productsWithSameCategory = findProductsWithSameCategory($categoryId, $products,
 
 foreach ($brands as $brandId => $brandInfo)
 {
-    $brands[$brandId]['image'] = str_replace('ftp://37.140.192.146', __DIR__ . '/.././', $brands[$brandId]['image']);
+    $brands[$brandId]['image'] = str_replace('ftp://37.140.192.146', './../', $brands[$brandId]['image']);
 }
 // $img = base64_encode(file_get_contents('ftp://user587s:CgIc6Wbt@user587s.beget.tech/Data/Картинки и баннеры/Логотипы/1.jpg'));
 ?>
@@ -225,8 +225,8 @@ foreach ($brands as $brandId => $brandInfo)
             <?php
             foreach ($brands as $brandId => $brandInfo)
             {
-                $image = base64_encode(file_get_contents($brandInfo['image']));
-                echo '<a href="#" class="brand"><img src="data:image/png;base64,' . $image . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
+                $image = $brandInfo['image'];
+                echo '<a href="#" class="brand"><img src="' . $image . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
             }
             ?>
             </div>
@@ -273,8 +273,7 @@ foreach ($brands as $brandId => $brandInfo)
 
                 if ($isProductHaveImage)
                 {
-                    $image = str_replace('ftp://37.140.192.146', __DIR__ . '/../', $productInfo['image1']);    
-                    $imageBase64 = base64_encode(file_get_contents($image));
+                    $image = str_replace('ftp://37.140.192.146', './../', $productInfo['image1']);
                 }
                 
                 ?>
@@ -283,7 +282,7 @@ foreach ($brands as $brandId => $brandInfo)
                     <?php
                     if ($isProductHaveImage)
                     { ?>
-                        <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="data:image/png;base64,<?php echo $imageBase64; ?>" alt="фотография продукта"></a>
+                        <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="<?php echo $image; ?>" alt="фотография продукта"></a>
               <?php } 
                     else
                     { ?>
