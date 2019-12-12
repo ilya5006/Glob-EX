@@ -19,7 +19,8 @@
     <script src="./resource/js/favourite.js" defer></script>
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
-    
+    <script src="./resource/js/showMessage.js" defer></script>
+
     <script src="./resource/js/nouislider.js"></script>
     <link rel="stylesheet" href="./../resource/css/nouislider.css">
 
