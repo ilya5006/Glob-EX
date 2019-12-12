@@ -233,6 +233,11 @@
 	filter: grayscale(1);
 }
 
+.catalg_view .sort img#sort-block
+{
+	margin-left: auto;
+}
+
 .catalg_view .sort img.active
 {
 	opacity: 1;
