@@ -47,3 +47,5 @@ foreach($data as $category)
         </ul>
     </div>
 </footer>
+
+<div class="messageBox"> </div>
