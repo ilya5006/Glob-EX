@@ -3,6 +3,7 @@ require_once __DIR__ . '/../model/xmlparser.php';
 require_once __DIR__ . '/../model/connection.php';
 
 $data = $xmlParseData['partitions'];
+
 $first = [];
 $two = [];
 $three = [];
@@ -98,9 +99,10 @@ $userData = $result->fetch_assoc();
             ?>
             </div>
 
-            <form action="#">
+            <form action="#" class="searchForm">
                 <input type="search" placeholder="Поиск...">
                 <button><img src="./resource/img/icons/search.svg" alt="search"></button>
+                <div id="searchResult"> </div>
             </form>
             <ul>
                 <li><a href="./favourite.php"><img src="./resource/img/icons/favourite.svg" alt="favorite"></a></li>

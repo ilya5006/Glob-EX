@@ -100,3 +100,27 @@ if (document.querySelector('#login_button'))
         document.querySelector('#modal_authorize .modal form.login').style.display = 'none';
     });
 }
+
+// SEARCH
+let searchInput = document.querySelector('.header .content .nav form input[type="search"]');
+let searchResult = document.querySelector('#searchResult');
+let data;
+searchInput.addEventListener('input', function()
+{
+    searchInput.value = searchInput.value.toUpperCase();
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', './../../model/searchOutput.php', true);
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+    data = "search=" + searchInput.value;
+
+    xhr.send(data);
+
+    xhr.onreadystatechange = function()
+    {
+        if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+        {
+            searchResult.innerHTML = xhr.responseText;
+        }
+    }
+})
