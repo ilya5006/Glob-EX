@@ -69,7 +69,7 @@ $brandInfo = $xmlParseData['brands'];
                             echo '<p class="sale">'.$productInfo[$idProduct]['discount'].'</p>';
                         }
                         echo '<label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label>';
-                        $image = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $productInfo[$idProduct]['image1']);
+                        $image = str_replace('ftp://37.140.192.146', __DIR__ . '/.././', $productInfo[$idProduct]['image1']);
                         $image = base64_encode(file_get_contents($image));
                         echo '<a href="#" class="product-image"><img src="data:image/png;base64,' . $image . '" alt="фотография продукта"></a>';
                         echo '<div class="product-disc">';

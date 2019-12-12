@@ -13,7 +13,7 @@ $product['images'][] = $product['image5'];
 
 for ($i = 0; $i < count($product['images']); $i++)
 {
-    $product['images'][$i] = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $product['images'][$i]);
+    $product['images'][$i] = str_replace('ftp://37.140.192.146', __DIR__ . '/.././', $product['images'][$i]);
 }
 
 $brand = $xmlParseData['brands'][$product['brand']];

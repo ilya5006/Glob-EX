@@ -65,7 +65,7 @@ $productsWithSameCategory = findProductsWithSameCategory($categoryId, $products,
 
 foreach ($brands as $brandId => $brandInfo)
 {
-    $brands[$brandId]['image'] = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $brands[$brandId]['image']);
+    $brands[$brandId]['image'] = str_replace('ftp://37.140.192.146', __DIR__ . '/.././', $brands[$brandId]['image']);
 }
 // $img = base64_encode(file_get_contents('ftp://user587s:CgIc6Wbt@user587s.beget.tech/Data/Картинки и баннеры/Логотипы/1.jpg'));
 ?>
@@ -82,7 +82,7 @@ foreach ($brands as $brandId => $brandInfo)
                 </div>
                 <div id="slider"></div>
             </div>
-            <div class="filter">
+            <div class="filter" id="brands-filter">
                 <p>Бренд</p>
                 <ul>
                     <li>
@@ -273,12 +273,12 @@ foreach ($brands as $brandId => $brandInfo)
 
                 if ($isProductHaveImage)
                 {
-                    $image = str_replace('user587s.beget.tech', 'user587s:CgIc6Wbt@user587s.beget.tech', $productInfo['image1']);    
+                    $image = str_replace('ftp://37.140.192.146', __DIR__ . '/../', $productInfo['image1']);    
                     $imageBase64 = base64_encode(file_get_contents($image));
                 }
                 
                 ?>
-                <div class="product">
+                <div class="product" data-brand="<?php echo $brands[$productInfo['brand']]['name']; ?>">
                     <!-- <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label> -->
                     <?php
                     if ($isProductHaveImage)
