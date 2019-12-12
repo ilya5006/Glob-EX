@@ -347,8 +347,12 @@ foreach ($brands as $brandId => $brandInfo)
                   <?php } ?>
                   
                         <div class="inp-cart-fav">
-                            <input class="product-count" type="number" name="" id="" min="1" max="999" value="1">
-                            <button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>
+                    <?php
+                        if ($productInfo['quantity'] > 1)
+                        {
+                            echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo['quantity'].'" value="1">';
+                            echo '<button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>';
+                        } ?>
                             <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
                         </div>
                     </div>

@@ -78,11 +78,26 @@ foreach ($specsId as $id => $specId)
                 <p class="old-price"><?php echo $product['old_price']; ?> р.</p>
       <?php } ?>
             <p class="new-price"><?php echo $product['price']; ?> р.</p>
-            <p class="available">есть в наличии <span class="available-count"><?php echo $product['quantity'] . ' ' . $product['unit']; ?></span> </p>
+            <?php
+                    if ($product['quantity'] > 1)
+                    {
+                        echo '<p class="available">есть в наличии <span class="available-count">'.$product['quantity'] . ' ' . $product['unit'].'</span> </p>';
+                    }
+                    else
+                    {
+                        echo '<p class="available"> нет в наличии </p>';
+                    }
+                ?>
+            
             <p class="brand">БРЕНД: <a href="#"><?php echo $brand['name']; ?></a> </p>
             <form action="#">
-                <input type="number" name="" id="" min="1" max="999" value="1">
-                <input type="submit" value="в корзину">
+                <?php
+                    if ($product['quantity'] > 1)
+                    {
+                        echo '<input type="number" name="" id="" min="1" max="'.$product['quantity'].'" value="1">';
+                        echo '<input type="submit" value="в корзину">';
+                    }
+                ?>
             </form>
         </div>
     </div>

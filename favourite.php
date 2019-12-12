@@ -18,6 +18,9 @@
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/favourite.js" defer></script>
+    <style>
+        .product.hor .sale { top: 55px; }
+    </style>
 </head>
 <body>
 
