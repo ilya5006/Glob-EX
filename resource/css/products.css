@@ -690,6 +690,22 @@
 	color: #E31E24;
 }
 
+@media screen and (max-width: 1050px)
+{
+	.catalg_view .sort .view
+	{
+		width: 100%;
+	}
+	.catalg_view .sort p
+	{
+		width: 100%;
+	}
+	.catalg_view .sort img#sort-block
+	{
+		margin-left: 0;
+	}
+}
+
 @media screen and (max-width: 750px)
 {
 	.catalg_view

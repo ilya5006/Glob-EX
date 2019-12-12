@@ -242,6 +242,7 @@
 	flex-flow: row nowrap;
 	flex-grow: 1;
 	justify-content: center;
+
 	margin-bottom: 15px;
 }
 
@@ -581,6 +582,7 @@
 .expand-catalog .expand-cat_2 ul li span
 {
 	font-weight: bold;
+
 	color: #E31E25;
 }
 
@@ -1011,9 +1013,10 @@ form .container p a, .container p span
 {
 	.header .content .nav > ul
 	{
-		margin-bottom: 35px;
-		width: 100%;
 		flex-flow: row wrap;
+
+		width: 100%;
+		margin-bottom: 35px;
 	}
 	.header .content .nav ul li a
 	{

@@ -82,7 +82,7 @@
 .product
 {
 	position: relative;
-	max-width: 320px;
+
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -95,6 +95,7 @@
 	-webkit-box-direction: normal;
 
 	min-width: 314px;
+	max-width: 320px;
 	min-height: 380px;
 	margin: 0 10px;
 
@@ -110,8 +111,8 @@
 
 .product > a, .scroll > .product > a > img
 {
-	max-height: 250px;
 	width: 100%;
+	max-height: 250px;
 }
 
 .scroll > .product > a.img
@@ -140,12 +141,14 @@
 
 .product > .product-name
 {
-	color: #000000;
-	width: 100%;
-    padding: 0 25px;
 	font-size: 18px;
+
+	width: 100%;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	padding: 0 25px;
+
+	color: #000000;
 }
 
 .product > .old-price
@@ -168,8 +171,9 @@
 
 .product .new-price::after, .product .old-price::after
 {
-	content: " р.";
 	font-size: 20px;
+
+	content: " р.";
 }
 
 .product > .sale

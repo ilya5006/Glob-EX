@@ -248,6 +248,7 @@ form .container p a, .container p span
 	align-self: flex-start;
 
 	min-width: 160px;
+	margin-top: 20px;
 	padding: 15px;
 
 	cursor: pointer;
