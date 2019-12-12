@@ -6,23 +6,19 @@ $first = [];
 $two = [];
 $three = [];
 
-
 foreach($data as $category)
 {
-    if ($category['top_id'] == '')
+    if (categoryLevel($data, $category['id'], 0) == '1')
     {
         array_push($first, $category);
     }
 
-    if ($category['top_id'] != '')
+    if (categoryLevel($data, $category['id'], 0) == '2')
     {
-        if (empty($category['specs']))
-        {
-            array_push($two, $category);
-        }
+        array_push($two, $category);
     }
 
-    if (isset($category['specs']))
+    if (categoryLevel($data, $category['id'], 0) == '3')
     {
         array_push($three, $category);
     }
@@ -64,51 +60,7 @@ $categories['three'] = $three;
                 echo '</div>';
             }
         ?>
-
-            <!-- <div class="catalog">
-                <img src="./resource/img/catalog/image1.png" alt="cat imgs">
-                <div class="cat">
-                    <p> Бумажная продукция</p>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                </div>
-            </div>
-            <div class="catalog">
-                <img src="./resource/img/catalog/image1.png" alt="cat imgs">
-                <div class="cat">
-                    <p> Бумажная продукция</p>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                </div>
-            </div>
-            <div class="catalog">
-                <img src="./resource/img/catalog/image1.png" alt="cat imgs">
-                <div class="cat">
-                    <p> Бумажная продукция</p>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                </div>
-            </div>
-            <div class="catalog">
-                <img src="./resource/img/catalog/image1.png" alt="cat imgs">
-                <div class="cat">
-                    <p> Бумажная продукция</p>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                    <a href="#">АЛЬБОМЫ ДЛЯ РИСОВАНИЯ</a>
-                </div>
-            </div> -->
+        
         </div>
     </div>
 </div>

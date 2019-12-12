@@ -73,7 +73,7 @@ $userData = $result->fetch_assoc();
             foreach($categories['first'] as $category)
             {
                 $idFirst = $category['id'];
-                echo '<a class="cat_1" href="catalog.php?id='.$category['id'].'"> <img src="./resource/img/icons/clip.svg"><p>'.$category['name'].'</p><span>&#62;</span> </a>';
+                echo '<a order="'.$category['sort'].'" class="cat_1" href="catalog.php?id='.$category['id'].'"> <img src="./resource/img/icons/clip.svg"><p>'.$category['name'].'</p><span>&#62;</span> </a>';
                 echo '<div class="expand-cat_2 hide">';
                 echo '<ul>';
                     foreach($categories['two'] as $category)
@@ -81,12 +81,12 @@ $userData = $result->fetch_assoc();
                         if ($idFirst == $category['top_id'])
                         {
                             $idTwo = $category['id'];
-                            echo '<li> <a href="products.php?id='.$category['id'].'"><span>'.$category['name'].'</span> </a></li>';
+                            echo '<li order="'.$category['sort'].'"> <a href="products.php?id='.$category['id'].'"><span>'.$category['name'].'</span> </a></li>';
                             foreach($categories['three'] as $category)
                             {
                                 if ($idTwo == $category['top_id'])
                                 {
-                                    echo '<li><a href="products.php?id='.$category['id'].'">'.$category['name'].'</a></li>';
+                                    echo '<li order="'.$category['sort'].'"><a href="products.php?id='.$category['id'].'">'.$category['name'].'</a></li>';
                                 }
                             }
                         }
@@ -96,43 +96,6 @@ $userData = $result->fetch_assoc();
             }
                     
             ?>
-            
-                <!-- <a class="cat_1" href="#"> <img src="./resource/img/icons/percent.svg"><p> АКЦИИ И СКИДКИ </p></a>
-                <a class="cat_1"> <img src="./resource/img/icons/clip.svg"><p> КАНЦЕЛЯРСКИЕ ТОВАРЫ </p><span>&#62;</span> </a>
-                <div class='expand-cat_2 hide'>
-                    <ul>
-                        <li><span>1</span></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                    </ul>
-                </div>
-
-                <a class="cat_1"> <img src="./resource/img/icons/bucket.svg"><p>ХОЗТОВАРЫ</p><span>&#62;</span></a>
-                <div class='expand-cat_2 hide'>
-                    <ul>
-                        <li><span>2</span></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                    </ul>
-                </div>
-
-                <a class="cat_1"> <img src="./resource/img/icons/furniture.svg"><p>МЕБЕЛЬ</p><span>&#62;</span></a>
-                <div class='expand-cat_2 hide'>
-                    <ul>
-                        <li><span>3</span></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                        <li><a href="#">asdasd</a></li>
-                    </ul>
-                </div> -->
             </div>
 
             <form action="#">
