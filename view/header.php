@@ -51,6 +51,8 @@ $categories['three'] = $three;
 $idUser = (int)$_COOKIE['isLogin'];
 $result = $mysqli->query("SELECT * FROM users_all WHERE id_user = $idUser;");
 $userData = $result->fetch_assoc();
+
+$fio = explode(' ', $userData['fio']);
 ?>
 
 <header class="header">
@@ -111,7 +113,7 @@ $userData = $result->fetch_assoc();
                     if (isset($idUser) && !empty($userData))
                     {
                         echo '
-                                <li class="account"><a id="profie_button"><img src="./resource/img/icons/account.svg" alt="account"><p> ПРОФИЛЬ <span>&#62;</span></p></a>
+                                <li class="account"><a id="profie_button"><img src="./resource/img/icons/account.svg" alt="account"><p>'.$fio[1] , ' ', mb_substr($fio[0], 0, 1), '.'.'<span>&#62;</span></p></a>
                                     <div class="user-act">
                                         <a href="../profile.php?id='.$idUser.'"> Профиль </a>
                                         <a href="../model/logout.php"> Выход </a>
@@ -189,7 +191,6 @@ $userData = $result->fetch_assoc();
             <p class="require"> <span>*</span> Поля обязательные для ввода</p>
 
             <div id="registerButton"> зарегистрироваться </div>
-
         </form>
 
     </div>

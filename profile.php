@@ -58,10 +58,13 @@ require_once __DIR__ . '/model/connection.php';
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Рабочий тел.:</p>
-                    <? echo '<input required="1" type="text" id="adress" value="'.$userData['address'].'">'; ?>
+                    <? echo '<input required="1" type="text" id="adress" value="'.$userData['work_number'].'">'; ?>
                     <div class="place_holder">Введите адрес<span>*</span></div>
                 </label>
-                <div id="editButton"> изменить </div>
+                <div class="buttons">
+                    <div id="editButton" class="button"> изменить </div>
+                    <div id="editButton" class="button"> сменить пароль </div>
+                </div>
             </form>
         </div>
         <div class="two">
@@ -69,7 +72,7 @@ require_once __DIR__ . '/model/connection.php';
                 <h3>ЗАКАЗЫ</h3>
                 <a href="#">Корзина товаров (25)</a>
                 <a href="#">история заказов (3)</a>
-                <a href="#">избранные товары (122)</a>
+                <a href="favourite.php">избранные товары (122)</a>
             </div>
         </div>
     </div>

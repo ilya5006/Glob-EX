@@ -819,7 +819,7 @@
 .place_holder
 {
 	position: absolute;
-	z-index: 100;
+	z-index: 3;
 	left: 10%;
 
 	display: none;
