@@ -26,7 +26,7 @@
 
 <?php require(__DIR__ . '/view/product.php'); ?>
 
-<?php require(__DIR__ . '/view/sliderProducts.php'); ?>
+<?php require(__DIR__ . '/view/similarProducts.php'); ?>
 
 <?php require(__DIR__ . '/view/sliderBrands.php'); ?>
 
