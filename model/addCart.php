@@ -1,5 +1,4 @@
 <?php
-
     require_once './connection.php';
 
     $idUser = $mysqli->escape_string($_POST['id_user']);
