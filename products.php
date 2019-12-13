@@ -16,7 +16,7 @@
     <script src="./resource/js/filters.js" defer></script>
     <script src="./resource/js/productSort.js" defer></script>
     <script src="./resource/js/slider.js" defer></script>
-    <script src="./resource/js/favourite.js" defer></script>
+    <script src="./resource/js/favourite-cart.js" defer></script>
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
