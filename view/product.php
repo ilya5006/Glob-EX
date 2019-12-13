@@ -17,13 +17,18 @@ for ($i = 0; $i < count($product['images']); $i++)
 }
 
 $brand = $xmlParseData['brands'][$product['brand']];
-$specsNames = [];
-$specsId = array_keys($product['specs']);
 
-foreach ($specsId as $id => $specId)
+if (isset($product['specs'])) 
 {
-    $specsNames[$specId] = $xmlParseData['specs'][$specId]['name'];
+    $specsNames = [];
+    $specsId = array_keys($product['specs']);
+
+    foreach ($specsId as $id => $specId)
+    {
+        $specsNames[$specId] = $xmlParseData['specs'][$specId]['name'];
+    }
 }
+
 ?>
 
 <div class="content" style="padding-top: 0; padding-bottom: 0;">
@@ -55,10 +60,20 @@ foreach ($specsId as $id => $specId)
             <h2> <?php echo $product['name']; ?> </h2>
             <div class="detail">
                 <p>Артикул <span><?php echo $product['article']; ?></span></p>
-                <p>Бренд: <a href="#"><?php echo $brand['name']; ?></a></p>
+                <?php
+                if (isset($brand['name']))
+                { ?>
+                    <p>Бренд: <a href="#"><?php echo $brand['name']; ?></a></p>
+          <?php }
+                else
+                { ?>
+                    <p>Бренд: <a href="#">Отсутствует</a></p>
+          <?php } ?>
             </div>
             <div class="features">
                 <?php
+                if (isset($product['specs'])) 
+                {
                     $specsPrintedCount = 0;
 
                     foreach($specsNames as $id => $name)
@@ -68,6 +83,7 @@ foreach ($specsId as $id => $specId)
                         if ($specsPrintedCount == 6) 
                             break;
                     }
+                }
                 ?>
                 <p class="feature_button">Больше характеристик</p>
             </div>
@@ -89,7 +105,15 @@ foreach ($specsId as $id => $specId)
                     }
                 ?>
             
-            <p class="brand">БРЕНД: <a href="#"><?php echo $brand['name']; ?></a> </p>
+            <?php
+            if (isset($brand['name']))
+            { ?>
+                <p class="brand">БРЕНД: <a href="#"><?php echo $brand['name']; ?></a> </p>
+      <?php }
+            else
+            { ?>
+                <p class="brand">БРЕНД: <a href="#">ОТСУТСТВУЕТ</a> </p>
+      <?php } ?>
             <form action="#">
                 <?php
                     if ((int)$product['quantity'] > 0)
@@ -113,8 +137,11 @@ foreach ($specsId as $id => $specId)
             </div>
             <div class="features" style="display: none;">
                 <?php
-                foreach($specsNames as $id => $name)
-                    echo '<p class="feature">' . $name . ' ' . $product['specs'][$id] .'</p>';
+                if (isset($product['specs'])) 
+                {
+                    foreach($specsNames as $id => $name)
+                        echo '<p class="feature">' . $name . ' ' . $product['specs'][$id] .'</p>';
+                }
                 ?>
             </div>
         </div>
