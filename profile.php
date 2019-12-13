@@ -1,5 +1,15 @@
 <?php
 require_once __DIR__ . '/model/connection.php';
+
+if (isset($_GET['change']))
+{
+    header('Location: ./model/updateUserInfo.php?fio=' . $_GET['fio'] . '&email=' . $_GET['email'] . '&phone_number=' . $_GET['phone_number'] . '&work_number=' .
+            $_GET['work_number'] . '&id_user=' . $_GET['id_user']);
+}
+if (isset($_GET['change_password']))
+{
+    header('Location: ./model/updateUserPassword.php?');
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -39,31 +49,32 @@ require_once __DIR__ . '/model/connection.php';
 
     <div class="profile">
         <div class="first">
-            <form action="" class="edit">
+            <form action="" method="GET" class="edit">
+                <input type="text" name="id_user" value="<?php echo $_GET['id']; ?>" style="display: none;">
                 <h3>Персональные данные</h3>
                 <label class="placeinput">
                     <p class="input-info">ФИО:</p>
-                    <? echo '<input required="1" type="text" id="fio" value="'.$userData['fio'].'">'; ?>
+                    <?php echo '<input required="1" type="text" id="fio" name="fio" value="'.$userData['fio'].'">'; ?>
                     <div class="place_holder">Введите ФИО<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">e-mail:</p>
-                    <? echo '<input required="1" type="text" id="email" value="'.$userData['email'].'">'; ?>
+                    <?php echo '<input required="1" type="text" id="email" name="email" value="'.$userData['email'].'">'; ?>
                     <div class="place_holder">Введите почту<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Мобильный тел.:</p>
-                    <? echo '<input required="1" type="tel" id="phone" value="'.$userData['phone_number'].'">'; ?>
+                    <?php echo '<input required="1" type="tel" id="phone" name="phone_number" value="'.$userData['phone_number'].'">'; ?>
                     <div class="place_holder">Введите телефон<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Рабочий тел.:</p>
-                    <? echo '<input type="text" id="adress" value="'.$userData['work_number'].'">'; ?>
+                    <?php echo '<input type="text" id="adress" name="work_number" value="'.$userData['work_number'].'">'; ?>
                     <div class="place_holder">Введите адрес</div>
                 </label>
                 <div class="buttons">
-                    <div id="editButton" class="button"> изменить </div>
-                    <div id="editButton" class="button"> сменить пароль </div>
+                    <input id="editButton" class="button" type="submit" name="change" value="изменить">
+                    <input id="editButton" class="button" type="submit" name="change_password" value="сменить пароль">
                 </div>
             </form>
 
@@ -71,12 +82,12 @@ require_once __DIR__ . '/model/connection.php';
                 <h3>Адреса доставки</h3>
                 <label class="placeinput">
                     <p class="input-info">Адрес:</p>
-                    <? echo '<input required="1" type="text" id="fio" value="'.$userData['adress'].'">'; ?>
+                    <?php echo '<input required="1" type="text" id="fio" value="'.$userData['adress'].'">'; ?>
                     <div class="place_holder">Введите адрес<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Доп. адрес:</p>
-                    <? echo '<input required="1" type="text" id="fio" value="'.$userData['additional_adress'].'">'; ?>
+                    <?php echo '<input required="1" type="text" id="fio" value="'.$userData['additional_adress'].'">'; ?>
                     <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
                 </label>
                 <div class="buttons">
