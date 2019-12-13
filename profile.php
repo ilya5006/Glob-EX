@@ -58,12 +58,29 @@ require_once __DIR__ . '/model/connection.php';
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Рабочий тел.:</p>
-                    <? echo '<input required="1" type="text" id="adress" value="'.$userData['work_number'].'">'; ?>
-                    <div class="place_holder">Введите адрес<span>*</span></div>
+                    <? echo '<input type="text" id="adress" value="'.$userData['work_number'].'">'; ?>
+                    <div class="place_holder">Введите адрес</div>
                 </label>
                 <div class="buttons">
                     <div id="editButton" class="button"> изменить </div>
                     <div id="editButton" class="button"> сменить пароль </div>
+                </div>
+            </form>
+
+            <form action="" class="edit">
+                <h3>Адреса доставки</h3>
+                <label class="placeinput">
+                    <p class="input-info">Адрес:</p>
+                    <? echo '<input required="1" type="text" id="fio" value="'.$userData['adress'].'">'; ?>
+                    <div class="place_holder">Введите адрес<span>*</span></div>
+                </label>
+                <label class="placeinput">
+                    <p class="input-info">Доп. адрес:</p>
+                    <? echo '<input required="1" type="text" id="fio" value="'.$userData['additional_adress'].'">'; ?>
+                    <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
+                </label>
+                <div class="buttons">
+                    <div id="editButton" class="button"> изменить </div>
                 </div>
             </form>
         </div>
@@ -74,6 +91,12 @@ require_once __DIR__ . '/model/connection.php';
                 <a href="#">история заказов (3)</a>
                 <a href="favourite.php">избранные товары (122)</a>
             </div>
+
+            <form class="mail">
+                <h3>РАССЫЛКИ</h3>
+                <label class="container" id="cart"> <p> e-mail рассылка</p> <input type="checkbox" name="mail"> <span class="checkmark"></span></label>
+                <a href="favourite.php" class="button buttonMail">сохранить</a>
+            </form>
         </div>
     </div>
 </div>

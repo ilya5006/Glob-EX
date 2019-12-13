@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 10 2019 г., 20:46
+-- Время создания: Дек 13 2019 г., 12:42
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.3.9
 
@@ -33,15 +33,6 @@ CREATE TABLE `user-favoutite` (
   `id_product` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Дамп данных таблицы `user-favoutite`
---
-
-INSERT INTO `user-favoutite` (`id_user`, `id_product`) VALUES
-(8, 19),
-(8, 18),
-(8, 11);
-
 -- --------------------------------------------------------
 
 --
@@ -55,7 +46,9 @@ CREATE TABLE `users_all` (
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone_number` varchar(20) NOT NULL,
-  `address` varchar(255) DEFAULT NULL,
+  `work_number` varchar(20) DEFAULT NULL,
+  `address` varchar(255) NOT NULL,
+  `additional_adress` varchar(255) DEFAULT NULL,
   `mailing` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -63,15 +56,15 @@ CREATE TABLE `users_all` (
 -- Дамп данных таблицы `users_all`
 --
 
-INSERT INTO `users_all` (`id_user`, `role`, `fio`, `password`, `email`, `phone_number`, `address`, `mailing`) VALUES
-(1, 0, 'Да Да Да', '$2y$10$58adI2iM5PEp7y2pZcZHJeboEvDkbhFEmjb/vmG2dcLLnWBhtvciu', 'dada@dada.dada', '88005553535', NULL, 0),
-(2, 0, 'Яяя Ааа Ддд', '$2y$10$ZOcqE7WwwClqNHMNMLmKHuHShokrUCYvdqZIpy.rNIZ8D43G5vmAW', 'yaya@yaya.yaya', '85025698756', NULL, 0),
-(3, 0, 'Яяя Ааа Aaa', '$2y$10$HMoWHpOkdETsiSH2unzCtuyEULHXaHcHu.Eydx9az5nu6WG9VIdSC', 'yaya@yaya.yaya', '85025698756', NULL, 1),
-(4, 1, 'Яяя Ааа Aaa', '$2y$10$ZdAidiOGlOv77fSYRAIw.eNHYZA2jwuapeK.nQkFoRz.kAp5JfKke', 'yaya@yaya.yaya', '85025698756', NULL, 1),
-(5, 1, 'Яяя Ааа Aaa', '$2y$10$eJqj1a5ZlMmpXX3s1IB/seU3LGyLmdXyzC4ENyRD/GZ0uIcf/CSEO', 'yaya@yaya.yaya', '85025698756', NULL, 0),
-(6, 1, '123', '$2y$10$OmGVARGpFTRfJKwMk/kOee3l9jvydKfAB2Bbz8omlXsqlBJORelpa', '123@123.123', '123', NULL, 0),
-(7, 1, 'AAa AAa AaA', '$2y$10$WN6n42g/nlMPBy/ynF9XEOQ1lRyLoIQXpNIPgt7Q2JMS9MsAEmynG', 'email@email.email', '8 999 555 12 22', NULL, 0),
-(8, 0, 'Манисов Александр Ильйч', '$2y$10$bCZq4EDwTEcqOtypskNezO1GCtnBdeA9sbyLvuD64rH0u35PNe4Ye', 'mrreads@yandex.com', '+79259294570', NULL, 0);
+INSERT INTO `users_all` (`id_user`, `role`, `fio`, `password`, `email`, `phone_number`, `work_number`, `address`, `additional_adress`, `mailing`) VALUES
+(1, 0, 'Да Да Да', '$2y$10$58adI2iM5PEp7y2pZcZHJeboEvDkbhFEmjb/vmG2dcLLnWBhtvciu', 'dada@dada.dada', '88005553535', NULL, 'ФЫВА', '', 0),
+(2, 0, 'Яяя Ааа Ддд', '$2y$10$ZOcqE7WwwClqNHMNMLmKHuHShokrUCYvdqZIpy.rNIZ8D43G5vmAW', 'yaya@yaya.yaya', '85025698756', NULL, 'ФЫВА', '', 0),
+(3, 0, 'Яяя Ааа Aaa', '$2y$10$HMoWHpOkdETsiSH2unzCtuyEULHXaHcHu.Eydx9az5nu6WG9VIdSC', 'yaya@yaya.yaya', '85025698756', NULL, 'ФЫВА', '', 1),
+(4, 1, 'Яяя Ааа Aaa', '$2y$10$ZdAidiOGlOv77fSYRAIw.eNHYZA2jwuapeK.nQkFoRz.kAp5JfKke', 'yaya@yaya.yaya', '85025698756', NULL, 'ФЫВА', '', 1),
+(5, 1, 'Яяя Ааа Aaa', '$2y$10$eJqj1a5ZlMmpXX3s1IB/seU3LGyLmdXyzC4ENyRD/GZ0uIcf/CSEO', 'yaya@yaya.yaya', '85025698756', NULL, 'ФЫВА', '', 0),
+(6, 1, '123', '$2y$10$OmGVARGpFTRfJKwMk/kOee3l9jvydKfAB2Bbz8omlXsqlBJORelpa', '123@123.123', '123', NULL, 'ФЫВА', '', 0),
+(7, 1, 'AAa AAa AaA', '$2y$10$WN6n42g/nlMPBy/ynF9XEOQ1lRyLoIQXpNIPgt7Q2JMS9MsAEmynG', 'email@email.email', '8 999 555 12 22', NULL, 'ФЫВА', '', 0),
+(8, 0, 'Манисов Александр Ильйч', '$2y$10$bCZq4EDwTEcqOtypskNezO1GCtnBdeA9sbyLvuD64rH0u35PNe4Ye', 'mrreads@yandex.com', '+79259294570', NULL, 'ФЫВА', '', 0);
 
 -- --------------------------------------------------------
 
