@@ -4,11 +4,15 @@ require_once __DIR__ . '/model/connection.php';
 if (isset($_GET['change']))
 {
     header('Location: ./model/updateUserInfo.php?fio=' . $_GET['fio'] . '&email=' . $_GET['email'] . '&phone_number=' . $_GET['phone_number'] . '&work_number=' .
-            $_GET['work_number'] . '&id_user=' . $_GET['id_user']);
+            $_GET['work_number'] . '&id_user=' . $_COOKIE['isLogin']);
 }
 if (isset($_GET['change_password']))
 {
     header('Location: ./model/updateUserPassword.php?');
+}
+if (isset($_GET['change_address']))
+{
+    header('Location: ./model/updateUserAddress.php?address=' . $_GET['address'] . '&additional_address=' . $_GET['additional_address'] . '&id_user=' . $_COOKIE['isLogin']);
 }
 ?>
 <!DOCTYPE html>
@@ -50,7 +54,6 @@ if (isset($_GET['change_password']))
     <div class="profile">
         <div class="first">
             <form action="" method="GET" class="edit">
-                <input type="text" name="id_user" value="<?php echo $_GET['id']; ?>" style="display: none;">
                 <h3>Персональные данные</h3>
                 <label class="placeinput">
                     <p class="input-info">ФИО:</p>
@@ -78,20 +81,20 @@ if (isset($_GET['change_password']))
                 </div>
             </form>
 
-            <form action="" class="edit">
+            <form action="" method="GET" class="edit">
                 <h3>Адреса доставки</h3>
                 <label class="placeinput">
                     <p class="input-info">Адрес:</p>
-                    <?php echo '<input required="1" type="text" id="fio" value="'.$userData['adress'].'">'; ?>
+                    <?php echo '<input required="1" type="text" id="fio" name="address" value="'.$userData['address'].'">'; ?>
                     <div class="place_holder">Введите адрес<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Доп. адрес:</p>
-                    <?php echo '<input required="1" type="text" id="fio" value="'.$userData['additional_adress'].'">'; ?>
+                    <?php echo '<input type="text" id="fio" name="additional_address" value="'.$userData['additional_address'].'">'; ?>
                     <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
                 </label>
                 <div class="buttons">
-                    <div id="editButton" class="button"> изменить </div>
+                    <input id="editButton" class="button" type="submit" name="change_address" value="изменить">
                 </div>
             </form>
         </div>
