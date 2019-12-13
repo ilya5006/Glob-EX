@@ -93,7 +93,7 @@ $brandInfo = $xmlParseData['brands'];
                             echo '</div>';
                         echo '</div>';
                         echo '<div class="product-act">';
-                            if ($productInfo[$idProduct]['quantity'] > 0)
+                            if ((int)$productInfo[$idProduct]['quantity'] > 0)
                             {
                                 echo '<p class="available">есть в наличии <span class="available-count">'.$productInfo[$idProduct]['quantity'].'</span> </p>';
                             }

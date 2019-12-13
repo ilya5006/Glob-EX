@@ -321,7 +321,7 @@ foreach ($brands as $brandId => $brandInfo)
                         <?php
                         if ((int)$productInfo['quantity'] > 0)
                         { ?>
-                            <p class="available">есть в наличии <span class="available-count"> <?php echo $productInfo['quantity']; ?> </span> </p>
+                            <p class="available">есть в наличии <span class="available-count"><?php echo $productInfo['quantity']; ?> </span> </p>
                         <?php
                         }
                         else
