@@ -86,10 +86,14 @@ require_once __DIR__ . '/model/connection.php';
         </div>
         <div class="two">
             <div class="orders">
+                <?php
+                    $favouriteResult = $mysqli->query("SELECT COUNT(*) FROM `user-favoutite` WHERE id_user = $idUser;");
+                    $favouriteCount = $favouriteResult->fetch_row();
+                ?>
                 <h3>ЗАКАЗЫ</h3>
-                <a href="#">Корзина товаров (25)</a>
-                <a href="#">история заказов (3)</a>
-                <a href="favourite.php">избранные товары (122)</a>
+                <!-- <a href="#">Корзина товаров (25)</a>
+                <a href="#">история заказов (3)</a> -->
+                <? echo '<a href="favourite.php">избранные товары ('.$favouriteCount[0].')</a>'; ?>
             </div>
 
             <form class="mail">
