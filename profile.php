@@ -33,8 +33,8 @@ require_once __DIR__ . '/model/connection.php';
     <?php
         $userEnteties = $mysqli->query("SELECT * FROM users_entities WHERE id_user = $idUser;")->num_rows;
         $userIndividuals = $mysqli->query("SELECT * FROM users_individuals WHERE id_user = $idUser;")->num_rows;
-        if ($userIndividuals == 1) { echo '<p class="usr-type"> Вы - физическое лицо. </p>'; }
-        if ($userEnteties == 1) { echo '<p class="usr-type"> Вы - юридическое лицо. </p>'; }
+        //if ($userIndividuals == 1) { echo '<p class="usr-type"> Вы - физическое лицо. </p>'; }
+        //if ($userEnteties == 1) { echo '<p class="usr-type"> Вы - юридическое лицо. </p>'; }
     ?>
 
     <div class="profile">

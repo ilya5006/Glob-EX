@@ -706,7 +706,7 @@
 	}
 }
 
-@media screen and (max-width: 750px)
+@media screen and (max-width: 1000px)
 {
 	.catalg_view
 	{
@@ -723,6 +723,7 @@
 	.filters
 	{
 		padding-right: 0;
+		margin-bottom: 55px;
 	}
 }
 
@@ -1017,3 +1018,15 @@
 	}
 }
 
+@media screen and (max-width: 425px)
+{
+	.filter > ul > li > label > p
+	{
+		margin-bottom: 6px;
+		font-size: 15px;
+	}
+	.filter_button, .filter > p
+	{
+		 font-size: 18px;
+	}
+}

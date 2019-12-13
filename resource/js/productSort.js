@@ -70,7 +70,7 @@ window.addEventListener('resize', function()
 
 function checkSize()
 {
-    if (document.body.clientWidth < 1000)
+    if (document.body.clientWidth < 1300)
     {
         setBlock();
         horEnable = false;
