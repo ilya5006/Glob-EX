@@ -2,6 +2,8 @@
 require_once __DIR__ . '/../model/xmlparser.php';
 require_once __DIR__ . '/../model/connection.php';
 
+var_dump($_SESSION);
+
 $data = $xmlParseData['partitions'];
 
 $first = [];

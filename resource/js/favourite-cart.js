@@ -44,7 +44,7 @@ allProducts.forEach(function(element)
         });
         connectionCart.then((result) =>
         {
-            result.json().then(result => showMessaage(result));
+            result.json().then(result => console.log(result));
         });
     });
 });
