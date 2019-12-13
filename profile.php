@@ -29,49 +29,50 @@ require_once __DIR__ . '/model/connection.php';
         <p> Главная </p>
         <p><span> &#92; Профиль </span></p>
     </div>
-    <h2> Профиль </h2>
-    <div class="sliders">
-        <?php echo '<a class="profile active" href="./profile.php?id='.$idUser.'"> Информация </a>' ?>
-        <a class="orders" href="./orders.php"> Заказы </a>
-    </div>
-
-    <h2> Изменить информацию </h2>
-    
+    <h2> Мой профиль </h2>
     <?php
         $userEnteties = $mysqli->query("SELECT * FROM users_entities WHERE id_user = $idUser;")->num_rows;
         $userIndividuals = $mysqli->query("SELECT * FROM users_individuals WHERE id_user = $idUser;")->num_rows;
         if ($userIndividuals == 1) { echo '<p class="usr-type"> Вы - физическое лицо. </p>'; }
         if ($userEnteties == 1) { echo '<p class="usr-type"> Вы - юридическое лицо. </p>'; }
     ?>
-    <form action="" class="edit">
 
-        <p class="input-info">Имя</p>
-        <label class="placeinput">
-            <? echo '<input required="1" type="text" id="fio" value="'.$userData['fio'].'">'; ?>
-            <div class="place_holder">Введите ФИО<span>*</span></div>
-        </label>
-
-        <p class="input-info">Почта</p>
-        <label class="placeinput">
-            <? echo '<input required="1" type="text" id="email" value="'.$userData['email'].'">'; ?>
-            <div class="place_holder">Введите почту<span>*</span></div>
-        </label>
-
-        <p class="input-info">Телефон</p>
-        <label class="placeinput">
-            <? echo '<input required="1" type="tel" id="phone" value="'.$userData['phone_number'].'">'; ?>
-            <div class="place_holder">Введите телефон<span>*</span></div>
-        </label>
-
-        <p class="input-info">Адрес</p>
-        <label class="placeinput">
-            <? echo '<input required="1" type="text" id="adress" value="'.$userData['address'].'">'; ?>
-            <div class="place_holder">Введите адрес<span>*</span></div>
-        </label>
-
-        <div id="editButton"> изменить </div>
-
-    </form>
+    <div class="profile">
+        <div class="first">
+            <form action="" class="edit">
+                <h3>Персональные данные</h3>
+                <label class="placeinput">
+                    <p class="input-info">ФИО:</p>
+                    <? echo '<input required="1" type="text" id="fio" value="'.$userData['fio'].'">'; ?>
+                    <div class="place_holder">Введите ФИО<span>*</span></div>
+                </label>
+                <label class="placeinput">
+                    <p class="input-info">e-mail:</p>
+                    <? echo '<input required="1" type="text" id="email" value="'.$userData['email'].'">'; ?>
+                    <div class="place_holder">Введите почту<span>*</span></div>
+                </label>
+                <label class="placeinput">
+                    <p class="input-info">Мобильный тел.:</p>
+                    <? echo '<input required="1" type="tel" id="phone" value="'.$userData['phone_number'].'">'; ?>
+                    <div class="place_holder">Введите телефон<span>*</span></div>
+                </label>
+                <label class="placeinput">
+                    <p class="input-info">Рабочий тел.:</p>
+                    <? echo '<input required="1" type="text" id="adress" value="'.$userData['address'].'">'; ?>
+                    <div class="place_holder">Введите адрес<span>*</span></div>
+                </label>
+                <div id="editButton"> изменить </div>
+            </form>
+        </div>
+        <div class="two">
+            <div class="orders">
+                <h3>ЗАКАЗЫ</h3>
+                <a href="#">Корзина товаров (25)</a>
+                <a href="#">история заказов (3)</a>
+                <a href="#">избранные товары (122)</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php require(__DIR__ . '/view/footer.php'); ?>
