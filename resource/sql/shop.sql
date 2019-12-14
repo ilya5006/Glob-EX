@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 13 2019 г., 18:38
--- Версия сервера: 8.0.15
--- Версия PHP: 7.3.2
+-- Время создания: Дек 14 2019 г., 17:33
+-- Версия сервера: 10.3.13-MariaDB-log
+-- Версия PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- База данных: `shop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `user-cart`
+--
+
+CREATE TABLE `user-cart` (
+  `id_user` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
+  `product_count` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `user-cart`
+--
+
+INSERT INTO `user-cart` (`id_user`, `id_product`, `product_count`) VALUES
+(8, 11, 1);
 
 -- --------------------------------------------------------
 
@@ -48,7 +67,7 @@ CREATE TABLE `users_all` (
   `phone_number` varchar(20) NOT NULL,
   `work_number` varchar(20) DEFAULT NULL,
   `address` varchar(255) NOT NULL,
-  `additional_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `additional_address` varchar(255) DEFAULT NULL,
   `mailing` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -64,7 +83,7 @@ INSERT INTO `users_all` (`id_user`, `role`, `fio`, `password`, `email`, `phone_n
 (5, 1, 'Яяя Ааа Aaa', '$2y$10$eJqj1a5ZlMmpXX3s1IB/seU3LGyLmdXyzC4ENyRD/GZ0uIcf/CSEO', 'yaya@yaya.yaya', '85025698756', NULL, 'ФЫВА', '', 0),
 (6, 1, '123', '$2y$10$OmGVARGpFTRfJKwMk/kOee3l9jvydKfAB2Bbz8omlXsqlBJORelpa', '123@123.123', '123', NULL, 'ФЫВА', '', 0),
 (7, 1, 'AAa AAa AaA', '$2y$10$WN6n42g/nlMPBy/ynF9XEOQ1lRyLoIQXpNIPgt7Q2JMS9MsAEmynG', 'email@email.email', '8 999 555 12 22', NULL, 'ФЫВА', '', 0),
-(8, 0, 'Манисов Александр Ильйич', '$2y$10$bCZq4EDwTEcqOtypskNezO1GCtnBdeA9sbyLvuD64rH0u35PNe4Ye', 'manisov@yandex.com', '79251488228', '', 'ФЫВА', '', 0);
+(8, 0, 'Манисов Александр Ильйч', '$2y$10$bCZq4EDwTEcqOtypskNezO1GCtnBdeA9sbyLvuD64rH0u35PNe4Ye', 'mrreads@yandex.com', '+79259294570', NULL, 'ФЫВА', '', 0);
 
 -- --------------------------------------------------------
 
@@ -111,6 +130,12 @@ INSERT INTO `users_individuals` (`id_user`) VALUES
 --
 
 --
+-- Индексы таблицы `user-cart`
+--
+ALTER TABLE `user-cart`
+  ADD KEY `id_user` (`id_user`);
+
+--
 -- Индексы таблицы `user-favoutite`
 --
 ALTER TABLE `user-favoutite`
@@ -147,6 +172,12 @@ ALTER TABLE `users_all`
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
+
+--
+-- Ограничения внешнего ключа таблицы `user-cart`
+--
+ALTER TABLE `user-cart`
+  ADD CONSTRAINT `user-cart_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users_all` (`id_user`);
 
 --
 -- Ограничения внешнего ключа таблицы `user-favoutite`
