@@ -1,11 +1,11 @@
 <?php
     require_once './connection.php';
 
-    $idUser = $mysqli->escape_string($_POST['id_user']);
-    $idProduct = $mysqli->escape_string($_POST['id_product']);
-    $productCount = $mysqli->escape_string($_POST['product_count']);
+    $idUser = $mysqli->escape_string((int)$_POST['id_user']);
+    $idProduct = $mysqli->escape_string((int)$_POST['id_product']);
+    $productCount = $mysqli->escape_string((int)$_POST['product_count']);
 
-    $resultCheck = $mysqli->query("SELECT COUNT(*) FROM `user-cart` WHERE id_user = $idUser AND id_product = $idProduct");
+    $resultCheck = $mysqli->query("SELECT COUNT(*) FROM `user-cart` WHERE id_user = $idUser AND id_product = $idProduct;");
     $checkData = $resultCheck->fetch_row();
 
     if ($checkData[0] == 0)

@@ -39,7 +39,7 @@ allProducts.forEach(function(element)
             cartData.append('id_user', idUser);
             if (element.querySelector('input[type=number]')) { cartData.append('product_count', element.querySelector('input[type=number]').value); }
             else { cartData.append('product_count', '1'); }
-            
+
             let connectionCart = fetch('../../model/addCart.php', 
             {
                 method: 'POST',

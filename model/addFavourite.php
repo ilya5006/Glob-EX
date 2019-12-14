@@ -1,8 +1,8 @@
 <?php
     require_once './connection.php';
 
-    $idUser = $mysqli->escape_string($_POST['id_user']);
-    $idProduct = $mysqli->escape_string($_POST['id_product']);
+    $idUser = $mysqli->escape_string((int)$_POST['id_user']);
+    $idProduct = $mysqli->escape_string((int)$_POST['id_product']);
 
     $resultCheck = $mysqli->query("SELECT COUNT(*) FROM `user-favoutite` WHERE id_user = $idUser AND id_product = $idProduct");
     $checkData = $resultCheck->fetch_row();

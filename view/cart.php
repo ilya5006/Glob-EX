@@ -40,7 +40,8 @@ $brands = $xmlParseData['brands'];
                                 echo '<p class="id" style="display: none;">'.$productData[$idProduct]['id'].'</p>';
                                 echo '<div class="product-detail">';
                                     echo '<p class="available">есть в наличии <span class="available-count">'.$productData[$idProduct]['quantity'].'</span> </p>';
-                                echo '<p>БРЕНД: <a href="#">'.$brands[$productData[$idProduct]['brand']]['name'].'</a></p>';
+                                if ($brands[$productData[$idProduct]['brand']]['name']) { echo '<p>БРЕНД: <a href="#">'.$brands[$productData[$idProduct]['brand']]['name'].'</a></p>'; }
+                                else { echo '<p>БРЕНД: <a> ОТСУСТВУЕТ </a></p>'; }
                                 echo '</div>';
                             echo '</div>';
                             echo '<p class="product-price">'.$productData[$idProduct]['price'].'</p>';
