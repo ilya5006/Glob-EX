@@ -12,7 +12,11 @@
     {
         $mysqli->query("INSERT INTO `user-cart` (`id_user`, `id_product`, `product_count`) VALUES ($idUser, $idProduct, $productCount);");
 
-        echo json_encode(['Товар добавлен в корзину']);
+    session_start();
+
+    $idUser = $mysqli->escape_string($_POST['id_user']);
+    $idProduct = $mysqli->escape_string($_POST['id_product']);
+    $countProduct = $mysqli->escape_string($_POST['product_count']);
 
     }
     else
