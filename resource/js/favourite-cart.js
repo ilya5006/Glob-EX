@@ -30,21 +30,25 @@ allProducts.forEach(function(element)
         });
     });
 
-    element.querySelector('.cart').addEventListener('click', function()
+    if (element.querySelector('.cart'))
     {
-        let cartData = new FormData();
-        cartData.append('id_product', element.querySelector('.id').textContent);
-        cartData.append('id_user', idUser);
-        cartData.append('product_count', element.querySelector('input[type=number]').value);
+        element.querySelector('.cart').addEventListener('click', function()
+        {
+            let cartData = new FormData();
+            cartData.append('id_product', element.querySelector('.id').textContent);
+            cartData.append('id_user', idUser);
+            if (element.querySelector('input[type=number]')) { cartData.append('product_count', element.querySelector('input[type=number]').value); }
+            else { cartData.append('product_count', '1'); }
 
-        let connectionCart = fetch('../../model/addCart.php', 
-        {
-            method: 'POST',
-            body: cartData
+            let connectionCart = fetch('../../model/addCart.php', 
+            {
+                method: 'POST',
+                body: cartData
+            });
+            connectionCart.then((result) =>
+            {
+                result.json().then(result => showMessaage(result));
+            });
         });
-        connectionCart.then((result) =>
-        {
-            result.json().then(result => showMessaage(result));
-        });
-    });
+    }
 });
