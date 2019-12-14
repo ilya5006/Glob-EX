@@ -10,16 +10,17 @@
 
 .edit
 {
-	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-	padding: 25px;
-	width: 100%;
 	display: inline-flex;
 	align-items: center;
 	flex-flow: column nowrap;
 	flex-grow: 1;
 	justify-content: center;
 
+	width: 100%;
 	margin-top: 20px;
+	padding: 25px;
+
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
 
 .edit .input-info
@@ -76,12 +77,13 @@ form label
 
 .placeinput
 {
-	margin-bottom: 15px;
-	border: 1px solid #C4C4C4;
-
 	position: relative;
 
 	overflow: hidden;
+
+	margin-bottom: 15px;
+
+	border: 1px solid #C4C4C4;
 }
 
 .placeinput:first-child
@@ -250,7 +252,6 @@ form .container p a, .container p span
 
 .button
 {
-	transition: 0.3s all;
 	font-size: 16px;
 	font-weight: bold;
 
@@ -259,7 +260,9 @@ form .container p a, .container p span
 	min-width: 160px;
 	margin-top: 20px;
 	padding: 15px 30px;
+
 	cursor: pointer;
+	transition: 0.3s all;
 	text-align: center;
 	text-transform: uppercase;
 
@@ -282,55 +285,65 @@ form .container p a, .container p span
 
 .buttons
 {
-	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
+
+	width: 100%;
 }
 
 .buttonMail
 {
-	padding: 10px 25px;
-	margin-top: 5px;
 	font-size: 18px;
 	font-weight: 500;
+
 	display: inline-block;
+
+	margin-top: 5px;
+	padding: 10px 25px;
+
+	color: #FFFFFF;
 	border: 3px solid #5D5A5A;
 	background-color: #5D5A5A;
-	color: #FFFFFF;
 }
 
 .buttonMail:hover
 {
+	color: #5D5A5A;
 	border: 3px solid #5D5A5A;
 	background-color: #FFFFFF;
-	color: #5D5A5A;
 }
 
 .orders, .mail
 {
-	padding: 25px;
-	width: 100%;
 	display: inline-block;
+
+	width: 100%;
 	margin-top: 20px;
+	padding: 25px;
+
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
 
 h3
 {
 	width: 100%;
-	text-transform: uppercase;
-	text-align: left;
 	margin-bottom: 30px;
+
+	text-align: left;
+	text-transform: uppercase;
 }
 
 .orders a
 {
-	color: #000000;
-	padding: 15px 0;
-	width: 100%;
 	font-size: 18px;
 	line-height: 21px;
+
+	width: 100%;
+	padding: 15px 0;
+
 	text-transform: uppercase;
+
+	color: #000000;
 }
 
 .profile
@@ -341,8 +354,9 @@ h3
 
 .profile .first
 {
-	margin-right: 25px;
 	flex-grow: 2;
+
+	margin-right: 25px;
 }
 
 .profile .two
@@ -371,6 +385,7 @@ h3
 	.placeinput
 	{
 		flex-flow: column wrap;
+
 		border: 0px;
 	}
 	.edit input[type=text], .edit input[type=password], .edit input[type=tel], .edit input[type=email]
@@ -389,6 +404,7 @@ h3
 	{
 		width: 100%;
 		margin-left: 0px;
+
 		text-align: center;
 	}
 	#editButton
@@ -419,5 +435,4 @@ h3
 	{
 		width: 100%;
 	}
-
 }

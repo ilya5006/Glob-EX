@@ -149,8 +149,9 @@
 .cart-block > .act span
 {
 	font-size: 25px;
-	padding-left: 10px;
+
 	margin-left: auto;
+	padding-left: 10px;
 
 	text-align: right;
 }
