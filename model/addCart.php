@@ -1,38 +1,25 @@
 <?php
-
-    session_start();
-
-    if (empty($_SESSION['cart']))
-    {
-        $_SESSION['cart'] = [];
-    }
-    
-    $currentCart =  $_SESSION['cart'];
-
     require_once './connection.php';
 
     $idUser = $mysqli->escape_string($_POST['id_user']);
     $idProduct = $mysqli->escape_string($_POST['id_product']);
-    $countProduct = $mysqli->escape_string($_POST['product_count']);
+    $productCount = $mysqli->escape_string($_POST['product_count']);
 
-    $counter = 0;
-    foreach($currentCart as $element)
-    {
-        if ($element[1] == $idProduct)
-        {
-            ++$counter;
-        }
-    }
+    $resultCheck = $mysqli->query("SELECT COUNT(*) FROM `user-cart` WHERE id_user = $idUser AND id_product = $idProduct");
+    $checkData = $resultCheck->fetch_row();
 
-    if ($counter == 0)
+    if ($checkData[0] == 0)
     {
-        $data = (array)[(int)$idUser, (int)$idProduct, (int)$countProduct];
-        array_push($_SESSION['cart'], $data);
+        $mysqli->query("INSERT INTO `user-cart` (`id_user`, `id_product`, `product_count`) VALUES ($idUser, $idProduct, $productCount);");
+
         echo json_encode(['Товар добавлен в корзину']);
+
     }
     else
     {
-        echo json_encode(['Товар уже в корзине']);
+        $mysqli->query("DELETE FROM `user-cart` WHERE id_user = $idUser AND id_product = $idProduct");
+
+        echo json_encode(['Товар убран из корзины']);
     }
 
     

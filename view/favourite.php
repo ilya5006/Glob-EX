@@ -60,7 +60,7 @@ $brandInfo = $xmlParseData['brands'];
             <div class="list-products">
             <?php
                 $result = $mysqli->query("SELECT `id_product` FROM `user-favoutite` WHERE id_user = $idUser;");
-
+                
                 while($idProduct = $result->fetch_assoc()['id_product'])
                 {
                     echo '<div class="product">';

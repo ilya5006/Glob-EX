@@ -1,7 +1,6 @@
 ﻿<?php
-session_start();
-$productCartData = $_SESSION['cart'];
 
+require_once __DIR__ . '/../model/connection.php';
 require_once __DIR__ . '/../model/xmlparser.php';
 
 $productData = $xmlParseData['nomeklatura'];
@@ -22,26 +21,30 @@ $brands = $xmlParseData['brands'];
         <div class="items">
 
         <?php
-            if (!empty($_SESSION['cart']))
+            
+            $result = $mysqli->query("SELECT `id_product` FROM `user-cart` WHERE id_user = $idUser;");
+            $count = $mysqli->query("SELECT COUNT(*) FROM `user-cart` WHERE id_user = $idUser")->fetch_row()[0];
+
+            if ($count > 0)
             {
-                foreach($productCartData as $productId)
+                while($idProduct = $result->fetch_assoc()['id_product'])
                 {
-                    if ($productData[$productId[1]]['quantity'] > 0) 
+                    if ($productData[$idProduct]['quantity'] > 0) 
                     { 
                         echo '<div class="product">';
-                        $img = str_replace('ftp://37.140.192.146', './../', $productData[$productId[1]]['image1']);
+                        $img = str_replace('ftp://37.140.192.146', './../', $productData[$idProduct]['image1']);
                             echo '<img class="product-image" src="'.$img.'" alt="">';
                             echo '<div class="product-info">';
-                                echo '<p class="product-name">'.$productData[$productId[1]]['name'].'</p>';
-                                echo '<p class="article" style="display: none;">'.$productData[$productId[1]]['article'].'</p>';
-                                echo '<p class="id" style="display: none;">'.$productData[$productId[1]]['id'].'</p>';
+                                echo '<p class="product-name">'.$productData[$idProduct]['name'].'</p>';
+                                echo '<p class="article" style="display: none;">'.$productData[$idProduct]['article'].'</p>';
+                                echo '<p class="id" style="display: none;">'.$productData[$idProduct]['id'].'</p>';
                                 echo '<div class="product-detail">';
-                                    echo '<p class="available">есть в наличии <span class="available-count">'.$productData[$productId[1]]['quantity'].'</span> </p>';
-                                echo '<p>БРЕНД: <a href="#">'.$brands[$productData[$productId[1]]['brand']]['name'].'</a></p>';
+                                    echo '<p class="available">есть в наличии <span class="available-count">'.$productData[$idProduct]['quantity'].'</span> </p>';
+                                echo '<p>БРЕНД: <a href="#">'.$brands[$productData[$idProduct]['brand']]['name'].'</a></p>';
                                 echo '</div>';
                             echo '</div>';
-                            echo '<p class="product-price">'.$productData[$productId[1]]['price'].'</p>';
-                            echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productData[$productId[1]]['quantity'].'" value="1">';
+                            echo '<p class="product-price">'.$productData[$idProduct]['price'].'</p>';
+                            echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productData[$idProduct]['quantity'].'" value="1">';
                             echo '<div class="fav-button">';
                                 echo '<img src="./resource/img/icons/favourite.svg" alt="fav">';
                             echo '</div>';
