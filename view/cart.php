@@ -3,11 +3,13 @@
 require_once __DIR__ . '/../model/connection.php';
 require_once __DIR__ . '/../model/xmlparser.php';
 
+$idUser = (int)$_COOKIE['isLogin'];
+
 $productData = $xmlParseData['nomeklatura'];
 $brands = $xmlParseData['brands'];
 ?>
 
-<div class="content" style="padding-top: 0">
+
     <div class="cat_fold">
         <p> Главная </p>
         <p><span> &#92; Корзина </span></p>
@@ -123,6 +125,4 @@ $brands = $xmlParseData['brands'];
             }
             ?>
 </div>
-</div>
-
 </div>

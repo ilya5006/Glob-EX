@@ -23,7 +23,7 @@
 
 <?php require(__DIR__ . '/view/header.php'); ?>
 
-<?php require(__DIR__ . '/view/cart.php'); ?>
+<div class="content" style="padding-top: 0" id="cart-update"> </div>
 
 <?php require(__DIR__ . '/view/footer.php'); ?>
 

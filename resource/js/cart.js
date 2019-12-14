@@ -1,14 +1,4 @@
-﻿let productInCart = [];
-let products = document.querySelectorAll('.product');
-
-products.forEach(function(element)
-{
-    element.querySelector('input.product-count').addEventListener('change', function()
-    {
-        update(element.querySelector('.id').textContent, element.querySelector('input[type=number]').value);
-    });
-});
-
+﻿let products;
 function update(id_product, product_count)
 {
     let cartUpdate = new FormData();
@@ -20,13 +10,37 @@ function update(id_product, product_count)
         method: 'POST',
         body: cartUpdate
     });
-    // connectionCart.then((result) =>
-    // {
-    //     result.text().then(result => console.log(result));
-    // });
-    productInCart = [];
+    connectionCart.then((result) =>
+    {
+        result.json().then(result => ajax());
+    });
+    
     products.forEach(function(element)
     {   
-        element.querySelector('.article').textContent, element.querySelector('input.product-count').value
+        element.querySelector('.article').textContent, element.querySelector('input.product-count').value;
     });
 }
+
+function ajax()
+{
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() 
+    {
+        if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+        {
+            document.querySelector('#cart-update').innerHTML = xhr.responseText;
+            products = document.querySelectorAll('.product');
+            products.forEach(function(element)
+            {
+                element.querySelector('input.product-count').addEventListener('change', function()
+                {
+                    update(element.querySelector('.id').textContent, element.querySelector('input[type=number]').value);
+                });
+            });
+        }
+    }
+    xhr.open('GET', '../../view/cart.php', true);
+    xhr.send();
+}
+
+ajax();
