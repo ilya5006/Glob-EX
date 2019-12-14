@@ -20,10 +20,3 @@ function update()
 }
 
 update();
-
-let inputAdress = document.querySelector('input#adress');
-let displayAdress = document.querySelector('.delivery > .deliv-inf > .address');
-inputAdress.addEventListener('input', function()
-{
-    displayAdress.textContent = inputAdress.value;
-})

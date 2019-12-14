@@ -60,7 +60,6 @@ $brands = $xmlParseData['brands'];
                                 <p class="type-pickup">Самовызов</p>
                             </div>
                             <div class="deliv-inf">
-                                <p class="address"></p>
                                 <label class="placeinput">
                                     <p>
                                         <span> Адрес: </span> 

@@ -305,7 +305,10 @@
 	color: #9D9A9A;
 }
 
-
+.delivery .deliv-inf label > p > span
+{
+	width: 100px;
+}
 .delivery .change-address
 {
 	font-weight: bold;
