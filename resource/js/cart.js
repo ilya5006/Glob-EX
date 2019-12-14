@@ -20,10 +20,10 @@ function update(id_product, product_count)
         method: 'POST',
         body: cartUpdate
     });
-    connectionCart.then((result) =>
-    {
-        result.text().then(result => console.log(result));
-    });
+    // connectionCart.then((result) =>
+    // {
+    //     result.text().then(result => console.log(result));
+    // });
     productInCart = [];
     products.forEach(function(element)
     {   
