@@ -7,9 +7,12 @@ let products = document.querySelectorAll('.product');
 let productsArray = [];
 products.forEach((product) => { productsArray.push(product); });
 products = productsArray;
+let originalProductsList = productsArray; // READ ONLY
 
 let productsSort = document.querySelector('#products_sort');
 let productsQuantitySort = document.querySelector('#products_quantity');
+
+let brandsSort = document.querySelectorAll('#brands-filter ul li label');
 
 let pagination = document.querySelector('.pagination');
 
@@ -87,6 +90,33 @@ checkSize()
 
 ////////////////////////////////////////////////////////////////////////////////
 
+let sortProductsByBrands = () =>
+{
+    let choseBrands = document.querySelectorAll('#brands-filter .container input:checked');
+    
+    if (choseBrands.length == 0) 
+    {
+        products = originalProductsList;
+        showPages();
+        productsListUpdate();
+        return 0;
+    }
+    let productsWithSameBrands = [];
+
+    products.forEach((product) =>
+    {
+        choseBrands.forEach((brand) =>
+        {
+            if (product.dataset.brand == brand.value) productsWithSameBrands.push(product);
+        });
+    });
+    
+    products = productsWithSameBrands;
+
+    showPages();
+    productsListUpdate();
+}
+
 let sortProductsAscendingOrDescending = (ascendingOrDescending) => // Аргумент должен быть равен либо 1 (по возрастанию), либо -1 (по убыванию)
 {
     let sortedProducts = products.sort((first, second) =>
@@ -110,7 +140,7 @@ let showPages = () =>
 {
     pagination.innerHTML = '';
 
-    let pagesQuantity = calculatePagesQuantity();
+    let pagesQuantity = calculatePagesQuantity(products);
     pagination.insertAdjacentHTML('beforeEnd', '<li> <a href="#" class="active">1</a></li>');
 
     for (let page = 2; page <= pagesQuantity; page++)
@@ -144,7 +174,7 @@ productsSort.addEventListener('input', () =>
 
     showPages();
     productsListUpdate();
-})
+});
 productsQuantitySort.addEventListener('input', () =>
 {
     showPages();

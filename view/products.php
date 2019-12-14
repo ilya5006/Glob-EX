@@ -43,11 +43,53 @@ function findProductsWithSameCategory($categoryId, $products, $partitions)
     return $productsWithSameCategory;
 }
 
+function findSpecsWithSameCategory($categoryId, $specs, $partitions)
+{
+    $specsWithSameCategory = [];
+    $categoriesIdToCheck = [$categoryId];
+
+    foreach ($partitions as $partitionId => $partitionInfo)
+    {
+        if ($partitionInfo['top_id'] == $categoryId)
+        {
+            $categoriesIdToCheck[] = $partitionId;
+        }
+    }
+
+    foreach ($categoriesIdToCheck as $c => $category) // Если какие-то категории ссылаются на эту
+    {
+        foreach ($partitions as $partitionId => $partitionInfo)
+        {
+            if ($partitionInfo['top_id'] == $category && $category != $categoryId)
+            {
+                $categoriesIdToCheck[] = $partitionId;
+            }
+        }
+    }
+
+    foreach ($categoriesIdToCheck as $c => $category)
+    {
+        if (is_array($partitions[$category]['specs']))
+        {
+            foreach ($partitions[$category]['specs'] as $c => $specId)
+            {
+                if (!in_array($specs[$specId]['name'], $specsWithSameCategory))
+                {
+                    $specsWithSameCategory[$specId] = $specs[$specId]['name'];
+                }
+            }
+        }
+    }
+
+    return $specsWithSameCategory;
+}
+
+
 function quantityOfProductsForOneBrand($brandId, $products)
 {
     $quantity = 0;
 
-    foreach ($products as $productId => $productInfo)
+    foreach ($products as $c => $productInfo)
     {
         if ($productInfo['brand'] == $brandId) 
             $quantity++;
@@ -62,12 +104,13 @@ $products = $xmlParseData['nomeklatura'];
 $specs = $xmlParseData['specs'];
 
 $productsWithSameCategory = findProductsWithSameCategory($categoryId, $products, $partitions);
+$specsWithSameCategory = findSpecsWithSameCategory($categoryId, $specs, $partitions);
 
 foreach ($brands as $brandId => $brandInfo)
 {
     $brands[$brandId]['image'] = str_replace('ftp://37.140.192.146', './../', $brands[$brandId]['image']);
 }
-// $img = base64_encode(file_get_contents('ftp://user587s:CgIc6Wbt@user587s.beget.tech/Data/Картинки и баннеры/Логотипы/1.jpg'));
+
 ?>
 
 <div class="content" style="padding-top: 0">
@@ -99,7 +142,56 @@ foreach ($brands as $brandId => $brandInfo)
                     </li>
                 </ul>
             </div>
-            <div class="filter">
+            <?php
+            foreach ($specsWithSameCategory as $specId => $specName)
+            {
+                $specsProduct = [];
+                foreach ($productsWithSameCategory as $c => $productInfo)
+                {
+                    if (is_array($productInfo['specs']))
+                    {
+                        foreach ($productInfo['specs'] as $specIdProduct => $specValueProduct)
+                        {
+                            if ($specId == $specIdProduct)
+                            {
+                                if (isset($specsProduct[$specId]))
+                                {
+                                    $specsProduct[$specId][1]++;
+                                }
+                                else
+                                {
+                                    $specsProduct[$specId][] = [$specValueProduct, 0];
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // echo '<pre>';
+                //     var_export($specsProduct);
+                // echo '</pre>';
+                
+                echo '
+                <div class="filter" data-specName="' . $specName .'">
+                    <p>' . $specName . '</p>
+                    <ul>
+                        <li>';
+                        foreach ($specsProduct as $c => $specValue)
+                        {
+                            echo '
+                            <label class="container">
+                                <p>' . $specValue[0] . '(' . $specValue[1]. ')</p> <input type="checkbox"> <span class="checkmark"></span>
+                            </label>';
+                        }
+                            
+                   echo '</li>
+                    </ul>
+                </div>';
+
+            }
+            
+            ?>
+            <!-- <div class="filter">
                 <p>ФОРМАТ</p>
                 <ul>
                     <li>
@@ -120,8 +212,8 @@ foreach ($brands as $brandId => $brandInfo)
                         </label>
                     </li>
                 </ul>
-            </div>
-            <div class="filter">
+            </div> -->
+            <!-- <div class="filter">
                 <p>ХАРАКТЕРИСТИКА</p>
                 <ul>
                     <li>
@@ -176,7 +268,7 @@ foreach ($brands as $brandId => $brandInfo)
                         </label>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
 
         <div class="products">
