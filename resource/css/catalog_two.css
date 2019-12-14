@@ -1,15 +1,11 @@
 .catalog_two
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	flex-flow: column wrap;
 }
 
 .catalog_two > .cat
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	flex-flow: row nowrap;
 }
@@ -44,17 +40,13 @@
 
 .catalog_two > .catalog_list
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	flex-flow: row wrap;
 }
 .catalog_two > .catalog_list > .catalog
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 
 	width: 305px;
 	margin: 25px 15px;
