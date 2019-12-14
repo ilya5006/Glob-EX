@@ -32,3 +32,16 @@ h3
 
 	text-transform: uppercase;
 }
+
+@media screen and (max-width: 450px)
+{
+	h2, h3, p
+	{
+		text-align: center;
+	}
+	.pay-block
+	{
+		margin: 25px 0px;
+		width: 100%;
+	}
+}
