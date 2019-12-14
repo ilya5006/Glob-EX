@@ -83,6 +83,15 @@
 	padding: 20px 35px;
 }
 
+.product > .product-price::after
+{
+	display: flex;
+	height: 35px;
+	margin-left: 5px;
+	content: "р.";
+	font-size: 20px;
+}
+
 .product > .product-count
 {
 	font-size: 29px;
@@ -435,4 +444,12 @@
 .products
 {
 	width: 100%;
+}
+
+@media screen and (max-width: 1000px)
+{
+	.product > .product-image, .product > .product-info
+	{
+		width: 100%;
+	}
 }

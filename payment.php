@@ -22,7 +22,7 @@
 
 <div class="content" style="padding-top: 0">
     <div class="cat_fold">
-        <p> Главная </p>
+        <a href="./index.php"> Главная </a>
         <p><span> &#92; Оплата </span></p>
     </div>
     <h2> Оплата </h2>

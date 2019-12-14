@@ -72,6 +72,8 @@ h2
 	display: inline-block;
 
 	margin-right: 5px;
+
+	color: #000000;
 }
 
 .cat_fold a span, .cat_fold p span

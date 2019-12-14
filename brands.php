@@ -24,6 +24,12 @@
 
 <?php require(__DIR__ . '/view/header.php'); ?>
 
+<div class="content" style="padding: 0 50px;">
+    <div class="cat_fold">
+        <a href="./index.php"> Главная </a>
+        <p><span> &#92; Торговые марки </span></p>
+    </div>
+</div>
 <?php require(__DIR__ . '/view/sliderBrands.php'); ?>
 
 <?php require(__DIR__ . '/view/footer.php'); ?>

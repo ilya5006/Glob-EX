@@ -44,7 +44,7 @@ if (isset($_GET['change_address']))
 
 <div class="content" style="padding-top: 0">
     <div class="cat_fold">
-        <p> Главная </p>
+        <a href="./index.php"> Главная </a>
         <p><span> &#92; Профиль </span></p>
     </div>
     <h2> Мой профиль </h2>

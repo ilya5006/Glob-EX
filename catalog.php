@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./resource/css/normalize.css">
     <link rel="stylesheet" href="./resource/css/base.css">
     <link rel="stylesheet" href="./resource/css/header.css">
-    <link rel="stylesheet" href="./resource/css/banner.css">
+    <link rel="stylesheet" href="./resource/css/scroll.css">
     <link rel="stylesheet" href="./resource/css/catalog_two.css">
     <link rel="stylesheet" href="./resource/css/footer.css">
     <script src="./resource/js/header.js" defer></script>
@@ -25,9 +25,9 @@
 
 <?php require(__DIR__ . '/view/header.php'); ?>
 
-<?php require(__DIR__ . '/view/banner.php'); ?>
-
 <?php require(__DIR__ . '/view/catalog_two.php'); ?>
+
+<?php require(__DIR__ . '/view/sliderBrands.php'); ?>
 
 <?php require(__DIR__ . '/view/footer.php'); ?>
 
