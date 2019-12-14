@@ -24,9 +24,9 @@ foreach($concomitant as $idConcomitant)
 {
     echo '<div class="product">';
     $img = str_replace('ftp://37.140.192.146', './../', $data[(int)$idConcomitant]['image1']);
-    echo '  <a href="product.php?id='.$data[(int)$idConcomitant]['id'].'" class="img"><img src="' . $img . '" class="product_img" alt="фотография продукта"></a>';
-    echo '  <a href="product.php?id='.$data[(int)$idConcomitant]['id'].'" class="product-name">'.$data[(int)$idConcomitant]['name'].'</a>';
-    echo '  <p class="id" style="display: none;">'.$data['id'].'</p>';
+    echo '  <a href="product.php?id='.$idConcomitant.'" class="img"><img src="' . $img . '" class="product_img" alt="фотография продукта"></a>';
+    echo '  <a href="product.php?id='.$idConcomitant.'" class="product-name">'.$data[(int)$idConcomitant]['name'].'</a>';
+    echo '  <p class="id" style="display: none;">'.$data[(int)$idConcomitant].'</p>';
     if (isset($data[(int)$idConcomitant]['discount'])) { echo '  <p class="old-price">'.$data[(int)$idConcomitant]['old_price'].'</p>'; };
     echo '  <p class="new-price">'.$data[(int)$idConcomitant]['price'].'</p>';
     if (isset($data[(int)$idConcomitant]['discount'])) { echo '  <p class="sale">'.$data[(int)$idConcomitant]['discount'].'</p>'; };
