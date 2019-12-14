@@ -1,4 +1,10 @@
-<? session_start(); ?>
+<? 
+
+session_start(); 
+
+if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']); }
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

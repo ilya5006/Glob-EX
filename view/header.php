@@ -61,7 +61,7 @@ $fio = explode(' ', $userData['fio']);
             <a href="./index.php"><img src="./resource/img/logo.svg" alt="logo"></a>
             <ul>
                 <li><a href="#">ДОСТАВКА</a></li>
-                <li><a href="#">ОПЛАТА</a></li>
+                <li><a href="./../payment.php">ОПЛАТА</a></li>
                 <li><a href="#">КОНТАКТЫ</a></li>
                 <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
                 <li><a href="#">О КОМПАНИИ</a></li>

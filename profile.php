@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']); }
+
 require_once __DIR__ . '/model/connection.php';
 
 if (isset($_GET['change']))
