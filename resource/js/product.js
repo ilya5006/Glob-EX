@@ -4,8 +4,9 @@ let bigPuctire = document.querySelector('.product_info .pictures img.big');
 
 for (let i = 0; i < puctures.length; i++)
 {
-    puctures[i].addEventListener('click', function()
+    puctures[i].addEventListener('click', function(e)
     {
+        e.preventDefault();
         showImage(i)
     });
 }
