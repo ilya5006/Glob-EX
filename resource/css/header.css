@@ -705,6 +705,7 @@
 
 	cursor: pointer;
 	text-align: center;
+	border-bottom: 5px solid transparent;
 }
 
 #modal_authorize .modal .type_auth p.active

@@ -271,6 +271,7 @@
 	text-transform: uppercase;
 
 	color: #E31E24;
+	border-bottom: 5px solid transparent;
 }
 
 .info_slider .sliders p.active

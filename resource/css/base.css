@@ -106,6 +106,7 @@ h2
 	text-align: center;
 
 	color: #E31E24;
+	border-bottom: 5px solid transparent;
 }
 
 .sliders p.active, .sliders a.active
