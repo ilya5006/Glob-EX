@@ -124,3 +124,4 @@ searchInput.addEventListener('input', function()
         }
     }
 })
+

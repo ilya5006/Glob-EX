@@ -13,7 +13,7 @@
     if (password_verify($passwordEntered, $passwordDB))
     {
         setcookie('isLogin', $idDB, time() + 60*60*24*7, '/', $_SERVER['SERVER_NAME']); // 7 дней
-        echo json_encode(['Авторизация прошла успешно']);
+        echo json_encode(['done']);
     }
     else
     {
