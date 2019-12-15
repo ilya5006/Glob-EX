@@ -143,46 +143,65 @@ registerButton.addEventListener('click', () =>
     if (individual.checked) role = 0;
     if (entities.checked) role = 1;
 
-    if (firstPassword.value == secondPassword.value)
+    if (fioOkay == true) 
     {
-        let formData = new FormData();
- 
-        formData.append('fio', fio.value);
-        formData.append('role', role);
-        formData.append('phone', phoneNumber.value);
-        formData.append('email', email.value);
-        formData.append('mailing', mailing.checked ? 1 : 0);
-        formData.append('password', firstPassword.value);
-    
-        let connection = fetch('../../model/registration_all.php', 
-        {
-            method: 'POST',
-            body: formData
-        });
-    
-        connection.then((result) =>
-        {
-            //result.json().then(result => alert(result));
-            result.json().then(result => 
+        if (emailOkay == true) 
+        { 
+            if (phoneNumberOkay == true) 
             {
-                if (result == 'done')
-                {
-                    //document.location.reload();
+                if (passwordsOkay == true) 
+                { 
+                    if (userTypeOkay == true) 
+                    {
+                        if (personalDataOkay == true) 
+                        {    
+
+                            if (firstPassword.value == secondPassword.value)
+                            {
+                                let formData = new FormData();
+                         
+                                formData.append('fio', fio.value);
+                                formData.append('role', role);
+                                formData.append('phone', phoneNumber.value);
+                                formData.append('email', email.value);
+                                formData.append('mailing', mailing.checked ? 1 : 0);
+                                formData.append('password', firstPassword.value);
+                            
+                                let connection = fetch('../../model/registration_all.php', 
+                                {
+                                    method: 'POST',
+                                    body: formData
+                                });
+                            
+                                connection.then((result) =>
+                                {
+                                    result.json().then(result => 
+                                    {
+                                        if (result == 'done')
+                                        {
+                                            document.location.reload();
+                                        }
+                                        else
+                                        {
+                                            showMessaage(result);
+                                        }
+                                    });
+                                });
+                            
+                                connection.catch((error) => 
+                                {
+                                    showMessaage('Произошла ошибка. Попробуйте зарегистрироваться ещё раз.');
+                                });
+                            }
+                            else
+                            {
+                                showMessaage('Второй пароль не соответствует первому');
+                            }
+
+                        }
+                    }
                 }
-                else
-                {
-                    showMessaage(result);
-                }
-            });
-        });
-    
-        connection.catch((error) => 
-        {
-            showMessaage('Произошла ошибка. Попробуйте зарегистрироваться ещё раз.');
-        });
-    }
-    else
-    {
-        showMessaage('Второй пароль не соответствует первому');
+            }
+        }
     }
 });
