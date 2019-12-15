@@ -119,7 +119,7 @@ if (isset($product['specs']))
                     if ((int)$product['quantity'] > 0)
                     {
                         echo '<input type="number" name="" id="" min="1" max="'.$product['quantity'].'" value="1">';
-                        echo '<input type="submit" value="в корзину">';
+                        echo '<input type="submit" class="cart" value="в корзину">';
                     }
                 ?>
             </form>
