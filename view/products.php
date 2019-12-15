@@ -84,6 +84,18 @@ function findSpecsWithSameCategory($categoryId, $specs, $partitions)
     return $specsWithSameCategory;
 }
 
+function isSpecInArray($array, string $specToFind)
+{
+    if (is_array($array))
+    {
+        foreach ($array as $i => $specInArray)
+        {
+            if ($specInArray[0] == $specToFind) return $i;
+        }
+    }
+
+    return false;
+}
 
 function quantityOfProductsForOneBrand($brandId, $products)
 {
@@ -146,21 +158,23 @@ foreach ($brands as $brandId => $brandInfo)
             foreach ($specsWithSameCategory as $specId => $specName)
             {
                 $specsProduct = [];
+
                 foreach ($productsWithSameCategory as $c => $productInfo)
                 {
                     if (is_array($productInfo['specs']))
                     {
                         foreach ($productInfo['specs'] as $specIdProduct => $specValueProduct)
                         {
-                            if ($specId == $specIdProduct)
+                            if ($specId == $specIdProduct && $specValueProduct !== '')
                             {
-                                if (isset($specsProduct[$specId]))
+                                $idSpecIfExist = isSpecInArray($specsProduct[$specId], $specValueProduct);
+                                if ($idSpecIfExist || $idSpecIfExist === 0)
                                 {
-                                    $specsProduct[$specId][1]++;
+                                    $specsProduct[$specId][$idSpecIfExist][1]++;
                                 }
-                                else
+                                else 
                                 {
-                                    $specsProduct[$specId][] = [$specValueProduct, 0];
+                                    $specsProduct[$specId][] = [$specValueProduct, 1];
                                 }
                             }
                         }
@@ -178,10 +192,13 @@ foreach ($brands as $brandId => $brandInfo)
                         <li>';
                         foreach ($specsProduct as $c => $specValue)
                         {
-                            echo '
-                            <label class="container">
-                                <p>' . $specValue[0] . '(' . $specValue[1]. ')</p> <input type="checkbox"> <span class="checkmark"></span>
-                            </label>';
+                            foreach ($specValue as $v => $specInfoOutput)
+                            {
+                                echo '
+                                <label class="container">
+                                    <p>' . $specInfoOutput[0] . ' (' .  $specInfoOutput[1]  .  ')</p> <input type="checkbox"> <span class="checkmark"></span>
+                                </label>';
+                            }
                         }
                             
                    echo '</li>
