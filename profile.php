@@ -61,22 +61,22 @@ if (isset($_GET['change_address']))
                 <h3>Персональные данные</h3>
                 <label class="placeinput">
                     <p class="input-info">ФИО:</p>
-                    <?php echo '<input required="1" type="text" id="fio" name="fio" value="'.$userData['fio'].'">'; ?>
+                    <?php echo '<input required="1" type="text" id="fio" name="fio" value="'.$userData['fio'].'" autocomplete="name">'; ?>
                     <div class="place_holder">Введите ФИО<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">e-mail:</p>
-                    <?php echo '<input required="1" type="text" id="email" name="email" value="'.$userData['email'].'">'; ?>
+                    <?php echo '<input required="1" type="text" id="email" name="email" value="'.$userData['email'].'" autocomplete="email">'; ?>
                     <div class="place_holder">Введите почту<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Мобильный тел.:</p>
-                    <?php echo '<input required="1" type="tel" id="phone" name="phone_number" value="'.$userData['phone_number'].'">'; ?>
+                    <?php echo '<input required="1" type="tel" id="phone" name="phone_number" value="'.$userData['phone_number'].'" autocomplete="tel">'; ?>
                     <div class="place_holder">Введите телефон<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Рабочий тел.:</p>
-                    <?php echo '<input type="text" id="adress" name="work_number" value="'.$userData['work_number'].'">'; ?>
+                    <?php echo '<input type="text" id="adress" name="work_number" value="'.$userData['work_number'].'" autocomplete="tel-extension">'; ?>
                     <div class="place_holder">Введите адрес</div>
                 </label>
                 <div class="buttons">
@@ -89,12 +89,12 @@ if (isset($_GET['change_address']))
                 <h3>Адреса доставки</h3>
                 <label class="placeinput">
                     <p class="input-info">Адрес:</p>
-                    <?php echo '<input required="1" type="text" id="fio" name="address" value="'.$userData['address'].'">'; ?>
+                    <?php echo '<input required="1" type="text" id="fio" name="address" value="'.$userData['address'].'" autocomplete="address-line1">'; ?>
                     <div class="place_holder">Введите адрес<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Доп. адрес:</p>
-                    <?php echo '<input type="text" id="fio" name="additional_address" value="'.$userData['additional_address'].'">'; ?>
+                    <?php echo '<input type="text" id="fio" name="additional_address" value="'.$userData['additional_address'].'" autocomplete="address-line2">'; ?>
                     <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
                 </label>
                 <div class="buttons">

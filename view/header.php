@@ -156,16 +156,16 @@ $fio = explode(' ', $userData['fio']);
         <form class="register" style="display: none">
 
             <label class="placeinput" id="fio_label">
-                <input required="1" type="text" name="fio" id="fio" />
+                <input required="1" type="text" name="fio" id="fio" autocomplete="name"/>
                 <div class="place_holder">Введите фио<span>*</span></div>
             </label>
 
             <label class="placeinput" id="email_label">
-                <input required="1" type="text" name="email" id="email" />
+                <input required="1" type="text" name="email" id="email" autocomplete="email"/>
                 <div class="place_holder">Введите email<span>*</span></div>
             </label>
             <label class="placeinput" id="tel_label">
-                <input required="1" type="tel" name="phone_number" id="tel" />
+                <input required="1" type="tel" name="phone_number" id="tel" autocomplete="tel"/>
                 <div class="place_holder">Введите телефон<span>*</span></div>
             </label>
 

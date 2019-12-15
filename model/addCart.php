@@ -1,7 +1,7 @@
 <?php
     require_once './connection.php';
 
-    $idUser = $mysqli->escape_string((int)$_POST['id_user']);
+    $idUser = (int)$_COOKIE['isLogin'];
     $idProduct = $mysqli->escape_string((int)$_POST['id_product']);
     $productCount = $mysqli->escape_string((int)$_POST['product_count']);
 

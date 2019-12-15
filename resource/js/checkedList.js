@@ -22,7 +22,7 @@ function update()
     checkedProducts = [];
     allChecked.forEach(function(elem)
     {
-        checkedProducts.push([elem.parentElement.parentElement.querySelector('.article').textContent, elem.parentElement.parentElement.querySelector('.product-count').value]);
+        checkedProducts.push([elem.parentElement.parentElement.querySelector('.id').textContent, elem.parentElement.parentElement.querySelector('.product-count').value]);
     });
     checkedCount.textContent = checkedProducts.length;
     if (checkedProducts.length >= 1)
@@ -46,10 +46,48 @@ allProducts.forEach(function(element)
 
 btnDelete.addEventListener('click', function()
 {
-    // сюда код, когда жмёшь УДАЛИТЬ
+    let cartData = new FormData();
+    cartData.append('data', JSON.stringify(checkedProducts));
+
+    let connectionCart = fetch('../../model/DeleteFavFromFav.php', 
+    {
+        method: 'POST',
+        body: cartData
+    });
+    connectionCart.then((result) =>
+    {
+        result.json().then(result => 
+        {
+            if (result == 'done')
+            {
+                document.location.reload();
+            }
+        });
+    });
 })
 
 btnInCart.addEventListener('click', function()
 {
-    // сюда код, когда жмёшь В КОРЗИНУ
+    let cartData = new FormData();
+    cartData.append('data', JSON.stringify(checkedProducts));
+
+    let connectionCart = fetch('../../model/addCartFromFav.php', 
+    {
+        method: 'POST',
+        body: cartData
+    });
+    connectionCart.then((result) =>
+    {
+        result.json().then(result => 
+        {
+            if (result == 'done')
+            {
+                location.href = './cart.php';
+            }
+            else
+            {
+                showMessaage(result);
+            }
+        });
+    });
 })
