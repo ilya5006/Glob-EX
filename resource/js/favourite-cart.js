@@ -66,3 +66,33 @@ allProducts.forEach(function(element)
         });
     }
 });
+
+if (document.querySelector('.product_info'))
+{
+    document.querySelector('.product_info').querySelector('.cart').addEventListener('click', function(e)
+    {
+        e.preventDefault();
+        if (idUser)
+        {
+            let cartData = new FormData();
+            cartData.append('id_product', document.querySelector('.product_info').querySelector('.id').textContent);
+            cartData.append('id_user', idUser);
+            if (document.querySelector('.product_info').querySelector('input[type=number]')) { cartData.append('product_count', document.querySelector('.product_info').querySelector('input[type=number]').value); }
+            else { cartData.append('product_count', '1'); }
+
+            let connectionCart = fetch('../../model/addCart.php', 
+            {
+                method: 'POST',
+                body: cartData
+            });
+            connectionCart.then((result) =>
+            {
+                result.json().then(result => showMessaage(result));
+            });
+        }
+        else
+        {
+            showMessaage('Вы не авторизованны!');
+        }
+    });
+}

@@ -36,6 +36,29 @@ function ajax()
                 {
                     update(element.querySelector('.id').textContent, element.querySelector('input[type=number]').value);
                 });
+                element.querySelector('.fav-button').addEventListener('click', function()
+                {
+                    if (idUser)
+                    {
+                        let favDara = new FormData();
+                        favDara.append('id_product', element.querySelector('.id').textContent);
+                        favDara.append('id_user', idUser);
+            
+                        let connectionFav = fetch('../../model/addFavourite.php', 
+                        {
+                            method: 'POST',
+                            body: favDara
+                        });
+                        connectionFav.then((result) =>
+                        {
+                            result.json().then(result => showMessaage(result));
+                        });
+                    }
+                    else
+                    {
+                        showMessaage('Вы не авторизованны!');
+                    }
+                });
             });
         }
     }

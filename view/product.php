@@ -58,6 +58,7 @@ if (isset($product['specs']))
         </div>
         <div class="info">
             <h2> <?php echo $product['name']; ?> </h2>
+            <?php echo '<p class="id" style="display: none">'.$idProduct.'</p>'; ?>
             <div class="detail">
                 <p>Артикул <span><?php echo $product['article']; ?></span></p>
                 <?php
