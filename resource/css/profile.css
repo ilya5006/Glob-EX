@@ -103,7 +103,7 @@ form label
 	color: red;
 }
 
-form input[type=submit]
+form input[type=submit]:not(.button)
 {
 	font-size: 16px;
 	font-weight: bold;
@@ -254,7 +254,6 @@ form .container p a, .container p span
 {
 	font-size: 16px;
 	font-weight: bold;
-
 	align-self: flex-start;
 
 	min-width: 160px;
@@ -269,6 +268,7 @@ form .container p a, .container p span
 	color: #E31E25;
 	border: 3px solid #E31E25;
 	background-color: #FFFFFF;
+	margin-left: 0;
 }
 
 .button:first-child
