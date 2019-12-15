@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-*
+*, *:before, *:after
 {
 	box-sizing: border-box;
 	margin: 0;
@@ -30,7 +30,6 @@ a
 	display: block;
 
 	cursor: pointer;
-	transition: 0.3s all;
 	text-decoration: none;
 }
 
@@ -44,9 +43,14 @@ img
 	object-fit: contain;
 }
 
-.catalog_expand_button
+.catalog_expand_button, button, a
 {
 	cursor: pointer;
+}
+
+button, a, input, img
+{
+	transition: 0.3s all;
 }
 
 h2
