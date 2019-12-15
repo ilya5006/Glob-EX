@@ -177,14 +177,7 @@ registerButton.addEventListener('click', () =>
                                 {
                                     result.json().then(result => 
                                     {
-                                        if (result == 'done')
-                                        {
-                                            document.location.reload();
-                                        }
-                                        else
-                                        {
-                                            showMessaage(result);
-                                        }
+                                        showMessaage(result);
                                     });
                                 });
                             
