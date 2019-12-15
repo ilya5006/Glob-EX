@@ -254,10 +254,12 @@ form .container p a, .container p span
 {
 	font-size: 16px;
 	font-weight: bold;
+
 	align-self: flex-start;
 
 	min-width: 160px;
 	margin-top: 20px;
+	margin-left: 0;
 	padding: 15px 30px;
 
 	cursor: pointer;
@@ -268,7 +270,6 @@ form .container p a, .container p span
 	color: #E31E25;
 	border: 3px solid #E31E25;
 	background-color: #FFFFFF;
-	margin-left: 0;
 }
 
 .button:first-child

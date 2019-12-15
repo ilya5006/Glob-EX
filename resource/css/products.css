@@ -257,9 +257,10 @@
 .catalg_view .sort p select
 {
 	margin-left: 5px;
-	background-color: #FFFFFF;
+
 	color: #E31E25;
 	border: 0;
+	background-color: #FFFFFF;
 }
 
 .catalg_view .sort .view
@@ -435,9 +436,9 @@
 .product.hor .product-brand a
 {
 	display: inline-block;
-;
 
 	color: #E31E25;
+	;
 }
 
 .product .product-brand
@@ -491,14 +492,14 @@
 
 .list-products .product .inp-cart-fav
 {
-	margin-top: 10px;
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap;
-	margin-left: auto;
 	justify-content: space-between;
 
 	width: auto;
+	margin-top: 10px;
+	margin-left: auto;
 }
 
 .list-products .product.hor .inp-cart-fav
@@ -576,6 +577,7 @@
 .product .fav-button
 {
 	margin-left: 25px;
+
 	cursor: pointer;
 	transition: 0.3s all;
 }
@@ -723,8 +725,8 @@
 	}
 	.filters
 	{
-		padding-right: 0;
 		margin-bottom: 55px;
+		padding-right: 0;
 	}
 }
 
@@ -1017,11 +1019,12 @@
 {
 	.filter > ul > li > label > p
 	{
-		margin-bottom: 6px;
 		font-size: 15px;
+
+		margin-bottom: 6px;
 	}
 	.filter_button, .filter > p
 	{
-		 font-size: 18px;
+		font-size: 18px;
 	}
 }

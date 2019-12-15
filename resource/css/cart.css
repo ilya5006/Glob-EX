@@ -85,11 +85,14 @@
 
 .product > .product-price::after
 {
+	font-size: 20px;
+
 	display: flex;
+
 	height: 35px;
 	margin-left: 5px;
+
 	content: "р.";
-	font-size: 20px;
 }
 
 .product > .product-count

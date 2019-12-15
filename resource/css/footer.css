@@ -5,8 +5,6 @@
 
 .footer > .content
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-end;
@@ -14,8 +12,6 @@
 
 .footer > .content > ul
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	flex-flow: column nowrap;
 
@@ -31,8 +27,6 @@
 
 .footer > .content > ul.logo
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -125,8 +119,6 @@
 	}
 	.footer > .content > ul.logo li
 	{
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
 		align-items: center;
 		justify-content: center;
