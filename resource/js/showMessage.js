@@ -8,6 +8,8 @@
 
     setTimeout(function() 
     {
+        console.log('опа');
+        
         message.remove();    
     }, 2500);
 }

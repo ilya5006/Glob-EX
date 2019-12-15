@@ -133,6 +133,8 @@ personalData.addEventListener('input', function() { personalDataOkay = personalD
 // уже сама регистрация
 registerButton.addEventListener('click', () =>
 {
+    document.querySelector('.messageBox').innerHTML = '';
+    
     if (fioOkay == false) { showMessaage('Неверное ФИО.'); }
     if (emailOkay == false) { showMessaage('Неверная почта.'); }
     if (phoneNumberOkay == false) { showMessaage('Неверный номер.'); }
@@ -177,7 +179,14 @@ registerButton.addEventListener('click', () =>
                                 {
                                     result.json().then(result => 
                                     {
-                                        showMessaage(result);
+                                        if (result == 'done')
+                                        {
+                                            document.location.reload();
+                                        }
+                                        else
+                                        {
+                                            showMessaage(result);
+                                        }
                                     });
                                 });
                             

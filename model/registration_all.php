@@ -32,8 +32,8 @@
     $checkEmail = $mysqli->query("SELECT count(email) FROM users_all WHERE email = '$email';")->fetch_array()[0];
     $checkPhone = $mysqli->query("SELECT count(phone_number) FROM users_all WHERE phone_number = '$phoneNumber';")->fetch_array()[0];
 
-    if ($checkEmail > 0) { echo json_encode(['Данная почта уже используется.']); };
-    if ($checkPhone > 0) { echo json_encode(['Данный телефон уже занят.']); };
+    if ($checkEmail > 0) { echo json_encode(['Данная почта уже используется.']); die(); };
+    if ($checkPhone > 0) { echo json_encode(['Данный телефон уже занят.']); die(); };
 
     if ($checkEmail == 0 && $checkEmail == 0)
     {
@@ -43,7 +43,12 @@
         $lastIdResult = $lastIdQuery->fetch_assoc();
         $lastId = (int)$lastIdResult['id_user'] + 1;
 
-        $mysqli->query("INSERT INTO users_all VALUES ('$lastId', '$role', '$fio', '$passwordHash', '$email', '$phoneNumber', NULL, NULL, NULL, '$mailing')");
+        $add = $mysqli->query("INSERT INTO users_all VALUES ('$lastId', '$role', '$fio', '$passwordHash', '$email', '$phoneNumber', NULL, NULL, NULL, '$mailing')");
+
+        if ($add)
+        {   
+            echo json_encode(['done']);
+        }
 
         if ($role === '1') // юр. лица
         {
