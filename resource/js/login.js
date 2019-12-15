@@ -33,8 +33,6 @@ password.addEventListener('input', function(element)
     }
 });
 
-checkValue(emailOrPhone);
-checkValue(password);
 
 loginButton.addEventListener('click', () =>
 {
@@ -68,15 +66,3 @@ loginButton.addEventListener('click', () =>
         showMessaage('Произошла ошибка. Попробуйте зарегестрироваться ещё раз.');
     });
 });
-
-function checkValue(element)
-{
-    if (element.value == "")
-    {
-        element.style.outline = '1px solid red';
-    }
-    else
-    {
-        element.style.outline = '0px';
-    }
-}

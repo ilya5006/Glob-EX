@@ -35,7 +35,12 @@
     $lastIdResult = $lastIdQuery->fetch_assoc();
     $lastId = (int)$lastIdResult['id_user'] + 1;
 
-    $mysqli->query("INSERT INTO users_all VALUES ('$lastId', '$role', '$fio', '$passwordHash', '$email', '$phoneNumber', NULL, '$mailing')");
+    $mysqli->query("INSERT INTO users_all VALUES ('$lastId', '$role', '$fio', '$passwordHash', '$email', '$phoneNumber', NULL, NULL, NULL, '$mailing')");
+
+    if ($mysqli)
+    {
+        echo json_encode(["done"]);
+    }
 
     if ($role === '1') // юр. лица
     {
@@ -45,6 +50,4 @@
     {
         $mysqli->query("INSERT INTO users_individuals VALUES ('$lastId')");
     }
-
-    echo json_encode(['Регистрация прошла успешно']);
 ?>
