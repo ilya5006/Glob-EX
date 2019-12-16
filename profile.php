@@ -36,6 +36,7 @@ if (isset($_GET['change_address']))
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/favourite-cart.js" defer></script>
+    <script src="./resource/js/profile.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
 </head>
 <body>
@@ -57,51 +58,73 @@ if (isset($_GET['change_address']))
 
     <div class="profile">
         <div class="first">
-            <form action="" method="GET" class="edit">
+            <form action="./model/updateUserInfo.php" method="GET" class="edit">
                 <h3>Персональные данные</h3>
                 <label class="placeinput">
                     <p class="input-info">ФИО:</p>
-                    <?php echo '<input required="1" type="text" id="fio" name="fio" value="'.$userData['fio'].'" autocomplete="name">'; ?>
+                    <?php echo '<input required="1" type="text" name="fio" value="'.$userData['fio'].'" autocomplete="name">'; ?>
                     <div class="place_holder">Введите ФИО<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">e-mail:</p>
-                    <?php echo '<input required="1" type="text" id="email" name="email" value="'.$userData['email'].'" autocomplete="email">'; ?>
+                    <?php echo '<input required="1" type="text" name="email" value="'.$userData['email'].'" autocomplete="email">'; ?>
                     <div class="place_holder">Введите почту<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Мобильный тел.:</p>
-                    <?php echo '<input required="1" type="tel" id="phone" name="phone_number" value="'.$userData['phone_number'].'" autocomplete="tel">'; ?>
+                    <?php echo '<input required="1" type="tel" name="phone_number" value="'.$userData['phone_number'].'" autocomplete="tel">'; ?>
                     <div class="place_holder">Введите телефон<span>*</span></div>
                 </label>
                 <label class="placeinput">
                     <p class="input-info">Рабочий тел.:</p>
-                    <?php echo '<input type="text" id="adress" name="work_number" value="'.$userData['work_number'].'" autocomplete="tel-extension">'; ?>
+                    <?php echo '<input type="text" name="work_number" value="'.$userData['work_number'].'" autocomplete="tel-extension">'; ?>
                     <div class="place_holder">Введите адрес</div>
                 </label>
                 <div class="buttons">
-                    <input id="editButton" class="button" type="submit" name="change" value="изменить">
-                    <input id="editButton" class="button" type="submit" name="change_password" value="сменить пароль">
+                    <input id="editButton" class="button button-anim" type="submit" name="change" value="сохранить">
+                    <input id="changePassword" class="button button-anim" type="submit" name="change_password" value="сменить пароль">
                 </div>
             </form>
 
-            <form action="" method="GET" class="edit">
+            <form action="./model/updateUserAddress.php" method="GET" class="edit">
                 <h3>Адреса доставки</h3>
                 <label class="placeinput">
                     <p class="input-info">Адрес:</p>
-                    <?php echo '<input required="1" type="text" id="fio" name="address" value="'.$userData['address'].'" autocomplete="address-line1">'; ?>
+                    <?php echo '<input required="1" type="text" name="address" value="'.$userData['address'].'" autocomplete="address-line1">'; ?>
                     <div class="place_holder">Введите адрес<span>*</span></div>
                 </label>
-                <label class="placeinput">
+                <label class="placeinput additionalAdress" style="display: none;">
                     <p class="input-info">Доп. адрес:</p>
-                    <?php echo '<input type="text" id="fio" name="additional_address" value="'.$userData['additional_address'].'" autocomplete="address-line2">'; ?>
+                    <?php echo '<input type="text" name="additional_address1" value="'.$userData['additional_address1'].'" autocomplete="address-line2">'; ?>
+                    <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
+                </label>
+                <label class="placeinput additionalAdress" style="display: none;">
+                    <p class="input-info">Доп. адрес:</p>
+                    <?php echo '<input type="text" name="additional_address2" value="'.$userData['additional_address2'].'" autocomplete="address-line2">'; ?>
+                    <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
+                </label>
+                <label class="placeinput additionalAdress" style="display: none;">
+                    <p class="input-info">Доп. адрес:</p>
+                    <?php echo '<input type="text" name="additional_address3" value="'.$userData['additional_address3'].'" autocomplete="address-line2">'; ?>
+                    <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
+                </label>
+                <label class="placeinput additionalAdress" style="display: none;">
+                    <p class="input-info">Доп. адрес:</p>
+                    <?php echo '<input type="text" name="additional_address4" value="'.$userData['additional_address4'].'" autocomplete="address-line2">'; ?>
+                    <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
+                </label>
+                <label class="placeinput additionalAdress" style="display: none;">
+                    <p class="input-info">Доп. адрес:</p>
+                    <?php echo '<input type="text" name="additional_address5" value="'.$userData['additional_address5'].'" autocomplete="address-line2">'; ?>
                     <div class="place_holder">Введите дополнительный адрес<span>*</span></div>
                 </label>
                 <div class="buttons">
-                    <input id="editButton" class="button" type="submit" name="change_address" value="изменить">
+                    <div class="button button-anim" id="addAddress"> Добавить адресс </div>
+                    <input id="editButton" class="button button-anim" type="submit" name="change_address" value="изменить">
                 </div>
             </form>
         </div>
+
         <div class="two">
             <div class="orders">
                 <?php
@@ -117,7 +140,7 @@ if (isset($_GET['change_address']))
             <form class="mail">
                 <h3>РАССЫЛКИ</h3>
                 <label class="container" id="cart"> <p> e-mail рассылка</p> <input type="checkbox" name="mail"> <span class="checkmark"></span></label>
-                <a href="favourite.php" class="button buttonMail">сохранить</a>
+                <a href="./profile.php" class="button buttonMail">сохранить</a>
             </form>
         </div>
     </div>
