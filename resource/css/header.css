@@ -679,14 +679,6 @@
 	padding-top: 1px;
 }
 
-#login_button > p > span, #profie_button > p > span
-{
-	margin-bottom: 1px;
-	margin-left: 4px;
-
-	transform: rotate(90deg);
-}
-
 #modal_authorize .modal .type_auth
 {
 	display: flex;
@@ -1005,4 +997,16 @@ form .container p a, .container p span
 	{
 		width: 100%;
 	}
+}
+
+.arrow_down
+{
+	width: 10px;
+	height: 5px;
+	margin-left: 5px;
+
+	background-image: url('./../img/icons/arrow.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
