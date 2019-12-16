@@ -279,6 +279,21 @@
 	justify-content: center;
 }
 
+.pages
+{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.page_left, .page_right
+{
+	font-family: Catamaran, sans-serif;
+	font-size: 24px;
+	padding: 0px 5px;
+	cursor: pointer;
+}
 .catalg_view .pagination
 {
 	display: flex;
@@ -306,7 +321,7 @@
 	opacity: 0.7;
 }
 
-.catalg_view .pagination li:first-child::before
+/* .catalg_view .pagination li:first-child::before
 {
 	margin-right: 5px;
 
@@ -332,7 +347,7 @@
 	content: ">";
 
 	color: #000000;
-}
+} */
 
 .catalg_view .pagination li:first-child::before, .catalg_view .pagination li:last-child::after
 {
