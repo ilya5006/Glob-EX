@@ -43,7 +43,7 @@
         $lastIdResult = $lastIdQuery->fetch_assoc();
         $lastId = (int)$lastIdResult['id_user'] + 1;
 
-        $add = $mysqli->query("INSERT INTO users_all VALUES ('$lastId', '$role', '$fio', '$passwordHash', '$email', '$phoneNumber', NULL, NULL, NULL, '$mailing')");
+        $add = $mysqli->query("INSERT INTO users_all VALUES ('$lastId', '$role', '$fio', '$passwordHash', '$email', '$phoneNumber', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$mailing')");
 
         if ($add)
         {   

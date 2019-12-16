@@ -203,7 +203,7 @@ foreach ($brands as $brandId => $brandInfo)
 
             }
             ?>
-            <button id="apply_filters">Применить фильтры</button>
+            <button id="apply_filters" style="display: none;">Применить фильтры</button>
         </div>
 
         <div class="products">

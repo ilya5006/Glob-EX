@@ -1036,3 +1036,29 @@
 		font-size: 18px;
 	}
 }
+
+#apply_filters
+{
+	width: 100%;
+	font-size: 16px;
+    font-weight: bold;
+    align-self: flex-start;
+    min-width: 160px;
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: 0.3s all;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E31E25;
+    border: 3px solid #E31E25;
+    background-color: #FFFFFF;
+}
+
+#apply_filters:hover
+{
+	color: #FFFFFF;
+    border: 3px solid #E31E25;
+    background-color: #E31E25;
+}

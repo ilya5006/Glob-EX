@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 16 2019 г., 00:13
--- Версия сервера: 10.3.13-MariaDB-log
+-- Время создания: Дек 16 2019 г., 19:30
+-- Версия сервера: 5.7.25
 -- Версия PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -34,6 +34,17 @@ CREATE TABLE `user-cart` (
   `product_count` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `user-cart`
+--
+
+INSERT INTO `user-cart` (`id_user`, `id_product`, `product_count`) VALUES
+(1, 40, 123),
+(1, 59, 1),
+(1, 18, 1),
+(1, 22, 1),
+(1, 13, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +55,17 @@ CREATE TABLE `user-favoutite` (
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `user-favoutite`
+--
+
+INSERT INTO `user-favoutite` (`id_user`, `id_product`) VALUES
+(1, 18),
+(1, 22),
+(1, 15),
+(1, 13),
+(1, 59);
 
 -- --------------------------------------------------------
 
@@ -60,7 +82,11 @@ CREATE TABLE `users_all` (
   `phone_number` varchar(20) NOT NULL,
   `work_number` varchar(20) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
-  `additional_address` varchar(255) DEFAULT NULL,
+  `additional_address1` varchar(255) DEFAULT NULL,
+  `additional_address2` text,
+  `additional_address3` text,
+  `additional_address4` text,
+  `additional_address5` text,
   `mailing` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -68,8 +94,10 @@ CREATE TABLE `users_all` (
 -- Дамп данных таблицы `users_all`
 --
 
-INSERT INTO `users_all` (`id_user`, `role`, `fio`, `password`, `email`, `phone_number`, `work_number`, `address`, `additional_address`, `mailing`) VALUES
-(1, 0, 'Александр Манисов', '$2y$10$AZMQJL4O9LhR5RKdDq1Lm.zmbkGV2.w9Pgl6pVpq8x3QY.OIZDsYS', 'test@test.ru', '+7999999999', NULL, NULL, NULL, 0);
+INSERT INTO `users_all` (`id_user`, `role`, `fio`, `password`, `email`, `phone_number`, `work_number`, `address`, `additional_address1`, `additional_address2`, `additional_address3`, `additional_address4`, `additional_address5`, `mailing`) VALUES
+(1, 0, 'Александр Манисов', '$2y$10$AZMQJL4O9LhR5RKdDq1Lm.zmbkGV2.w9Pgl6pVpq8x3QY.OIZDsYS', 'test@test.ru', ' 7999999999', '', 'z', 'x', 'c', 'v', 'b', 'n', 0),
+(2, 0, 'asd asd', '$2y$10$x28cR9hS6aYkwHCoV9H/Le1HIQuRrcO8chz9qODGTqCjdKQCCHiqG', 'te1st@test.ru', '+7999999999', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(3, 0, 'asd asd', '$2y$10$yUe.KjvT8BTtqxAIjxghCOniTQvqQTxCftGBcNi3b/qAJxrv570Bu', 'dfghdfghh22@asd.ru', '+7959199399', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -96,7 +124,9 @@ CREATE TABLE `users_individuals` (
 --
 
 INSERT INTO `users_individuals` (`id_user`) VALUES
-(1);
+(1),
+(2),
+(3);
 
 --
 -- Индексы сохранённых таблиц
@@ -140,7 +170,7 @@ ALTER TABLE `users_individuals`
 -- AUTO_INCREMENT для таблицы `users_all`
 --
 ALTER TABLE `users_all`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
