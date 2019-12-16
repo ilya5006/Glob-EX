@@ -18,6 +18,10 @@ if (isset($_GET['change_address']))
 {
     header('Location: ./model/updateUserAddress.php?address=' . $_GET['address'] . '&additional_address=' . $_GET['additional_address'] . '&id_user=' . $_COOKIE['isLogin']);
 }
+if (isset($_GET['mailing']))
+{
+    header('Location: ./model/updateUserMailing.php?mailing=' . $_GET['mail'] . '&id_user=' . $_COOKIE['isLogin']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -137,10 +141,10 @@ if (isset($_GET['change_address']))
                 <? echo '<a href="favourite.php">избранные товары ('.$favouriteCount[0].')</a>'; ?>
             </div>
 
-            <form class="mail">
+            <form class="mail" method="GET" action="">
                 <h3>РАССЫЛКИ</h3>
                 <label class="container" id="cart"> <p> e-mail рассылка</p> <input type="checkbox" name="mail"> <span class="checkmark"></span></label>
-                <a href="./profile.php" class="button buttonMail">сохранить</a>
+                <input type="submit" name="mailing" href="./profile.php" class="button buttonMail">
             </form>
         </div>
     </div>
