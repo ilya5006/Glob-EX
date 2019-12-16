@@ -16,6 +16,7 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
     <link rel="stylesheet" href="./resource/css/normalize.css">
     <link rel="stylesheet" href="./resource/css/base.css">
     <link rel="stylesheet" href="./resource/css/header.css">
+    <link rel="stylesheet" href="./resource/css/delivery.css">
     <link rel="stylesheet" href="./resource/css/cart.css">
     <link rel="stylesheet" href="./resource/css/footer.css">
     <script src="./resource/js/header.js" defer></script>
@@ -30,6 +31,91 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
 <?php require(__DIR__ . '/view/header.php'); ?>
 
 <div class="content" style="padding-top: 0" id="cart-update"> </div>
+
+<div class="content">
+    <h2> СПОСОБ ДОСТАВКИ </h2>
+    <div class="delivery">
+        <div class="delivery-type">
+            <p class="type-deliv active">Доставка</p>
+            <p class="type-pickup">Самовызов</p>
+        </div>
+        <div class="deliv-inf" id="deliv-one">
+        <?php
+            $result = $mysqli->query("SELECT * FROM `users_all` WHERE id_user = $idUser;");
+            $userData = $result->fetch_assoc();
+        ?>
+            <label class="placeinput">
+                <p>
+                    <span> Адрес: </span> 
+                        <?php
+                            $addressIsSet = false;
+                            if ($userData['address'] != '') { $addressIsSet = true; }
+                            if ($userData['additional_address1'] != '') { $addressIsSet = true; }
+                            if ($userData['additional_address2'] != '') { $addressIsSet = true; }
+                            if ($userData['additional_address3'] != '') { $addressIsSet = true; }
+                            if ($userData['additional_address4'] != '') { $addressIsSet = true; }
+                            if ($userData['additional_address5'] != '') { $addressIsSet = true; }
+                            
+                            if ($addressIsSet == true)
+                            {
+                                echo '<select name="address" id="cart-address">';
+                                if ($userData['address'] != '') { echo '<option>'.$userData['address'].'</option>'; }
+                                if ($userData['additional_address1'] != '') { echo '<option>'.$userData['additional_address1'].'</option>'; }
+                                if ($userData['additional_address2'] != '') { echo '<option>'.$userData['additional_address2'].'</option>'; }
+                                if ($userData['additional_address3'] != '') { echo '<option>'.$userData['additional_address3'].'</option>'; }
+                                if ($userData['additional_address4'] != '') { echo '<option>'.$userData['additional_address4'].'</option>'; }
+                                if ($userData['additional_address5'] != '') { echo '<option>'.$userData['additional_address5'].'</option>'; }
+                                echo '</select>';
+                            }
+                            else
+                            {
+                            ?>
+                                <input required="1" type="text" id="cart-address" placeholder="У вас в профиле не указан адресс доставки!" />
+                                <div class="place_holder">Введите адресс<span>*</span></div>
+                            <?php
+                            }
+                        ?>
+                </p> 
+            </label>
+            <label class="placeinput">
+                <p>
+                    <span> Телефон: </span> 
+                    <?php
+                        echo '<select name="phome" id="cart-phone">';
+                        if ($userData['phone_number'] != '') { echo '<option>'.$userData['phone_number'].'</option>'; }
+                        if ($userData['work_number'] != '') { echo '<option>'.$userData['work_number'].'</option>'; }
+                        echo '</select>';
+                    ?>
+                </p>
+            </label>
+            <!-- <button class="change-address">ВЫБРАТЬ АДРЕС</button> -->
+        </div>
+
+        <div class="deliv-inf" id="deliv-two" style="display: none;"> 
+            <div class="two">
+                <iframe src="https://yandex.ru/map-widget/v1/-/CGhtnJ5D" width="640" height="400" frameborder="1" allowfullscreen="true"></iframe>
+                <div>
+                    <h3> <span class="bold"> Адрес: </span> г. Москва. Ул золоторожский вал дом 11 строение 8 </h3>
+                    <h3> <span class="bold"> Телефон: </span> <span class="red"> 8-495-380-42-88 </span> </h3>
+                </div>
+            </div>
+        </div>
+        <!-- <p class="delivery-cost">Стоимость доставки: <span>200</span></p> -->
+        <p class="info">Курьер свяжется с Вами для уточнения адреса и времени и стоймости доставки, после оформления заказа.</p>
+    </div>
+
+    <h2> СПОСОБ ОПЛАТЫ </h2>
+    <div class="pay-type">
+        <label class="container" id="cash">
+            <p> НАЛИЧНЫМИ ПРИ ПОЛУЧЕНИИ </p> <input type="radio" name="pay_type"> <span
+                class="checkmark"></span>
+        </label>
+        <label class="container" id="cart">
+            <p> ОПЛАТА КАРТОЙ ПРИ ПОЛУЧЕНИИ</p> <input type="radio" name="pay_type"> <span
+                class="checkmark"></span>
+        </label>
+    </div>
+</div>
 
 <?php require(__DIR__ . '/view/footer.php'); ?>
 

@@ -67,3 +67,24 @@ function ajax()
 }
 
 ajax();
+
+//delivery type
+
+let delivOne = document.querySelector('.delivery .delivery-type > .type-deliv');
+let delivTwo = document.querySelector('.delivery > .delivery-type > .type-pickup');
+
+delivOne.addEventListener('click', function()
+{
+    delivOne.classList.add('active');
+    delivTwo.classList.remove('active');
+    document.querySelector('.delivery > #deliv-one').style.display = "flex";
+    document.querySelector('.delivery > #deliv-two').style.display = "none";
+});
+
+delivTwo.addEventListener('click', function()
+{
+    delivOne.classList.remove('active');
+    delivTwo.classList.add('active');
+    document.querySelector('.delivery > #deliv-one').style.display = "none";
+    document.querySelector('.delivery > #deliv-two').style.display = "flex";
+});
