@@ -147,4 +147,8 @@ if (isset($product['specs']))
             </div>
         </div>
     </div>
+    <div id="imageFullScreen">
+        <div id="closeImageFullscreen"> &times </div>
+        <img alt="">
+    </div>
 </div>

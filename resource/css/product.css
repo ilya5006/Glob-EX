@@ -444,3 +444,51 @@
 		font-size: 12px;
 	}
 }
+
+#imageFullScreen
+{
+	display: none;
+	position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    min-width: 100vw;
+	min-height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#imageFullScreen > #closeImageFullscreen
+{
+	transition: 0.6s all;
+	cursor: pointer;
+	color: #FFFFFF;
+	z-index: 1500;
+	font-size: 100px;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	min-height: 75px;
+	min-width: 75px;
+	display: flex;
+	justify-content: flex-end;
+	align-self: flex-start;
+	text-shadow: 3px 3px 0px #E31E24;
+
+}
+
+#imageFullScreen > #closeImageFullscreen:hover
+{
+	color: #E31E24;
+}
+#imageFullScreen > img
+{
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	z-index: 1001;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}

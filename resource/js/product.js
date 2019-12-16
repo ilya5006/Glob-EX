@@ -74,3 +74,57 @@ document.querySelector('.info_slider > .sliders .slider_f').addEventListener('cl
     document.querySelector('.informations .features').style.display = 'block';
 });
 
+// modal image
+
+let imageModalClosed = true;
+bigPuctire.addEventListener('click', function(elem)
+{
+    document.querySelector('#imageFullScreen').style.display = 'block';
+    document.body.style.overflowY = 'hidden';
+    document.body.style.paddingRight = '18px';
+    document.querySelector('#imageFullScreen > img').src = bigPuctire.src;
+    imageModalClosed = false;
+});
+
+document.querySelector('#imageFullScreen > #closeImageFullscreen').addEventListener('click', function()
+{
+    closeModalImage();
+});
+
+document.addEventListener("keydown", function (event)
+{
+    if (event.code == 'Escape') 
+    {
+        closeModalImage();
+    }
+});
+
+document.querySelector('#imageFullScreen > #closeImageFullscreen').addEventListener('click', function()
+{
+    document.querySelector('#imageFullScreen').style.display = 'none';
+    document.body.style.overflowY = 'scroll';
+    document.body.style.paddingRight = '0px';
+});
+
+document.addEventListener('click', function(e)
+{
+    if (imageModalClosed == false)
+    {
+        if (e.clientX < 350)
+        {
+            closeModalImage();
+        }
+        if (e.clientX > (document.documentElement.clientWidth - 350))
+        {
+            closeModalImage();
+        }
+    }
+}, true);
+
+function closeModalImage()
+{
+    document.querySelector('#imageFullScreen').style.display = 'none';
+    document.body.style.overflowY = 'scroll';
+    document.body.style.paddingRight = '0px';
+    imageModalClosed = true;
+}
