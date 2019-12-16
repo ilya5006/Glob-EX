@@ -60,7 +60,7 @@ $fio = explode(' ', $userData['fio']);
         <div class="menu">
             <a href="./index.php"><img src="./resource/img/logo.svg" alt="logo"></a>
             <ul>
-                <li><a href="#">ДОСТАВКА</a></li>
+                <li><a href="./../delivery.php">ДОСТАВКА</a></li>
                 <li><a href="./../payment.php">ОПЛАТА</a></li>
                 <li><a href="#">КОНТАКТЫ</a></li>
                 <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>

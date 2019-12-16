@@ -48,17 +48,17 @@
 
     <h4>Банковские карты</h4>
     <div class="pay-icons">
-        <img src="./resource/img/icons/pay/visa.png" alt="VISA">
-        <img src="./resource/img/icons/pay/mastercard.png" alt="MasterCard">
-        <img src="./resource/img/icons/pay/mir.png" alt="МИР">
+        <img src="./resource/img/icons/pay/visa.png" alt="VISA" style="padding: 0px 15px;">
+        <img src="./resource/img/icons/pay/mastercard.png" alt="MasterCard" style="padding: 0px 15px;">
+        <img src="./resource/img/icons/pay/mir.png" alt="МИР" style="padding: 0px 15px;">
     </div>
     <br>
 
     <h4>Платежные системы</h4>
     <div class="pay-icons">
         <img src="./resource/img/icons/pay/googlePay.png" alt="Google Pay" style="padding: 0px 15px;">
-        <img src="./resource/img/icons/pay/applePay.png" alt="Apple Pay">
-        <img src="./resource/img/icons/pay/samsungPay.png" alt="Samsung Pay">
+        <img src="./resource/img/icons/pay/applePay.png" alt="Apple Pay" style="padding: 0px 15px;">
+        <img src="./resource/img/icons/pay/samsungPay.png" alt="Samsung Pay" style="padding: 0px 15px;">
     </div>
     <br>
 

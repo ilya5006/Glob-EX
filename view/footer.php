@@ -34,7 +34,7 @@ foreach($data as $category)
             <li><a href="#">МЕБЕЛЬ</a></li> -->
         </ul>
         <ul>
-            <li><a href="#">ДОСТАВКА</a></li>
+            <li><a href="./../delivery.php">ДОСТАВКА</a></li>
             <li><a href="./../payment.php">ОПЛАТА</a></li>
             <li><a href="#">КОНТАКТЫ</a></li>
             <li><a href="#">О КОМПАНИИ</a></li>
