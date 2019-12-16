@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 require_once __DIR__ . '/../model/xmlparser.php';
 
@@ -196,7 +196,7 @@ foreach ($brands as $brandId => $brandInfo)
                             {
                                 echo '
                                 <label class="container">
-                                    <p>' . $specInfoOutput[0] . ' (' .  $specInfoOutput[1]  .  ')</p> <input type="checkbox"> <span class="checkmark"></span>
+                                    <p><span id="spec_value">' . $specInfoOutput[0] . '</span>(' .  $specInfoOutput[1]  .  ')</p> <input type="checkbox"> <span class="checkmark"></span>
                                 </label>';
                             }
                         }
