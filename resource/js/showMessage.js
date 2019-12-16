@@ -6,8 +6,9 @@ function showMessaage(messageText)
     message.textContent = messageText;
     messageBox.appendChild(message);
 
-    setTimeout(function() 
+    setTimeout(() =>
     {
-        message.remove();    
-    }, 2500);
+        document.querySelectorAll('.messageBox > p')[0].remove();
+    }, 2000);
+
 }
