@@ -8,7 +8,6 @@ foreach ($brands as $brandId => $brandInfo)
 {
     $brands[$brandId]['image'] = str_replace('ftp://37.140.192.146', './../', $brands[$brandId]['image']);
 }
-// $img = base64_encode(file_get_contents('ftp://user587s:CgIc6Wbt@user587s.beget.tech/Data/Картинки и баннеры/Логотипы/1.jpg'));
 ?>
 
 <div class="content">

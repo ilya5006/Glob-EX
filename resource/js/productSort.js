@@ -3,7 +3,7 @@ let sortHor = document.querySelector('#sort-hor');
 let listProduct = document.querySelector('.list-products');
 let products = document.querySelectorAll('.product');
 
-// Т.к products - не обычный массив, а NodeList, нам нужно сделать из него массив, чтобы использовать его методы
+// Т.к products - не обычный массив, а NodeList, нам нужно сделать из него обычный массив, чтобы использовать его методы
 let productsArray = [];
 products.forEach((product) => { productsArray.push(product); });
 products = productsArray;
@@ -15,6 +15,8 @@ let productsQuantitySort = document.querySelector('#products_quantity');
 let brandsSort = document.querySelectorAll('#brands-filter ul li label');
 
 let pagination = document.querySelector('.pagination');
+
+let applyFilters = document.querySelector('#apply_filters');
 
 // Выбранное количество сортировки товаров на странице - productsQuantity.selectedOptions[0].value
 
@@ -90,29 +92,67 @@ checkSize()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-let sortProductsByBrands = () =>
+let toApplyFilters = () =>
 {
-    let choseBrands = document.querySelectorAll('#brands-filter .container input:checked');
-    
-    if (choseBrands.length == 0) 
+    let choseSpecs = document.querySelectorAll('.filter .container input:checked');
+
+    if (choseSpecs.length == 0)
     {
         products = originalProductsList;
         showPages();
         productsListUpdate();
         return 0;
     }
-    let productsWithSameBrands = [];
+    
+    products = [];
+    let specsNameValueObject = {};
 
-    products.forEach((product) =>
+    choseSpecs.forEach((spec) =>
     {
-        choseBrands.forEach((brand) =>
+        //Да, это очень плохой код, но я не знаю, как здесь сделать иначе
+        let specName = spec.parentElement.parentElement.parentElement.parentElement.querySelector('p').textContent.slice(0, -1);
+        let specValue = spec.parentElement.querySelector('#spec_value').textContent;
+
+        let isSpecNameAlreayInObject = specsNameValueObject[specName];
+
+        if (isSpecNameAlreayInObject)
         {
-            if (product.dataset.brand == brand.value) productsWithSameBrands.push(product);
+            specsNameValueObject[specName].push(specValue);
+        }
+        else
+        {
+            specsNameValueObject[specName] = [specValue];
+        }
+
+    });
+
+    let accpetedFiltersLength = Object.keys(specsNameValueObject).length;
+
+    originalProductsList.forEach((product) =>
+    {
+        let specsValuesProduct = product.dataset.specs.split(' ; ');
+        let suitableFilters = 0;
+        specsValuesProduct.forEach((oneFilter) =>
+        {
+            let specValuePair = oneFilter.split(' => ');
+            let specName = specValuePair[0];
+            let specValue = specValuePair[1];
+
+            if (specsNameValueObject[specName])
+            {
+                let isSpecInObject = specsNameValueObject[specName].find((element) => 
+                { 
+                    if (element == specValue) 
+                    return true; 
+                });
+
+                if (isSpecInObject) suitableFilters++;
+            }
         });
+
+        if (accpetedFiltersLength == suitableFilters) products.push(product);
     });
     
-    products = productsWithSameBrands;
-
     showPages();
     productsListUpdate();
 }
@@ -194,3 +234,8 @@ pagination.addEventListener('click', (event) =>
 
 showPages();
 productsListUpdate();
+
+applyFilters.addEventListener('click', () =>
+{
+    toApplyFilters();
+});

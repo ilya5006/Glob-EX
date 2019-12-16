@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . '/../model/xmlparser.php';
 
@@ -128,8 +128,8 @@ foreach ($brands as $brandId => $brandInfo)
 <div class="content" style="padding-top: 0">
     <div class="catalg_view">
         <div class="filters">
-            <div class="price-filter">
-                <p>Цена:</p>
+            <div class="price-filter" data-specname="Цена">
+                <p>Цена</p>
                 <div class="price-input">
                     <input title="минимальная цена" id="price-min">
                     <p>-</p>
@@ -137,7 +137,7 @@ foreach ($brands as $brandId => $brandInfo)
                 </div>
                 <div id="slider"></div>
             </div>
-            <div class="filter" id="brands-filter">
+            <div class="filter" data-sepcname="Бренд">
                 <p>Бренд</p>
                 <ul>
                     <li>
@@ -147,7 +147,7 @@ foreach ($brands as $brandId => $brandInfo)
                             $productsQuantity = quantityOfProductsForOneBrand($brandId, $productsWithSameCategory);
                             
                             echo '<label class="container">';
-                                echo '<p>' . $brandInfo['name'] . ' (' . $productsQuantity . ') </p> <input type="checkbox" value="' . $brandInfo['name'] . '"> <span class="checkmark"></span>';
+                                echo '<p>' . $brandInfo['name'] . ' (' . $productsQuantity . ')</p> <input type="checkbox" value="' . $brandInfo['name'] . '"> <span class="checkmark"></span>';
                             echo '</label>';
                         }
                         ?>
@@ -180,10 +180,6 @@ foreach ($brands as $brandId => $brandInfo)
                         }
                     }
                 }
-
-                // echo '<pre>';
-                //     var_export($specsProduct);
-                // echo '</pre>';
                 
                 echo '
                 <div class="filter" data-specName="' . $specName .'">
@@ -206,86 +202,8 @@ foreach ($brands as $brandId => $brandInfo)
                 </div>';
 
             }
-            
             ?>
-            <!-- <div class="filter">
-                <p>ФОРМАТ</p>
-                <ul>
-                    <li>
-                        <label class="container">
-                            <p>A4 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>A5 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>A3 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>A2 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>A1 (3)</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                    </li>
-                </ul>
-            </div> -->
-            <!-- <div class="filter">
-                <p>ХАРАКТЕРИСТИКА</p>
-                <ul>
-                    <li>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="filter">
-                <p>ХАРАКТЕРИСТИКА</p>
-                <ul>
-                    <li>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                        <label class="container">
-                            <p>Атрибут</p> <input type="checkbox"> <span class="checkmark"></span>
-                        </label>
-                    </li>
-                </ul>
-            </div> -->
+            <button id="apply_filters">Применить фильтры</button>
         </div>
 
         <div class="products">
@@ -385,8 +303,15 @@ foreach ($brands as $brandId => $brandInfo)
                     $image = str_replace('ftp://37.140.192.146', './../', $productInfo['image1']);
                 }
                 
+                $productSpecsIdValues = $productInfo['specs'];
+                $specsValuesString = '';
+
+                foreach ($productSpecsIdValues as $idSpec => $productSpecValue)
+                {
+                    $specsValuesString .= $specs[$idSpec]['name'] . ' => ' . $productSpecValue . ' ; ';
+                }
                 ?>
-                <div class="product" data-brand="<?php echo $brands[$productInfo['brand']]['name']; ?>">
+                <div class="product" data-specs="<?php echo $specsValuesString . 'Бренд => ' . $brands[$productInfo['brand']]['name'] . ' ; '; ?>">
                     <!-- <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label> -->
                     <?php
                     if ($isProductHaveImage)
@@ -436,9 +361,8 @@ foreach ($brands as $brandId => $brandInfo)
                         else
                         { ?>
                             <p class="available">нет в наличии</p>
-                  <?php } ?>
-
-                        <?php
+                  <?php } 
+                  
                         if ($isProductHaveDiscount)
                         { ?>
                             <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
