@@ -1,11 +1,17 @@
-﻿.pay-block
+﻿.payments, .pay-icons
 {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.pay-block
+{
+	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	flex-flow: column nowrap;
 	justify-content: center;
 
-	width: 250px;
 	margin: 25px 10px;
 	margin-bottom: 55px;
 }
@@ -16,6 +22,7 @@
 }
 .pay-block p
 {
+	max-width: 250px;
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 23px;
@@ -33,9 +40,25 @@ h3
 	text-transform: uppercase;
 }
 
+h4
+{
+	font-weight: normal;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin: 10px 0;
+}
+
+@media screen and (max-width: 750px)
+{
+	.payments
+	{
+		flex-flow: column nowrap;
+	}
+}
+
 @media screen and (max-width: 450px)
 {
-	h2, h3, p
+	h2, h3, p, h4
 	{
 		text-align: center;
 	}
@@ -43,5 +66,10 @@ h3
 	{
 		width: 100%;
 		margin: 25px 0px;
+	}
+	.pay-icons > img
+	{
+		max-width: 33%;
+		flex-grow: 1;
 	}
 }

@@ -27,10 +27,40 @@
     </div>
     <h2> Оплата </h2>
 
-    <div class="pay-block">
-        <img src="./resource/img/icons/payment_1.png" alt="оплата">
-        <p>НАЛИЧНЫМИ ПРИ ПОЛУЧЕНИИ КУРЬЕРУ ИЛИ В ПУНКТЕ ВЫДАЧИ</p>
+    <div class="payments">
+        <div class="pay-block">
+            <img src="./resource/img/icons/pay/payment_2.png" alt="оплата">
+            <p>КАРТОЙ ПРИ ПОЛУЧЕНИИ КУРЬЕРУ ИЛИ В ПУНКТЕ ВЫДАЧИ</p>
+        </div>
+        <div class="pay-block">
+            <img src="./resource/img/icons/pay/payment_1.png" alt="оплата">
+            <p>НАЛИЧНЫМИ ПРИ ПОЛУЧЕНИИ КУРЬЕРУ ИЛИ В ПУНКТЕ ВЫДАЧИ</p>
+        </div>
+        <div class="pay-block">
+            <img src="./resource/img/icons/pay/payment_3.png" alt="оплата">
+            <p>ОПЛАТА СЧЕТА ПО РЕКВИЗИТАМ</p>
+        </div>
     </div>
+
+    <h3>БЕЗНАЛИЧНАЯ ОПЛАТА</h3>
+    <p>Безналичная оплата возможна в пункте выдачи и курьеру</p>
+    <br>
+
+    <h4>Банковские карты</h4>
+    <div class="pay-icons">
+        <img src="./resource/img/icons/pay/visa.png" alt="VISA">
+        <img src="./resource/img/icons/pay/mastercard.png" alt="MasterCard">
+        <img src="./resource/img/icons/pay/mir.png" alt="МИР">
+    </div>
+    <br>
+
+    <h4>Платежные системы</h4>
+    <div class="pay-icons">
+        <img src="./resource/img/icons/pay/googlePay.png" alt="Google Pay" style="padding: 0px 15px;">
+        <img src="./resource/img/icons/pay/applePay.png" alt="Apple Pay">
+        <img src="./resource/img/icons/pay/samsungPay.png" alt="Samsung Pay">
+    </div>
+    <br>
 
     <h3>оплата наличными</h3>
     <p>Оплата наличными возможна в пункте выдачи и курьеру</p>
