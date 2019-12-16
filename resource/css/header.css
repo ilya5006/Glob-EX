@@ -123,7 +123,7 @@
 {
 	font-size: 16px;
 	font-weight: bold;
-
+	max-height: 40px;;
 	display: flex;
 	align-items: center;
 
