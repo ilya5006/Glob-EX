@@ -8,19 +8,19 @@ require_once __DIR__ . '/model/connection.php';
 if (isset($_GET['change']))
 {
     header('Location: ./model/updateUserInfo.php?fio=' . $_GET['fio'] . '&email=' . $_GET['email'] . '&phone_number=' . $_GET['phone_number'] . '&work_number=' .
-            $_GET['work_number'] . '&id_user=' . $_COOKIE['isLogin']);
+            $_GET['work_number']);
 }
 if (isset($_GET['change_password']))
 {
     header('Location: ./model/updateUserPassword.php?');
 }
-if (isset($_GET['change_address']))
-{
-    header('Location: ./model/updateUserAddress.php?address=' . $_GET['address'] . '&additional_address=' . $_GET['additional_address'] . '&id_user=' . $_COOKIE['isLogin']);
-}
+// if (isset($_GET['change_address']))
+// {
+//     header('Location: ./model/updateUserAddress.php?address=' . $_GET['address'] . '&additional_address=' . $_GET['additional_address'] . '&id_user=' . $_COOKIE['isLogin']);
+// }
 if (isset($_GET['mailing']))
 {
-    header('Location: ./model/updateUserMailing.php?mailing=' . $_GET['mail'] . '&id_user=' . $_COOKIE['isLogin']);
+    header('Location: ./model/updateUserMailing.php?mailing=' . $_GET['mail']);
 }
 ?>
 <!DOCTYPE html>
@@ -62,7 +62,7 @@ if (isset($_GET['mailing']))
 
     <div class="profile">
         <div class="first">
-            <form action="./model/updateUserInfo.php" method="GET" class="edit">
+            <form action="" method="GET" class="edit">
                 <h3>Персональные данные</h3>
                 <label class="placeinput">
                     <p class="input-info">ФИО:</p>
