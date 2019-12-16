@@ -9,4 +9,10 @@ additionalAdressButton.addEventListener('click', function()
         additionalInputs[counter].style.display = 'flex';
         counter++;
     }
+    else
+    {
+        additionalAdressButton.style.opacity = 0.5;
+        additionalAdressButton.style.cursor = 'default';
+        additionalAdressButton.classList.remove('button-anim');
+    }
 });
