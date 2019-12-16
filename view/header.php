@@ -113,7 +113,7 @@ $fio = explode(' ', $userData['fio']);
                     if (isset($idUser) && !empty($userData))
                     {
                         echo '
-                                <li class="account"><a id="profie_button"><img src="./resource/img/icons/account.svg" alt="account"><p>'.$fio[1] , ' ', mb_substr($fio[0], 0, 1), '.'.'<span>&#62;</span></p></a>
+                                <li class="account"><a id="profie_button"><img src="./resource/img/icons/account.svg" alt="account"><p>'.$fio[1] , ' ', mb_substr($fio[0], 0, 1), '.'.'<span class="arrow_down"> </span></p></a>
                                     <div class="user-act">
                                         <a href="../profile.php?id='.$idUser.'"> Профиль </a>
                                         <a href="../model/logout.php"> Выход </a>
@@ -122,7 +122,7 @@ $fio = explode(' ', $userData['fio']);
                     }
                     else
                     {
-                        echo '<li class="account"><a id="login_button"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти <span>&#62;</span></p></a></li>';
+                        echo '<li class="account"><a id="login_button"><img src="./resource/img/icons/account.svg" alt="account"><p>Войти <span class="arrow_down"></span></p></a></li>';
                     }
                 ?>
                 
