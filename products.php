@@ -1,11 +1,16 @@
-<? session_start(); ?>
+<?php
+session_start(); 
+require_once __DIR__ . './model/xmlparser.php';
+$idCategory = $_GET['id'];
+$title = $xmlParseData['partitions'][$idCategory]['name'];
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Страница продуктов </title>
+    <title> <?php echo $title; ?> </title>
     <link rel="shortcut icon" href="./resource/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./resource/css/normalize.css">
     <link rel="stylesheet" href="./resource/css/base.css">

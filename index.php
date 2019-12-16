@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Главная страница </title>
+    <title> Вся канцелярия </title>
     <link rel="shortcut icon" href="./resource/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./resource/css/normalize.css">
     <link rel="stylesheet" href="./resource/css/base.css">
