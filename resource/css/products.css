@@ -76,7 +76,7 @@
 
 .filter > ul > li > label > p
 {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	flex-flow: row nowrap;
 	justify-content: space-between;
@@ -84,6 +84,14 @@
 	margin-top: 5px;
 	padding-right: 30px;
 }
+
+
+#spec_value
+{
+	margin-right: 5px;
+	color: #000000;
+}
+
 
 .filter_button
 {
