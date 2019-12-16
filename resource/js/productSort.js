@@ -88,7 +88,7 @@ function checkSize()
     }
 }
 
-checkSize()
+checkSize();
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -156,6 +156,12 @@ let toApplyFilters = () =>
     showPages();
     productsListUpdate();
 }
+
+let allFiltersBox = document.querySelectorAll('.filter > ul > li .container input, .fav-act > .check-selecter .container input');
+allFiltersBox.forEach(function(element)
+{
+    element.addEventListener('change', toApplyFilters);
+})
 
 let sortProductsAscendingOrDescending = (ascendingOrDescending) => // Аргумент должен быть равен либо 1 (по возрастанию), либо -1 (по убыванию)
 {

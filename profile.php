@@ -120,7 +120,7 @@ if (isset($_GET['change_address']))
                 </label>
                 <div class="buttons">
                     <div class="button button-anim" id="addAddress"> Добавить адресс </div>
-                    <input id="editButton" class="button button-anim" type="submit" name="change_address" value="изменить">
+                    <input id="editButton" class="button button-anim" type="submit" name="change_address" value="сохранить">
                 </div>
             </form>
         </div>
