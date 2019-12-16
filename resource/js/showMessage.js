@@ -1,4 +1,4 @@
-﻿function showMessaage(messageText)
+function showMessaage(messageText)
 {
     let messageBox = document.querySelector('.messageBox');
     messageBox.innerHTML += '';
