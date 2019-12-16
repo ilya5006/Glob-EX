@@ -206,6 +206,9 @@ let productsListUpdate = () =>
     }
 }
 
+showPages();
+productsListUpdate();
+
 productsSort.addEventListener('input', () =>
 {
     let selectedValue = productsSort.selectedOptions[0].value
@@ -231,9 +234,6 @@ pagination.addEventListener('click', (event) =>
         productsListUpdate();
     }
 });
-
-showPages();
-productsListUpdate();
 
 applyFilters.addEventListener('click', () =>
 {
