@@ -99,7 +99,7 @@ let toApplyFilters = () =>
     if (choseSpecs.length == 0)
     {
         products = originalProductsList;
-        showPages();
+        showPages(1);
         productsListUpdate();
         return 0;
     }
@@ -153,7 +153,7 @@ let toApplyFilters = () =>
         if (accpetedFiltersLength == suitableFilters) products.push(product);
     });
     
-    showPages();
+    showPages(1);
     productsListUpdate();
 }
 
@@ -182,16 +182,22 @@ let calculatePagesQuantity = () =>
     return Math.ceil(products.length / parseInt(productsQuantitySort.selectedOptions[0].value));
 }
 
-let showPages = () =>
+let showPages = (chosePage) =>
 {
     pagination.innerHTML = '';
 
     let pagesQuantity = calculatePagesQuantity(products);
-    pagination.insertAdjacentHTML('beforeEnd', '<li> <a href="#" class="active">1</a></li>');
 
-    for (let page = 2; page <= pagesQuantity; page++)
+    for (let page = 1; page <= pagesQuantity; page++)
     {
-        pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
+        if (page == chosePage)
+        {
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#" class="active">${page}</a></li>`);
+        }
+        else
+        {
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
+        }
     }
 
 }
@@ -212,7 +218,7 @@ let productsListUpdate = () =>
     }
 }
 
-showPages();
+showPages(1);
 productsListUpdate();
 
 productsSort.addEventListener('input', () =>
@@ -221,12 +227,12 @@ productsSort.addEventListener('input', () =>
     if (selectedValue == 'low') products = sortProductsAscendingOrDescending(1);
     if (selectedValue == 'hight') products = sortProductsAscendingOrDescending(-1);
 
-    showPages();
+    showPages(1);
     productsListUpdate();
 });
 productsQuantitySort.addEventListener('input', () =>
 {
-    showPages();
+    showPages(1);
     productsListUpdate();
 });
 pagination.addEventListener('click', (event) =>
@@ -237,6 +243,7 @@ pagination.addEventListener('click', (event) =>
     {
         pagination.querySelector('li .active').classList.remove('active');
         event.target.classList.add('active');
+        showPages(event.target.textContent);
         productsListUpdate();
     }
 });
