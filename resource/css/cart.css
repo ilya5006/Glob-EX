@@ -27,9 +27,9 @@
 
 .product .product-image, .product .link-img
 {
+	width: 150px;
 	min-width: 150px;
 	max-width: 150px;
-	width: 150px;
 	height: 150px;
 	margin-right: 25px;
 }
@@ -44,26 +44,31 @@
 
 .product > .product-info > .product-name
 {
-	margin-top: 15px;
 	font-size: 20px;
-	color: #000000;
+
+	margin-top: 15px;
 	margin-bottom: 30px;
+
+	color: #000000;
 }
 
 .product > .product-info > .product-detail
 {
-	width: 100%;
 	position: relative;
-	white-space: nowrap;
+
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+
+	width: 100%;
+
+	white-space: nowrap;
 }
 
 .product > .product-info > .product-detail .product-brand
 {
-	left: 350px;
 	position: absolute;
+	left: 350px;
 }
 
 .product > .product-info > .product-detail p, .product > .product-info > .product-detail a, .product > .product-info > .product-detail p a
@@ -80,6 +85,7 @@
 .product > .product-info > .product-detail p a
 {
 	margin-bottom: 10px;
+
 	color: #E31E25;
 }
 
@@ -139,12 +145,12 @@
 
 .cart-block > .act
 {
-	min-width: 300px;
 	align-self: flex-start;
 	flex-grow: 1;
 
-	margin-left: 25px;
+	min-width: 300px;
 	margin-right: 25px;
+	margin-left: 25px;
 	padding: 20px;
 
 	background: #9D9A9A;
@@ -425,6 +431,25 @@
 {
 	width: 200px;
 }
+
+.delete-cart
+{
+	position: absolute;
+	top: 20px;
+	right: 22px;
+
+	width: 30px;
+	height: 30px;
+
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+.delete-cart:hover
+{
+	filter: grayscale(1);
+}
+
 @media screen and (max-width: 1300px)
 {
 	.cart-block

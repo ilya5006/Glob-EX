@@ -36,6 +36,7 @@ function ajax()
                 {
                     update(element.querySelector('.id').textContent, element.querySelector('input[type=number]').value);
                 });
+
                 element.querySelector('.fav-button').addEventListener('click', function()
                 {
                     if (idUser)
@@ -58,6 +59,33 @@ function ajax()
                     {
                         showMessaage('Вы не авторизованны!');
                     }
+                });
+
+                element.querySelector('.delete-cart').addEventListener('click', function()
+                {
+                    
+                    let cartDel = new FormData();
+                    cartDel.append('id_product', element.querySelector('.id').textContent);            
+
+                    let connectionDelCart = fetch('../../model/deleteCart.php', 
+                    {
+                        method: 'POST',
+                        body: cartDel
+                    });
+                    connectionDelCart.then((result) =>
+                    {
+                        result.json().then(result => 
+                        {
+                            if (result == 'done')
+                            {
+                                document.location.reload();
+                            }
+                            else
+                            {
+                                showMessaage(result);
+                            }
+                        });
+                    });
                 });
             });
         }

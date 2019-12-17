@@ -53,7 +53,8 @@ $brands = $xmlParseData['brands'];
 
                     echo '<div class="product">';
                     $img = str_replace('ftp://37.140.192.146', './../', $productData[$idProduct['id_product']]['image1']);
-                        echo ' <a class="link-img"> <img class="product-image" src="'.$img.'" alt=""> </a>';
+                        echo '<img class="product-image" src="'.$img.'" alt="">';
+                        echo '<img class="delete-cart" src="./../resource/img/icons/delete.svg">';
                         if (isset($productData[$idProduct['id_product']]['discount'])) { echo '<p class="sale">'.$productData[$idProduct['id_product']]['discount'].'</p>'; }
                         echo '<div class="product-info">';
                             echo '<a class="product-name" href="./../product.php?id='.$productData[$idProduct['id_product']]['id'].'">'.$productData[$idProduct['id_product']]['name'].'</a>';
