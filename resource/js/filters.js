@@ -24,7 +24,10 @@ noUiSlider.create(slider, {
         'min': minPrice,
         'max': maxPrice
     },
-    step: 1.0
+    step: 1.0,
+    format: wNumb({
+        decimals: 4
+    })
 });
 
 slider.noUiSlider.on('update', function (values, handle) {

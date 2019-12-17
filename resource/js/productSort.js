@@ -99,13 +99,13 @@ let toApplyFilters = () =>
 {
     let choseSpecs = document.querySelectorAll('.filter .container input:checked');
 
-    // if (choseSpecs.length == 0)
-    // {
-    //     products = originalProductsList;
-    //     showPages(1);
-    //     productsListUpdate();
-    //     return 0;
-    // }
+    if (choseSpecs.length == 0)
+    {
+        products = originalProductsList;
+        showPages(1);
+        productsListUpdate();
+        return 0;
+    }
     
     products = [];
     let specsNameValueObject = {};
@@ -137,7 +137,7 @@ let toApplyFilters = () =>
     originalProductsList.forEach((product) =>
     {
         let specsValuesProduct = product.dataset.specs.split(' ; ');
-        let suitableFiltersCount = 0;
+        let suitableFilters = 0;
         let productPrice = parseFloat(product.querySelector('.new-price').textContent);
         
         specsValuesProduct.forEach((oneFilter) =>
@@ -154,11 +154,11 @@ let toApplyFilters = () =>
                     return true; 
                 });
 
-                if (isSpecInObject) suitableFiltersCount++;
+                if (isSpecInObject) suitableFilters++;
             }
         });
 
-        if (accpetedFiltersLength == suitableFiltersCount && productPrice >= minPrice && productPrice <= maxPrice) products.push(product);
+        if (accpetedFiltersLength == suitableFilters && productPrice >= minPrice && productPrice <= maxPrice) products.push(product);
     });
     
     showPages(1);
@@ -170,7 +170,6 @@ allFiltersBox.forEach(function(element)
 {
     element.addEventListener('change', toApplyFilters);
 });
-slider.noUiSlider.on('change.one', toApplyFilters);
 
 let sortProductsAscendingOrDescending = (ascendingOrDescending) => // Аргумент должен быть равен либо 1 (по возрастанию), либо -1 (по убыванию)
 {
@@ -320,3 +319,4 @@ applyFilters.addEventListener('click', () =>
     toApplyFilters();
 });
 
+slider.noUiSlider.on('update.one', toApplyFilters);
