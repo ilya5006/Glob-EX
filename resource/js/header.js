@@ -1,5 +1,13 @@
 "use strict";
 
+document.querySelectorAll('.expand-catalog .expand-cat_2 ul').forEach(function(element)
+{
+    if (element.textContent == "")
+    {
+        element.remove();
+    }
+});
+
 document.querySelector('#catalog').addEventListener('mouseup', function () 
 {
     if (document.querySelector('.expand-catalog').classList.contains('hide')) 

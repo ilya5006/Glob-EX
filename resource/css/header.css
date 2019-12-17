@@ -255,7 +255,7 @@
 
 .header .content .nav ul, .header .content .nav > ul li, .header .content .nav ul li a
 {
-	height: 100%;
+	/* height: 100%; */
 }
 
 .header .content .nav > ul
@@ -520,19 +520,30 @@
 	z-index: 999;
 	top: 0;
 	left: 300px;
-
-	display: flex;
-	align-items: center;
-	flex-flow: row wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: flex-start;
+	flex-flow: column wrap;
 	justify-content: flex-start;
 
-	width: 55vw;
+	width: 100%;
 
 	background-color: transparent;
 }
 
+@media screen and (max-width: 1400px)
+{
+	.expand-cat_2 { grid-template-columns: 1fr 1fr; }
+}
+
+@media screen and (max-width: 1200px)
+{
+	.expand-cat_2 { grid-template-columns: 1fr; }
+}
+
 .expand-catalog .expand-cat_2 ul
 {
+	min-width: 320px;
 	display: flex;
 	flex-flow: column nowrap;
 
@@ -541,6 +552,7 @@
 
 .expand-catalog .expand-cat_2 ul li
 {
+	width: 100%;
 	display: flex;
 	align-items: center;
 
@@ -598,6 +610,11 @@
 
 		text-align: center;
 	}
+	.header .content .nav ul li a
+	{
+		justify-content: center;
+		text-align: center;
+	}
 }
 
 .hide
@@ -607,7 +624,7 @@
 
 .expand-cat_2:hover
 {
-	display: flex;
+	display: grid;
 }
 
 #modal_authorize, #modal_changePassword

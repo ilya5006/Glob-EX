@@ -80,9 +80,10 @@ if (isset($_COOKIE['isLogin']))
                 $idFirst = $category['id'];
                 echo '<a order="'.$category['sort'].'" class="cat_1" href="catalog.php?id='.$category['id'].'"> <img src="./resource/img/icons/clip.svg"><p>'.$category['name'].'</p><span>&#62;</span> </a>';
                 echo '<div class="expand-cat_2 hide">';
-                echo '<ul>';
+                
                     foreach($categories['two'] as $category)
                     {
+                        echo '<ul order="'.$category['sort'].'">';
                         if ($idFirst == $category['top_id'])
                         {
                             $idTwo = $category['id'];
@@ -95,8 +96,9 @@ if (isset($_COOKIE['isLogin']))
                                 }
                             }
                         }
+                        echo '</ul>';
                     }
-                    echo '</ul>';
+                    
                 echo '</div>';
             }
                     
