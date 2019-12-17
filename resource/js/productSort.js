@@ -188,8 +188,6 @@ let showPages = (chosePage) =>
     pagination.innerHTML = '';
 
     let pagesQuantity = calculatePagesQuantity(products);
-    pagesQuantity = 20;
-
 
     if (pagesQuantity < 6)
     {
