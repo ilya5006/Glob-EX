@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="./resource/css/base.css">
     <link rel="stylesheet" href="./resource/css/header.css">
     <link rel="stylesheet" href="./resource/css/scroll.css">
-    <link rel="stylesheet" href="./resource/css/footer.css">
+    <link rel="stylesheet" href="./resource/css/footer.css">\
+    <script src="./resource/js/detectBrowser.js"></script>
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/brandList.js" defer></script>
     <script src="./resource/js/registration.js" defer></script>

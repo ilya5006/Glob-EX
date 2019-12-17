@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./resource/css/banner.css">
     <link rel="stylesheet" href="./resource/css/scroll.css">
     <link rel="stylesheet" href="./resource/css/footer.css">
+    <script src="./resource/js/detectBrowser.js"></script>
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/banner.js" defer></script>
     <script src="./resource/js/slider.js" defer></script>

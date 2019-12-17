@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./resource/css/header.css">
     <link rel="stylesheet" href="./resource/css/payment.css">
     <link rel="stylesheet" href="./resource/css/footer.css">
+    <script src="./resource/js/detectBrowser.js"></script>
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>

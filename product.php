@@ -18,6 +18,7 @@ $title = $xmlParseData['nomeklatura'][$idProduct]['name'];
     <link rel="stylesheet" href="./resource/css/product.css">
     <link rel="stylesheet" href="./resource/css/scroll.css">
     <link rel="stylesheet" href="./resource/css/footer.css">
+    <script src="./resource/js/detectBrowser.js"></script>
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/product.js" defer></script>
     <script src="./resource/js/slider.js" defer></script>
