@@ -144,7 +144,7 @@ if (isset($_GET['mailing']))
             <form class="mail" method="GET" action="">
                 <h3>РАССЫЛКИ</h3>
                 <label class="container" id="cart"> <p> e-mail рассылка</p> <input type="checkbox" name="mail"> <span class="checkmark"></span></label>
-                <input type="submit" name="mailing" href="./profile.php" class="button buttonMail">
+                <input type="submit" name="mailing" href="./profile.php" class="button buttonMail" value="сохранить">
             </form>
         </div>
     </div>
