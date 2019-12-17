@@ -40,8 +40,8 @@ if (isset($_GET['mailing']))
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/favourite-cart.js" defer></script>
-    <script src="./resource/js/profile.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
+    <script src="./resource/js/profile.js" defer></script>
 </head>
 <body>
 
@@ -153,7 +153,7 @@ if (isset($_GET['mailing']))
 <div id="modal_changePassword" style="display: none;">
     <div class="modal">
         <h3> Смена пароля </h3>
-        <form action="../model/login.php" class="changePassword">
+        <form class="changePassword">
 
             <label class="placeinput">
                 <input required="1" type="password" id="current-password" autocomplete="current-password"/>
