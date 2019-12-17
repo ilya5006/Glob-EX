@@ -378,7 +378,7 @@ h3
 	{
 		text-align: center;
 	}
-	.placeinput
+	.content .placeinput
 	{
 		flex-flow: column wrap;
 
@@ -415,6 +415,11 @@ h3
 	{
 		justify-content: center;
 	}
+	#modal_changePassword .place_holder
+	{
+		bottom: 25px;
+		margin-left: 0;
+	}
 }
 
 @media screen and (max-width: 600px)
@@ -444,4 +449,20 @@ h3
 #modal_changePassword input
 {
 	margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px)
+{
+	#modal_authorize .modal, #modal_changePassword .modal
+	{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+	#modal_changePassword .modal form input[type=text], #modal_changePassword .modal form input[type=password], #modal_changePassword .modal form input[type=tel], #modal_changePassword .modal form input[type=email]
+	{
+		width: 100%;
+	}
 }
