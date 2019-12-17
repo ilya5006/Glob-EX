@@ -98,6 +98,11 @@
 	transform: scale(1);
 }
 
+.footer .logo img
+{
+	user-select: none;
+}
+
 @media screen and (max-width: 1200px)
 {
 	.footer > .content
