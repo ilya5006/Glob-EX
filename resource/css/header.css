@@ -520,29 +520,31 @@
 	z-index: 999;
 	top: 0;
 	left: 300px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: block;
 	align-items: flex-start;
 	flex-flow: column wrap;
 	justify-content: flex-start;
 
-	width: 100%;
-
 	background-color: transparent;
+
+	column-count: 3;
+	column-gap: 0px;
 }
 
 @media screen and (max-width: 1400px)
 {
-	.expand-cat_2 { grid-template-columns: 1fr 1fr; }
+	.expand-cat_2 { column-count: 2; }
 }
 
 @media screen and (max-width: 1200px)
 {
-	.expand-cat_2 { grid-template-columns: 1fr; }
+	.expand-cat_2 { column-count: 1; }
 }
 
 .expand-catalog .expand-cat_2 ul
 {
+	page-break-inside: avoid;
+	break-inside: avoid;
 	min-width: 320px;
 	display: flex;
 	flex-flow: column nowrap;
@@ -624,7 +626,7 @@
 
 .expand-cat_2:hover
 {
-	display: grid;
+	display: block;
 }
 
 #modal_authorize, #modal_changePassword
