@@ -483,6 +483,7 @@
 
 .product.hor > .product-disc .features .feature_button
 {
+	color: #000000;
 	font-weight: bold;
 
 	display: inline-block;
@@ -1007,9 +1008,17 @@
 
 @media screen and (max-width: 1100px)
 {
+	.fav-act
+	{
+		flex-flow: column nowrap;
+	}
 	.fav-act > .check-selecter
 	{
 		margin-right: 0;
+	}
+	.fav-act > .sort, .fav-act > .check-selecter
+	{
+		width: 100%;
 	}
 }
 
@@ -1028,7 +1037,6 @@
 	.fav-act > .check-selecter p.delete
 	{
 		margin: 5px 20px;
-		margin-left: unset;
 	}
 	.fav-act > .check-selecter p
 	{

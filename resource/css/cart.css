@@ -2,19 +2,19 @@
 .cart-block
 {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 }
 
 .cart-block > .items
 {
 	display: flex;
 	flex-flow: column nowrap;
-
-	width: 77%;
 }
 
 .product
 {
+	position: relative;
+
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap;
@@ -25,8 +25,10 @@
 	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
 }
 
-.product > .product-image
+.product .product-image, .product .link-img
 {
+	min-width: 150px;
+	max-width: 150px;
 	width: 150px;
 	height: 150px;
 	margin-right: 25px;
@@ -42,16 +44,26 @@
 
 .product > .product-info > .product-name
 {
+	margin-top: 15px;
 	font-size: 20px;
-
+	color: #000000;
 	margin-bottom: 30px;
 }
 
 .product > .product-info > .product-detail
 {
+	width: 100%;
+	position: relative;
+	white-space: nowrap;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+}
+
+.product > .product-info > .product-detail .product-brand
+{
+	left: 350px;
+	position: absolute;
 }
 
 .product > .product-info > .product-detail p, .product > .product-info > .product-detail a, .product > .product-info > .product-detail p a
@@ -67,6 +79,7 @@
 
 .product > .product-info > .product-detail p a
 {
+	margin-bottom: 10px;
 	color: #E31E25;
 }
 
@@ -126,10 +139,12 @@
 
 .cart-block > .act
 {
+	min-width: 300px;
 	align-self: flex-start;
 	flex-grow: 1;
 
 	margin-left: 25px;
+	margin-right: 25px;
 	padding: 20px;
 
 	background: #9D9A9A;
@@ -297,6 +312,7 @@
 .delivery .deliv-inf select
 {
 	width: 100%;
+
 	background-color: #FFFFFF;
 }
 
@@ -371,6 +387,52 @@
 	width: 100%;
 }
 
+.product .sale
+{
+	font-size: 26px;
+
+	position: absolute;
+	top: 15px;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100px;
+	height: 50px;
+
+	color: #FFFFFF;
+	background-color: red;
+}
+
+.product > .sale::before
+{
+	content: "-";
+}
+
+.product > .sale::after
+{
+	content: "%";
+}
+
+.product > .product-info > .product-detail p
+{
+	text-align: left;
+}
+
+.available
+{
+	width: 200px;
+}
+@media screen and (max-width: 1300px)
+{
+	.cart-block
+	{
+		flex-flow: row wrap;
+	}
+}
+
 @media screen and (max-width: 1200px)
 {
 	.cart-block > .items
@@ -385,9 +447,10 @@
 
 @media screen and (max-width: 1000px)
 {
-	.product > .product-image, .product > .product-info
+	.product  .product-image, .product > .product-info, .product  .link-img
 	{
 		width: 100%;
+		max-width: 100%;
 	}
 	.product
 	{
@@ -397,6 +460,22 @@
 	{
 		margin: 15px;
 		margin-left: auto;
+	}
+	.product > .product-info > .product-name, .product > .product-info > .product-detail
+	{
+		padding: 2px 25px;
+	}
+	.product .product-image, .product .link-img
+	{
+		margin-right: 0;
+	}
+	.product > .product-info > .product-detail .product-brand
+	{
+		position: static;
+	}
+	.available
+	{
+		width: auto;
 	}
 }
 
@@ -436,6 +515,7 @@
 	.product > .product-price
 	{
 		width: 100%;
+		padding: 0 25px;
 	}
 	h2
 	{
@@ -457,14 +537,30 @@
 	{
 		text-align: left;
 	}
+	.product > .product-info
+	{
+		padding: 0;
+	}
 }
 
+@media screen and (max-width: 600px)
+{
+	.product > .product-info > .product-detail p
+	{
+		text-align: center;
+	}
+	.product > .product-info > .product-detail
+	{
+		flex-flow: column nowrap;
+	}
+}
 
 @media screen and (max-width: 470px)
 {
 	.delivery .deliv-inf label > p
 	{
 		flex-flow: column nowrap;
+
 		margin-bottom: 25px;
 	}
 	.delivery .deliv-inf label > p > span

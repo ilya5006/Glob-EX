@@ -352,7 +352,7 @@ foreach ($brands as $brandId => $brandInfo)
                                 if (++$specsPrintedCount == 6) break;
                             }
                             ?>
-                            <p class="feature_button"> Больше характеристик </p>
+                            <a class="feature_button" href="./product.php?id=<?php echo $productId; ?>#specs"> Больше характеристик </a>
                         </div>
                     </div>
                     <div class="product-act">

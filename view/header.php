@@ -48,11 +48,13 @@ $categories['three'] = $three;
 // var_dump($categories);
 // echo "</pre>";
 
-$idUser = (int)$_COOKIE['isLogin'];
-$result = $mysqli->query("SELECT * FROM users_all WHERE id_user = $idUser;");
-$userData = $result->fetch_assoc();
-
-$fio = explode(' ', $userData['fio']);
+if (isset($_COOKIE['isLogin']))
+{
+    $idUser = (int)$_COOKIE['isLogin'];
+    $result = $mysqli->query("SELECT * FROM users_all WHERE id_user = $idUser;");
+    $userData = $result->fetch_assoc();
+    $fio = explode(' ', $userData['fio']);
+    }
 ?>
 
 <header class="header">

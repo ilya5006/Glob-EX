@@ -129,7 +129,7 @@ if (isset($product['specs']))
     <div class="info_slider">
         <div class="sliders">
             <p class="slider_d active"> Описание товара </p>
-            <p class="slider_f"> Все характеристики </p>
+            <p class="slider_f" id="specs"> Все характеристики </p>
         </div>
         
         <div class="informations">

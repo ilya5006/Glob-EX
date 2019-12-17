@@ -53,15 +53,16 @@ $brands = $xmlParseData['brands'];
 
                     echo '<div class="product">';
                     $img = str_replace('ftp://37.140.192.146', './../', $productData[$idProduct['id_product']]['image1']);
-                        echo '<img class="product-image" src="'.$img.'" alt="">';
+                        echo ' <a class="link-img"> <img class="product-image" src="'.$img.'" alt=""> </a>';
+                        if (isset($productData[$idProduct['id_product']]['discount'])) { echo '<p class="sale">'.$productData[$idProduct['id_product']]['discount'].'</p>'; }
                         echo '<div class="product-info">';
-                            echo '<p class="product-name">'.$productData[$idProduct['id_product']]['name'].'</p>';
+                            echo '<a class="product-name" href="./../product.php?id='.$productData[$idProduct['id_product']]['id'].'">'.$productData[$idProduct['id_product']]['name'].'</a>';
                             echo '<p class="article" style="display: none;">'.$productData[$idProduct['id_product']]['article'].'</p>';
                             echo '<p class="id" style="display: none;">'.$productData[$idProduct['id_product']]['id'].'</p>';
                             echo '<div class="product-detail">';
                                 echo '<p class="available">есть в наличии <span class="available-count">'.$productData[$idProduct['id_product']]['quantity'].'</span> </p>';
-                            if ($brands[$productData[$idProduct['id_product']]['brand']]['name']) { echo '<p>БРЕНД: <a href="#">'.$brands[$productData[$idProduct['id_product']]['brand']]['name'].'</a></p>'; }
-                            else { echo '<p>БРЕНД: <a> ОТСУСТВУЕТ </a></p>'; }
+                            if ($brands[$productData[$idProduct['id_product']]['brand']]['name']) { echo '<p class="product-brand">БРЕНД: <a href="#">'.$brands[$productData[$idProduct['id_product']]['brand']]['name'].'</a></p>'; }
+                            else { echo '<p class="product-brand">БРЕНД: <a> ОТСУСТВУЕТ </a></p>'; }
                             echo '</div>';
                         echo '</div>';
                         echo '<p class="product-price">'.$productData[$idProduct['id_product']]['price'].'</p>';
