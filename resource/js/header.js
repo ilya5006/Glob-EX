@@ -68,10 +68,7 @@ document.body.addEventListener('mousedown', function (e)
     if (e.target.parentElement === document.body)
     {   
         document.querySelector('#modal_authorize').style.display = 'none';
-        document.body.style.overflowY = 'scroll';
-        document.body.style.paddingRight = '0px';
-
-        document.querySelector('#modal_changePassword').style.display = 'none';
+        if (document.querySelector('#modal_changePassword')) { document.querySelector('#modal_changePassword').style.display = 'none'; }
         document.body.style.overflowY = 'scroll';
         document.body.style.paddingRight = '0px';
     }
@@ -134,7 +131,7 @@ document.addEventListener("keydown", function (event)
     if (event.code == 'Escape') 
     {
         document.querySelector('#modal_authorize').style.display = 'none';
-        document.querySelector('#modal_changePassword').style.display = 'none';
+        if (document.querySelector('#modal_changePassword')) { document.querySelector('#modal_changePassword').style.display = 'none'; }
         document.body.style.overflowY = 'scroll';
         document.body.style.paddingRight = '0px';
     }
