@@ -9,6 +9,9 @@ products.forEach((product) => { productsArray.push(product); });
 products = productsArray;
 let originalProductsList = productsArray; // READ ONLY
 
+let minPriceInput = document.querySelector('#price-min');
+let maxPriceInput = document.querySelector('#price-max');
+
 let productsSort = document.querySelector('#products_sort');
 let productsQuantitySort = document.querySelector('#products_quantity');
 
@@ -107,6 +110,9 @@ let toApplyFilters = () =>
     products = [];
     let specsNameValueObject = {};
 
+    let minPrice = parseFloat(minPriceInput.value);
+    let maxPrice = parseFloat(maxPriceInput.value);
+
     choseSpecs.forEach((spec) =>
     {
         //Да, это очень плохой код, но я не знаю, как здесь сделать иначе
@@ -132,6 +138,8 @@ let toApplyFilters = () =>
     {
         let specsValuesProduct = product.dataset.specs.split(' ; ');
         let suitableFilters = 0;
+        let productPrice = parseFloat(product.querySelector('.new-price').textContent);
+        
         specsValuesProduct.forEach((oneFilter) =>
         {
             let specValuePair = oneFilter.split(' => ');
@@ -150,7 +158,7 @@ let toApplyFilters = () =>
             }
         });
 
-        if (accpetedFiltersLength == suitableFilters) products.push(product);
+        if (accpetedFiltersLength == suitableFilters && productPrice >= minPrice && productPrice <= maxPrice) products.push(product);
     });
     
     showPages(1);
@@ -161,7 +169,7 @@ let allFiltersBox = document.querySelectorAll('.filter > ul > li .container inpu
 allFiltersBox.forEach(function(element)
 {
     element.addEventListener('change', toApplyFilters);
-})
+});
 
 let sortProductsAscendingOrDescending = (ascendingOrDescending) => // Аргумент должен быть равен либо 1 (по возрастанию), либо -1 (по убыванию)
 {
@@ -310,3 +318,5 @@ applyFilters.addEventListener('click', () =>
 {
     toApplyFilters();
 });
+
+slider.noUiSlider.on('update.one', toApplyFilters);

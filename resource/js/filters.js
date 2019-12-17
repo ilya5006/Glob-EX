@@ -24,7 +24,7 @@ noUiSlider.create(slider, {
         'min': minPrice,
         'max': maxPrice
     },
-    step: 10
+    step: 1.0
 });
 
 slider.noUiSlider.on('update', function (values, handle) {
