@@ -182,7 +182,7 @@ if (isset($_COOKIE['isLogin']))
                 </label>
             </div>
 
-            <div class="user-type">
+            <div class="user-type" style="width: 100%;">
                 <label class="container" id="individual"> <p> Частное лицо</p> <input type="radio" name="user_type" > <span class="checkmark"></span> </label>
                 <label class="container" id="entities"> <p> Юридическое лицо</p> <input type="radio" name="user_type"  > <span class="checkmark"></span> </label>
             </div>
