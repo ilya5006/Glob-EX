@@ -1,4 +1,4 @@
-﻿let sortBlock = document.querySelector('#sort-block');
+let sortBlock = document.querySelector('#sort-block');
 let sortHor = document.querySelector('#sort-hor');
 let listProduct = document.querySelector('.list-products');
 let products = document.querySelectorAll('.product');
@@ -289,7 +289,7 @@ productsListUpdate();
 
 productsSort.addEventListener('input', () =>
 {
-    let selectedValue = productsSort.selectedOptions[0].value
+    let selectedValue = productsSort.selectedOptions[0].value;
     if (selectedValue == 'low') products = sortProductsAscendingOrDescending(1);
     if (selectedValue == 'hight') products = sortProductsAscendingOrDescending(-1);
 

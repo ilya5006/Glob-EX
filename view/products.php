@@ -146,9 +146,12 @@ foreach ($brands as $brandId => $brandInfo)
                         {
                             $productsQuantity = quantityOfProductsForOneBrand($brandId, $productsWithSameCategory);
                             
-                            echo '<label class="container">';
-                                echo '<p><span id="spec_value">' . $brandInfo['name'] . '</span>(' . $productsQuantity . ')</p> <input type="checkbox" value="' . $brandInfo['name'] . '"> <span class="checkmark"></span>';
-                            echo '</label>';
+                            if ($productsQuantity > 0)
+                            {
+                                echo '<label class="container">';
+                                    echo '<p><span id="spec_value">' . $brandInfo['name'] . '</span>(' . $productsQuantity . ')</p> <input type="checkbox" value="' . $brandInfo['name'] . '"> <span class="checkmark"></span>';
+                                echo '</label>';
+                            }
                         }
                         ?>
                     </li>

@@ -51,7 +51,10 @@ if (isset($product['specs']))
                     
                 foreach ($product['images'] as $id => $image)
                 {
-                    echo '<a href="#" class="brand"><img src="' . $image . '" alt="" class="little"></a>';
+                    if ($image != '')
+                    {
+                        echo '<a href="#" class="brand"><img src="' . $image . '" alt="" class="little"></a>';
+                    }
                 }
                 ?>
             </div>
