@@ -184,22 +184,82 @@ let calculatePagesQuantity = () =>
 
 let showPages = (chosePage) =>
 {
+    chosePage = parseInt(chosePage)
     pagination.innerHTML = '';
 
     let pagesQuantity = calculatePagesQuantity(products);
+    pagesQuantity = 20;
 
-    for (let page = 1; page <= pagesQuantity; page++)
+
+    if (pagesQuantity < 6)
     {
-        if (page == chosePage)
+        for (let page = 1; page <= pagesQuantity; page++)
         {
-            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#" class="active">${page}</a></li>`);
+            if (page == chosePage)
+            {
+                pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#" class="active">${page}</a></li>`);
+            }
+            else
+            {
+                pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
+            }
+        }
+    }
+    else
+    {
+        if (chosePage > pagesQuantity - 3)
+        {
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">1</a></li>`);
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">...</a></li>`);
+            for (let page = pagesQuantity - 3; page <= pagesQuantity; page++)
+            {
+                if (page == chosePage)
+                {
+                    pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#" class="active">${page}</a></li>`);
+                }
+                else
+                {
+                    pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
+                }
+            }
+        }
+        else if (chosePage < 4)
+        {
+            for (let page = 1; page <= 4; page++)
+            {
+                if (page == chosePage)
+                {
+                    pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#" class="active">${page}</a></li>`);
+                }
+                else
+                {
+                    pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
+                }
+            }
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">...</a></li>`);
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${pagesQuantity}</a></li>`);
         }
         else
         {
-            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">1</a></li>`);
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">...</a></li>`);
+            
+            for (let page = chosePage - 1; page <= chosePage + 1; page++)
+            {
+                if (page == chosePage)
+                {
+                    pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#" class="active">${page}</a></li>`);
+                }
+                else
+                {
+                    pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${page}</a></li>`);
+                }
+            }
+
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">...</a></li>`);
+            pagination.insertAdjacentHTML('beforeEnd', `<li> <a href="#">${pagesQuantity}</a></li>`);
         }
     }
-
 }
 
 let productsListUpdate = () =>
