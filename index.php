@@ -21,10 +21,6 @@
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/favourite-cart.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
-
-
-    <link rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css">
-    <script src="https://unpkg.com/flexmasonry/dist/flexmasonry.js"de></script>
 </head>
 <body>
 
