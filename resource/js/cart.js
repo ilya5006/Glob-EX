@@ -82,7 +82,7 @@ function ajax()
                             }
                             else
                             {
-                                showMessaage(result);
+                                //showMessaage(result);
                             }
                         });
                     });

@@ -149,7 +149,6 @@
 	flex-grow: 1;
 
 	min-width: 300px;
-	margin-right: 25px;
 	margin-left: 25px;
 	padding: 20px;
 
@@ -455,6 +454,11 @@
 	.cart-block
 	{
 		flex-flow: row wrap;
+	}
+	.cart-block > .act
+	{
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
