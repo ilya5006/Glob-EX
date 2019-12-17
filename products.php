@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-require_once __DIR__ . './model/xmlparser.php';
+require_once __DIR__ . '/model/xmlparser.php';
 $idCategory = $_GET['id'];
 $title = $xmlParseData['partitions'][$idCategory]['name'];
 ?>
