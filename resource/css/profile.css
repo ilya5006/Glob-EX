@@ -75,7 +75,7 @@ form label
 	display: inline;
 }
 
-.placeinput
+.content .placeinput
 {
 	position: relative;
 
@@ -84,11 +84,6 @@ form label
 	margin-bottom: 15px;
 
 	border: 1px solid #C4C4C4;
-}
-
-.placeinput:first-child
-{
-	margin-bottom: 25px;
 }
 
 .place_holder span
@@ -436,4 +431,17 @@ h3
 	{
 		width: 100%;
 	}
+}
+
+#modal_changePassword h3
+{
+	margin-top: 50px;
+	align-self: center;
+	width: 80%;
+	color: #E31E25;
+}
+
+#modal_changePassword input
+{
+	margin-bottom: 0;
 }

@@ -16,3 +16,11 @@ additionalAdressButton.addEventListener('click', function()
         additionalAdressButton.classList.remove('button-anim');
     }
 });
+
+document.querySelector('#changePassword').addEventListener('click', function(e)
+{
+    e.preventDefault();
+    document.querySelector('#modal_changePassword').style.display = 'flex';
+    document.body.style.overflowY = 'hidden';
+    document.body.style.paddingRight = '18px';
+});

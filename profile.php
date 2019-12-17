@@ -64,7 +64,7 @@ if (isset($_GET['mailing']))
         <div class="first">
             <form action="" method="GET" class="edit">
                 <h3>Персональные данные</h3>
-                <label class="placeinput">
+                <label class="placeinput" style="margin-bottom: 30px;">
                     <p class="input-info">ФИО:</p>
                     <?php echo '<input required="1" type="text" name="fio" value="'.$userData['fio'].'" autocomplete="name">'; ?>
                     <div class="place_holder">Введите ФИО<span>*</span></div>
@@ -86,7 +86,7 @@ if (isset($_GET['mailing']))
                 </label>
                 <div class="buttons">
                     <input id="editButton" class="button button-anim" type="submit" name="change" value="сохранить">
-                    <input id="changePassword" class="button button-anim" type="submit" name="change_password" value="сменить пароль">
+                    <div id="changePassword" class="button button-anim" name="change_password"> сменить пароль </div>
                 </div>
             </form>
 
@@ -147,6 +147,34 @@ if (isset($_GET['mailing']))
                 <input type="submit" name="mailing" href="./profile.php" class="button buttonMail">
             </form>
         </div>
+    </div>
+</div>
+
+<div id="modal_changePassword" style="display: none;">
+    <div class="modal">
+        <h3> Смена пароля </h3>
+        <form action="../model/login.php" class="changePassword">
+
+            <label class="placeinput">
+                <input required="1" type="password" id="current-password" autocomplete="current-password"/>
+                <div class="place_holder">Введите старый пароль<span>*</span></div>
+            </label>
+
+            <label class="placeinput">
+                <input required="1" type="password" id="new-password" autocomplete="new-password"/>
+                <div class="place_holder">Введите новый пароль<span>*</span></div>
+            </label>
+
+            <label class="placeinput">
+                <input required="1" type="password" id="re-new-password" autocomplete="new-password"/>
+                <div class="place_holder">Повторите новый пароль<span>*</span></div>
+            </label>
+
+            <p class="require"> <span>*</span> Поля обязательные для ввода</p>
+
+            <div id="loginButton"> СМЕНИТЬ ПАРОЛЬ </div>
+
+        </form>
     </div>
 </div>
 

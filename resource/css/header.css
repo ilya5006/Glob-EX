@@ -610,7 +610,7 @@
 	display: flex;
 }
 
-#modal_authorize
+#modal_authorize, #modal_changePassword
 {
 	position: fixed;
 	z-index: 999;
@@ -623,7 +623,7 @@
 	min-height: 100vh;
 }
 
-#modal_authorize .modal
+#modal_authorize .modal, #modal_changePassword .modal
 {
 	position: absolute;
 	top: 140px;
@@ -643,7 +643,7 @@
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-#modal_authorize .modal #close_modal
+#modal_authorize .modal #close_modal, #modal_changePassword .modal #close_modal
 {
 	font-size: 46px;
 
@@ -653,7 +653,7 @@
 	text-align: right;
 }
 
-#modal_authorize .modal form
+#modal_authorize .modal form, #modal_changePassword .modal form
 {
 	display: flex;
 	align-items: center;
@@ -662,7 +662,7 @@
 	justify-content: center;
 }
 
-#login_button, #profie_button
+#login_button, #profie_button, #login_button, #profie_button
 {
 	cursor: pointer;
 }
@@ -711,7 +711,7 @@
 	border-bottom: 5px solid #E31E25;
 }
 
-#modal_authorize .modal form label
+#modal_authorize .modal form label, #modal_changePassword .modal form label
 {
 	display: flex;
 	align-items: center;
@@ -720,7 +720,8 @@
 	width: 100%;
 }
 
-#modal_authorize .modal form input[type=text], #modal_authorize .modal form input[type=password], #modal_authorize .modal form input[type=tel], #modal_authorize .modal form input[type=email]
+#modal_authorize .modal form input[type=text], #modal_authorize .modal form input[type=password], #modal_authorize .modal form input[type=tel], #modal_authorize .modal form input[type=email],
+#modal_changePassword .modal form input[type=text], #modal_changePassword .modal form input[type=password], #modal_changePassword .modal form input[type=tel], #modal_changePassword .modal form input[type=email]
 {
 	width: 80%;
 	height: 40px;
@@ -805,7 +806,7 @@
 	color: #E31E25;
 }
 
-#modal_authorize .modal form .require
+#modal_authorize .modal form .require, #modal_changePassword .modal form .require
 {
 	font-size: 14px;
 
@@ -815,12 +816,12 @@
 	color: #8B7B7B;
 }
 
-#modal_authorize .modal form .require span
+#modal_authorize .modal form .require span, #modal_changePassword .modal form .require span
 {
 	color: #E31E25;
 }
 
-#modal_authorize .modal form .passwords, #modal_authorize .modal form .user-type
+#modal_authorize .modal form .passwords, #modal_changePassword .modal form .user-type
 {
 	display: flex;
 	flex-flow: row nowrap;
