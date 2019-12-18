@@ -37,7 +37,7 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
     <h2> СПОСОБ ДОСТАВКИ </h2>
     <div class="delivery">
         <form class="delivery-type">
-            <label class="active"> <input type="radio" name="delivery" value="d" class="type-deliv"> <p> ДОСТАВКА </p> </label>
+            <label class="active"> <input type="radio"  name="delivery" value="d" class="type-deliv" checked> <p> ДОСТАВКА </p> </label>
             <label> <input type="radio" name="delivery" value="s" class="type-pickup"> <p> САМОВЫВОЗ </p> </label>
         </form>
         <div class="deliv-inf" id="deliv-one">
@@ -108,11 +108,11 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
     <h2> СПОСОБ ОПЛАТЫ </h2>
     <div class="pay-type">
         <label class="container" id="cash">
-            <p> НАЛИЧНЫМИ ПРИ ПОЛУЧЕНИИ </p> <input type="radio" name="pay_type"> <span
+            <p> НАЛИЧНЫМИ ПРИ ПОЛУЧЕНИИ </p> <input type="radio" value="cash" name="pay_type"> <span
                 class="checkmark"></span>
         </label>
         <label class="container" id="cart">
-            <p> ОПЛАТА КАРТОЙ ПРИ ПОЛУЧЕНИИ</p> <input type="radio" name="pay_type"> <span
+            <p> ОПЛАТА КАРТОЙ ПРИ ПОЛУЧЕНИИ</p> <input type="radio" value="card" name="pay_type"> <span
                 class="checkmark"></span>
         </label>
     </div>

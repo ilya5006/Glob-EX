@@ -1,4 +1,5 @@
 ﻿let products;
+let orderButton = null;
 function update(id_product, product_count)
 {
     let cartUpdate = new FormData();
@@ -13,11 +14,6 @@ function update(id_product, product_count)
     connectionCart.then((result) =>
     {
         result.json().then(result => ajax());
-    });
-    
-    products.forEach(function(element)
-    {   
-        element.querySelector('.article').textContent, element.querySelector('input.product-count').value;
     });
 }
 
@@ -90,7 +86,55 @@ function ajax()
             });
 
             // твоя кнопка
-            console.log(document.querySelector(".act > .order-button"));
+            document.querySelector(".act > .order-button").addEventListener('click', () =>
+            {
+                console.clear();
+                let typesOfPayment = document.querySelectorAll('.pay-type input');
+                let address = document.querySelector('#cart-address').value;
+                let typesOfDelivery = document.querySelectorAll('.delivery-type input');
+                let phoneNumber = document.querySelector('#cart-phone').value;
+                let price = document.querySelector('.act-itog span').textContent;
+
+                let typeOfPayment = null;
+                let typeOfDelivery = null;
+
+                typesOfPayment.forEach((type) =>
+                {
+                    if (type.checked)
+                    {
+                        typeOfPayment = type.value;
+                    }
+                });
+                typesOfDelivery.forEach((type) =>
+                {
+                    if (type.checked)
+                    {
+                        typeOfDelivery = type.value;
+                    }
+                });
+
+                console.log(address);
+                console.log(typeOfPayment);
+                console.log(phoneNumber);
+                console.log(typeOfDelivery);
+                console.log(price);
+
+                if (!typeOfDelivery) showMessaage('Выберите тип доставки');
+                if (!typeOfPayment) showMessaage('Выберите тип оплаты');
+
+                let formData = new FormData();
+                formData.append('address', address);
+                formData.append('type_of_delivery', typeOfDelivery);
+                formData.append('type_of_payment', typeOfPayment);
+                formData.append('price', price);
+                formData.append('phone_number', phoneNumber);
+
+                let connectionOrder = fetch('../../model/makeOrder.php', 
+                {
+                    method: "POST",
+                    body: formData
+                });
+            });
         }
     }
     xhr.open('GET', '../../view/cart.php', true);
