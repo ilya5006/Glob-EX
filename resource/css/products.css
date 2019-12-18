@@ -530,6 +530,7 @@
 
 .list-products .product.hor .inp-cart-fav
 {
+	height: 40px;
 	width: 100%;
 }
 

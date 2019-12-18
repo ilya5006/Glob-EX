@@ -48,46 +48,67 @@ $productInfo = $xmlParseData['nomeklatura'];
     $dir = "./orders/";
     $orderFiles = array_diff( scandir( $dir), array('..', '.'));
     
-    foreach($orderFiles as $order)
+    $ordersCount = count($orderFiles);
+
+    if ($ordersCount > 0)
     {
-        $pathToFile = './orders/' . $order;
-        $spreadsheet = $reader->load($pathToFile);
-        $orderData = $spreadsheet->getActiveSheet()->toArray();
-        echo "<pre>";
-        print_r($orderData);
-        echo "</pre>";
+        foreach($orderFiles as $order)
+        {
+            $pathToFile = './orders/' . $order;
+            $spreadsheet = $reader->load($pathToFile);
+            $orderData = $spreadsheet->getActiveSheet()->toArray(); 
 
-        echo '<div class="order">
-                <h2> ЗАКАЗ ОТ '.$orderData[1][8].'</h2>
-                <hr>
-                <div class="order-info">
-                    <div class="one">
-                        <div class="ord-product">';
-                            $counter = 0;
-                            foreach($orderData as $product)
-                            {
-                                if ($counter == 0) {} else
-                                {
-                                    echo '
-                                    <div class="order">
-                                        
-                                    </div>';
-                                }
-                            }
-                        echo '</div>
-                    </div>
+            if ($idUser ==  $orderData[1][0])
+            {
+                //echo "<pre>";
+                //print_r($orderData);
+                //echo "</pre>";
 
-                    <div class="two">
-                        <p>'.$orderData[0][0].': <span>'.$orderData[1][0].'</p>
-                        <p>'.$orderData[0][3].': <span>'.$orderData[1][3].'</p>
-                        <p>'.$orderData[0][2].': <span>'.$orderData[1][2].'</p>
-                        <p>'.$orderData[0][7].': <span>'.$orderData[1][7].'</p>
-                        <p>'.$orderData[0][1].': <span>'.$orderData[1][1].'</p>
-                    </div>
-                </div>
-            </div>';
+                echo '<div class="order">
+                        <h2> ЗАКАЗ ОТ '.$orderData[1][10].'</h2>
+                        <div class="order-info">
+                            <div class="one">
+                                <div class="ord-product">';
+                                    $counter = 0;
+                                    foreach($orderData as $product)
+                                    {
+                                        if ($counter == 0) { } else
+                                        {
+                                            $img = str_replace('ftp://37.140.192.146', './../', $productInfo[$product[8]]['image1']);
+                                            echo '
+                                            <div class="product">
+                                                <img class="product-image" src="'.$img.'" alt="">
+                                                <div class="product-info">
+                                                    <p>'.$productInfo[$product[8]]['name'].'</p>
+                                                    <div class="product-additional-info"> 
+                                                        <p class="product-count"> Кол-во: '.$product[6] .' <span>('.$productInfo[$product[8]]['unit'].'.)</span></p>
+                                                        <p class="product-price"> Цена: '.$product[7].'</p> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>';
+                                        }
+                                        $counter = 1;
+                                    }
+                                echo '</div>
+                            </div>
 
-
+                            <div class="two">
+                                <p>'.$orderData[0][1].': <span>'.$orderData[1][1].'</p>
+                                <p>'.$orderData[0][3].': <span>'.$orderData[1][3].'</p>
+                                <p>'.$orderData[0][2].': <span>'.$orderData[1][2].'</p>
+                                <p>'.$orderData[0][11].': <span>'.$orderData[1][11].'</p>
+                                <hr>
+                                <p class="final-price">'.$orderData[0][9].': <span>'.$orderData[1][9].'</p>
+                            </div>
+                        </div>
+                    </div>';
+            }
+        }
+    }
+    else
+    {
+        echo '<h2 style="text-align: center"> У вас нет заказов.</h2>';
     }
 ?>
     </div>

@@ -4,6 +4,7 @@ session_start();
 if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']); }
 
 require_once __DIR__ . '/model/connection.php';
+require 'vendor/autoload.php';
 
 if (isset($_GET['change']))
 {
@@ -138,11 +139,31 @@ if (isset($_GET['mailing']))
 
                     $cartResult = $mysqli->query("SELECT COUNT(*) FROM `user-cart` WHERE id_user = $idUser;");
                     $cartCount = $cartResult->fetch_row();
+
+                    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+                    $reader->setReadDataOnly(true);
+                    $dir = "./orders/";
+                    $orderFiles = array_diff( scandir( $dir), array('..', '.'));
+                    $ordersCount = count($orderFiles);
+                    $myOrder = 0;
+                    if ($ordersCount > 0)
+                    {
+                        foreach($orderFiles as $order)
+                        {
+                            $pathToFile = './orders/' . $order;
+                            $spreadsheet = $reader->load($pathToFile);
+                            $orderData = $spreadsheet->getActiveSheet()->toArray(); 
+
+                            if ($idUser ==  $orderData[1][0])
+                            {
+                                $myOrder++;
+                            }
+                        }
+                    }
                 ?>
                 <h3>ЗАКАЗЫ</h3>
-                <!-- <a href="#">Корзина товаров (25)</a>
-                <a href="#">история заказов (3)</a> -->
                 <? echo '<a href="cart.php">корзина товаров ('.$cartCount[0].')</a>'; ?>
+                <? echo '<a href="orders.php">история заказов ('.$myOrder.')</a>'; ?>
                 <? echo '<a href="favourite.php">избранные товары ('.$favouriteCount[0].')</a>'; ?>
             </div>
 
