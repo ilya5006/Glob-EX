@@ -37,8 +37,8 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
     <h2> СПОСОБ ДОСТАВКИ </h2>
     <div class="delivery">
         <form class="delivery-type">
-            <input type="radio" name="delivery" value="d" class="type-deliv active">Доставка</input>
-            <input type="radio" name="delivery" value="s" class="type-pickup">Самовызов</input>
+            <label class="active"> <input type="radio" name="delivery" value="d" class="type-deliv"> <p> ДОСТАВКА </p> </label>
+            <label> <input type="radio" name="delivery" value="s" class="type-pickup"> <p> САМОВЫВОЗ </p> </label>
         </form>
         <div class="deliv-inf" id="deliv-one">
         <?php
