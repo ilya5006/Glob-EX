@@ -113,14 +113,17 @@ function ajax()
                     }
                 });
 
-                console.log(address);
-                console.log(typeOfPayment);
-                console.log(phoneNumber);
-                console.log(typeOfDelivery);
-                console.log(price);
+                if (!typeOfDelivery)
+                {
+                    showMessaage('Выберите тип доставки');
+                    return 0;
+                }
 
-                if (!typeOfDelivery) showMessaage('Выберите тип доставки');
-                if (!typeOfPayment) showMessaage('Выберите тип оплаты');
+                if (!typeOfPayment)
+                {
+                    showMessaage('Выберите тип оплаты');
+                    return 0;
+                }
 
                 let formData = new FormData();
                 formData.append('address', address);
