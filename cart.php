@@ -36,10 +36,10 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
 <div class="content">
     <h2> СПОСОБ ДОСТАВКИ </h2>
     <div class="delivery">
-        <div class="delivery-type">
-            <p class="type-deliv active">Доставка</p>
-            <p class="type-pickup">Самовызов</p>
-        </div>
+        <form class="delivery-type">
+            <input type="radio" name="delivery" value="d" class="type-deliv active">Доставка</input>
+            <input type="radio" name="delivery" value="s" class="type-pickup">Самовызов</input>
+        </form>
         <div class="deliv-inf" id="deliv-one">
         <?php
             $result = $mysqli->query("SELECT * FROM `users_all` WHERE id_user = $idUser;");
