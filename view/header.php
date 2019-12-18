@@ -161,7 +161,7 @@ if (isset($_COOKIE['isLogin']))
 
             <label class="placeinput" id="fio_label">
                 <input required="1" type="text" name="fio" id="fio" autocomplete="name"/>
-                <div class="place_holder">Введите фио<span>*</span></div>
+                <div class="place_holder">Введите ФИО<span>*</span></div>
             </label>
 
             <label class="placeinput" id="email_label">
@@ -177,14 +177,16 @@ if (isset($_COOKIE['isLogin']))
                 <label class="placeinput" id="first_password">
                     <input required="1" type="password" name="password" id="passwordRegister" />
                     <div class="place_holder">Введите пароль<span>*</span></div>
+                    <span class="tooltip"> Не менее 6 символов </span>
                 </label>
                 <label class="placeinput" id="second_password">
                     <input required="1" type="password" id="passwordRegisterAgain" />
                     <div class="place_holder">Повторите пароль<span>*</span></div>
+                    <span class="tooltip"> Должны совпадать </span>
                 </label>
             </div>
 
-            <div class="user-type" style="width: 100%;">
+            <div class="user-type" style="width: 89%; display: flex; padding-left: 1px;">
                 <label class="container" id="individual"> <p> Частное лицо</p> <input type="radio" name="user_type" > <span class="checkmark"></span> </label>
                 <label class="container" id="entities"> <p> Юридическое лицо</p> <input type="radio" name="user_type"  > <span class="checkmark"></span> </label>
             </div>
