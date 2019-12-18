@@ -27,7 +27,7 @@ function ajax()
     xhr.onreadystatechange = function() 
     {
         if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
-        {
+        {   
             document.querySelector('#cart-update').innerHTML = xhr.responseText;
             products = document.querySelectorAll('.product');
             products.forEach(function(element)
@@ -88,6 +88,9 @@ function ajax()
                     });
                 });
             });
+
+            // твоя кнопка
+            console.log(document.querySelector(".act > .order-button"));
         }
     }
     xhr.open('GET', '../../view/cart.php', true);
