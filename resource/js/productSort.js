@@ -99,13 +99,13 @@ let toApplyFilters = () =>
 {
     let choseSpecs = document.querySelectorAll('.filter .container input:checked');
 
-    if (choseSpecs.length == 0)
-    {
-        products = originalProductsList;
-        showPages(1);
-        productsListUpdate();
-        return 0;
-    }
+    // if (choseSpecs.length == 0)
+    // {
+    //     products = originalProductsList;
+    //     showPages(1);
+    //     productsListUpdate();
+    //     return 0;
+    // }
     
     products = [];
     let specsNameValueObject = {};
@@ -195,7 +195,7 @@ let showPages = (chosePage) =>
     chosePage = parseInt(chosePage)
     pagination.innerHTML = '';
 
-    let pagesQuantity = calculatePagesQuantity(products);
+    let pagesQuantity = calculatePagesQuantity();
 
     if (pagesQuantity < 6)
     {
@@ -301,15 +301,33 @@ productsQuantitySort.addEventListener('input', () =>
     showPages(1);
     productsListUpdate();
 });
-pagination.addEventListener('click', (event) =>
+
+document.querySelector('.pages').addEventListener('click', (event) =>
 {
     event.preventDefault();
+
+    let currentPage = pagination.querySelector('li .active');
     
-    if (event.target.tagName.toLowerCase() == 'a')
+    if (event.target.tagName.toLowerCase() == 'a' && event.target.textContent != '...')
     {
-        pagination.querySelector('li .active').classList.remove('active');
-        event.target.classList.add('active');
+        currentPage.classList.remove('active');
         showPages(event.target.textContent);
+        productsListUpdate();
+    }
+
+    if (event.target.getAttribute('class') == 'page_left' && parseInt(currentPage.textContent) >= 4)
+    {
+        let nextPage = parseInt(currentPage.textContent) - 3;
+        currentPage.classList.remove('active');
+        showPages(nextPage);
+        productsListUpdate();
+    }
+
+    if (event.target.getAttribute('class') == 'page_right' && parseInt(currentPage.textContent) <= calculatePagesQuantity() - 3)
+    {
+        let nextPage = parseInt(currentPage.textContent) + 3;
+        currentPage.classList.remove('active');
+        showPages(nextPage);
         productsListUpdate();
     }
 });
