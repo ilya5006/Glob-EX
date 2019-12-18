@@ -150,13 +150,16 @@ if (isset($_GET['mailing']))
                     {
                         foreach($orderFiles as $order)
                         {
-                            $pathToFile = './orders/' . $order;
-                            $spreadsheet = $reader->load($pathToFile);
-                            $orderData = $spreadsheet->getActiveSheet()->toArray(); 
-
-                            if ($idUser ==  $orderData[1][0])
+                            if ($order[0] != '~')
                             {
-                                $myOrder++;
+                                $pathToFile = './orders/' . $order;
+                                $spreadsheet = $reader->load($pathToFile);
+                                $orderData = $spreadsheet->getActiveSheet()->toArray(); 
+    
+                                if ($idUser ==  $orderData[1][0])
+                                {
+                                    $myOrder++;
+                                }
                             }
                         }
                     }
