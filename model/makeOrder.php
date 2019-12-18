@@ -94,11 +94,16 @@
     $sheet->setCellValue('K2', $date);
 
     $sheet->setCellValue('L1', 'Статус заказа');
-    $sheet->setCellValue('L2', 'Оформлен');
+    $sheet->setCellValue('L2', 'Не подтверждён');
 
 
     $writer = new Xlsx($spreadsheet);
 
     $filePath = '../orders/' . generateOrderNumber() . '.xlsx';
     $writer->save($filePath);
+
+    if ($writer)
+    {
+        echo json_encode(['done']);
+    }
 ?>

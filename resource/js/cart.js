@@ -137,6 +137,19 @@ function ajax()
                     method: "POST",
                     body: formData
                 });
+                
+                connectionOrder.then((result) =>
+                {
+                    result.json().then(result => 
+                    {
+                        if (result == 'done')
+                        {
+                            showMessaage('Заказ оформлен');
+                            location.href = 'orders.php';
+                        }
+                    });
+                });
+
             });
         }
     }
