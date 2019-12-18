@@ -104,6 +104,8 @@
 
     if ($writer)
     {
+        $mysqli->query("DELETE FROM `user-cart` WHERE id_user = '$idUser'");
         echo json_encode(['done']);
     }
+
 ?>
