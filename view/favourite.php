@@ -20,6 +20,12 @@ $brandInfo = $xmlParseData['brands'];
         <a class="favourite active" href="./favourite.php"> Отложенные товары </a>
     </div>
 
+    <?php
+        $countFav = $mysqli->query("SELECT count(*) FROM `user-favoutite` WHERE id_user = $idUser;")->fetch_row()[0];
+        
+        if ($countFav > 0)
+        { 
+    ?>
     <div class="catalg_view">
         <div class='fav-act'>
             <div class="sort">
@@ -31,15 +37,6 @@ $brandInfo = $xmlParseData['brands'];
                         <option value="50">Сначала дорогие</option>
                     </select>
                 </p>
-
-                <!-- <p>
-                    Товаров на странице:
-                    <select>
-                        <option value="10">10</option>
-                        <option value="30">30</option>
-                        <option value="50">50</option>
-                    </select>
-                </p> -->
 
                 <div class="view">
                     <img src="./resource/img/icons/block.png" alt="sort" id="sort-block">
@@ -123,4 +120,11 @@ $brandInfo = $xmlParseData['brands'];
             </div>
         </div>
     </div>
+    <?php
+        }
+        else
+        {
+            echo '<h2 style="text-align: center"> У вас нет отложенных товаров.</h2>';
+        }
+    ?>
 </div>

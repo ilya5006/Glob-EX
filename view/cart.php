@@ -22,6 +22,12 @@ $brands = $xmlParseData['brands'];
     <a class="favourite" href="./favourite.php"> Отложенные товары </a>
 </div>
 
+<?php
+        $countCart = $mysqli->query("SELECT count(*) FROM `user-cart` WHERE id_user = $idUser;")->fetch_row()[0];
+        
+        if ($countCart > 0)
+        { 
+    ?>
 <div class="cart-block">
     <div class="items">
 
@@ -89,5 +95,13 @@ $brands = $xmlParseData['brands'];
             <?php
         }
         ?>
+        
 </div>
+<?php
+        }
+        else
+        {
+            echo '<h2 style="text-align: center"> У вас нет товаров в корзине.</h2>';
+        }
+    ?>
 </div>

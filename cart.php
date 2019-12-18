@@ -33,6 +33,12 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
 
 <div class="content" style="padding-top: 0" id="cart-update"> </div>
 
+<?php
+        $countCart = $mysqli->query("SELECT count(*) FROM `user-cart` WHERE id_user = $idUser;")->fetch_row()[0];
+        
+        if ($countCart > 0)
+        { 
+    ?>
 <div class="content">
     <h2> СПОСОБ ДОСТАВКИ </h2>
     <div class="delivery">
@@ -117,6 +123,9 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
         </label>
     </div>
 </div>
+<?php
+    }
+?>
 
 <?php require(__DIR__ . '/view/footer.php'); ?>
 
