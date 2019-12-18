@@ -177,12 +177,12 @@ if (isset($_COOKIE['isLogin']))
                 <label class="placeinput" id="first_password">
                     <input required="1" type="password" name="password" id="passwordRegister" />
                     <div class="place_holder">Введите пароль<span>*</span></div>
-                    <span class="tooltip"> Не менее 6 символов </span>
+                    <span class="tooltip"> <p> Не менее 6 символов </p> </span>
                 </label>
                 <label class="placeinput" id="second_password">
                     <input required="1" type="password" id="passwordRegisterAgain" />
                     <div class="place_holder">Повторите пароль<span>*</span></div>
-                    <span class="tooltip"> Должны совпадать </span>
+                    <span class="tooltip"> <p>  Должны совпадать </p> </span>
                 </label>
             </div>
 
