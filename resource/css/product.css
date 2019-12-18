@@ -223,6 +223,12 @@
 	background-color: #E31E25;
 }
 
+.fav-button
+{
+	margin-right: 15px;
+	cursor: pointer;
+}
+
 .product_info .act input[type="submit"]:hover
 {
 	color: #E31E25;

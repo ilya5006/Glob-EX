@@ -823,7 +823,7 @@
 {
 	position: relative;
 
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .place_holder span
@@ -1087,4 +1087,30 @@ form .container p a, .container p span
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+}
+
+.tooltip
+{
+    bottom: 63px;
+    left: 0;
+	position: absolute;
+	display: none;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.tooltip > p
+{
+	color: #FFFFFF;
+	background-color: #E31E25;
+    padding: 5px 15px;
+    text-align: center;
+	border-radius: 6px;
+	opacity: 0.8;
+}
+
+.placeinput input:focus ~ .tooltip
+{
+	display: flex;
 }

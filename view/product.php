@@ -120,11 +120,15 @@ if (isset($product['specs']))
       <?php } ?>
             <form action="#">
                 <?php
+                    echo '<div class="fav-button">';
+                    echo '<img src="./resource/img/icons/favourite.svg" alt="fav">';
+                    echo '</div>';
                     if ((int)$product['quantity'] > 0)
                     {
                         echo '<input type="number" name="" id="" min="1" max="'.$product['quantity'].'" value="1">';
                         echo '<input type="submit" class="cart" value="в корзину">';
                     }
+                    
                 ?>
             </form>
         </div>
