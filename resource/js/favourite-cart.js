@@ -95,4 +95,29 @@ if (document.querySelector('.product_info'))
             showMessaage('Вы не авторизованны!');
         }
     });
+
+    document.querySelector('.product_info').querySelector('.fav-button').addEventListener('click', function(e)
+    {
+        e.preventDefault();
+        if (idUser)
+        {
+            let favDara = new FormData();
+            favDara.append('id_product', document.querySelector('.product_info').querySelector('.id').textContent);
+            favDara.append('id_user', idUser);
+
+            let connectionFav = fetch('../../model/addFavourite.php', 
+            {
+                method: 'POST',
+                body: favDara
+            });
+            connectionFav.then((result) =>
+            {
+                result.json().then(result => showMessaage(result));
+            });
+        }
+        else
+        {
+            showMessaage('Вы не авторизованны!');
+        }
+    });
 }
