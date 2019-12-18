@@ -67,7 +67,7 @@ $productInfo = $xmlParseData['nomeklatura'];
                     //echo "</pre>";
 
                     echo '<div class="order">
-                            <h2> ЗАКАЗ ОТ '.$orderData[1][10].'</h2>
+                            <h2> ЗАКАЗ '.preg_replace("/[^0-9]/", '', $order).'</h2>
                             <div class="order-info">
                                 <div class="one">
                                     <div class="ord-product">';
@@ -96,6 +96,7 @@ $productInfo = $xmlParseData['nomeklatura'];
                                 </div>
 
                                 <div class="two">
+                                    <p>'.$orderData[0][10].': <span>'.$orderData[1][10].'</p>
                                     <p>'.$orderData[0][1].': <span>'.$orderData[1][1].'</p>
                                     <p>'.$orderData[0][3].': <span>'.$orderData[1][3].'</p>
                                     <p>'.$orderData[0][2].': <span>'.$orderData[1][2].'</p>
