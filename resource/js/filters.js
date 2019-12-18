@@ -26,7 +26,8 @@ noUiSlider.create(slider, {
     },
     step: 1.0,
     format: wNumb({
-        decimals: 4
+        decimals: 4,
+        suffix: ' р.'
     })
 });
 
