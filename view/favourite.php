@@ -29,6 +29,11 @@ $brandInfo = $xmlParseData['brands'];
     <div class="catalg_view">
         <div class='fav-act'>
             <div class="sort">
+                <label class="container">
+                    <input type="checkbox" id="only_in_stock"> 
+                    <span class="checkmark"></span>
+                    Товар в наличии
+                </label>
                 <p>
                     Сортировка:
                     <select>

@@ -98,6 +98,7 @@ checkSize();
 let toApplyFilters = () =>
 {
     let choseSpecs = document.querySelectorAll('.filter .container input:checked');
+    let onlyInStock = document.querySelector('#only_in_stock:checked');
 
     // if (choseSpecs.length == 0)
     // {
@@ -158,7 +159,15 @@ let toApplyFilters = () =>
             }
         });
 
-        if (accpetedFiltersLength == suitableFilters && productPrice >= minPrice && productPrice <= maxPrice) products.push(product);
+        if (onlyInStock)
+        {
+            let isProductInStock = product.querySelector('.available').textContent != 'нет в наличии';
+            if (accpetedFiltersLength == suitableFilters && productPrice >= minPrice && productPrice <= maxPrice && isProductInStock) products.push(product);
+        }
+        else
+        {
+            if (accpetedFiltersLength == suitableFilters && productPrice >= minPrice && productPrice <= maxPrice) products.push(product);
+        }
     });
     
     showPages(1);
@@ -338,3 +347,8 @@ applyFilters.addEventListener('click', () =>
 });
 
 slider.noUiSlider.on('update.one', toApplyFilters);
+
+document.querySelector('#only_in_stock').addEventListener(('input'), () =>
+{
+    toApplyFilters();
+});

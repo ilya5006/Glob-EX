@@ -276,7 +276,6 @@ foreach ($brands as $brandId => $brandInfo)
                     Товар в наличии
                 </label>
 
-
                 <p> Сортировка: <select id="products_sort">
                         <option value="popular" selected="selected">По популярности</option>
                         <option value="low">Сначала дешевые</option>
