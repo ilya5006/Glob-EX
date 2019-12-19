@@ -123,6 +123,7 @@ foreach ($brands as $brandId => $brandInfo)
     $brands[$brandId]['image'] = str_replace('ftp://37.140.192.146', './../', $brands[$brandId]['image']);
 }
 
+
 ?>
 
 <div class="content" style="padding-top: 0">
@@ -255,14 +256,23 @@ foreach ($brands as $brandId => $brandInfo)
             <?php
             foreach ($brands as $brandId => $brandInfo)
             {
-                $image = $brandInfo['image'];
-                echo '<a href="#" class="brand"><img src="' . $image . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
+                $productsQuantity = quantityOfProductsForOneBrand($brandId, $productsWithSameCategory);
+                if ($productsQuantity > 0)
+                {
+                    $image = $brandInfo['image'];
+                    echo '<a href="#" class="brand"><img src="' . $image . '"> <span class="name" style="display: none;">'.$brandInfo['name'].'</span> </a>';
+                }
+               
             }
             ?>
             </div>
             <!-- КОНЕЦ СЛАЙДЕРА С БРЕНДАМИ -->
 
             <div class="sort">
+                <p> Товар в наличии: <input type="checkbox" id="only_in_stock">
+                </p>
+
+
                 <p> Сортировка: <select id="products_sort">
                         <option value="popular" selected="selected">По популярности</option>
                         <option value="low">Сначала дешевые</option>
