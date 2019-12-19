@@ -66,7 +66,7 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
                             if ($addressIsSet == true)
                             {
                                 echo '<select name="address" id="cart-address">';
-                                if ($userData['address'] != '') { echo '<option>'.$userData['address'].'</option>'; }
+                                if ($userData['address'] != '')             { echo '<option>'.$userData['address'].'</option>'; }
                                 if ($userData['additional_address1'] != '') { echo '<option>'.$userData['additional_address1'].'</option>'; }
                                 if ($userData['additional_address2'] != '') { echo '<option>'.$userData['additional_address2'].'</option>'; }
                                 if ($userData['additional_address3'] != '') { echo '<option>'.$userData['additional_address3'].'</option>'; }
