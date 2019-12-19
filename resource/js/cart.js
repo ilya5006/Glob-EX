@@ -145,7 +145,7 @@ function ajax()
                         if (result == 'done')
                         {
                             showMessaage('Заказ оформлен');
-                            location.href = 'orders.php';
+                            location.href = 'order.php';
                         }
                     });
                 });

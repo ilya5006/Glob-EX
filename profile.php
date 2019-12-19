@@ -166,7 +166,7 @@ if (isset($_GET['mailing']))
                 ?>
                 <h3>ЗАКАЗЫ</h3>
                 <? echo '<a href="cart.php">корзина товаров ('.$cartCount[0].')</a>'; ?>
-                <? echo '<a href="orders.php">история заказов ('.$myOrder.')</a>'; ?>
+                <? echo '<a href="order.php">история заказов ('.$myOrder.')</a>'; ?>
                 <? echo '<a href="favourite.php">избранные товары ('.$favouriteCount[0].')</a>'; ?>
             </div>
 

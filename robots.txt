@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /Data/
-Disallow: /orders/s
+Disallow: /orders/
 Disallow: /vendor/
 Disallow: /model/
 Disallow: /resource/

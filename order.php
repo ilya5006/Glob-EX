@@ -5,7 +5,7 @@ session_start();
 if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']); }
 
 require 'vendor/autoload.php';
-require_once __DIR__ . './model/xmlparser.php';
+require_once __DIR__ . '/model/xmlparser.php';
 $productInfo = $xmlParseData['nomeklatura'];
 
 ?>
