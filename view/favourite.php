@@ -36,13 +36,19 @@ $brandInfo = $xmlParseData['brands'];
                 </label>
                 <p>
                     Сортировка:
-                    <select>
-                        <option value="10">По популярности</option>
-                        <option value="30">Сначала дешевые</option>
-                        <option value="50">Сначала дорогие</option>
+                    <select id="products_sort">
+                        <option value="popular" selected="selected">По популярности</option>
+                        <option value="low">Сначала дешевые</option>
+                        <option value="hight">Сначала дорогие</option>
                     </select>
                 </p>
-
+                <p> Товаров на странице: 
+                    <select id="products_quantity">
+                        <option value="10">10</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                    </select>
+                </p>
                 <div class="view">
                     <img src="./resource/img/icons/block.png" alt="sort" id="sort-block">
                     <img src="./resource/img/icons/horizontal.png" alt="sort" id="sort-hor">
@@ -56,6 +62,19 @@ $brandInfo = $xmlParseData['brands'];
                 <p class="delete"> Удалить </p>
                 <p class=in-cart> В корзину </p>
             </div>
+
+        </div>
+
+        <div class="pages">
+            <p class="page_left"> < </p>
+            <ul class="pagination">
+                <!-- <li> <a href="#" class="active">1</a></li>
+                <li> <a href="#">2</a></li>
+                <li> <a href="#">3</a></li>
+                <li> <a href="#">4</a></li>
+                <li> <a href="#">5</a></li> -->
+            </ul>
+            <p class="page_right"> > </p>
         </div>
 
         <div class="products" style="width: 100%;">

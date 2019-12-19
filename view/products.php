@@ -332,7 +332,7 @@ foreach ($brands as $brandId => $brandInfo)
                 }
                 ?>
                 <div class="product" data-specs="<?php echo $specsValuesString . 'Бренд => ' . $brands[$productInfo['brand']]['name'] . ' ; '; ?>">
-                    <!-- <label class="container" id="cart"> <input type="checkbox" name="prduct-check"> <span class="checkmark"></span> </label> -->
+                    
                     <?php
                     if ($isProductHaveImage)
                     { ?>
