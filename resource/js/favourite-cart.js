@@ -8,7 +8,7 @@ function getCookie(name)
 
 let idUser = getCookie('isLogin');
 
-allProducts = document.querySelectorAll('.product');
+allProducts = originalProductsList;
 let idProduct;
 
 allProducts.forEach(function(element)
