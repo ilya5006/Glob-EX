@@ -8,7 +8,8 @@ function getCookie(name)
 
 let idUser = getCookie('isLogin');
 
-allProducts = originalProductsList;
+allProducts = document.querySelectorAll('.product');
+if(typeof(originalProductsList) != "undefined" && originalProductsList !== null) { allProducts = originalProductsList; }
 let idProduct;
 
 allProducts.forEach(function(element)
