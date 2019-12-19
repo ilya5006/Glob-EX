@@ -341,11 +341,6 @@ document.querySelector('.pages').addEventListener('click', (event) =>
     }
 });
 
-applyFilters.addEventListener('click', () =>
-{
-    toApplyFilters();
-});
-
 slider.noUiSlider.on('update.one', toApplyFilters);
 
 document.querySelector('#only_in_stock').addEventListener(('input'), () =>
