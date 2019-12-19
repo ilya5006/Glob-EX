@@ -772,7 +772,7 @@
 }
 
 /* Начало чекбоксов */
-.product > .container
+.product > .container, .sort > .container
 {
 	font-size: 14px;
 
@@ -788,7 +788,7 @@
 }
 
 
-.product > .container input
+.product > .container input, .sort > .container input
 {
 	position: absolute;
 
@@ -801,7 +801,7 @@
 }
 
 
-.product .checkmark
+.product .checkmark, .sort .checkmark
 {
 	position: absolute;
 	z-index: 50;
@@ -816,19 +816,19 @@
 }
 
 
-.product > .container:hover input ~ .checkmark
+.product > .container:hover input ~ .checkmark, .sort > .container:hover input ~ .checkmark
 {
 	background-color: #FFFFFF;
 }
 
 
-.product > .container input:checked ~ .checkmark
+.product > .container input:checked ~ .checkmark, .sort > .container input:checked ~ .checkmark
 {
 	border: 0;
 	background-color: #E31E25;
 }
 
-.product > .container .checkmark:after
+.product > .container .checkmark:after, .sort > .container .checkmark:after
 {
 	top: 5px;
 	left: 9px;
@@ -841,6 +841,21 @@
 	border: solid white;
 	border-width: 0 3px 3px 0;
 }
+
+.sort > .container
+{
+	font-size: 16px;
+	margin: 0 25px;
+	width: auto;
+	margin-bottom: 0;
+}
+
+.sort .checkmark
+{
+    top: -4px;
+    left: 0px;
+}
+
 /* Конец чекбоксов */
 
 .available
@@ -1087,4 +1102,21 @@
 	color: #FFFFFF;
     border: 3px solid #E31E25;
     background-color: #E31E25;
+}
+
+@media screen and (max-width: 1400px)
+{
+	.catalg_view .sort
+	{
+		flex-flow: column nowrap;
+	}
+	.sort > .container
+	{
+		margin-top: 25px;
+		margin-bottom: 10px;
+	}
+	.catalg_view .sort .view
+	{
+		margin-bottom: 10px;
+	}
 }

@@ -269,8 +269,12 @@ foreach ($brands as $brandId => $brandInfo)
             <!-- КОНЕЦ СЛАЙДЕРА С БРЕНДАМИ -->
 
             <div class="sort">
-                <p> Товар в наличии: <input type="checkbox" id="only_in_stock">
-                </p>
+
+                <label class="container">
+                    <input type="checkbox" id="only_in_stock"> 
+                    <span class="checkmark"></span>
+                    Товар в наличии
+                </label>
 
 
                 <p> Сортировка: <select id="products_sort">
