@@ -2,6 +2,12 @@
 session_start(); 
 require_once __DIR__ . '/model/xmlparser.php';
 $idCategory = $_GET['id'];
+
+if (empty($xmlParseData['partitions'][$idCategory]))
+{
+    header("Location: ./404.html");
+}
+
 $title = $xmlParseData['partitions'][$idCategory]['name'];
 ?>
 <!DOCTYPE html>

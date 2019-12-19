@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../model/xmlparser.php';
 
 $idProduct = $_GET['id'];
+
 $product = $xmlParseData['nomeklatura'][$idProduct];
 
 $product['images'][] = $product['image1'];

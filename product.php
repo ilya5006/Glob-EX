@@ -2,6 +2,13 @@
 session_start(); 
 require_once __DIR__ . '/model/xmlparser.php';
 $idProduct = $_GET['id'];
+
+if (empty($xmlParseData['nomeklatura'][$idProduct]))
+{
+    header("Location: ./404.html");
+}
+
+
 $title = $xmlParseData['nomeklatura'][$idProduct]['name'];
 ?>
 <!DOCTYPE html>
