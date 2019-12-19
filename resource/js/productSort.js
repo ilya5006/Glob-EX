@@ -279,6 +279,11 @@ let showPages = (chosePage) =>
 
 let productsListUpdate = () =>
 {
+    if (originalProductsList.length == 0)
+    {
+        listProduct.innerHTML = '<h2 style="margin: 0px auto;">Продуктов с данной категорией нету в наличии</h2>';
+        return 0;
+    }
     listProduct.innerHTML = '';
 
     let activePage = parseInt(pagination.querySelector('li .active').textContent);
