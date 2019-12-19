@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /Data/
+Disallow: /orders/s
+Disallow: /vendor/
+Disallow: /model/
+Disallow: /resource/
+Disallow: /view/
