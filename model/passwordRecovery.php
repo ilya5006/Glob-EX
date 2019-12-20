@@ -11,7 +11,7 @@
         die();
     }
 
-    $isAlreadyCreatedToken = $mysqli->query("SELECT * FROM users_all WHERE email = '$email'");
+    $isAlreadyCreatedToken = $mysqli->query("SELECT * FROM password_recovery WHERE email = '$email'");
 
     if (!$isAlreadyCreatedToken)
     {
@@ -48,11 +48,7 @@
             </html>
         ';
 
-        $headers = 
-        [
-            'Content-Type' => 'text/html',
-            'From' => 'help@vsekanc.ru'
-        ];
+        $headers = 'Content-Type: text/html' . "\r\n" . 'From: help@vsekanc.ru';
 
         mail($to, $subject, $message, $headers);
         
