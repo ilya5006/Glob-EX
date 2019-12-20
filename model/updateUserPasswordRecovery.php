@@ -26,6 +26,7 @@
 
     if ($updatePassword)
     {
+        $mysqli->query("DELETE FROM password_recovery WHERE token = '$token'");
         echo 'Пароль успешно обновлён!';
     }
 ?>
