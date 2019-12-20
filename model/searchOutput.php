@@ -2,7 +2,8 @@
 
 require_once __DIR__ . '/xmlparser.php';
 
-$inputText = $_POST['search'];
+$inputText = trim(htmlentities($_POST['search']));
+$inputText = preg_replace ("/[^a-zA-ZА-Яа-я0-9\s]/","", $inputText);
 
 $products = $xmlParseData['nomeklatura'];
 
