@@ -86,7 +86,7 @@
 {
 	margin-bottom: 10px;
 
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .product > .product-price
@@ -415,7 +415,7 @@
 	height: 50px;
 
 	color: #FFFFFF;
-	background-color: red;
+	background-color: #E31E24;
 }
 
 .product > .sale::before

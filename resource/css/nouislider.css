@@ -98,7 +98,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin
 
 	cursor: pointer;
 
-	background-color: #E31E25;
+	background-color: #E31E24;
 }
 .noUi-state-tap .noUi-connect, .noUi-state-tap .noUi-origin
 {
@@ -158,7 +158,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle
 }
 .noUi-connect
 {
-	background: #E31E25;
+	background: #E31E24;
 }
 /* Handles and cursors;
  */

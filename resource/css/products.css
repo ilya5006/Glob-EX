@@ -167,7 +167,7 @@
 .filter > ul > li .container input:checked ~ .checkmark, .fav-act > .check-selecter .container input:checked ~ .checkmark
 {
 	border: 0;
-	background-color: #E31E25;
+	background-color: #E31E24;
 }
 
 .fav-act > .check-selecter .container
@@ -267,7 +267,7 @@
 {
 	margin-left: 5px;
 
-	color: #E31E25;
+	color: #E31E24;
 	border: 0;
 	background-color: #FFFFFF;
 }
@@ -363,7 +363,7 @@
 	font-weight: bold;
 
 	opacity: 1;
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .list-products
@@ -462,7 +462,7 @@
 {
 	display: inline-block;
 
-	color: #E31E25;
+	color: #E31E24;
 	;
 }
 
@@ -548,7 +548,7 @@
 
 .product.hor .cart:hover
 {
-	color: #E31E25;
+	color: #E31E24;
 	background-color: #FFFFFF;
 
 	filter: grayscale(0);
@@ -593,7 +593,7 @@
 	text-transform: lowercase;
 
 	color: #FFFFFF;
-	background-color: #E31E25;
+	background-color: #E31E24;
 }
 
 .product.hor .checkmark
@@ -825,7 +825,7 @@
 .product > .container input:checked ~ .checkmark, .sort > .container input:checked ~ .checkmark
 {
 	border: 0;
-	background-color: #E31E25;
+	background-color: #E31E24;
 }
 
 .product > .container .checkmark:after, .sort > .container .checkmark:after
@@ -965,7 +965,7 @@
 	height: 50px;
 
 	color: #FFFFFF;
-	background-color: red;
+	background-color: #E31E24;
 }
 
 .fav-act
@@ -1092,16 +1092,16 @@
     transition: 0.3s all;
     text-align: center;
     text-transform: uppercase;
-    color: #E31E25;
-    border: 3px solid #E31E25;
+    color: #E31E24;
+    border: 3px solid #E31E24;
     background-color: #FFFFFF;
 }
 
 #apply_filters:hover
 {
 	color: #FFFFFF;
-    border: 3px solid #E31E25;
-    background-color: #E31E25;
+    border: 3px solid #E31E24;
+    background-color: #E31E24;
 }
 
 @media screen and (max-width: 1400px)

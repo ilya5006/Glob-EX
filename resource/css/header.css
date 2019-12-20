@@ -71,12 +71,12 @@
 {
 	font-weight: bold;
 
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .header .content .menu li a:hover
 {
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .header .content .menu li a:not(.tel)::after
@@ -95,7 +95,7 @@
 	-webkit-transform: scale(0);
 	        transform: scale(0);
 
-	background-color: #E31E25;
+	background-color: #E31E24;
 }
 
 .header .content .menu li a:hover::after
@@ -106,7 +106,7 @@
 
 .header .content .menu li a.tel
 {
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .header .content .menu li a.tel:hover
@@ -145,7 +145,7 @@
 
 	color: #FFFFFF;
 	border: 0;
-	background-color: #E31E25;
+	background-color: #E31E24;
 	;
 }
 
@@ -218,7 +218,7 @@
 
 #searchResult::-webkit-scrollbar-thumb
 {
-	background-color: #E31E25;
+	background-color: #E31E24;
 }
 
 #searchResult::-webkit-scrollbar-track
@@ -355,7 +355,7 @@
 
 	text-transform: uppercase;
 
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .header .content .nav ul li.account
@@ -523,12 +523,12 @@
 	user-select: none;
 
 	opacity: 0.7;
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .expand-catalog .cat_1:hover
 {
-	color: #E31E25;
+	color: #E31E24;
 	background-color: #F7F7F7;
 
 	filter: grayscale(0);
@@ -607,7 +607,7 @@
 {
 	font-weight: bold;
 
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .expand-catalog .expand-cat_2 ul li a
@@ -624,7 +624,7 @@
 
 .expand-catalog .expand-cat_2 ul li a:hover
 {
-	color: #E31E25;
+	color: #E31E24;
 	background-color: #FFFFFF;
 }
 
@@ -705,7 +705,7 @@
 
 	transform: translate(-50%, 0%);
 
-	border-top: 7px solid #E31E25;
+	border-top: 7px solid #E31E24;
 	background-color: #FFFFFF;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
 }
@@ -775,7 +775,7 @@
 
 #modal_authorize .modal .type_auth p.active
 {
-	border-bottom: 5px solid #E31E25;
+	border-bottom: 5px solid #E31E24;
 }
 
 #modal_authorize .modal form label, #modal_changePassword .modal form label
@@ -835,7 +835,7 @@
 {
 	margin-left: 7px;
 
-	color: red;
+	color: #E31E24;
 }
 
 #modal_authorize .modal form input[type=submit], #loginButton, #registerButton, #recoveryMailButton	
@@ -855,7 +855,7 @@
 
 	color: #FFFFFF;
 	border: 0;
-	background-color: #E31E25;
+	background-color: #E31E24;
 }
 
 #recoveryMailButton
@@ -874,7 +874,7 @@
 
 	text-align: right;
 
-	color: #E31E25;
+	color: #E31E24;
 }
 
 #modal_authorize .modal form .require, #modal_changePassword .modal form .require
@@ -895,7 +895,7 @@
 
 #modal_authorize .modal form .require span, #modal_changePassword .modal form .require span
 {
-	color: #E31E25;
+	color: #E31E24;
 }
 
 #modal_authorize .modal form .passwords, #modal_changePassword .modal form .user-type
@@ -963,7 +963,7 @@ form .container:hover input ~ .checkmark, .pay-type .container:hover input ~ .ch
 form .container input:checked ~ .checkmark, .pay-type .container input:checked ~ .checkmark
 {
 	border: 0;
-	background-color: #E31E25;
+	background-color: #E31E24;
 }
 
 form .container .checkmark:after, .pay-type .container .checkmark:after
@@ -993,7 +993,7 @@ form .container p a, .container p span
 {
 	display: inline-block;
 
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .pay-type .checkmark
@@ -1149,7 +1149,7 @@ form .container p a, .container p span
 .tooltip > p
 {
 	color: #FFFFFF;
-	background-color: #E31E25;
+	background-color: #E31E24;
     padding: 5px 15px;
     text-align: center;
 	border-radius: 6px;
