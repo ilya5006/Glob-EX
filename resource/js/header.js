@@ -137,8 +137,8 @@ searchInput.addEventListener('input', function()
         {
             searchResult.innerHTML = xhr.responseText;
         }
-    }
-})
+    };
+});
 
 document.addEventListener("keydown", function (event)
 {
