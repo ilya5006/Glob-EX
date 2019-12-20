@@ -105,6 +105,7 @@ if (document.querySelector('#login_button'))
         document.querySelector('#reg_form').classList.remove('active');
         document.querySelector('#modal_authorize .modal form.login').style.display = 'flex';
         document.querySelector('#modal_authorize .modal form.register').style.display = 'none';
+        document.querySelector('#modal_authorize .modal form.password_recovery').style.display = 'none';
     });
 
     document.querySelector('#reg_form').addEventListener('click', function()
@@ -113,6 +114,7 @@ if (document.querySelector('#login_button'))
         document.querySelector('#log_form').classList.remove('active');
         document.querySelector('#modal_authorize .modal form.register').style.display = 'flex';
         document.querySelector('#modal_authorize .modal form.login').style.display = 'none';
+        document.querySelector('#modal_authorize .modal form.password_recovery').style.display = 'none';
     });
 }
 
@@ -149,4 +151,21 @@ document.addEventListener("keydown", function (event)
         document.body.style.overflowY = 'scroll';
         document.body.style.paddingRight = '0px';
     }
+});
+
+document.querySelector('.forget_password').addEventListener('click', function()
+{
+    document.querySelector('#reg_form').classList.remove('active');
+    document.querySelector('#log_form').classList.remove('active');
+    document.querySelector('#modal_authorize .modal form.register').style.display = 'none';
+    document.querySelector('#modal_authorize .modal form.login').style.display = 'none';
+    document.querySelector('#modal_authorize .modal form.password_recovery').style.display = 'flex';
+});
+
+document.querySelector('#modal_authorize .modal form.password_recovery .passwordRecoveryBack').addEventListener('click', function()
+{
+    document.querySelector('#log_form').classList.remove('add');
+    document.querySelector('#modal_authorize .modal form.register').style.display = 'none';
+    document.querySelector('#modal_authorize .modal form.login').style.display = 'flex';
+    document.querySelector('#modal_authorize .modal form.password_recovery').style.display = 'none';
 });

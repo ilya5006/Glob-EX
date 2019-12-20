@@ -199,5 +199,16 @@ if (isset($_COOKIE['isLogin']))
             <div id="registerButton"> зарегистрироваться </div>
         </form>
 
+        <form action="#" class="password_recovery" style="display: none;">
+            <h2> Восстановление пароля </h2>
+            <label class="placeinput">
+                <input required="1" type="text" id="recoveryMail" />
+                <div class="place_holder">Введите телефон или e-mail<span>*</span></div>
+            </label>
+
+            <div id="recoveryMailButton"> восстановить </div>
+            <a href="#" class="passwordRecoveryBack"> Вспомнили пароль? </a>
+        </form>
+
     </div>
 </div>
