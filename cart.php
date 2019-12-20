@@ -22,7 +22,6 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
     
     <script src="./resource/js/detectBrowser.js"></script>
     <script src="./resource/js/header.js" defer></script>
-    <script src="./resource/js/productsQuantityControl.js" defer></script>
     <script src="./resource/js/cart.js" defer></script>
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
