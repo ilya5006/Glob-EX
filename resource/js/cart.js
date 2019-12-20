@@ -85,10 +85,9 @@ function ajax()
                 });
             });
 
-            // твоя кнопка
+            
             document.querySelector(".act > .order-button").addEventListener('click', () =>
             {
-                console.clear();
                 let typesOfPayment = document.querySelectorAll('.pay-type input');
                 let address = document.querySelector('#cart-address').value;
                 let typesOfDelivery = document.querySelectorAll('.delivery-type input');

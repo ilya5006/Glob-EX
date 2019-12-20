@@ -19,6 +19,7 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
     <link rel="stylesheet" href="./resource/css/scroll.css">
     <link rel="stylesheet" href="./resource/css/products.css">
     <link rel="stylesheet" href="./resource/css/footer.css">
+    
     <script src="./resource/js/detectBrowser.js"></script>
     <script src="./resource/js/header.js" defer></script>
     <script src="./resource/js/productSort.js" defer></script>
@@ -27,6 +28,8 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/favourite-cart.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
+    <script src="./resource/js/productsQuantityControl.js" defer></script>
+
     <style> 
         .product.hor .sale { top: 55px; }
         .list-products .product .inp-cart-fav { width: 100%; }

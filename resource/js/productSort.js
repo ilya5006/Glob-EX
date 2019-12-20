@@ -7,7 +7,7 @@ let products = document.querySelectorAll('.product');
 let productsArray = [];
 products.forEach((product) => { productsArray.push(product); });
 products = productsArray;
-let originalProductsList = productsArray; // READ ONLY
+const originalProductsList = productsArray; // READ ONLY
 
 let minPriceInput = document.querySelector('#price-min');
 let maxPriceInput = document.querySelector('#price-max');

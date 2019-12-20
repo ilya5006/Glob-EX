@@ -33,7 +33,6 @@ function update()
     {
         countPanel.style.display = 'none';
     }
-    console.log(checkedProducts);
 }
 
 allProducts.forEach(function(element)

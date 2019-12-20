@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . '/../model/xmlparser.php';
 require_once __DIR__ . '/../model/connection.php';
@@ -122,6 +122,7 @@ $brandInfo = $xmlParseData['brands'];
                             {
                                 echo '<p class="available">нет в наличии</p>';
                             }
+                            
                             if (isset($productInfo[$idProduct]['old_price']))
                             {
                                 echo '<p class="old-price">'.$productInfo[$idProduct]['old_price'].'</p>';

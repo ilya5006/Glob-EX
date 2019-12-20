@@ -126,7 +126,7 @@ if (isset($product['specs']))
                     echo '</div>';
                     if ((int)$product['quantity'] > 0)
                     {
-                        echo '<input type="number" name="" id="" min="1" max="'.$product['quantity'].'" value="1">';
+                        echo '<input type="number" class="product-count" name="" id="" min="1" max="'.$product['quantity'].'" value="1">';
                         echo '<input type="submit" class="cart" value="в корзину">';
                     }
                     
