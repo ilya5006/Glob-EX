@@ -838,7 +838,7 @@
 	color: red;
 }
 
-#modal_authorize .modal form input[type=submit], #loginButton, #registerButton, #recoveryMailButton
+#modal_authorize .modal form input[type=submit], #loginButton, #registerButton, #recoveryMailButton	
 {
 	font-size: 16px;
 	font-weight: bold;
@@ -885,6 +885,12 @@
 	margin-bottom: 20px;
 
 	color: #8B7B7B;
+}
+
+#modal_authorize .modal form .passwordRecoveryBack
+{
+	margin-top: -70px;
+    padding-bottom: 25px;
 }
 
 #modal_authorize .modal form .require span, #modal_changePassword .modal form .require span
@@ -1001,6 +1007,11 @@ form .container p a, .container p span
 	margin-bottom: 35px;
 }
 
+.passwordRecoveryBack
+{
+	margin-top: -45px;
+}
+
 /* Конец чекбоксов */
 
 @media screen and (max-width: 750px)
@@ -1038,6 +1049,30 @@ form .container p a, .container p span
 	.placeinput input:invalid + .place_holder, #modal_authorize input
 	{
 		text-align: center;
+	}
+
+	#recoveryMailButton
+	{
+		margin-top: 45px;
+	}
+
+	#modal_authorize .modal form .passwordRecoveryBack
+	{
+		align-self: center;
+		margin-right: 0;
+		width: 100%;
+		text-align: center;
+		margin-top: -90px;
+		padding-bottom: 40px;
+	}
+	#modal_authorize .modal form .forget_password, #modal_authorize .modal form .passwordRecoveryBack
+	{
+		margin-right: 0;
+		align-self: center;
+	}
+	.place_holder
+	{
+		margin-left: 0;
 	}
 }
 
