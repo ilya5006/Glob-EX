@@ -83,6 +83,21 @@ function ajax()
                         });
                     });
                 });
+
+                element.querySelector('.product-count').addEventListener('input', (event) =>
+                {
+                    event.target.value = event.target.value.replace('-', '');
+            
+                    if (!parseInt(event.target.value))
+                    {
+                        event.target.value = 1;
+                    }
+            
+                    if (parseInt(event.target.value) > parseInt(event.target.max))
+                    {
+                        event.target.value = event.target.max;
+                    }
+                });
             });
 
             
