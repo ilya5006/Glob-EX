@@ -1,5 +1,6 @@
-"use strict";
+// "use strict";
 
+// При генерации каталога могут появляться пустые <ul>
 document.querySelectorAll('.expand-catalog .expand-cat_2 ul').forEach(function(element)
 {
     if (element.textContent == "")
@@ -8,6 +9,8 @@ document.querySelectorAll('.expand-catalog .expand-cat_2 ul').forEach(function(e
     }
 });
 
+
+// Разворачивание кнопки "каталог товаров"
 document.querySelector('#catalog').addEventListener('mouseup', function () 
 {
     if (document.querySelector('.expand-catalog').classList.contains('hide')) 
@@ -20,6 +23,7 @@ document.querySelector('#catalog').addEventListener('mouseup', function ()
     }
 });
 
+// Разворачивание каталога 1 уровня
 document.querySelectorAll('.cat_1').forEach(function (element) 
 {
     element.addEventListener('mouseenter', function () 
@@ -45,6 +49,7 @@ document.querySelectorAll('.cat_1').forEach(function (element)
     });
 });
 
+// Чтобы при нажатии на блок с надписью "каталог" разварачивался каталогы
 var allExpandButton = document.querySelectorAll('.catalog_expand_button');
 allExpandButton.forEach(function (element) 
 {
@@ -55,7 +60,7 @@ allExpandButton.forEach(function (element)
     });
 });
 
-document.body.addEventListener('mousedown', function (e) 
+document.body.addEventListener('click', function (e) 
 {   
     if (document.querySelector('.expand-catalog').classList.contains('hide') == false) 
     {
@@ -65,7 +70,7 @@ document.body.addEventListener('mousedown', function (e)
             {
                 if (e.target.parentElement.classList.contains('nav') == false)
                 {
-                    if (e.target.parentElement.tagName != 'LI')
+                    if (e.target.parentElement.tagName.toUpperCase != 'LI')
                     {
                         document.querySelector('.expand-catalog').classList.add('hide');
                     }
@@ -73,6 +78,7 @@ document.body.addEventListener('mousedown', function (e)
             }
         }
     }
+
     if (e.target.parentElement === document.body)
     {   
         document.querySelector('#modal_authorize').style.display = 'none';
