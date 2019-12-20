@@ -33,6 +33,7 @@
 
 .banners > .banner p
 {
+	user-select: none;
 	font-size: 68px;
 	font-weight: bold;
 
