@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 require_once __DIR__ . '/../model/xmlparser.php';
 require_once __DIR__ . '/../model/connection.php';
@@ -132,7 +132,7 @@ $brandInfo = $xmlParseData['brands'];
 
                             if ((int)$productInfo[$idProduct]['quantity'] > 0)
                             {
-                                echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo['quantity'].'" value="1">';
+                                echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo[$idProduct]['quantity'].'" value="1">';
                                 echo '<button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>';
                             }
                                 echo '<img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">';
