@@ -1003,6 +1003,7 @@ form .container p a, .container p span
 
 #modal_authorize .modal form.password_recovery h2
 {
+	text-align: center	;
 	margin-top: 10px;
 	margin-bottom: 35px;
 }
@@ -1042,7 +1043,7 @@ form .container p a, .container p span
 	{
 		align-self: center;
 
-		margin-top: 15px;
+		margin-top: 60px;
 		margin-left: 0;
 	}
 
