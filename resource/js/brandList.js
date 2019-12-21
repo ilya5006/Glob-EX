@@ -49,7 +49,7 @@ document.querySelector('.scroll').addEventListener('scroll', function(element)
         if (tempAlphNumLet[i][1] == parseInt(element.target.scrollLeft / (150 + 20)) + 1)
         {
             lastLetter = tempAlphNumLet[i][2];
-            allLetters[tempAlphNumLet[i][2]].style.color = '#E31E25';
+            allLetters[tempAlphNumLet[i][2]].style.color = '#E31E24';
             allLetters[tempAlphNumLet[i][2]].style.opacity = '1';
         }
         else

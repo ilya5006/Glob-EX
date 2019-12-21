@@ -24,7 +24,7 @@ function showImage(param)
         else
         {
             bigPuctire.src = puctures[j].src;
-            puctures[j].style.border = '1px solid #E31E25';
+            puctures[j].style.border = '1px solid #E31E24';
         }
     }
 }

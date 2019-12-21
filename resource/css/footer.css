@@ -57,14 +57,14 @@
 
 	text-align: right;
 
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .footer > .content > ul > li > a > span
 {
 	transition: 0.3s all;
 
-	color: #E31E25;
+	color: #E31E24;
 }
 
 .footer > .content > ul > li > a > span:hover
