@@ -15,7 +15,7 @@
     $isAlreadyCreatedToken = $mysqli->query("SELECT token FROM password_recovery WHERE email = '$email'");
     $isAlreadyCreatedToken = $isAlreadyCreatedToken->fetch_array()[0];
 
-    if (!$isAlreadyCreatedToken)
+    if ($isAlreadyCreatedToken)
     {
         echo 'Вы уже пытались сбросить пароль. Попробуйте в другое время';
         die();
@@ -45,7 +45,7 @@
             </head>
             <body>
                 <p>Чтобы восстановить пароль, перейдите по ссылке:</p><br>
-                <a href="vsekanc.ru/newPassword.php?token=' . $token . '>vsekanc.ru/newPassword.php?token=' . $token . '</a>
+                <a href="https://vsekanc.ru/newPassword.php?token=' . $token . '>https://vsekanc.ru/newPassword.php?token=' . $token . '</a>
             </body>
             </html>
         ';
