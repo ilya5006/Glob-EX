@@ -3,7 +3,8 @@
 
     $email = $mysqli->escape_string($_GET['email']);
 
-    $checkEmail = $mysqli->query("SELECT * FROM users_all WHERE email = '$email'");
+    $checkEmail = $mysqli->query("SELECT id_user FROM users_all WHERE email = '$email'");
+    $checkEmail = $checkEmail->fetch_array()[0];
     
     if (!$checkEmail)
     {
@@ -11,7 +12,8 @@
         die();
     }
 
-    $isAlreadyCreatedToken = $mysqli->query("SELECT * FROM password_recovery WHERE email = '$email'");
+    $isAlreadyCreatedToken = $mysqli->query("SELECT token FROM password_recovery WHERE email = '$email'");
+    $isAlreadyCreatedToken = $isAlreadyCreatedToken->fetch_array()[0];
 
     if (!$isAlreadyCreatedToken)
     {
