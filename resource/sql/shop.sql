@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 16 2019 г., 19:30
--- Версия сервера: 5.7.25
--- Версия PHP: 7.3.9
+-- Время создания: Дек 21 2019 г., 15:49
+-- Версия сервера: 8.0.15
+-- Версия PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,6 +25,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `password_recovery`
+--
+
+CREATE TABLE `password_recovery` (
+  `email` varchar(100) NOT NULL,
+  `token` varchar(100) NOT NULL,
+  `date_exp` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `user-cart`
 --
 
@@ -39,11 +51,13 @@ CREATE TABLE `user-cart` (
 --
 
 INSERT INTO `user-cart` (`id_user`, `id_product`, `product_count`) VALUES
-(1, 40, 123),
-(1, 59, 1),
-(1, 18, 1),
-(1, 22, 1),
-(1, 13, 1);
+(4, 10, 1),
+(4, 5, 4),
+(4, 11, 1),
+(5, 55, 22),
+(5, 71, 74),
+(5, 15, 126),
+(5, 56, 1);
 
 -- --------------------------------------------------------
 
@@ -61,11 +75,11 @@ CREATE TABLE `user-favoutite` (
 --
 
 INSERT INTO `user-favoutite` (`id_user`, `id_product`) VALUES
-(1, 18),
-(1, 22),
-(1, 15),
-(1, 13),
-(1, 59);
+(4, 18),
+(4, 15),
+(5, 71),
+(5, 16),
+(5, 15);
 
 -- --------------------------------------------------------
 
@@ -95,9 +109,10 @@ CREATE TABLE `users_all` (
 --
 
 INSERT INTO `users_all` (`id_user`, `role`, `fio`, `password`, `email`, `phone_number`, `work_number`, `address`, `additional_address1`, `additional_address2`, `additional_address3`, `additional_address4`, `additional_address5`, `mailing`) VALUES
-(1, 0, 'Александр Манисов', '$2y$10$AZMQJL4O9LhR5RKdDq1Lm.zmbkGV2.w9Pgl6pVpq8x3QY.OIZDsYS', 'test@test.ru', ' 7999999999', '', 'z', 'x', 'c', 'v', 'b', 'n', 0),
 (2, 0, 'asd asd', '$2y$10$x28cR9hS6aYkwHCoV9H/Le1HIQuRrcO8chz9qODGTqCjdKQCCHiqG', 'te1st@test.ru', '+7999999999', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(3, 0, 'asd asd', '$2y$10$yUe.KjvT8BTtqxAIjxghCOniTQvqQTxCftGBcNi3b/qAJxrv570Bu', 'dfghdfghh22@asd.ru', '+7959199399', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0);
+(3, 0, 'asd asd', '$2y$10$yUe.KjvT8BTtqxAIjxghCOniTQvqQTxCftGBcNi3b/qAJxrv570Bu', 'dfghdfghh22@asd.ru', '+7959199399', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(4, 0, 'Манисов Александр Ильич', '$2y$10$LJTmld3DpCHkmVvzeWfM1OWrG9CpLokLpBKQUFG7Eusx2B28624uW', 'manisov@yandex.com', '88005553535', '', 'Москва', 'ЕЩЁ МАСКВА', '', '', '', '', 1),
+(5, 0, 'Янибекова Нина Степановна', '$2y$10$ltqPHqaONpe3ZwAnBYMq7.dsBzOtmtrJgIEYmthEt.yw3JqmHL0WS', 'nina@yandex.com', '89211115364', '84992501819', 'Москва, ул. Лосинки', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -124,9 +139,10 @@ CREATE TABLE `users_individuals` (
 --
 
 INSERT INTO `users_individuals` (`id_user`) VALUES
-(1),
 (2),
-(3);
+(3),
+(4),
+(5);
 
 --
 -- Индексы сохранённых таблиц
@@ -170,7 +186,7 @@ ALTER TABLE `users_individuals`
 -- AUTO_INCREMENT для таблицы `users_all`
 --
 ALTER TABLE `users_all`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
