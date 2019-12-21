@@ -46,7 +46,7 @@ if (isset($product['specs']))
     </div>
     <div class="product_info">
         <div class="pictures">
-            <img src="./resource/img/products/product.jpg" alt="" class="big" style="order: -1;">
+            <img src="./resource/img/none.jpg" alt="" class="big" style="order: -1;">
             <div class="img_list">
                 <?php
                     
