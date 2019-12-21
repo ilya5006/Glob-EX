@@ -353,19 +353,22 @@ foreach ($brands as $brandId => $brandInfo)
                         <p class="id" style="display: none;"> <?php echo $productInfo['id']; ?> </p>
                         <div class="features">
                             <?php
-                            $specsPrintedCount = 0;
-
-                            $specsNames = [];
-                            $specsId = array_keys($productInfo['specs']);
-                            foreach ($specsId as $id => $specId)
+                            if (is_array($productInfo['specs']))
                             {
-                                $specsNames[$specId] = $specs[$specId]['name'];
-                            }
+                                $specsPrintedCount = 0;
 
-                            foreach ($specsNames as $id => $name)
-                            {
-                                echo '<p class="feature">' . $name . ' ' . $productInfo['specs'][$id]. '</p>';
-                                if (++$specsPrintedCount == 6) break;
+                                $specsNames = [];
+                                $specsId = array_keys($productInfo['specs']);
+                                foreach ($specsId as $id => $specId)
+                                {
+                                    $specsNames[$specId] = $specs[$specId]['name'];
+                                }
+    
+                                foreach ($specsNames as $id => $name)
+                                {
+                                    echo '<p class="feature">' . $name . ' ' . $productInfo['specs'][$id]. '</p>';
+                                    if (++$specsPrintedCount == 6) break;
+                                }
                             }
                             ?>
                             <a class="feature_button" href="./product.php?id=<?php echo $productId; ?>#specs"> Больше характеристик </a>
