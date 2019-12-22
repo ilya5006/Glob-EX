@@ -25,7 +25,7 @@
     $expDate = date("Y-m-d H:i:s",$expFormat);
 
     $token = md5($email);
-    $insertInfoInDB = $mysqli->query("INSERT INTO password_recovery VALUES ('$email', '$token', '$expFormat')");
+    $insertInfoInDB = $mysqli->query("INSERT INTO password_recovery VALUES ('$email', '$token', '$expDate')");
 
     if (!$insertInfoInDB)
     {
