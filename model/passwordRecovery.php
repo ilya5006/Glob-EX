@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="./..//resource/css/base.css">
     <link rel="stylesheet" href="./..//resource/css/profile.css">
     <style>
-        body { position: relative; background-color: rgb(227, 30, 36); box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25); }
+        body { position: relative; background-color: rgb(227, 30, 36); }
         h2 { text-align: center; margin-bottom: 55px;}
         .info-box 
         {
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
             width: 600px; 
             background-color: #FFFFFF; 
             padding: 55px; 
@@ -39,7 +40,7 @@
     {
         echo '<div class="info-box">';
         echo '<h2> Вы ввели неверный email, попробуйте снова </h2>';
-        echo '<a href="index.php" class="button button-anim"> вернуться на главную </a>';
+        echo '<a href="./../index.php" class="button button-anim"> вернуться на главную </a>';
         echo '</div>';
         die();
     }
@@ -51,7 +52,7 @@
     {
         echo '<div class="info-box">';
         echo '<h2> Вы уже пытались сбросить пароль. Попробуйте в другое время </h2>';
-        echo '<a href="index.php" class="button button-anim"> вернуться на главную </a>';
+        echo '<a href="./../index.php" class="button button-anim"> вернуться на главную </a>';
         echo '</div>';
         die();
     }
@@ -66,7 +67,7 @@
     {
         echo '<div class="info-box">';
         echo '<h2> Повторите попытку </h2>';
-        echo '<a href="index.php" class="button button-anim"> вернуться на главную </a>';
+        echo '<a href="./../index.php" class="button button-anim"> вернуться на главную </a>';
         echo '</div>';
         echo '';
     }
@@ -218,7 +219,7 @@
         
         echo '<div class="info-box">';
         echo '<h2> Вам было отправлено письмо на почту с ссылкой на страницу сброса пароля </h2>';
-        echo '<a href="index.php" class="button button-anim"> вернуться на главную </a>';
+        echo '<a href="./../index.php" class="button button-anim"> вернуться на главную </a>';
         echo '</div>';
     }
 ?>
