@@ -10,6 +10,13 @@ if (empty($xmlParseData['nomeklatura'][$idProduct]))
 
 
 $title = $xmlParseData['nomeklatura'][$idProduct]['name'];
+$description = $xmlParseData['nomeklatura'][$idProduct]['description'];
+
+echo "тайтл" . $title . "<br>";
+echo "диск" . $description . "<br>";
+echo "рарас" . $price . "<br>";
+echo "йа" . $quantity . "<br>";
+echo "ьбр" . $brand . "<br>";
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -17,7 +24,19 @@ $title = $xmlParseData['nomeklatura'][$idProduct]['name'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title> <?php echo $title; ?> </title>
+    <meta name="description" content="<?php echo $description; ?>" />
+
+    <meta name="og:title" content="<?php echo $title; ?>">
+    <meta name="og:description" content="<?php echo $description; ?>">
+    <meta name="og:type" content="product">
+
+    <meta name="product:availability" content="<?php echo $quantity; ?>">
+    <meta name="product:price:currency" content="RUS">
+    <meta name="product:price:amount" content="<?php echo $price; ?>">
+    <meta name="product:brand" content="<?php echo $brand; ?>">
+
     <link rel="shortcut icon" href="./resource/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./resource/css/normalize.css">
     <link rel="stylesheet" href="./resource/css/base.css">
@@ -35,7 +54,6 @@ $title = $xmlParseData['nomeklatura'][$idProduct]['name'];
     <script src="./resource/js/favourite-cart.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
     <script src="./resource/js/productsQuantityControl.js" defer></script>
-
 </head>
 <body>
 
