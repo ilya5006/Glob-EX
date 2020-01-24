@@ -149,7 +149,7 @@ if (isset($product['specs']))
                 if (isset($product['specs'])) 
                 {
                     foreach($specsNames as $id => $name)
-                        echo '<p class="feature">' . $name . ' ' . $product['specs'][$id] .'</p>';
+                        echo '<p class="feature">' . $name . '.. ' . $product['specs'][$id] .'</p>';
                 }
                 ?>
             </div>
