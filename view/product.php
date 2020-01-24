@@ -84,7 +84,7 @@ if (isset($product['specs']))
                     foreach($specsNames as $id => $name)
                     {
                         $specsPrintedCount++;
-                        echo '<p class="feature">' . $name . ' ' . $product['specs'][$id] .'</p>';
+                        echo '<p class="feature">' . $name . '.. ' . $product['specs'][$id] .'</p>';
                         if ($specsPrintedCount == 6) 
                             break;
                     }
