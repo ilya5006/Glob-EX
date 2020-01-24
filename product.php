@@ -12,11 +12,6 @@ if (empty($xmlParseData['nomeklatura'][$idProduct]))
 $title = $xmlParseData['nomeklatura'][$idProduct]['name'];
 $description = $xmlParseData['nomeklatura'][$idProduct]['description'];
 
-echo "тайтл" . $title . "<br>";
-echo "диск" . $description . "<br>";
-echo "рарас" . $price . "<br>";
-echo "йа" . $quantity . "<br>";
-echo "ьбр" . $brand . "<br>";
 ?>
 <!DOCTYPE html>
 <html lang="ru">
