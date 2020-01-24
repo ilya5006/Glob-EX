@@ -366,7 +366,7 @@ foreach ($brands as $brandId => $brandInfo)
     
                                 foreach ($specsNames as $id => $name)
                                 {
-                                    echo '<p class="feature">' . $name . ' ' . $productInfo['specs'][$id]. '</p>';
+                                    echo '<p class="feature">' . $name . '.. ' . $productInfo['specs'][$id]. '</p>';
                                     if (++$specsPrintedCount == 6) break;
                                 }
                             }
