@@ -15,6 +15,13 @@ allBrandsList.forEach((event) =>
             if (f.value === clickedBrand)
             {
                 f.checked = true;
+                
+                if (allBrandFiltersList.querySelector('.filterHide').style.transform == "rotate(0deg)")
+                {
+                    allBrandFiltersList.querySelector('.filterHide').click();
+                }
+                
+                
                 toApplyFilters();
                 if (i >= 6)
                 {
