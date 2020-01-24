@@ -65,8 +65,8 @@ if (isset($_COOKIE['isLogin']))
                 <li><a href="./../delivery.php">ДОСТАВКА</a></li>
                 <li><a href="./../payment.php">ОПЛАТА</a></li>
                 <li><a href="#">КОНТАКТЫ</a></li>
-                <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
-                <li><a href="#">О КОМПАНИИ</a></li>
+                <!-- <li><a href="#">ЗАДАТЬ ВОПРОС</a></li> -->
+                <!-- <li><a href="#">О КОМПАНИИ</a></li> -->
                 <li><p class="tel">8-495-380-42-88</p></li>
             </ul>
         </div>

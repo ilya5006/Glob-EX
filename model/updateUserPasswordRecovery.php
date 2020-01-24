@@ -36,7 +36,6 @@
     $passwordRepeat = $mysqli->escape_string($_GET['new_password_repeat']);
 
 
-    // В дальнейшем эта проверка будет удалена
     if ($password != $passwordRepeat)
     {
         echo '<div class="info-box">';

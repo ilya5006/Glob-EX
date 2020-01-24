@@ -45,8 +45,10 @@ $categories['three'] = $three;
             {
                 $catId = $category['id'];
 
+                $imagePath = str_replace('ftp://37.140.192.146', './../', $category['image1']);
+
                 echo '<div class="catalog">';
-                    echo '<img src="'.$category['icon'].'" alt="cat imgs">';
+                    echo '<img src="'.$imagePath.'" alt="cat imgs">';
                     echo '<div class="cat">';
                         echo '<p>'.$category['name'].'</p>';
                         foreach($categories['three'] as $category)
