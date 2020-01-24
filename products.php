@@ -35,6 +35,7 @@ $title = $xmlParseData['partitions'][$idCategory]['name'];
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
+    <script src="./resource/js/selectBrand.js" defer></script>
 
     <script src="./resource/js/wNumb.min.js"></script>
     <script src="./resource/js/nouislider.js"></script>

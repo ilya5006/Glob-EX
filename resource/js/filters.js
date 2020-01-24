@@ -62,10 +62,11 @@ allFilters.forEach(function (element) {
                 buttonExpandFilter.textContent = "Показать еще";
                 buttonExpandFilter.classList.add('filter_button');
                 let isShow = false;
-                buttonExpandFilter.addEventListener('click', function () {
+                buttonExpandFilter.addEventListener('click', function () 
+                {
                     if (isShow == false) {
-                        for (let i = 0; i < element.querySelectorAll('label')
-                            .length; i++) {
+                        for (let i = 0; i < element.querySelectorAll('label').length; i++) 
+                        {
                             if (i > 5) {
                                 element.querySelectorAll('label')[i].style.display =
                                     'block';
