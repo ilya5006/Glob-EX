@@ -90,7 +90,10 @@ function isSpecInArray($array, string $specToFind)
     {
         foreach ($array as $i => $specInArray)
         {
-            if ($specInArray[0] == $specToFind) return $i;
+            if ($specInArray[0] == $specToFind)
+            {
+                return $i;
+            }
         }
     }
 
@@ -103,8 +106,10 @@ function quantityOfProductsForOneBrand($brandId, $products)
 
     foreach ($products as $c => $productInfo)
     {
-        if ($productInfo['brand'] == $brandId) 
+        if ($productInfo['brand'] == $brandId)
+        {
             $quantity++;
+        }
     }
 
     return $quantity;
@@ -122,8 +127,6 @@ foreach ($brands as $brandId => $brandInfo)
 {
     $brands[$brandId]['image'] = str_replace('ftp://37.140.192.146', './../', $brands[$brandId]['image']);
 }
-
-
 ?>
 
 <div class="content" style="padding-top: 0">
@@ -138,7 +141,7 @@ foreach ($brands as $brandId => $brandInfo)
                 </div>
                 <div id="slider"></div>
             </div>
-            <div class="filter" data-sepcname="Бренд">
+            <div class="filter" data-specname="Бренд">
                 <p>Бренд</p>
                 <ul>
                     <li>
@@ -186,7 +189,7 @@ foreach ($brands as $brandId => $brandInfo)
                 }
                 
                 echo '
-                <div class="filter" data-specName="' . $specName .'">
+                <div class="filter" data-specname="' . $specName .'">
                     <p>' . $specName . '</p>
                     <ul>
                         <li>';

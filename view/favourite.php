@@ -109,7 +109,10 @@ $brandInfo = $xmlParseData['brands'];
                                 foreach ($specsNames as $id => $name)
                                 {
                                     echo '<p class="feature">' . $name . ' ' . $productInfo[$idProduct]['specs'][$id]. '</p>';
-                                    if (++$specsPrintedCount == 5) break;
+                                    if (++$specsPrintedCount == 5)
+                                    {
+                                        break;
+                                    }
                                 }
                             echo '</div>';
                         echo '</div>';

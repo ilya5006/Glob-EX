@@ -1,7 +1,8 @@
 ﻿let allBrandsList = document.querySelectorAll('.scroll .brand');
-let allBrandFiltersList = document.querySelector('.filter[data-sepcname="Бренд"]');
-let allBrandFiltersCheckboxes = document.querySelectorAll('.filter[data-sepcname="Бренд"] ul li label input[type=checkbox]');
+let allBrandFiltersList = document.querySelector('.filter[data-specname="Бренд"]');
+let allBrandFiltersCheckboxes = document.querySelectorAll('.filter[data-specname="Бренд"] ul li label input[type=checkbox]');
 let clickedBrand;
+let moreOrLessButton = allBrandFiltersList.querySelector('.filter_button');
 
 allBrandsList.forEach((event) => 
 {
@@ -21,18 +22,18 @@ allBrandsList.forEach((event) =>
                     allBrandFiltersList.querySelector('.filterHide').click();
                 }
                 
-                
                 toApplyFilters();
-                if (i >= 6)
+                
+                if (moreOrLessButton)
                 {
-                    if (allBrandFiltersList.querySelector('.filter_button').textContent == 'Показать еще')
+                    if (i >= 6)
                     {
-                        allBrandFiltersList.querySelector('.filter_button').click();
+                        if (moreOrLessButton.textContent == 'Показать еще')
+                        {
+                            allBrandFiltersList.querySelector('.filter_button').click();
+                        }
                     }
-                }
-                else
-                {
-                    if (allBrandFiltersList.querySelector('.filter_button').textContent == 'Скрыть')
+                    else if (moreOrLessButton.textContent == 'Скрыть')
                     {
                         allBrandFiltersList.querySelector('.filter_button').click();
                     }
