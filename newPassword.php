@@ -4,8 +4,6 @@ if (empty($_GET['token']))
     header("Location: ./index.php");
 }
 
-// TODO: Проверка на совпадение паролей
-
 $token = $_GET['token'];
 
 ?>

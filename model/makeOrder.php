@@ -10,10 +10,7 @@
         {
             return generateOrderNumber();
         }
-        else
-        {
-            return $orderNumber;
-        }
+        return $orderNumber;
     }
 
     $products = $xmlParseData['nomeklatura'];
