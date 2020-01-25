@@ -4,13 +4,13 @@ let allBrandFiltersCheckboxes = document.querySelectorAll('.filter[data-specname
 let clickedBrand;
 let moreOrLessButton = allBrandFiltersList.querySelector('.filter_button');
 
-allBrandsList.forEach((event) => 
+allBrandsList.forEach((brand) => 
 {
-    event.addEventListener('click', (b) =>
+    brand.addEventListener('click', (b) =>
     {
         b.preventDefault();
         clickedBrand = b.target.parentElement.querySelector('span').textContent;
-        
+
         allBrandFiltersCheckboxes.forEach((f, i) =>
         {   
             if (f.value === clickedBrand)
