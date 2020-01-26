@@ -41,12 +41,12 @@
 
         $lastIdQuery = $mysqli->query("SELECT id_user FROM users_all ORDER BY id_user DESC");
         $lastIdResult = $lastIdQuery->fetch_assoc();
-        $lastId = (int)$lastIdResult['id_user'] + 1;
+        $lastId = (int)$lastIdResult['id_user'] + 1; // ID нужен для того, чтобы этот же ID добавить в другие таблицы, в зависимости от роли пользователя
 
         $add = $mysqli->query("INSERT INTO users_all VALUES ('$lastId', '$role', '$fio', '$passwordHash', '$email', '$phoneNumber', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$mailing')");
 
         if ($add)
-        {   
+        {
             echo json_encode(['done']);
         }
 
