@@ -67,9 +67,9 @@ if (isset($product['specs']))
                 <p>Артикул <span><?php echo $product['article']; ?></span></p>
                 <?php
                 if (isset($brand['name']))
-                { ?>
-                    <p>Бренд: <a href="#"><?php echo $brand['name']; ?></a></p>
-          <?php }
+                {
+                    echo '<p> Бренд: <a href="./products.php?brand='. $product['brand'] .'">' . $brand['name'] . '</a></p>';
+                }
                 else
                 { ?>
                     <p>Бренд: <a href="#">Отсутствует</a></p>
