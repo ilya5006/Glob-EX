@@ -205,9 +205,7 @@ if (!empty($brandId))
     
     $categorysId = array_unique($categorysId);
     $specsWithSameCategory = findSpecsWithSameCategory($categorysId, $specs, $partitions);
-};
-
-
+}
 
 foreach ($brands as $brandAll => $brandInfo)
 {
@@ -234,25 +232,24 @@ foreach ($brands as $brandAll => $brandInfo)
             <div class="filter" data-specname="Бренд">
                 <p>Бренд</p>
                 <ul>
-                    <li> <?
-                        
-                                foreach ($brands as $brandAll => $brandInfo)
-                                {
-                                    $productsQuantity = quantityOfProductsForOneBrand($brandAll, $productsWithSameCategory);
-                                    
-                                    if ($productsQuantity > 0)
-                                    {
-                                        echo '<label class="container">';
-                                            echo '<p><span id="spec_value">' . $brandInfo['name'] . '</span>(' . $productsQuantity . ')</p> <input type="checkbox" value="' . $brandInfo['name'] . '"> <span class="checkmark"></span>';
-                                        echo '</label>';
-                                    }
-                                }
+                    <li> 
+                    <?php
+                        foreach ($brands as $brandAll => $brandInfo)
+                        {
+                            $productsQuantity = quantityOfProductsForOneBrand($brandAll, $productsWithSameCategory);
                             
-                        ?>
+                            if ($productsQuantity > 0)
+                            {
+                                echo '<label class="container">';
+                                    echo '<p><span id="spec_value">' . $brandInfo['name'] . '</span>(' . $productsQuantity . ')</p> <input type="checkbox" value="' . $brandInfo['name'] . '"> <span class="checkmark"></span>';
+                                echo '</label>';
+                            }
+                        }
+                    ?>
                     </li>
                 </ul>
-            </div> <?
-                }
+            </div> 
+         <?php }
 
             if (isset($categoryId))
             {
@@ -509,16 +506,16 @@ foreach ($brands as $brandAll => $brandInfo)
                             if ($isProductHaveImage)
                             { ?>
                                 <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="<?php echo $image; ?>" alt="фотография продукта"></a>
-                    <?php } 
+                      <?php } 
                             else
                             { ?>
                                 <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="./resource/img/none.jpg" alt="фотография продукта"></a>
-                    <?php } 
+                      <?php } 
 
                             if ($isProductHaveDiscount)
                             { ?>
                                 <p class="sale"><?php echo $productInfo['discount']; ?></p>
-                    <?php } ?>
+                      <?php } ?>
                             <div class="product-disc">
                                 <a class="product-name" href="product.php?id=<?php echo $productId; ?>"> <?php echo $productInfo['name']; ?> </a>
                                 <p class="article" style="display: none;"> <?php echo $productInfo['article']; ?> </p>
@@ -556,23 +553,23 @@ foreach ($brands as $brandAll => $brandInfo)
                                 else
                                 { ?>
                                     <p class="available">нет в наличии</p>
-                        <?php } 
+                          <?php } 
                         
                                 if ($isProductHaveDiscount)
                                 { ?>
                                     <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
-                        <?php } ?>
+                          <?php } ?>
                                     <p class="new-price"><?php echo $productInfo['price']; ?></p>
 
                                 <?php
                                 if ($isProductHaveBrand)
                                 { ?>
                                     <p class="product-brand">БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
-                        <?php }
+                          <?php }
                                 else
                                 { ?>
                                     <p class="product-brand">БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
-                        <?php } ?>
+                          <?php } ?>
                         
                                 <div class="inp-cart-fav">
                             <?php
@@ -616,16 +613,16 @@ foreach ($brands as $brandAll => $brandInfo)
                                 if ($isProductHaveImage)
                                 { ?>
                                     <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="<?php echo $image; ?>" alt="фотография продукта"></a>
-                        <?php } 
+                          <?php } 
                                 else
                                 { ?>
                                     <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="./resource/img/none.jpg" alt="фотография продукта"></a>
-                        <?php } 
+                          <?php } 
 
                                 if ($isProductHaveDiscount)
                                 { ?>
                                     <p class="sale"><?php echo $productInfo['discount']; ?></p>
-                        <?php } ?>
+                          <?php } ?>
                                 <div class="product-disc">
                                     <a class="product-name" href="product.php?id=<?php echo $productId; ?>"> <?php echo $productInfo['name']; ?> </a>
                                     <p class="article" style="display: none;"> <?php echo $productInfo['article']; ?> </p>
@@ -663,23 +660,23 @@ foreach ($brands as $brandAll => $brandInfo)
                                     else
                                     { ?>
                                         <p class="available">нет в наличии</p>
-                            <?php } 
+                              <?php } 
                             
                                     if ($isProductHaveDiscount)
                                     { ?>
                                         <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
-                            <?php } ?>
+                              <?php } ?>
                                         <p class="new-price"><?php echo $productInfo['price']; ?></p>
 
                                     <?php
                                     if ($isProductHaveBrand)
                                     { ?>
                                         <p class="product-brand">БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
-                            <?php }
+                              <?php }
                                     else
                                     { ?>
                                         <p class="product-brand">БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
-                            <?php } ?>
+                              <?php } ?>
                             
                                     <div class="inp-cart-fav">
                                 <?php
@@ -693,7 +690,6 @@ foreach ($brands as $brandAll => $brandInfo)
                                 </div>
                             </div>
                             <?php
-                            
                         }
                     }
                 ?>
