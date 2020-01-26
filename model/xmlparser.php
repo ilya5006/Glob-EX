@@ -18,6 +18,7 @@ while ($reader->read()) {
         while ($reader->name != 'brands') {
             if (isElement($reader->nodeType)) {
                 $brandId = $reader->getAttribute('id');
+                $brands[$brandId]['id'] = $reader->getAttribute('id');
                 $brands[$brandId]['name'] = $reader->getAttribute('name');
                 $brands[$brandId]['image'] = $reader->getAttribute('image');
                 $brands[$brandId]['description'] = $reader->getAttribute('description');
