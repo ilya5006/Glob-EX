@@ -5,8 +5,7 @@ productsQuantityInputs.forEach((quantityInput) =>
     quantityInput.addEventListener('input', (event) =>
     {
         event.target.value = event.target.value.replace('-', '');
-        console.log(event.target.value);
-
+        
         if (!parseInt(event.target.value))
         {
             event.target.value = 1;
