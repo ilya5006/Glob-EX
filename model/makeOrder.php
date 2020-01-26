@@ -5,7 +5,7 @@
 
     function generateOrderNumber()
     {
-        $orderNumber = rand(1000, 1000000);
+        $orderNumber = mt_rand(1000, 1000000);
         if (file_exists ('../orders/' . $orderNumber . '.xlsx'))
         {
             return generateOrderNumber();
