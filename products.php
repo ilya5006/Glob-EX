@@ -2,8 +2,9 @@
 session_start(); 
 require_once __DIR__ . '/model/xmlparser.php';
 $idCategory = $_GET['id'];
+$idBrand = $_GET['brand'];
 
-if (empty($xmlParseData['partitions'][$idCategory]))
+if (empty($xmlParseData['partitions'][$idCategory]) && empty($xmlParseData['brands'][$idBrand]))
 {
     header("Location: ./404.html");
 }
