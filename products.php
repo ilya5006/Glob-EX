@@ -9,7 +9,9 @@ if (empty($xmlParseData['partitions'][$idCategory]) && empty($xmlParseData['bran
     header("Location: ./404.html");
 }
 
-$title = $xmlParseData['partitions'][$idCategory]['name'];
+$title = isset($_GET['brand']) 
+    ? 'Товары бренда ' . $xmlParseData['brands'][$idBrand]['name'] 
+    : $xmlParseData['partitions'][$idCategory]['name'];
 ?>
 <!DOCTYPE html>
 <html lang="ru">
