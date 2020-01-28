@@ -479,219 +479,122 @@ foreach ($brands as $brandAll => $brandInfo)
             <div class="list-products">
                 <?php
 
+                $productsToShow = NULL;
                 if (isset($categoryId))
                 {
-                    foreach ($productsWithSameCategory as $productId => $productInfo)
-                    { 
-                        $isProductHaveImage = $productInfo['image1'] != '';
-                        $isProductHaveBrand = $productInfo['brand'] != '';
-                        $isProductHaveDiscount = !is_null($productInfo['discount']);
+                    $productsToShow = $productsWithSameCategory;
+                }
+                else
+                {
+                    $productsToShow = $productsWithSameBrand;
+                }
+                
+                foreach ($productsToShow as $productId => $productInfo)
+                {
+                    $isProductHaveImage = $productInfo['image1'] != '';
+                    $isProductHaveBrand = $productInfo['brand'] != '';
+                    $isProductHaveDiscount = !is_null($productInfo['discount']);
 
-                        if ($isProductHaveImage)
-                        {
-                            $image = str_replace('ftp://37.140.192.146', './../', $productInfo['image1']);
-                        }
+                    if ($isProductHaveImage)
+                    {
+                        $image = str_replace('ftp://37.140.192.146', './../', $productInfo['image1']);
+                    }
+                    
+                    $productSpecsIdValues = $productInfo['specs'];
+                    $specsValuesString = '';
+
+                    foreach ($productSpecsIdValues as $idSpec => $productSpecValue)
+                    {
+                        $specsValuesString .= $specs[$idSpec]['name'] . ' => ' . $productSpecValue . ' ; ';
+                    }
+                    ?>
+                    <div class="product" data-specs="<?php echo $specsValuesString . 'Бренд => ' . $brands[$productInfo['brand']]['name'] . ' ; '; ?>">
                         
-                        $productSpecsIdValues = $productInfo['specs'];
-                        $specsValuesString = '';
+                        <?php
+                        if ($isProductHaveImage)
+                        { ?>
+                            <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="<?php echo $image; ?>" alt="фотография продукта"></a>
+                  <?php } 
+                        else
+                        { ?>
+                            <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="./resource/img/none.jpg" alt="фотография продукта"></a>
+                    <?php } 
 
-                        foreach ($productSpecsIdValues as $idSpec => $productSpecValue)
-                        {
-                            $specsValuesString .= $specs[$idSpec]['name'] . ' => ' . $productSpecValue . ' ; ';
-                        }
-                        ?>
-                        <div class="product" data-specs="<?php echo $specsValuesString . 'Бренд => ' . $brands[$productInfo['brand']]['name'] . ' ; '; ?>">
-                            
-                            <?php
-                            if ($isProductHaveImage)
-                            { ?>
-                                <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="<?php echo $image; ?>" alt="фотография продукта"></a>
-                      <?php } 
-                            else
-                            { ?>
-                                <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="./resource/img/none.jpg" alt="фотография продукта"></a>
-                      <?php } 
+                        if ($isProductHaveDiscount)
+                        { ?>
+                            <p class="sale"><?php echo $productInfo['discount']; ?></p>
+                  <?php } ?>
+                        <div class="product-disc">
+                            <a class="product-name" href="product.php?id=<?php echo $productId; ?>"> <?php echo $productInfo['name']; ?> </a>
+                            <p class="article" style="display: none;"> <?php echo $productInfo['article']; ?> </p>
+                            <p class="id" style="display: none;"> <?php echo $productInfo['id']; ?> </p>
+                            <div class="features">
+                                <?php
+                                if (is_array($productInfo['specs']))
+                                {
+                                    $specsPrintedCount = 0;
 
-                            if ($isProductHaveDiscount)
-                            { ?>
-                                <p class="sale"><?php echo $productInfo['discount']; ?></p>
-                      <?php } ?>
-                            <div class="product-disc">
-                                <a class="product-name" href="product.php?id=<?php echo $productId; ?>"> <?php echo $productInfo['name']; ?> </a>
-                                <p class="article" style="display: none;"> <?php echo $productInfo['article']; ?> </p>
-                                <p class="id" style="display: none;"> <?php echo $productInfo['id']; ?> </p>
-                                <div class="features">
-                                    <?php
-                                    if (is_array($productInfo['specs']))
+                                    $specsNames = [];
+                                    $specsId = array_keys($productInfo['specs']);
+                                    foreach ($specsId as $id => $specId)
                                     {
-                                        $specsPrintedCount = 0;
-
-                                        $specsNames = [];
-                                        $specsId = array_keys($productInfo['specs']);
-                                        foreach ($specsId as $id => $specId)
+                                        $specsNames[$specId] = $specs[$specId]['name'];
+                                    }
+        
+                                    foreach ($specsNames as $id => $name)
+                                    {
+                                        echo '<p class="feature">' . $name . '.. ' . $productInfo['specs'][$id]. '</p>';
+                                        if (++$specsPrintedCount == 6)
                                         {
-                                            $specsNames[$specId] = $specs[$specId]['name'];
-                                        }
-            
-                                        foreach ($specsNames as $id => $name)
-                                        {
-                                            echo '<p class="feature">' . $name . '.. ' . $productInfo['specs'][$id]. '</p>';
-                                            if (++$specsPrintedCount == 6) break;
+                                            break;
                                         }
                                     }
-                                    ?>
-                                    <a class="feature_button" href="./product.php?id=<?php echo $productId; ?>#specs"> Больше характеристик </a>
-                                </div>
-                            </div>
-                            <div class="product-act">
-                                <?php
-                                if ((int)$productInfo['quantity'] > 0)
-                                { ?>
-                                    <p class="available">есть в наличии <span class="available-count"><?php echo $productInfo['quantity']; ?> </span> </p>
-                                <?php
                                 }
-                                else
-                                { ?>
-                                    <p class="available">нет в наличии</p>
-                          <?php } 
-                        
-                                if ($isProductHaveDiscount)
-                                { ?>
-                                    <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
-                          <?php } ?>
-                                    <p class="new-price"><?php echo $productInfo['price']; ?></p>
-
-                                <?php
-                                if ($isProductHaveBrand)
-                                { ?>
-                                    <p class="product-brand">БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
-                          <?php }
-                                else
-                                { ?>
-                                    <p class="product-brand">БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
-                          <?php } ?>
-                        
-                                <div class="inp-cart-fav">
-                            <?php
-                                if ((int)$productInfo['quantity'] > 0)
-                                {
-                                    echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo['quantity'].'" value="1">';
-                                    echo '<button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>';
-                                } ?>
-                                    <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
-                                </div>
+                                ?>
+                                <a class="feature_button" href="./product.php?id=<?php echo $productId; ?>#specs"> Больше характеристик </a>
                             </div>
                         </div>
-                        <?php
-                        }  
-                    }
-                    else
-                    {
-                        // вывод товаров по бренду
-                        foreach ($productsWithSameBrand as $productId => $productInfo)
-                        { 
-                            $isProductHaveImage = $productInfo['image1'] != '';
-                            $isProductHaveBrand = $productInfo['brand'] != '';
-                            $isProductHaveDiscount = !is_null($productInfo['discount']);
-
-                            if ($isProductHaveImage)
-                            {
-                                $image = str_replace('ftp://37.140.192.146', './../', $productInfo['image1']);
-                            }
-                            
-                            $productSpecsIdValues = $productInfo['specs'];
-                            $specsValuesString = '';
-
-                            foreach ($productSpecsIdValues as $idSpec => $productSpecValue)
-                            {
-                                $specsValuesString .= $specs[$idSpec]['name'] . ' => ' . $productSpecValue . ' ; ';
-                            }
-                            ?>
-                            <div class="product" data-specs="<?php echo $specsValuesString . 'Бренд => ' . $brands[$productInfo['brand']]['name'] . ' ; '; ?>">
-                                
-                                <?php
-                                if ($isProductHaveImage)
-                                { ?>
-                                    <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="<?php echo $image; ?>" alt="фотография продукта"></a>
-                          <?php } 
-                                else
-                                { ?>
-                                    <a href="./product.php?id=<?php echo $productId; ?>" class="product-image"><img src="./resource/img/none.jpg" alt="фотография продукта"></a>
-                          <?php } 
-
-                                if ($isProductHaveDiscount)
-                                { ?>
-                                    <p class="sale"><?php echo $productInfo['discount']; ?></p>
-                          <?php } ?>
-                                <div class="product-disc">
-                                    <a class="product-name" href="product.php?id=<?php echo $productId; ?>"> <?php echo $productInfo['name']; ?> </a>
-                                    <p class="article" style="display: none;"> <?php echo $productInfo['article']; ?> </p>
-                                    <p class="id" style="display: none;"> <?php echo $productInfo['id']; ?> </p>
-                                    <div class="features">
-                                        <?php
-                                        if (is_array($productInfo['specs']))
-                                        {
-                                            $specsPrintedCount = 0;
-
-                                            $specsNames = [];
-                                            $specsId = array_keys($productInfo['specs']);
-                                            foreach ($specsId as $id => $specId)
-                                            {
-                                                $specsNames[$specId] = $specs[$specId]['name'];
-                                            }
-                
-                                            foreach ($specsNames as $id => $name)
-                                            {
-                                                echo '<p class="feature">' . $name . '.. ' . $productInfo['specs'][$id]. '</p>';
-                                                if (++$specsPrintedCount == 6) break;
-                                            }
-                                        }
-                                        ?>
-                                        <a class="feature_button" href="./product.php?id=<?php echo $productId; ?>#specs"> Больше характеристик </a>
-                                    </div>
-                                </div>
-                                <div class="product-act">
-                                    <?php
-                                    if ((int)$productInfo['quantity'] > 0)
-                                    { ?>
-                                        <p class="available">есть в наличии <span class="available-count"><?php echo $productInfo['quantity']; ?> </span> </p>
-                                    <?php
-                                    }
-                                    else
-                                    { ?>
-                                        <p class="available">нет в наличии</p>
-                              <?php } 
-                            
-                                    if ($isProductHaveDiscount)
-                                    { ?>
-                                        <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
-                              <?php } ?>
-                                        <p class="new-price"><?php echo $productInfo['price']; ?></p>
-
-                                    <?php
-                                    if ($isProductHaveBrand)
-                                    { ?>
-                                        <p class="product-brand">БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
-                              <?php }
-                                    else
-                                    { ?>
-                                        <p class="product-brand">БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
-                              <?php } ?>
-                            
-                                    <div class="inp-cart-fav">
-                                <?php
-                                    if ((int)$productInfo['quantity'] > 0)
-                                    {
-                                        echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo['quantity'].'" value="1">';
-                                        echo '<button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>';
-                                    } ?>
-                                        <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="product-act">
                             <?php
-                        }
-                    }
+                            if ((int)$productInfo['quantity'] > 0)
+                            { ?>
+                                <p class="available">есть в наличии <span class="available-count"><?php echo $productInfo['quantity']; ?> </span> </p>
+                            <?php
+                            }
+                            else
+                            { ?>
+                                <p class="available">нет в наличии</p>
+                      <?php } 
+                    
+                            if ($isProductHaveDiscount)
+                            { ?>
+                                <p class="old-price"><?php echo $productInfo['old_price']; ?></p>
+                      <?php } ?>
+                                <p class="new-price"><?php echo $productInfo['price']; ?></p>
+
+                            <?php
+                            if ($isProductHaveBrand)
+                            { ?>
+                                <p class="product-brand">БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
+                      <?php }
+                            else
+                            { ?>
+                                <p class="product-brand">БРЕНД: <a href="#"> ОТСУТСТВУЕТ </a></p>
+                      <?php } ?>
+                    
+                            <div class="inp-cart-fav">
+                        <?php
+                            if ((int)$productInfo['quantity'] > 0)
+                            {
+                                echo '<input class="product-count" type="number" name="" id="" min="1" max="'.$productInfo['quantity'].'" value="1">';
+                                echo '<button class="cart"> <img src="./resource/img/icons/cart.svg" alt=""> <p class="cart-text">В корзину</p></button>';
+                            } ?>
+                                <img src="./resource/img/icons/favourite.svg" alt="fav" class="fav-button">
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                }
                 ?>
             </div>
         </div>
