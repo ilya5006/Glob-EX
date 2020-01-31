@@ -29,6 +29,7 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']
     <script src="./resource/js/favourite-cart.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
     <script src="./resource/js/productsQuantityControl.js" defer></script>
+    <script src="//code-ya.jivosite.com/widget/LsTlT3PJe2" async></script>
 
     <style> 
         .product.hor .sale { top: 55px; }
