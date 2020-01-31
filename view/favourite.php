@@ -57,7 +57,7 @@ $brandInfo = $xmlParseData['brands'];
 
             <div class="check-selecter" style="display: none;">
                 <!-- <label class="container" id="cart"> -->
-                    <p class="text-selected">Выбранно: <span class="selected-count">0</span> </p> 
+                <p class="text-selected">Выбранно: <span class="selected-count">0</span> </p> 
                 <!-- <input type="checkbox" name="prduct-check"> <span class="checkmark"></span>  </label> -->
                 <p class="delete"> Удалить </p>
                 <p class=in-cart> В корзину </p>

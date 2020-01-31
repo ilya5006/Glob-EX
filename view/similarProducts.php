@@ -8,8 +8,6 @@ $idProduct = $_GET['id'];
 
 $concomitant = explode(',', $data[$idProduct]['concomitant']);
 
-
-
 echo 
 '<div class="content">
     <div class="slider_header">

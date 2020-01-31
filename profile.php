@@ -8,8 +8,7 @@ require 'vendor/autoload.php';
 
 if (isset($_GET['change']))
 {
-    header('Location: ./model/updateUserInfo.php?fio=' . $_GET['fio'] . '&email=' . $_GET['email'] . '&phone_number=' . $_GET['phone_number'] . '&work_number=' .
-            $_GET['work_number']);
+    header('Location: ./model/updateUserInfo.php?fio=' . $_GET['fio'] . '&email=' . $_GET['email'] . '&phone_number=' . $_GET['phone_number'] . '&work_number=' . $_GET['work_number']);
 }
 if (isset($_GET['change_password']))
 {
