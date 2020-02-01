@@ -1,9 +1,9 @@
 <?php
     require_once './connection.php';
-    $currentPassword = $mysqli->escape_string($_POST['current_password']);
-    $newPassword = $mysqli->escape_string($_POST['new_password']);
-    $newPasswordRepeat = $mysqli->escape_string($_POST['new_password_repeat']);
-    $idUser = $mysqli->escape_string($_COOKIE['isLogin']);
+    $currentPassword = htmlentities($mysqli->escape_string($_POST['current_password']));
+    $newPassword = htmlentities($mysqli->escape_string($_POST['new_password']));
+    $newPasswordRepeat = htmlentities($mysqli->escape_string($_POST['new_password_repeat']));
+    $idUser = htmlentities($mysqli->escape_string($_COOKIE['isLogin']));
 
     $userPasswordHashDB = $mysqli->query("SELECT password FROM users_all WHERE id_user = '$idUser'");
     $userPasswordHash = $userPasswordHashDB->fetch_assoc()['password'];

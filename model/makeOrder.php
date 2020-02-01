@@ -15,12 +15,12 @@
 
     $products = $xmlParseData['nomeklatura'];
 
-    $idUser = $mysqli->escape_string($_COOKIE['isLogin']);
-    $typeOfDelivery = $mysqli->escape_string($_POST['type_of_delivery']);
-    $typeOfPayment = $mysqli->escape_string($_POST['type_of_payment']);
-    $price = $mysqli->escape_string($_POST['price']);
-    $phoneNumber = $mysqli->escape_string($_POST['phone_number']);
-    $address = $mysqli->escape_string($_POST['address']);
+    $idUser = htmlentities($mysqli->escape_string($_COOKIE['isLogin']));
+    $typeOfDelivery = htmlentities($mysqli->escape_string($_POST['type_of_delivery']));
+    $typeOfPayment = htmlentities($mysqli->escape_string($_POST['type_of_payment']));
+    $price = htmlentities($mysqli->escape_string($_POST['price']));
+    $phoneNumber = htmlentities($mysqli->escape_string($_POST['phone_number']));
+    $address = htmlentities($mysqli->escape_string($_POST['address']));
 
     $fio = $mysqli->query("SELECT fio FROM users_all WHERE id_user = '$idUser'");
     $fio = $fio->fetch_assoc()['fio'];

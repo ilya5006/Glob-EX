@@ -31,9 +31,9 @@
 <?php
     require_once './connection.php';
 
-    $token = $mysqli->escape_string($_GET['token']);
-    $password = $mysqli->escape_string($_GET['new_password']);
-    $passwordRepeat = $mysqli->escape_string($_GET['new_password_repeat']);
+    $token = htmlentities($mysqli->escape_string($_GET['token']));
+    $password = htmlentities($mysqli->escape_string($_GET['new_password']));
+    $passwordRepeat = htmlentities($mysqli->escape_string($_GET['new_password_repeat']));
 
 
     if ($password != $passwordRepeat)
@@ -66,7 +66,6 @@
         echo '<h2> Пароль успешно обновлён </h2>';
         echo '<a href="./../index.php" class="button button-anim"> вернуться на главную </a>';
         echo '</div>';
-        
     }
 ?>
 </body>

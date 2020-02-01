@@ -1,8 +1,8 @@
 <?php
     require_once './connection.php';
 
-    $emailOrPhoneNumber = $mysqli->escape_string($_POST['emailOrPhoneNumber']);
-    $passwordEntered = $mysqli->escape_string($_POST['password']);
+    $emailOrPhoneNumber = htmlentities($mysqli->escape_string($_POST['emailOrPhoneNumber']));
+    $passwordEntered = htmlentities($mysqli->escape_string($_POST['password']));
 
     $idFioPasswordDB = $mysqli->query("SELECT id_user, fio, password FROM users_all WHERE email = '$emailOrPhoneNumber' OR phone_number = '$emailOrPhoneNumber'");
     $idFioPasswordDB = $idFioPasswordDB->fetch_assoc();

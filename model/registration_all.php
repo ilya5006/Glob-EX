@@ -16,12 +16,12 @@
 
     require_once './connection.php';
 
-    $role = $mysqli->escape_string($_POST['role']);
-    $fio = $mysqli->escape_string(trim($_POST['fio']));
-    $password = $mysqli->escape_string($_POST['password']);
-    $email = $mysqli->escape_string($_POST['email']);
-    $phoneNumber = $mysqli->escape_string($_POST['phone']);
-    $mailing = $mysqli->escape_string($_POST['mailing']);
+    $role = htmlentities($mysqli->escape_string($_POST['role']));
+    $fio = htmlentities($mysqli->escape_string(trim($_POST['fio'])));
+    $password = htmlentities($mysqli->escape_string($_POST['password']));
+    $email = htmlentities($mysqli->escape_string($_POST['email']));
+    $phoneNumber = htmlentities($mysqli->escape_string($_POST['phone']));
+    $mailing = htmlentities($mysqli->escape_string($_POST['mailing']));
 
     // if (isUserExists($email, $phoneNumber, $password))
     // {

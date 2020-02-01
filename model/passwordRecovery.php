@@ -31,7 +31,7 @@
 <?php
     require_once './connection.php';
 
-    $email = $mysqli->escape_string($_GET['email']);
+    $email = htmlentities($mysqli->escape_string($_GET['email']));
 
     $checkEmail = $mysqli->query("SELECT id_user FROM users_all WHERE email = '$email'");
     $checkEmail = $checkEmail->fetch_array()[0];

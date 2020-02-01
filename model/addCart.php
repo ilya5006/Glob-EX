@@ -2,8 +2,8 @@
     require_once './connection.php';
 
     $idUser = (int)$_COOKIE['isLogin'];
-    $idProduct = $mysqli->escape_string((int)$_POST['id_product']);
-    $productCount = $mysqli->escape_string((int)$_POST['product_count']);
+    $idProduct = htmlentities($mysqli->escape_string((int)$_POST['id_product']));
+    $productCount = htmlentities($mysqli->escape_string((int)$_POST['product_count']));
 
     $resultCheck = $mysqli->query("SELECT COUNT(*) FROM `user-cart` WHERE id_user = $idUser AND id_product = $idProduct;");
     $checkData = $resultCheck->fetch_row();

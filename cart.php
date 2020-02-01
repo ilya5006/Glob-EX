@@ -127,7 +127,7 @@ if (empty($_COOKIE['isLogin'])) { header('Location: ' . $redirectLink); }
     </div>
 </div>
 <?php
-    }
+        }
 ?>
 
 <?php require(__DIR__ . '/view/footer.php'); ?>
