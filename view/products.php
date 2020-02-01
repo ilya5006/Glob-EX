@@ -575,7 +575,7 @@ foreach ($brands as $brandAll => $brandInfo)
                             <?php
                             if ($isProductHaveBrand)
                             { ?>
-                                <p class="product-brand">БРЕНД: <a href="#"><?php echo $brands[$productInfo['brand']]['name']; ?></a></p>
+                                <p class="product-brand">БРЕНД: <?php echo '<a href="./products?brand='.$productInfo['brand'].'">'. $brands[$productInfo['brand']]['name']; ?></a></p>
                       <?php }
                             else
                             { ?>
