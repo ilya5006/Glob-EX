@@ -37,10 +37,10 @@ foreach($data as $category)
             <li><a href="./../delivery.php">ДОСТАВКА</a></li>
             <li><a href="./../payment.php">ОПЛАТА</a></li>
             <li><a href="#">КОНТАКТЫ</a></li>
-            <li><a href="#">О КОМПАНИИ</a></li>
+            <!-- <li><a href="#">О КОМПАНИИ</a></li> -->
         </ul>
         <ul>
-            <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
+            <!-- <li><a href="#">ЗАДАТЬ ВОПРОС</a></li> -->
             <li><p class="exception tel"><span>8-495-380-42-88</span></p></li>
             <li><a href="#" class="exception email"><span>sale@glob-ex.ru</span></a></li>
         </ul>
