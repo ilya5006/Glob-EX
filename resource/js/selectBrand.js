@@ -22,8 +22,6 @@ allBrandsList.forEach((brand) =>
                     allBrandFiltersList.querySelector('.filterHide').click();
                 }
                 
-                toApplyFilters();
-                
                 if (moreOrLessButton)
                 {
                     if (i >= 6)
@@ -44,5 +42,7 @@ allBrandsList.forEach((brand) =>
                 f.checked = false;
             }
         });
+
+        toApplyFilters();
     });
 });
