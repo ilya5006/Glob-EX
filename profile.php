@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-if (empty($_COOKIE['isLogin'])) { header('Location: ' . $_SERVER['HTTP_REFERER']); }
+$redirectLink = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+if (empty($_COOKIE['isLogin'])) { header('Location: ' . $redirectLink); }
 
 require_once __DIR__ . '/model/connection.php';
 require 'vendor/autoload.php';
