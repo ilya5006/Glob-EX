@@ -113,7 +113,7 @@ if (isset($product['specs']))
             <?php
             if (isset($brand['name']))
             { ?>
-                <p class="brand">БРЕНД: <a href="#"><?php echo $brand['name']; ?></a> </p>
+                <p class="brand">БРЕНД: <?php echo '<a href="./products.php?brand='. $product['brand'] .'">'. $brand['name']; ?></a> </p>
       <?php }
             else
             { ?>
