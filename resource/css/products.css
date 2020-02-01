@@ -89,6 +89,7 @@
 #spec_value
 {
 	margin-right: 5px;
+
 	color: #000000;
 }
 
@@ -106,8 +107,8 @@
 
 .filterHide
 {
-	user-select: none;
 	cursor: pointer;
+	user-select: none;
 }
 
 /* Начало чекбоксов */
@@ -237,6 +238,7 @@
 
 	cursor: pointer;
 	user-select: none;
+
 	opacity: 0.5;
 
 	filter: grayscale(1);
@@ -282,18 +284,21 @@
 
 .pages
 {
-	user-select: none;
 	display: flex;
+	align-items: center;
 	flex-flow: row nowrap;
 	justify-content: center;
-	align-items: center;
+
+	user-select: none;
 }
 
 .page_left, .page_right
 {
 	font-family: Catamaran, sans-serif;
 	font-size: 24px;
+
 	padding: 0px 5px;
+
 	cursor: pointer;
 }
 .catalg_view .pagination
@@ -366,6 +371,28 @@
 	color: #E31E24;
 }
 
+#brand-info
+{
+	flex-flow: row nowrap;
+
+	margin-top: 25px;
+}
+
+#brand-info > h2
+{
+	width: 100%;
+}
+
+#brand-info > img
+{
+	align-self: flex-start;
+
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin-right: 25px;
+}
+
 .list-products
 {
 	display: grid;
@@ -434,7 +461,6 @@
 }
 
 
-
 .product > .product-disc .features
 {
 	display: none;
@@ -485,7 +511,6 @@
 
 .product.hor > .product-disc .features .feature_button
 {
-	color: #000000;
 	font-weight: bold;
 
 	display: inline-block;
@@ -494,6 +519,8 @@
 	margin-bottom: 15px;
 
 	cursor: pointer;
+
+	color: #000000;
 }
 
 .list-products .product.hor .product-image
@@ -530,8 +557,8 @@
 
 .list-products .product.hor .inp-cart-fav
 {
-	height: 40px;
 	width: 100%;
+	height: 40px;
 }
 
 .product .cart
@@ -769,6 +796,16 @@
 	{
 		text-align: center;
 	}
+	#brand-info
+	{
+		flex-flow: column nowrap;
+	}
+	#brand-info > img
+	{
+		margin-right: 0;
+		justify-self: center;
+		align-self: center;
+	}
 }
 
 /* Начало чекбоксов */
@@ -845,15 +882,16 @@
 .sort > .container
 {
 	font-size: 16px;
-	margin: 0 25px;
+
 	width: auto;
+	margin: 0 25px;
 	margin-bottom: 0;
 }
 
 .sort .checkmark
 {
-    top: -4px;
-    left: 0px;
+	top: -4px;
+	left: 0px;
 }
 
 /* Конец чекбоксов */
@@ -1080,28 +1118,32 @@
 
 #apply_filters
 {
-	width: 100%;
 	font-size: 16px;
-    font-weight: bold;
-    align-self: flex-start;
-    min-width: 160px;
-    margin-top: 20px;
-    margin-left: 0;
-    padding: 15px 30px;
-    cursor: pointer;
-    transition: 0.3s all;
-    text-align: center;
-    text-transform: uppercase;
-    color: #E31E24;
-    border: 3px solid #E31E24;
-    background-color: #FFFFFF;
+	font-weight: bold;
+
+	align-self: flex-start;
+
+	width: 100%;
+	min-width: 160px;
+	margin-top: 20px;
+	margin-left: 0;
+	padding: 15px 30px;
+
+	cursor: pointer;
+	transition: 0.3s all;
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #E31E24;
+	border: 3px solid #E31E24;
+	background-color: #FFFFFF;
 }
 
 #apply_filters:hover
 {
 	color: #FFFFFF;
-    border: 3px solid #E31E24;
-    background-color: #E31E24;
+	border: 3px solid #E31E24;
+	background-color: #E31E24;
 }
 
 @media screen and (max-width: 1400px)

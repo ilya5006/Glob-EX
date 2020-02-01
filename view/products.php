@@ -427,8 +427,8 @@ foreach ($brands as $brandAll => $brandInfo)
                 }
                 else
                 {
-                    echo '<div class="slider_header" id="brand_info">';
                     echo '<h2> Бренд ' . $brands[$brandId]['name'] . '</h2>';
+                    echo '<div class="slider_header" id="brand-info">';
                     echo '<img src="' . $brands[$brandId]['image'] . '">';
                     echo '<p class="brand_description">' . $brands[$brandId]['description'] . '</p>';
                     echo '</div>';
