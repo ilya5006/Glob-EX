@@ -27,7 +27,7 @@ $productInfo = $xmlParseData['nomeklatura'];
     <script src="./resource/js/registration.js" defer></script>
     <script src="./resource/js/login.js" defer></script>
     <script src="./resource/js/showMessage.js" defer></script>
-    <script src="//code-ya.jivosite.com/widget/LsTlT3PJe2" async></script>
+    <script src="//code-ya.jivosite.com/widget/Wa5vYcSeDT" async></script>
 </head>
 <body>
 

@@ -42,7 +42,7 @@ $title = isset($_GET['brand'])
 
     <script src="./resource/js/wNumb.min.js"></script>
     <script src="./resource/js/nouislider.js"></script>
-    <script src="//code-ya.jivosite.com/widget/LsTlT3PJe2" async></script>
+    <script src="//code-ya.jivosite.com/widget/Wa5vYcSeDT" async></script>
 
     <link rel="stylesheet" href="./../resource/css/nouislider.css">
 
