@@ -139,6 +139,12 @@ function ajax()
                     return 0;
                 }
 
+                if(!address)
+                {
+                    showMessaage('Заполните адресс');
+                    return 0;
+                }
+
                 let formData = new FormData();
                 formData.append('address', address);
                 formData.append('type_of_delivery', typeOfDelivery);
