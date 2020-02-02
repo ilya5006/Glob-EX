@@ -226,6 +226,7 @@
 .fav-button
 {
 	margin-right: 15px;
+
 	cursor: pointer;
 }
 
@@ -453,34 +454,41 @@
 
 #imageFullScreen
 {
-	display: none;
 	position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    overflow-y: scroll;
-    min-width: 100vw;
+	z-index: 999;
+	top: 0;
+	left: 0;
+
+	display: none;
+	overflow-y: scroll;
+
+	min-width: 100vw;
 	min-height: 100vh;
+
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
 #imageFullScreen > #closeImageFullscreen
 {
-	transition: 0.6s all;
-	cursor: pointer;
-	color: #FFFFFF;
-	z-index: 1500;
 	font-size: 100px;
+
 	position: absolute;
+	z-index: 1500;
 	top: 5%;
 	right: 5%;
-	min-height: 75px;
-	min-width: 75px;
-	display: flex;
-	justify-content: flex-end;
-	align-self: flex-start;
-	text-shadow: 3px 3px 0px #E31E24;
 
+	display: flex;
+	align-self: flex-start;
+	justify-content: flex-end;
+
+	min-width: 75px;
+	min-height: 75px;
+
+	cursor: pointer;
+	transition: 0.6s all;
+
+	color: #FFFFFF;
+	text-shadow: 3px 3px 0px #E31E24;
 }
 
 #imageFullScreen > #closeImageFullscreen:hover
@@ -489,12 +497,15 @@
 }
 #imageFullScreen > img
 {
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 1;
-	z-index: 1001;
 	position: absolute;
+	z-index: 1001;
+	top: 50%;
+	left: 50%;
+
 	width: 100%;
 	height: 100%;
+
+	transform: translate(-50%, -50%);
+
+	opacity: 1;
 }

@@ -33,7 +33,6 @@
 
 .banners > .banner p
 {
-	user-select: none;
 	font-size: 68px;
 	font-weight: bold;
 
@@ -43,6 +42,8 @@
 	left: 0;
 
 	margin: 55px;
+
+	user-select: none;
 
 	color: #FFFFFF;
 	text-shadow: 3px 3px 0px red;

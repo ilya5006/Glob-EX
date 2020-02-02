@@ -418,6 +418,7 @@ h3
 	#modal_changePassword .place_holder
 	{
 		bottom: 25px;
+
 		margin-left: 0;
 	}
 }
@@ -440,9 +441,11 @@ h3
 
 #modal_changePassword h3
 {
-	margin-top: 50px;
 	align-self: center;
+
 	width: 80%;
+	margin-top: 50px;
+
 	color: #E31E24;
 }
 

@@ -161,8 +161,8 @@ h2
 .messageBox
 {
 	position: fixed;
-	right: 25px;
 	top: 15px;
+	right: 25px;
 
 	max-width: 290px;
 }

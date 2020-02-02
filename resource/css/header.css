@@ -1,27 +1,14 @@
 .header .content
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-flow: column wrap;
-	    flex-flow: column wrap;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
+	flex-flow: column wrap;
 }
 
 .header .content .menu
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-line-pack: center;
 	align-content: center;
-	-ms-flex-flow: row wrap;
-	    flex-flow: row wrap;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
+	flex-flow: row wrap;
 	justify-content: space-between;
 
 	margin-bottom: 25px;
@@ -34,25 +21,14 @@
 
 .header .content .menu > ul
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-flow: row wrap;
-	    flex-flow: row wrap;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
+	flex-flow: row wrap;
 }
 
 .header .content .menu > ul > li
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
 	align-items: center;
-	-ms-flex-align: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -90,18 +66,15 @@
 	height: 3px;
 
 	content: "";
-	-webkit-transition: 0.3s all;
-	        transition: 0.3s all;
-	-webkit-transform: scale(0);
-	        transform: scale(0);
+	transition: 0.3s all;
+	transform: scale(0);
 
 	background-color: #E31E24;
 }
 
 .header .content .menu li a:hover::after
 {
-	-webkit-transform: scale(1);
-	        transform: scale(1);
+	transform: scale(1);
 }
 
 .header .content .menu li a.tel
@@ -146,7 +119,6 @@
 	color: #FFFFFF;
 	border: 0;
 	background-color: #E31E24;
-	;
 }
 
 .header .content .nav .catalog span
@@ -838,7 +810,7 @@
 	color: #E31E24;
 }
 
-#modal_authorize .modal form input[type=submit], #loginButton, #registerButton, #recoveryMailButton	
+#modal_authorize .modal form input[type=submit], #loginButton, #registerButton, #recoveryMailButton
 {
 	font-size: 16px;
 	font-weight: bold;
@@ -890,7 +862,7 @@
 #modal_authorize .modal form .passwordRecoveryBack
 {
 	margin-top: -70px;
-    padding-bottom: 25px;
+	padding-bottom: 25px;
 }
 
 #modal_authorize .modal form .require span, #modal_changePassword .modal form .require span
@@ -1003,9 +975,10 @@ form .container p a, .container p span
 
 #modal_authorize .modal form.password_recovery h2
 {
-	text-align: center	;
 	margin-top: 10px;
 	margin-bottom: 35px;
+
+	text-align: center	;
 }
 
 .passwordRecoveryBack
@@ -1060,16 +1033,19 @@ form .container p a, .container p span
 	#modal_authorize .modal form .passwordRecoveryBack
 	{
 		align-self: center;
-		margin-right: 0;
+
 		width: 100%;
-		text-align: center;
 		margin-top: -90px;
+		margin-right: 0;
 		padding-bottom: 40px;
+
+		text-align: center;
 	}
 	#modal_authorize .modal form .forget_password, #modal_authorize .modal form .passwordRecoveryBack
 	{
-		margin-right: 0;
 		align-self: center;
+
+		margin-right: 0;
 	}
 	.place_holder
 	{
@@ -1138,23 +1114,27 @@ form .container p a, .container p span
 
 .tooltip
 {
-    bottom: 63px;
-    left: 0;
 	position: absolute;
+	bottom: 63px;
+	left: 0;
+
 	display: none;
-	width: 100%;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+
+	width: 100%;
 }
 
 .tooltip > p
 {
-	color: #FFFFFF;
-	background-color: #E31E24;
-    padding: 5px 15px;
-    text-align: center;
-	border-radius: 6px;
+	padding: 5px 15px;
+
+	text-align: center;
+
 	opacity: 0.8;
+	color: #FFFFFF;
+	border-radius: 6px;
+	background-color: #E31E24;
 }
 
 .placeinput input:focus ~ .tooltip

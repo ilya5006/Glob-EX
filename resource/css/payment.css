@@ -6,10 +6,10 @@
 
 .pay-block
 {
-	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	flex-flow: column nowrap;
+	flex-grow: 1;
 	justify-content: center;
 
 	margin: 25px 10px;
@@ -22,10 +22,11 @@
 }
 .pay-block p
 {
-	max-width: 250px;
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 23px;
+
+	max-width: 250px;
 
 	text-align: center;
 	text-transform: uppercase;
@@ -42,10 +43,12 @@ h3
 
 h4
 {
-	font-weight: normal;
 	font-size: 18px;
-	text-transform: uppercase;
+	font-weight: normal;
+
 	margin: 10px 0;
+
+	text-transform: uppercase;
 }
 
 @media screen and (max-width: 750px)
@@ -69,7 +72,8 @@ h4
 	}
 	.pay-icons > img
 	{
-		max-width: 33%;
 		flex-grow: 1;
+
+		max-width: 33%;
 	}
 }

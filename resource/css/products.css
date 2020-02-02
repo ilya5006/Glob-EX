@@ -385,9 +385,9 @@
 
 #brand-info > img
 {
+	float: left;
 	align-self: flex-start;
 
-	float: left;
 	width: 150px;
 	height: 150px;
 	margin-right: 25px;
@@ -802,9 +802,11 @@
 	}
 	#brand-info > img
 	{
-		margin-right: 0;
-		justify-self: center;
 		align-self: center;
+
+		margin-right: 0;
+
+		justify-self: center;
 	}
 }
 
